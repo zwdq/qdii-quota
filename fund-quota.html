@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -165,8 +165,50 @@
   footer strong { color: var(--text); }
   footer p:first-child strong { color: var(--primary); }
   footer code { background: rgba(56, 189, 248, 0.1); color: var(--primary); padding: 1px 6px; border-radius: 4px; font-size: 11px; font-family: var(--mono); }
+
+  /* 主题切换按钮 */
+  .theme-toggle { width: 34px; height: 34px; padding: 0; display: inline-flex; align-items: center; justify-content: center; }
+  .theme-toggle svg { width: 16px; height: 16px; display: block; }
+
+  /* ===== 浅色主题（在深色基础上覆盖变量） ===== */
+  [data-theme="light"] {
+    --bg-0: #e9eff8; --bg-1: #f5f8fc;
+    --card: rgba(255, 255, 255, 0.82); --card-solid: #ffffff;
+    --border: rgba(30, 50, 90, 0.10); --border-strong: rgba(30, 50, 90, 0.22);
+    --text: #16233a; --text-sub: #56688a; --text-dim: #8b9ab5;
+    --primary: #2563eb; --primary-2: #7c3aed; --primary-soft: rgba(37, 99, 235, 0.09);
+    --glow: 0 6px 18px rgba(37, 99, 235, 0.15);
+    --green: #059669; --green-soft: rgba(5, 150, 105, 0.11);
+    --amber: #d97706; --amber-soft: rgba(217, 119, 6, 0.11);
+    --red: #dc2626;   --red-soft: rgba(220, 38, 38, 0.11);
+    --blue: #2563eb;  --blue-soft: rgba(37, 99, 235, 0.11);
+  }
+  [data-theme="light"] body {
+    background:
+      radial-gradient(820px 520px at 88% -8%, rgba(124, 58, 237, 0.10), transparent 60%),
+      radial-gradient(680px 480px at 2% -5%, rgba(37, 99, 235, 0.10), transparent 58%),
+      linear-gradient(180deg, var(--bg-1) 0%, var(--bg-0) 100%);
+  }
+  [data-theme="light"] body::before {
+    background-image:
+      linear-gradient(rgba(30, 50, 90, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(30, 50, 90, 0.05) 1px, transparent 1px);
+  }
+  [data-theme="light"] h1 {
+    background: linear-gradient(95deg, #16233a 0%, var(--primary) 55%, var(--primary-2) 100%);
+    -webkit-background-clip: text; background-clip: text;
+  }
+  [data-theme="light"] .stat .num { text-shadow: none; }
+  [data-theme="light"] .stat::before,
+  [data-theme="light"] .dot,
+  [data-theme="light"] .status::before { box-shadow: none; }
+  [data-theme="light"] .nav-main { color: #16233a; }
+  [data-theme="light"] thead th { background: rgba(245, 248, 252, 0.94); }
   @media (max-width: 700px) { .stats { grid-template-columns: repeat(2, 1fr); } h1 { font-size: 22px; } }
 </style>
+<script>/* 防闪烁：在渲染前尽早读取主题偏好 */
+  (function(){try{var t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
+</script>
 </head>
 <body>
 <div class="wrap">
@@ -179,6 +221,10 @@
       <span class="badge"><span class="dot"></span>数据更新：<span id="updatedAt">—</span></span>
       <span class="badge g">净值日期：<span id="navDate">—</span></span>
       <button class="btn" id="refreshBtn">↻ 刷新数据</button>
+      <button class="btn theme-toggle" id="themeToggle" title="切换 浅色 / 深色" aria-label="切换主题">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </button>
     </div>
   </header>
 
@@ -410,6 +456,22 @@ document.querySelectorAll("thead th").forEach(th => {
   });
 });
 document.getElementById("refreshBtn").addEventListener("click", loadData);
+
+/* 主题切换：深色 ↔ 浅色，记忆到 localStorage */
+function syncThemeIcon() {
+  const t = document.documentElement.getAttribute("data-theme") || "dark";
+  const moon = document.querySelector(".icon-moon"), sun = document.querySelector(".icon-sun");
+  if (moon) moon.style.display = t === "light" ? "none" : "block";
+  if (sun)  sun.style.display  = t === "light" ? "block" : "none";
+}
+document.getElementById("themeToggle").addEventListener("click", () => {
+  const cur = document.documentElement.getAttribute("data-theme") || "dark";
+  const next = cur === "dark" ? "light" : "dark";
+  document.documentElement.setAttribute("data-theme", next);
+  try { localStorage.setItem("theme", next); } catch (e) {}
+  syncThemeIcon();
+});
+syncThemeIcon();
 syncChips();
 loadData();
 </script>
