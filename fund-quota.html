@@ -113,11 +113,13 @@
       <input id="search" type="text" placeholder="搜索基金代码 / 名称 / 公司 / 跟踪指数…">
     </div>
     <div class="filters" id="filters">
-      <button class="chip active" data-f="all">全部</button>
-      <button class="chip" data-f="normal">✅ 正常申购</button>
-      <button class="chip" data-f="limited">⚠️ 限大额</button>
-      <button class="chip" data-f="suspended">⛔ 暂停</button>
-      <button class="chip" data-f="traded">📈 场内交易</button>
+      <span style="font-size:13px;color:var(--text-sub);align-self:center">主题：</span>
+      <button class="chip active" data-cat="纳斯达克">纳斯达克</button>
+      <button class="chip active" data-cat="标普500">标普 500</button>
+      <button class="chip" data-cat="中概互联">中概互联</button>
+      <button class="chip" data-cat="恒生">恒生科技/互联</button>
+      <button class="chip" data-cat="主动基金">主动基金</button>
+      <button class="chip" data-cat="__all">全部</button>
     </div>
   </div>
 
@@ -156,9 +158,9 @@ const FALLBACK = {
   updatedAt: "本地示例数据",
   navDateHint: "—",
   funds: [
-    { code: "270042", name: "广发纳斯达克100ETF联接(示例)", company: "广发基金", type: "qdii", index: "纳斯达克100指数", status: "limited", statusText: "限大额", limit: null, limitText: "限大额（见公告）", nav: 8.0725, navChangePct: -1.63, navDate: "示例" },
-    { code: "161130", name: "易方达纳斯达克100ETF联接(示例)", company: "易方达基金", type: "qdii", index: "纳斯达克100指数", status: "suspended", statusText: "暂停申购", limit: null, nav: 4.3813, navChangePct: -1.53, navDate: "示例" },
-    { code: "006327", name: "易方达中证海外互联网50ETF联接(示例)", company: "易方达基金", type: "qdii", index: "中证海外互联网", status: "normal", statusText: "开放申购", limit: null, nav: 0.904, navChangePct: 2.56, navDate: "示例" },
+    { code: "270042", name: "广发纳斯达克100ETF联接(示例)", company: "广发基金", type: "qdii", group: "纳斯达克100", index: "纳斯达克100指数", status: "limited", statusText: "限大额", limit: null, limitText: "限大额（见公告）", nav: 8.0725, navChangePct: -1.63, navDate: "示例" },
+    { code: "161130", name: "易方达纳斯达克100ETF联接(示例)", company: "易方达基金", type: "qdii", group: "纳斯达克100", index: "纳斯达克100指数", status: "suspended", statusText: "暂停申购", limit: null, nav: 4.3813, navChangePct: -1.53, navDate: "示例" },
+    { code: "006327", name: "易方达中证海外互联网50ETF联接(示例)", company: "易方达基金", type: "qdii", group: "中概互联", index: "中证海外互联网", status: "normal", statusText: "开放申购", limit: null, nav: 0.904, navChangePct: 2.56, navDate: "示例" },
   ]
 };
 
@@ -169,7 +171,17 @@ const STATUS_LABEL = {
   traded:    { text: "场内",     cls: "traded" },
 };
 
-const state = { data: null, filter: "all", query: "", sortKey: "group", sortDir: "asc" };
+const state = { data: null, cats: new Set(["纳斯达克", "标普500"]), query: "", sortKey: "default", sortDir: "asc" };
+
+// 基金分组 -> 主题分类（主动基金默认隐藏，需手动点击）
+const GROUP_TO_CAT = {
+  "纳斯达克100": "纳斯达克", "标普500": "标普500", "中概互联": "中概互联",
+  "恒生互联": "恒生", "恒生科技": "恒生",
+  "亚洲精选": "主动基金", "全球精选": "主动基金", "全球互联": "主动基金",
+};
+const CAT_ORDER = ["纳斯达克", "标普500", "中概互联", "恒生", "主动基金", "其他"];
+const BUY_RANK = { normal: 0, limited: 1, traded: 2, suspended: 3 }; // 可买性排序
+const catOf = f => GROUP_TO_CAT[f.group] || "其他";
 
 function fmtLimit(f) {
   if (f.limitText) return f.limitText;   // data.json 提供的现成文本（最准，含"限大额（见公告）"等情况）
@@ -208,16 +220,26 @@ function renderStats() {
     <div class="stat red"><div class="label">⛔ 暂停</div><div class="num">${s}</div></div>`;
 }
 
+function defaultCmp(a, b) {
+  const ca = CAT_ORDER.indexOf(catOf(a)), cb = CAT_ORDER.indexOf(catOf(b));
+  if (ca !== cb) return ca - cb;                       // 先按主题分组
+  const ba = BUY_RANK[a.status] ?? 9, bb = BUY_RANK[b.status] ?? 9;
+  if (ba !== bb) return ba - bb;                       // 再按可买性：正常>限大额>场内>暂停
+  const la = a.limit ?? Infinity, lb = b.limit ?? Infinity;
+  if (la !== lb) return lb - la;                       // 限大额里，额度大（更好买）靠前
+  return (a.name || "").localeCompare(b.name || "", "zh");
+}
 function getView() {
   const q = state.query.trim().toLowerCase();
   let view = state.data.funds.filter(f => {
-    if (state.filter !== "all" && f.status !== state.filter) return false;
+    if (!state.cats.has(catOf(f))) return false;        // 主题多选过滤
     if (q) {
-      const hay = (f.code + f.name + f.index + f.company + (f.group||"")).toLowerCase();
+      const hay = (f.code + f.name + f.index + f.company + (f.group || "") + catOf(f)).toLowerCase();
       if (!hay.includes(q)) return false;
     }
     return true;
   });
+  if (state.sortKey === "default") { view.sort(defaultCmp); return view; }
   const key = state.sortKey, dir = state.sortDir === "asc" ? 1 : -1;
   view.sort((a, b) => {
     let va, vb;
@@ -283,10 +305,22 @@ async function loadData() {
   }
 }
 
+function syncChips() {
+  document.querySelectorAll("#filters .chip").forEach(c => {
+    const cat = c.dataset.cat;
+    c.classList.toggle("active", cat === "__all" ? state.cats.size === CAT_ORDER.length : state.cats.has(cat));
+  });
+}
 document.getElementById("filters").addEventListener("click", e => {
   const chip = e.target.closest(".chip"); if (!chip) return;
-  document.querySelectorAll(".chip").forEach(c => c.classList.remove("active"));
-  chip.classList.add("active"); state.filter = chip.dataset.f; render();
+  const cat = chip.dataset.cat;
+  if (cat === "__all") {
+    state.cats = new Set(CAT_ORDER);                    // 全选
+  } else {
+    if (state.cats.has(cat)) state.cats.delete(cat); else state.cats.add(cat);
+    if (state.cats.size === 0) state.cats = new Set([cat]); // 至少保留一个主题
+  }
+  syncChips(); render();
 });
 document.getElementById("search").addEventListener("input", e => { state.query = e.target.value; render(); });
 document.querySelectorAll("thead th").forEach(th => {
@@ -298,6 +332,7 @@ document.querySelectorAll("thead th").forEach(th => {
   });
 });
 document.getElementById("refreshBtn").addEventListener("click", loadData);
+syncChips();
 loadData();
 </script>
 </body>

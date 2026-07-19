@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-19 20:36:14",
+  "updatedAt": "2026-07-19 21:41:32",
   "source": "eastmoney FundMNNBasicInformation + jjgg 公告交叉校验",
   "note": "MAXSG 为可信当前限额；announcement 为公告交叉校验，review=true 表示与 MAXSG 不符需人工核对。",
   "count": 20,
@@ -116,24 +116,6 @@
         ],
         "review": false
       },
-      "group": "纳斯达克100"
-    },
-    {
-      "code": "006327",
-      "name": "易方达中证海外互联网50ETF联接(QDII)A",
-      "type": "qdii",
-      "index": "中证海外中国互联网50人民币指数",
-      "company": "易方达基金",
-      "status": "normal",
-      "statusText": "开放申购",
-      "limit": null,
-      "limitText": "不限",
-      "limitReliable": false,
-      "limitSource": "api",
-      "minPurchase": 10,
-      "nav": 0.904,
-      "navChangePct": 2.56,
-      "navDate": "2026-07-16",
       "group": "纳斯达克100"
     },
     {
@@ -381,6 +363,24 @@
       "minPurchase": 10,
       "nav": 0.9838,
       "navChangePct": 2.55,
+      "navDate": "2026-07-16",
+      "group": "中概互联"
+    },
+    {
+      "code": "006327",
+      "name": "易方达中证海外互联网50ETF联接(QDII)A",
+      "type": "qdii",
+      "index": "中证海外中国互联网50人民币指数",
+      "company": "易方达基金",
+      "status": "normal",
+      "statusText": "开放申购",
+      "limit": null,
+      "limitText": "不限",
+      "limitReliable": false,
+      "limitSource": "api",
+      "minPurchase": 10,
+      "nav": 0.904,
+      "navChangePct": 2.56,
       "navDate": "2026-07-16",
       "group": "中概互联"
     },
