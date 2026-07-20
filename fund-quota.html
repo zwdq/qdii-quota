@@ -8,6 +8,8 @@
   :root {
     --bg-0: #060912; --bg-1: #0c1322;
     --card: rgba(20, 30, 52, 0.55); --card-solid: #0e1626;
+    --surface-2: rgba(6, 10, 20, 0.55); /* 输入框/chip/按钮等凹陷面 */
+    --shadow: none;
     --border: rgba(120, 170, 255, 0.14); --border-strong: rgba(120, 170, 255, 0.3);
     --text: #e6edf7; --text-sub: #8295b8; --text-dim: #56678a;
     --primary: #38bdf8; --primary-2: #818cf8; --primary-soft: rgba(56, 189, 248, 0.12);
@@ -65,7 +67,7 @@
   .live-dot { animation: pulse 1.7s infinite; }
   @keyframes pulse { 0%, 100% { opacity: 1; box-shadow: 0 0 9px currentColor; } 50% { opacity: .3; box-shadow: 0 0 2px currentColor; } }
   button.btn {
-    border: 1px solid var(--border); background: rgba(20, 30, 52, 0.5); color: var(--text);
+    border: 1px solid var(--border); background: var(--surface-2); color: var(--text);
     padding: 6px 14px; border-radius: 10px; font-size: 13px; cursor: pointer; transition: .2s;
     font-family: inherit; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
   }
@@ -100,7 +102,7 @@
   .search { flex: 1 1 220px; position: relative; }
   .search input {
     width: 100%; padding: 10px 12px 10px 36px; border-radius: 10px; font-size: 14px;
-    background: rgba(6, 10, 20, 0.6); border: 1px solid var(--border); color: var(--text); font-family: inherit; transition: .2s;
+    background: var(--surface-2); border: 1px solid var(--border); color: var(--text); font-family: inherit; transition: .2s;
   }
   .search input::placeholder { color: var(--text-dim); }
   .search input:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.16); }
@@ -108,7 +110,7 @@
   .filters { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
   .chip {
     padding: 7px 14px; border-radius: 999px; cursor: pointer; font-size: 13px; font-family: inherit;
-    background: rgba(6, 10, 20, 0.5); border: 1px solid var(--border); color: var(--text-sub);
+    background: var(--surface-2); border: 1px solid var(--border); color: var(--text-sub);
     transition: .2s; white-space: nowrap;
   }
   .chip:hover { color: var(--text); border-color: var(--border-strong); }
@@ -169,7 +171,7 @@
   /* 主题切换：双图标分段开关（当前模式高亮+辉光） */
   .theme-switch {
     display: inline-flex; align-items: center; gap: 7px; padding: 6px 11px; border-radius: 999px;
-    background: rgba(6, 10, 20, 0.6); border: 1px solid var(--border); cursor: pointer; transition: .2s;
+    background: var(--surface-2); border: 1px solid var(--border); cursor: pointer; transition: .2s;
     font-family: inherit;
   }
   .theme-switch:hover { border-color: var(--primary); box-shadow: 0 0 16px rgba(56, 189, 248, 0.28); }
@@ -182,7 +184,9 @@
   [data-theme="light"] {
     --bg-0: #e9eff8; --bg-1: #f5f8fc;
     --card: rgba(255, 255, 255, 0.82); --card-solid: #ffffff;
-    --border: rgba(30, 50, 90, 0.10); --border-strong: rgba(30, 50, 90, 0.22);
+    --surface-2: rgba(245, 248, 252, 0.9); /* 浅色凹陷面（输入框/chip/按钮） */
+    --shadow: 0 4px 16px rgba(30, 50, 90, 0.07);
+    --border: rgba(30, 50, 90, 0.12); --border-strong: rgba(30, 50, 90, 0.24);
     --text: #16233a; --text-sub: #56688a; --text-dim: #8b9ab5;
     --primary: #2563eb; --primary-2: #7c3aed; --primary-soft: rgba(37, 99, 235, 0.09);
     --glow: 0 6px 18px rgba(37, 99, 235, 0.15);
@@ -212,6 +216,11 @@
   [data-theme="light"] .status::before { box-shadow: none; }
   [data-theme="light"] .nav-main { color: #16233a; }
   [data-theme="light"] thead th { background: rgba(245, 248, 252, 0.94); }
+  /* 浅色模式：卡片加阴影增强层次感 */
+  [data-theme="light"] .stat,
+  [data-theme="light"] .controls,
+  [data-theme="light"] .table-wrap,
+  [data-theme="light"] footer .src { box-shadow: 0 4px 16px rgba(30, 50, 90, 0.08); }
   @media (max-width: 700px) { .stats { grid-template-columns: repeat(2, 1fr); } h1 { font-size: 22px; } }
 </style>
 <script>/* 防闪烁：在渲染前尽早读取主题偏好 */
