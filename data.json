@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-19 21:41:32",
+  "updatedAt": "2026-07-20 12:54:01",
   "source": "eastmoney FundMNNBasicInformation + jjgg 公告交叉校验",
   "note": "MAXSG 为可信当前限额；announcement 为公告交叉校验，review=true 表示与 MAXSG 不符需人工核对。",
   "count": 20,
@@ -108,13 +108,13 @@
       "navChangePct": -1.63,
       "navDate": "2026-07-16",
       "announcement": {
-        "date": "2025-10-30",
-        "title": "广发基金管理有限公司关于广发纳斯达克100交易型开放式指数证券投资基金联接基金(QDII)人民币份额调整大额申购(含转换",
-        "artId": "AN202510301771709226",
+        "date": "2026-07-20",
+        "title": "关于广发纳斯达克100交易型开放式指数证券投资基金联接基金(QDII)A类及C类基金份额调整大额申购(含转换转入、定期定",
+        "artId": "AN202607201827126800",
         "limits": [
-          10
+          5
         ],
-        "review": false
+        "review": true
       },
       "group": "纳斯达克100"
     },
