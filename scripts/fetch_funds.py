@@ -4,46 +4,45 @@
 fetch_funds.py —— 每日抓取 QDII 基金申购状态 / 限额 / 净值，写入 data.json
 
 数据源：
-  状态/限额/净值：东方财富移动端 FundMNNBasicInformation（MAXSG 已验证可信，含紧限购）
-  公告交叉校验（路径 B）：东方财富公告列表 jjgg(type=5) + 正文 np-cnotice-stock
+  基金状态/限额/净值：东方财富 FundMNNBasicInformation（MAXSG 已验证可信）
+  基金清单（大幅扩充）：运行时自动发现东方财富全量场外 QDII（rankhandler），失败则用兜底清单
+  公告交叉校验：仅对 CORE 热门基金做（控制耗时）
+运行：python3 scripts/fetch_funds.py [data.json] [--no-ann]   无第三方依赖
 
-运行：python3 scripts/fetch_funds.py [data.json]   无第三方依赖（仅标准库）
-
-【关于"限额"精度的最终结论】
-经公告正文交叉验证：MAXSG 字段是**可信的、按份额代码返回的当前限额**。
-  - 040046：公告正文"不超过 10 元"，MAXSG=10 ✅ 一致
-  - 因此即使 MAXSG 很小（如 10），也是真实限额，直接使用，不再标"见公告"。
-路径 B（公告解析）作为**透明度补充**：
-  - 附上最近一期限购公告的日期 / 标题 / 从正文抠出的金额。
-  - 当公告金额与 MAXSG 不一致时打 review=true，提示人工核对。
-  - 仍属 best-effort（标题措辞多变、多份额基金会有多个数字、需取最新公告）。
-
-字段说明（来源 API -> 本文件字段）：
-  SGZT 申购状态 -> status/statusText
-  MAXSG 单日上限(元) -> limit（limited 时直接用，可信）
-  DWJZ/RZDF/FSRQ -> nav/navChangePct/navDate
-  公告 jjgg+正文 -> announcement{date,title,limits,review}
+【清单扩充策略】
+  - CORE：人工核对的 ~20 只热门基金（分组精确，且做公告交叉校验）。
+  - 其余：运行时调用 rankhandler 拉全量场外 QDII（约 350+ 只），按名称自动分类。
+  - 若发现接口不可用（如 Actions 网络受限），回退到 scripts/fallback_codes.json 兜底清单。
+  - 分组(group)即展示分类：CORE 精确分类优先，否则按基金名称关键词归类。
 """
 
 import json
+import os
 import re
 import sys
 import time
 import datetime
 import urllib.request
 
-# ── 关注清单（代码, 分组）────────────────────────────────
-WATCHLIST = [
-    ("159941", "纳斯达克100"), ("513100", "纳斯达克100"), ("513300", "纳斯达克100"),
-    ("161130", "纳斯达克100"), ("270042", "纳斯达克100"),
-    ("040046", "纳斯达克100"), ("160213", "纳斯达克100"), ("000834", "纳斯达克100"),
-    ("513500", "标普500"), ("050025", "标普500"), ("161125", "标普500"), ("007721", "标普500"),
-    ("513050", "中概互联"), ("513330", "恒生互联"), ("513180", "恒生科技"), ("164906", "中概互联"),
-    ("006327", "中概互联"),
-    ("118001", "亚洲精选"), ("000041", "全球精选"), ("470888", "全球互联"),
-]
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# ── 手动覆盖（最高优先级，看到公告填真实额度，单位元，0=实质暂停）──
+# ── 核心：精确分组 + 公告交叉校验 ──────────────────────
+CORE = {
+    # 纳斯达克
+    "159941": "纳斯达克", "513100": "纳斯达克", "513300": "纳斯达克", "161130": "纳斯达克",
+    "270042": "纳斯达克", "040046": "纳斯达克", "160213": "纳斯达克", "000834": "纳斯达克",
+    # 标普 500
+    "513500": "标普500", "050025": "标普500", "161125": "标普500", "007721": "标普500",
+    # 中概互联
+    "513050": "中概互联", "164906": "中概互联", "006327": "中概互联",
+    # 恒生
+    "513330": "恒生互联", "513180": "恒生科技",
+    # 主动
+    "118001": "主动基金", "000041": "主动基金", "470888": "主动基金",
+}
+ANN_CORE = set(CORE.keys())  # 仅这些做公告交叉校验
+
+# 手动覆盖额度（最高优先级，单位元，0=实质暂停）
 OVERRIDES = {
     # "270042": 1000,
 }
@@ -51,38 +50,43 @@ OVERRIDES = {
 API = "https://fundmobapi.eastmoney.com/FundMNewApi/FundMNNBasicInformation"
 JJGG = "https://api.fund.eastmoney.com/f10/jjgg"
 CONTENT = "https://np-cnotice-stock.eastmoney.com/api/content/ann"
+RANK = "http://fund.eastmoney.com/data/rankhandler.aspx"
+FALLBACK_FILE = os.path.join(SCRIPT_DIR, "fallback_codes.json")
 HDR = {
-    "User-Agent": "Mozilla/5.0 (Linux; Android 10) AppleWebKit/537.36 "
-                  "(KHTML, like Gecko) Chrome/96.0 Mobile Safari/537.36",
+    "User-Agent": "Mozilla/5.0 (Linux; Android 10) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0 Mobile Safari/537.36",
     "Referer": "http://fundf10.eastmoney.com/",
 }
 
-# 限购公告标题：含这些词算限购相关
-ANN_INCLUDE = re.compile(r"(限制|暂停|调整|恢复).{0,6}(大额)?(申购|定期定额|转换转入)|大额申购|限额")
-# 排除纯运营类公告
-ANN_EXCLUDE = re.compile(r"节假日|休市|境外.{0,4}(休市|节假日)|清盘|分红|费率|销售(机构|渠道)|代销|"
-                         r"基金经理|变更|估值|托管|成立|生效|招募|分红|转托管|终止")
-# 从正文抠金额：不超过/上限/限额 ... X 元
-AMOUNT_RE = re.compile(
-    r"(?:不超过|上限[为是]?|上限金额[为是]?|金额[为是]?|限额[为调是]?|限制金额[为是]?|"
-    r"单日[^。；]{0,10}为|将[^。；]{0,10}为)\s*0*(\d{1,3}(?:,\d{3})*(?:\.\d+)?)\s*元")
+# ── 名称分类规则（按优先级；不使用裸"美"，避免误匹配"美元"份额）──
+CAT_RULES = [
+    (r"纳斯达克|纳指", "纳斯达克"), (r"标普", "标普500"), (r"道琼斯", "道琼斯"),
+    (r"日经", "日经225"), (r"德国|DAX", "德国"), (r"法国|CAC", "法国"),
+    (r"越南", "越南"), (r"印度", "印度"), (r"日本", "日本"),
+    (r"恒生科技", "恒生科技"), (r"恒生互联网|恒生互联", "恒生互联"),
+    (r"恒生医疗|港股医疗", "恒生医疗"), (r"恒生消费", "恒生消费"),
+    (r"恒生国企|H股", "恒生国企"), (r"恒生", "恒生"),
+    (r"中概|中国互联|海外中国互联网|海外互联", "中概互联"),
+    (r"原油|石油|油气", "油气"), (r"黄金|贵金属", "黄金"),
+    (r"REIT|不动产|地产|房地产", "REITs"), (r"半导体|芯片", "半导体"),
+    (r"医药|医疗|生物|健康", "医药"), (r"科技", "全球科技"), (r"互联网", "互联网"),
+    (r"消费", "消费"), (r"新能源|光伏|电池|碳中和", "新能源"),
+    (r"美股|美国", "美国"), (r"欧洲", "欧洲"), (r"亚太|亚洲", "亚太"),
+    (r"新兴", "新兴市场"), (r"全球|世界", "全球"), (r"债|票息", "债券"),
+]
 
 
 def beijing_now():
-    return (datetime.datetime.now(datetime.timezone.utc)
-            + datetime.timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S")
-
-
-def http_json(url):
-    req = urllib.request.Request(url, headers=HDR)
-    with urllib.request.urlopen(req, timeout=20) as r:
-        return json.loads(r.read().decode("utf-8", "ignore"))
+    return (datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S")
 
 
 def http_text(url):
     req = urllib.request.Request(url, headers=HDR)
     with urllib.request.urlopen(req, timeout=20) as r:
         return r.read().decode("utf-8", "ignore")
+
+
+def http_json(url):
+    return json.loads(http_text(url))
 
 
 def to_float(v, d=None):
@@ -99,10 +103,19 @@ def to_int(v, d=None):
 
 def classify(name):
     if "ETF" in name and "联接" not in name:
-        return "etf"
-    if "LOF" in name:
-        return "lof"
-    return "qdii"
+        t = "etf"
+    elif "LOF" in name:
+        t = "lof"
+    else:
+        t = "qdii"
+    return t
+
+
+def categorize(name):
+    for pat, cat in CAT_RULES:
+        if re.search(pat, name):
+            return cat
+    return "其他"
 
 
 def parse_status(sgzt):
@@ -131,7 +144,6 @@ def fmt_amount(n):
 
 
 def build_limit(status, maxsg_raw, code):
-    """OVERRIDES > MAXSG（已验证可信）。返回 (limit, limitText, reliable, source)"""
     if code in OVERRIDES:
         n = OVERRIDES[code]
         return n, fmt_amount(n), True, "manual"
@@ -141,16 +153,64 @@ def build_limit(status, maxsg_raw, code):
         return None, "场内", False, "api"
     if status == "normal":
         return None, "不限", False, "api"
-    # limited：直接信任 MAXSG（按份额代码返回的当前值）
     maxsg = to_int(maxsg_raw, None)
     if maxsg is not None:
         return maxsg, fmt_amount(maxsg), True, "api"
     return None, "限大额", False, "api"
 
 
-# ───────────── 路径 B：公告解析（交叉校验）─────────────
+# ── 清单：自动发现 + 兜底 ──
+def discover_universe():
+    """返回 [code, ...]（成功且数量足够）或 None"""
+    try:
+        url = ("%s?op=ph&dt=kf&ft=qdii&rs=&gs=0&sc=zzf&st=desc&pi=1&pn=800"
+               "&sd=2026-05-20&ed=2026-07-20&v=%d" % (RANK, int(time.time())))
+        raw = http_text(url)
+        pairs = re.findall(r'"(\d{6}),[^,"]+,', raw)
+        return pairs if len(pairs) > 50 else None
+    except Exception as e:
+        print("[discover] 失败，将用兜底清单：%s" % e)
+        return None
+
+
+def load_fallback():
+    try:
+        with open(FALLBACK_FILE, encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return []
+
+
+def build_codes():
+    codes = list(CORE.keys())
+    seen = set(codes)
+    univ = discover_universe()
+    if univ:
+        src = "自动发现(rankhandler) %d 只 + CORE" % len(univ)
+        for c in univ:
+            if c not in seen:
+                codes.append(c)
+                seen.add(c)
+    else:
+        fb = load_fallback()
+        src = "兜底清单 fallback_codes.json %d 只 + CORE" % len(fb)
+        for c in fb:
+            if c not in seen:
+                codes.append(c)
+                seen.add(c)
+    return codes, src
+
+
+# ── 公告交叉校验（仅 CORE）──
+ANN_INCLUDE = re.compile(r"(限制|暂停|调整|恢复).{0,6}(大额)?(申购|定期定额|转换转入)|大额申购|限额")
+ANN_EXCLUDE = re.compile(r"节假日|休市|境外.{0,4}(休市|节假日)|清盘|分红|费率|销售(机构|渠道)|代销|"
+                         r"基金经理|变更|估值|托管|成立|生效|招募|转托管|终止")
+AMOUNT_RE = re.compile(
+    r"(?:不超过|上限[为是]?|上限金额[为是]?|金额[为是]?|限额[为调是]?|限制金额[为是]?|"
+    r"单日[^。；]{0,10}为|将[^。；]{0,10}为)\s*0*(\d{1,3}(?:,\d{3})*(?:\.\d+)?)\s*元")
+
+
 def latest_limit_announcement(code):
-    """返回最近一期限购公告记录，或 None。"""
     url = ("%s?callback=j&fundCode=%s&pageIndex=1&pageSize=120&type=5&_=%d000"
            % (JJGG, code, int(time.time())))
     try:
@@ -159,33 +219,27 @@ def latest_limit_announcement(code):
         data = json.loads(m.group(0)).get("Data") or []
     except Exception:
         return None
-    cands = []
-    for r in data:
-        title = r.get("TITLE", "") or ""
-        if ANN_INCLUDE.search(title) and not ANN_EXCLUDE.search(title):
-            cands.append(r)
+    cands = [r for r in data if ANN_INCLUDE.search(r.get("TITLE", "") or "")
+             and not ANN_EXCLUDE.search(r.get("TITLE", "") or "")]
     if not cands:
         return None
-    # 取公告日期最新
     cands.sort(key=lambda r: r.get("PUBLISHDATE", ""), reverse=True)
     return cands[0]
 
 
 def extract_amounts(text):
-    nums = []
+    out = []
     for m in AMOUNT_RE.finditer(text):
-        raw = m.group(1).replace(",", "")
         try:
-            n = int(float(raw))
+            n = int(float(m.group(1).replace(",", "")))
         except ValueError:
             continue
-        if 1 <= n < 100_000_000:  # 过滤掉费率/份额噪音
-            nums.append(n)
-    return sorted(set(nums))
+        if 1 <= n < 100_000_000:
+            out.append(n)
+    return sorted(set(out))
 
 
 def announcement_supplement(code, current_limit):
-    """抓最近限购公告，抠金额，与 MAXSG 比对。返回 dict 或 None。"""
     ann = latest_limit_announcement(code)
     if not ann:
         return None
@@ -198,17 +252,16 @@ def announcement_supplement(code, current_limit):
         except Exception:
             body = ""
     limits = extract_amounts(body) if body else []
-    review = bool(limits and current_limit is not None and current_limit not in limits)
     return {
         "date": ann.get("PUBLISHDATEDesc") or "",
         "title": (ann.get("TITLE") or "")[:60],
         "artId": art_id,
-        "limits": limits,            # 正文抠出的全部金额（多份额会有多个）
-        "review": review,            # 与 MAXSG 不符时提示人工核对
+        "limits": limits,
+        "review": bool(limits and current_limit is not None and current_limit not in limits),
     }
 
 
-def fetch_one(code, do_announcement):
+def fetch_one(code, do_ann):
     url = ("%s?FCODE=%s&deviceid=1&plat=Android&appType=ttjj&product=EFund&version=6.2.6"
            % (API, code))
     datas = http_json(url).get("Datas") or {}
@@ -223,6 +276,7 @@ def fetch_one(code, do_announcement):
         "code": code,
         "name": name,
         "type": classify(name),
+        "group": CORE.get(code) or categorize(name),   # 分组即展示分类
         "index": datas.get("INDEXNAME") or "",
         "company": datas.get("JJGS") or "",
         "status": status,
@@ -236,9 +290,7 @@ def fetch_one(code, do_announcement):
         "navChangePct": to_float(datas.get("RZDF")),
         "navDate": datas.get("FSRQ") or "",
     }
-
-    # 路径 B：仅对 limited/suspended 抓公告做交叉校验
-    if do_announcement and status in ("limited", "suspended"):
+    if do_ann and code in ANN_CORE and status in ("limited", "suspended"):
         try:
             ann = announcement_supplement(code, limit)
             if ann:
@@ -249,30 +301,30 @@ def fetch_one(code, do_announcement):
 
 
 def main():
-    out_path = sys.argv[1] if len(sys.argv) > 1 else "data.json"
+    out_path = "data.json"
+    args = [a for a in sys.argv[1:] if not a.startswith("-")]
+    if args:
+        out_path = args[0]
     do_ann = "--no-ann" not in sys.argv
+
+    codes, src = build_codes()
+    print("清单来源：%s → 共 %d 只基金" % (src, len(codes)))
     funds, errors = [], []
-    for code, group in WATCHLIST:
+    for i, code in enumerate(codes, 1):
         try:
             item = fetch_one(code, do_ann)
-            item["group"] = group
             funds.append(item)
-            ann = item.get("announcement")
-            annstr = ""
-            if ann:
-                flag = " ⚠️与MAXSG不符" if ann.get("review") else ""
-                annstr = " | 公告%s 抠出%s%s" % (ann["date"], ann["limits"], flag)
-            print("[OK] %s %-24s %-10s %s%s"
-                  % (code, item["name"][:24], item["status"], item["limitText"], annstr))
+            if i <= 5 or i % 50 == 0:
+                print("[%d/%d] %s %-22s %s %s" % (i, len(codes), code, item["name"][:22], item["status"], item["limitText"]))
         except Exception as e:
             errors.append((code, str(e)))
-            print("[FAIL] %s %s" % (code, e))
-        time.sleep(0.3)
+        time.sleep(0.18)
 
     result = {
         "updatedAt": beijing_now(),
-        "source": "eastmoney FundMNNBasicInformation + jjgg 公告交叉校验",
-        "note": "MAXSG 为可信当前限额；announcement 为公告交叉校验，review=true 表示与 MAXSG 不符需人工核对。",
+        "source": "eastmoney FundMNNBasicInformation + rankhandler 发现",
+        "universeSource": src,
+        "note": "MAXSG 为可信当前限额；CORE 热门基金附公告交叉校验；分组按名称自动分类。",
         "count": len(funds),
         "failed": len(errors),
         "funds": funds,
@@ -280,8 +332,8 @@ def main():
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(result, f, ensure_ascii=False, indent=2)
     print("\n写入 %s：成功 %d，失败 %d" % (out_path, len(funds), len(errors)))
-    if errors:
-        print("失败：", errors)
+    if errors[:5]:
+        print("失败示例：", errors[:5])
 
 
 if __name__ == "__main__":
