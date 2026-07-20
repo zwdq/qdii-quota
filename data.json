@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-20 10:53:51",
+  "updatedAt": "2026-07-20 13:11:06",
   "source": "eastmoney FundMNNBasicInformation + rankhandler 发现",
   "universeSource": "自动发现(rankhandler) 358 只 + CORE",
   "note": "MAXSG 为可信当前限额；CORE 热门基金附公告交叉校验；分组按名称自动分类。",
@@ -113,10 +113,8 @@
         "date": "2026-07-20",
         "title": "关于广发纳斯达克100交易型开放式指数证券投资基金联接基金(QDII)A类及C类基金份额调整大额申购(含转换转入、定期定",
         "artId": "AN202607201827126800",
-        "limits": [
-          5
-        ],
-        "review": true
+        "limits": [],
+        "review": false
       }
     },
     {
