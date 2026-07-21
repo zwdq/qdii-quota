@@ -28,11 +28,29 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # ── 核心：精确分组 + 公告交叉校验 ──────────────────────
 CORE = {
-    # 纳斯达克
+    # 纳斯达克100（场内ETF + 场外联接/指数，含各份额）
     "159941": "纳斯达克", "513100": "纳斯达克", "513300": "纳斯达克", "161130": "纳斯达克",
     "270042": "纳斯达克", "040046": "纳斯达克", "160213": "纳斯达克", "000834": "纳斯达克",
-    # 标普 500
+    "159513": "纳斯达克", "159659": "纳斯达克", "159632": "纳斯达克", "513870": "纳斯达克",
+    "159660": "纳斯达克", "159696": "纳斯达克", "513110": "纳斯达克", "513390": "纳斯达克",
+    "008971": "纳斯达克", "012870": "纳斯达克", "012871": "纳斯达克", "006480": "纳斯达克",
+    "000055": "纳斯达克", "016055": "纳斯达克", "016057": "纳斯达克", "015299": "纳斯达克",
+    "015300": "纳斯达克", "015518": "纳斯达克", "018966": "纳斯达克", "018967": "纳斯达克",
+    "018968": "纳斯达克", "019524": "纳斯达克", "019525": "纳斯达克", "019547": "纳斯达克",
+    "019548": "纳斯达克", "019441": "纳斯达克", "019442": "纳斯达克", "019736": "纳斯达克",
+    "019737": "纳斯达克", "022525": "纳斯达克", "022664": "纳斯达克", "021000": "纳斯达克",
+    "021773": "纳斯达克", "021838": "纳斯达克", "024237": "纳斯达克", "016534": "纳斯达克",
+    "016535": "纳斯达克", "012751": "纳斯达克", "012753": "纳斯达克", "023422": "纳斯达克",
+    "019173": "纳斯达克", "019174": "纳斯达克", "019175": "纳斯达克", "017436": "纳斯达克",
+    "017437": "纳斯达克",
+    # 标普500（场内ETF + 场外联接/指数，含各份额）
     "513500": "标普500", "050025": "标普500", "161125": "标普500", "007721": "标普500",
+    "159612": "标普500", "159655": "标普500", "513650": "标普500", "006075": "标普500",
+    "003718": "标普500", "012860": "标普500", "012861": "标普500", "019305": "标普500",
+    "017028": "标普500", "017030": "标普500", "018064": "标普500", "018065": "标普500",
+    "018066": "标普500", "018738": "标普500", "013425": "标普500", "013499": "标普500",
+    "017642": "标普500", "017643": "标普500", "008401": "标普500", "013404": "标普500",
+    "015545": "标普500", "007722": "标普500", "022523": "标普500",
     # 中概互联
     "513050": "中概互联", "164906": "中概互联", "006327": "中概互联",
     # 恒生
@@ -51,6 +69,7 @@ API = "https://fundmobapi.eastmoney.com/FundMNewApi/FundMNNBasicInformation"
 JJGG = "https://api.fund.eastmoney.com/f10/jjgg"
 CONTENT = "https://np-cnotice-stock.eastmoney.com/api/content/ann"
 RANK = "http://fund.eastmoney.com/data/rankhandler.aspx"
+SEARCH = "https://fundsuggest.eastmoney.com/FundSearch/api/FundSearchPageAPI.ashx"
 FALLBACK_FILE = os.path.join(SCRIPT_DIR, "fallback_codes.json")
 HDR = {
     "User-Agent": "Mozilla/5.0 (Linux; Android 10) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0 Mobile Safari/537.36",
@@ -58,8 +77,10 @@ HDR = {
 }
 
 # ── 名称分类规则（按优先级；不使用裸"美"，避免误匹配"美元"份额）──
+# 注意：标普500规则必须排除"标普油气""标普消费""标普生物"等非500指数
 CAT_RULES = [
-    (r"纳斯达克100|纳指", "纳斯达克"), (r"标普", "标普500"), (r"道琼斯", "道琼斯"),
+    (r"纳斯达克100|纳斯达克.*ETF|纳指", "纳斯达克"), (r"标普500", "标普500"),
+    (r"道琼斯", "道琼斯"),
     (r"日经", "日经225"), (r"德国|DAX", "德国"), (r"法国|CAC", "法国"),
     (r"越南", "越南"), (r"印度", "印度"), (r"日本", "日本"),
     (r"恒生科技", "恒生科技"), (r"恒生互联网|恒生互联", "恒生互联"),
@@ -159,7 +180,44 @@ def build_limit(status, maxsg_raw, code):
     return None, "限大额", False, "api"
 
 
-# ── 清单：自动发现 + 兜底 ──
+# ── 清单：自动发现 + 搜索补充 + 兜底 ──
+
+# 搜索关键词 → 分组映射（用于发现 CORE 和 rankhandler 遗漏的基金）
+SEARCH_KEYWORDS = {
+    "标普500": "标普500",
+    "纳斯达克": "纳斯达克",
+}
+
+# 搜索结果过滤：只保留名称真正匹配的基金
+SEARCH_FILTERS = {
+    "标普500": re.compile(r"标普500|标普.*500|S&P.?500", re.I),
+    "纳斯达克": re.compile(r"纳斯达克|纳指|NASDAQ", re.I),
+}
+
+
+def search_funds(keyword, max_pages=8):
+    """通过东方财富基金搜索 API 搜索基金，返回 [(code, name), ...]"""
+    import urllib.parse
+    results = []
+    for page in range(1, max_pages + 1):
+        try:
+            url = ("%s?m=1&key=%s&pageindex=%d&pagesize=30&_=%d"
+                   % (SEARCH, urllib.parse.quote(keyword), page, int(time.time())))
+            raw = http_text(url)
+            m = re.search(r"\{.*\}", raw, re.S)
+            if not m:
+                break
+            datas = json.loads(m.group(0)).get("Datas") or []
+            if not datas:
+                break
+            for d in datas:
+                results.append((d.get("CODE", ""), d.get("NAME", "")))
+        except Exception:
+            break
+        time.sleep(0.15)
+    return results
+
+
 def discover_universe():
     """返回 [code, ...]（成功且数量足够）或 None"""
     try:
@@ -184,20 +242,40 @@ def load_fallback():
 def build_codes():
     codes = list(CORE.keys())
     seen = set(codes)
+    sources = []
+
+    # 1. 搜索 API 补充标普500、纳斯达克等（发现 rankhandler 遗漏的 ETF 联接/指数基金）
+    for keyword, group in SEARCH_KEYWORDS.items():
+        try:
+            results = search_funds(keyword)
+            filt = SEARCH_FILTERS.get(group)
+            added = 0
+            for code, name in results:
+                if code and code not in seen and filt and filt.search(name):
+                    codes.append(code)
+                    seen.add(code)
+                    added += 1
+            sources.append("搜索\"%s\"发现 %d 只（过滤后新增 %d）" % (keyword, len(results), added))
+        except Exception as e:
+            sources.append("搜索\"%s\"失败: %s" % (keyword, e))
+
+    # 2. rankhandler 全量 QDII
     univ = discover_universe()
     if univ:
-        src = "自动发现(rankhandler) %d 只 + CORE" % len(univ)
+        sources.append("自动发现(rankhandler) %d 只" % len(univ))
         for c in univ:
             if c not in seen:
                 codes.append(c)
                 seen.add(c)
     else:
         fb = load_fallback()
-        src = "兜底清单 fallback_codes.json %d 只 + CORE" % len(fb)
+        sources.append("兜底清单 fallback_codes.json %d 只" % len(fb))
         for c in fb:
             if c not in seen:
                 codes.append(c)
                 seen.add(c)
+
+    src = " + ".join(sources)
     return codes, src
 
 
