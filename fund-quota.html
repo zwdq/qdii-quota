@@ -305,7 +305,7 @@ const STATUS_LABEL = {
   traded:    { text: "场内",     cls: "traded" },
 };
 
-const state = { data: null, cats: new Set(["纳斯达克", "标普500"]), query: "", sortKey: "default", sortDir: "asc" };
+const state = { data: null, cats: new Set(["纳斯达克"]), query: "", sortKey: "default", sortDir: "asc" };
 
 // 分类：脚本输出的 group 即展示分类；chip 按数据动态生成、按 PREFERRED 顺序排列
 const PREFERRED = ["纳斯达克","标普500","道琼斯","日经225","日本","德国","法国","欧洲",
@@ -424,10 +424,10 @@ function buildCategories() {
     if (pa !== pb) return pa - pb;
     return a.localeCompare(b, "zh");
   });
-  // 默认分类若不在数据里，退化为前两个
+  // 默认分类若不在数据里，退化为第一个
   const have = c => CAT_ORDER.includes(c);
   const keep = [...state.cats].filter(have);
-  if (keep.length === 0) state.cats = new Set(["纳斯达克", "标普500"].filter(have));
+  if (keep.length === 0) state.cats = new Set([CAT_ORDER[0]].filter(Boolean));
   else state.cats = new Set(keep);
 }
 function renderChips() {
@@ -474,8 +474,7 @@ document.getElementById("filters").addEventListener("click", e => {
   if (cat === "__all") {
     state.cats = new Set(CAT_ORDER);                    // 全选
   } else {
-    if (state.cats.has(cat)) state.cats.delete(cat); else state.cats.add(cat);
-    if (state.cats.size === 0) state.cats = new Set([cat]); // 至少保留一个主题
+    state.cats = new Set([cat]);                         // 单选：只显示该分类
   }
   syncChips(); render();
 });
