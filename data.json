@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-07-21 20:42:24",
+  "updatedAt": "2026-07-22 12:42:34",
   "source": "eastmoney FundMNNBasicInformation + rankhandler 发现",
   "universeSource": "搜索\"标普500\"发现 0 只（过滤后新增 0） + 搜索\"纳斯达克\"发现 50 只（过滤后新增 13） + 自动发现(rankhandler) 358 只",
   "note": "MAXSG 为可信当前限额；CORE 热门基金附公告交叉校验；分组按名称自动分类。",
   "count": 451,
-  "failed": 5,
+  "failed": 0,
   "funds": [
     {
       "code": "159941",
@@ -40,7 +40,14 @@
       "minPurchase": null,
       "nav": 1.9381,
       "navChangePct": 0.05,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2024-11-23",
+        "title": "纳斯达克100交易型开放式指数证券投资基金暂停申购业务的公告",
+        "artId": "AN202411221641031789",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "513300",
@@ -76,7 +83,14 @@
       "minPurchase": 10,
       "nav": 4.3228,
       "navChangePct": 0.05,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-03-31",
+        "title": "关于旗下部分基金2026年4月3日暂停申购、赎回、转换、定期定额投资业务的提示性公告",
+        "artId": "AN202603301820859738",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "270042",
@@ -94,7 +108,16 @@
       "minPurchase": 5,
       "nav": 7.9568,
       "navChangePct": 0.05,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-07-20",
+        "title": "关于广发纳斯达克100交易型开放式指数证券投资基金联接基金(QDII)A类及C类基金份额调整大额申购(含转换转入、定期定",
+        "artId": "AN202607201827126800",
+        "limits": [
+          5
+        ],
+        "review": false
+      }
     },
     {
       "code": "040046",
@@ -112,7 +135,17 @@
       "minPurchase": 10,
       "nav": 8.0048,
       "navChangePct": 0.04,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-07-21",
+        "title": "关于华安纳斯达克100交易型开放式指数证券投资基金联接基金(QDII)暂停大额申购、大额定期定额投资的公告",
+        "artId": "AN202607211827178744",
+        "limits": [
+          10,
+          100
+        ],
+        "review": false
+      }
     },
     {
       "code": "160213",
@@ -130,7 +163,14 @@
       "minPurchase": 10,
       "nav": 4.355,
       "navChangePct": 0.09,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-05-29",
+        "title": "国泰纳斯达克100指数证券投资基金暂停申购、定期定额投资业务的公告",
+        "artId": "AN202605291823008560",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "000834",
@@ -148,7 +188,17 @@
       "minPurchase": 10,
       "nav": 6.1427,
       "navChangePct": 0.04,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-06-03",
+        "title": "关于大成纳斯达克100交易型开放式指数证券投资基金联接基金(QDII)调整大额申购(含定期定额申购)的公告",
+        "artId": "AN202606031823188725",
+        "limits": [
+          10,
+          100
+        ],
+        "review": false
+      }
     },
     {
       "code": "159513",
@@ -310,7 +360,17 @@
       "minPurchase": 10,
       "nav": 6.0871,
       "navChangePct": 0.04,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-06-03",
+        "title": "关于大成纳斯达克100交易型开放式指数证券投资基金联接基金(QDII)调整大额申购(含定期定额申购)的公告",
+        "artId": "AN202606031823188725",
+        "limits": [
+          10,
+          100
+        ],
+        "review": false
+      }
     },
     {
       "code": "012870",
@@ -328,7 +388,14 @@
       "minPurchase": 10,
       "nav": 4.2482,
       "navChangePct": 0.05,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-03-31",
+        "title": "关于旗下部分基金2026年4月3日暂停申购、赎回、转换、定期定额投资业务的提示性公告",
+        "artId": "AN202603301820859738",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "012871",
@@ -346,7 +413,14 @@
       "minPurchase": 10,
       "nav": 0.6252,
       "navChangePct": 0.03,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-03-31",
+        "title": "关于旗下部分基金2026年4月3日暂停申购、赎回、转换、定期定额投资业务的提示性公告",
+        "artId": "AN202603301820859738",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "006480",
@@ -364,7 +438,16 @@
       "minPurchase": 1,
       "nav": 1.1507,
       "navChangePct": 0.02,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-07-20",
+        "title": "关于广发纳斯达克100交易型开放式指数证券投资基金联接基金(QDII)A类及C类基金份额调整大额申购(含转换转入、定期定",
+        "artId": "AN202607201827126800",
+        "limits": [
+          5
+        ],
+        "review": false
+      }
     },
     {
       "code": "000055",
@@ -382,7 +465,16 @@
       "minPurchase": 1,
       "nav": 1.171,
       "navChangePct": 0.03,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-07-20",
+        "title": "关于广发纳斯达克100交易型开放式指数证券投资基金联接基金(QDII)A类及C类基金份额调整大额申购(含转换转入、定期定",
+        "artId": "AN202607201827126800",
+        "limits": [
+          5
+        ],
+        "review": false
+      }
     },
     {
       "code": "016055",
@@ -400,7 +492,16 @@
       "minPurchase": 10,
       "nav": 2.0607,
       "navChangePct": 0.07,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2025-11-18",
+        "title": "博时纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)调整大额申购、转换转入、定期定额投资业务的公告",
+        "artId": "AN202511181783502485",
+        "limits": [
+          100
+        ],
+        "review": false
+      }
     },
     {
       "code": "016057",
@@ -418,7 +519,16 @@
       "minPurchase": 10,
       "nav": 2.0345,
       "navChangePct": 0.06,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2025-11-18",
+        "title": "博时纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)调整大额申购、转换转入、定期定额投资业务的公告",
+        "artId": "AN202511181783502485",
+        "limits": [
+          100
+        ],
+        "review": false
+      }
     },
     {
       "code": "015299",
@@ -436,7 +546,14 @@
       "minPurchase": 10,
       "nav": 1.9848,
       "navChangePct": -0.1,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2025-11-22",
+        "title": "华夏纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购及定期定额申购业务的公告",
+        "artId": "AN202511221785999927",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "015300",
@@ -454,7 +571,14 @@
       "minPurchase": 10,
       "nav": 1.9596,
       "navChangePct": -0.1,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2025-11-22",
+        "title": "华夏纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购及定期定额申购业务的公告",
+        "artId": "AN202511221785999927",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "015518",
@@ -472,7 +596,14 @@
       "minPurchase": 1,
       "nav": 0.2933,
       "navChangePct": 0.03,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2025-11-22",
+        "title": "华夏纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购及定期定额申购业务的公告",
+        "artId": "AN202511221785999927",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "018966",
@@ -490,7 +621,14 @@
       "minPurchase": 10,
       "nav": 1.6011,
       "navChangePct": 0.05,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-07-17",
+        "title": "关于汇添富纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)调整大额申购、定期定额投资业务限制金额的公",
+        "artId": "AN202607171827041199",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "018967",
@@ -508,7 +646,14 @@
       "minPurchase": 10,
       "nav": 1.5825,
       "navChangePct": 0.04,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-07-17",
+        "title": "关于汇添富纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)调整大额申购、定期定额投资业务限制金额的公",
+        "artId": "AN202607171827041199",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "018968",
@@ -526,7 +671,14 @@
       "minPurchase": 10,
       "nav": 1.6922,
       "navChangePct": 0.03,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-07-17",
+        "title": "关于汇添富纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)调整大额申购、定期定额投资业务限制金额的公",
+        "artId": "AN202607171827041199",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "019524",
@@ -544,7 +696,14 @@
       "minPurchase": 10,
       "nav": 1.6062,
       "navChangePct": 0.04,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-04-23",
+        "title": "华泰柏瑞纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)调整大额申购(含定期定额投资)业务的公告",
+        "artId": "AN202604231821470346",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "019525",
@@ -562,7 +721,14 @@
       "minPurchase": 10,
       "nav": 1.5931,
       "navChangePct": 0.04,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-04-23",
+        "title": "华泰柏瑞纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)调整大额申购(含定期定额投资)业务的公告",
+        "artId": "AN202604231821470346",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "019547",
@@ -580,7 +746,14 @@
       "minPurchase": 10,
       "nav": 1.5309,
       "navChangePct": 0.05,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-06-09",
+        "title": "关于调整招商纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)大额申购(含定期定额投资)业务的公告",
+        "artId": "AN202606091823377663",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "019548",
@@ -598,7 +771,14 @@
       "minPurchase": 10,
       "nav": 1.515,
       "navChangePct": 0.05,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-06-09",
+        "title": "关于调整招商纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)大额申购(含定期定额投资)业务的公告",
+        "artId": "AN202606091823377663",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "019441",
@@ -616,7 +796,14 @@
       "minPurchase": 10,
       "nav": 1.6375,
       "navChangePct": 0.06,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-07-09",
+        "title": "关于万家纳斯达克100指数型发起式证券投资基金(QDII)调整大额申购(含定期定额投资)业务金额限制并调整总规模上限的公",
+        "artId": "AN202607091826830545",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "019442",
@@ -634,7 +821,14 @@
       "minPurchase": 10,
       "nav": 1.6272,
       "navChangePct": 0.06,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-07-09",
+        "title": "关于万家纳斯达克100指数型发起式证券投资基金(QDII)调整大额申购(含定期定额投资)业务金额限制并调整总规模上限的公",
+        "artId": "AN202607091826830545",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "019736",
@@ -652,7 +846,16 @@
       "minPurchase": 10,
       "nav": 1.4507,
       "navChangePct": 0.06,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-06-10",
+        "title": "宝盈纳斯达克100指数型发起式证券投资基金(QDII)调整大额申购、定期定额投资业务限制金额的公告",
+        "artId": "AN202606101823409504",
+        "limits": [
+          10
+        ],
+        "review": false
+      }
     },
     {
       "code": "019737",
@@ -670,7 +873,16 @@
       "minPurchase": 10,
       "nav": 1.4411,
       "navChangePct": 0.06,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-06-10",
+        "title": "宝盈纳斯达克100指数型发起式证券投资基金(QDII)调整大额申购、定期定额投资业务限制金额的公告",
+        "artId": "AN202606101823409504",
+        "limits": [
+          10
+        ],
+        "review": false
+      }
     },
     {
       "code": "022525",
@@ -688,7 +900,14 @@
       "minPurchase": 0,
       "nav": 1.9614,
       "navChangePct": 0.05,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-05-29",
+        "title": "天弘基金管理有限公司关于天弘纳斯达克100指数型发起式证券投资基金(QDII)暂停申购及定期定额投资业务的公告",
+        "artId": "AN202605291822989315",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "022664",
@@ -706,7 +925,14 @@
       "minPurchase": 10,
       "nav": 1.6043,
       "navChangePct": 0.04,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-04-23",
+        "title": "华泰柏瑞纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)调整大额申购(含定期定额投资)业务的公告",
+        "artId": "AN202604231821470346",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "021000",
@@ -724,7 +950,14 @@
       "minPurchase": 10,
       "nav": 2.2279,
       "navChangePct": 0.05,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2025-01-07",
+        "title": "南方基金管理股份有限公司关于旗下部分基金2025年1月9日暂停申购赎回等业务的公告",
+        "artId": "AN202501061641821184",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "021773",
@@ -742,7 +975,14 @@
       "minPurchase": 10,
       "nav": 1.598,
       "navChangePct": 0.05,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-07-17",
+        "title": "关于汇添富纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)调整大额申购、定期定额投资业务限制金额的公",
+        "artId": "AN202607171827041199",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "021838",
@@ -760,7 +1000,14 @@
       "minPurchase": 1,
       "nav": 2.0937,
       "navChangePct": 0.05,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-02-03",
+        "title": "嘉实纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购(含定期定额投资)业务的公告",
+        "artId": "AN202602031819507007",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "024237",
@@ -778,7 +1025,14 @@
       "minPurchase": 1,
       "nav": 2.0566,
       "navChangePct": 0.07,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2025-11-21",
+        "title": "博时纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)I类份额暂停申购、转换转入、定期定额投资业务的公",
+        "artId": "AN202511211785379194",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "016534",
@@ -796,7 +1050,14 @@
       "minPurchase": 10,
       "nav": 0.3109,
       "navChangePct": 0.03,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-02-03",
+        "title": "嘉实纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购(含定期定额投资)业务的公告",
+        "artId": "AN202602031819507007",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "016535",
@@ -814,7 +1075,14 @@
       "minPurchase": 10,
       "nav": 0.3074,
       "navChangePct": 0.03,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-02-03",
+        "title": "嘉实纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购(含定期定额投资)业务的公告",
+        "artId": "AN202602031819507007",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "012751",
@@ -832,7 +1100,14 @@
       "minPurchase": 100,
       "nav": 0.495,
       "navChangePct": 0.0,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-07-09",
+        "title": "建信纳斯达克100指数型证券投资基金(QDII)在直销渠道暂停大额申购、定期定额投资公告",
+        "artId": "AN202607091826839817",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "012753",
@@ -850,7 +1125,14 @@
       "minPurchase": 100,
       "nav": 0.4791,
       "navChangePct": 0.0,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-07-09",
+        "title": "建信纳斯达克100指数型证券投资基金(QDII)在直销渠道暂停大额申购、定期定额投资公告",
+        "artId": "AN202607091826839817",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "023422",
@@ -868,7 +1150,14 @@
       "minPurchase": 10,
       "nav": 3.271,
       "navChangePct": 0.02,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-07-09",
+        "title": "建信纳斯达克100指数型证券投资基金(QDII)在直销渠道暂停大额申购、定期定额投资公告",
+        "artId": "AN202607091826839817",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "019173",
@@ -886,7 +1175,16 @@
       "minPurchase": 10,
       "nav": 1.6895,
       "navChangePct": 0.05,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-07-10",
+        "title": "摩根纳斯达克100指数型发起式证券投资基金(QDII)调整直销渠道大额申购、定期定额投资及转换转入业务限制金额的公告",
+        "artId": "AN202607091826843545",
+        "limits": [
+          300
+        ],
+        "review": true
+      }
     },
     {
       "code": "019174",
@@ -904,7 +1202,16 @@
       "minPurchase": 1,
       "nav": 1.7928,
       "navChangePct": 0.03,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-07-10",
+        "title": "摩根纳斯达克100指数型发起式证券投资基金(QDII)调整直销渠道大额申购、定期定额投资及转换转入业务限制金额的公告",
+        "artId": "AN202607091826843545",
+        "limits": [
+          300
+        ],
+        "review": false
+      }
     },
     {
       "code": "019175",
@@ -922,7 +1229,16 @@
       "minPurchase": 1,
       "nav": 1.7853,
       "navChangePct": 0.03,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-07-10",
+        "title": "摩根纳斯达克100指数型发起式证券投资基金(QDII)调整直销渠道大额申购、定期定额投资及转换转入业务限制金额的公告",
+        "artId": "AN202607091826843545",
+        "limits": [
+          300
+        ],
+        "review": false
+      }
     },
     {
       "code": "513500",
@@ -958,7 +1274,17 @@
       "minPurchase": 10,
       "nav": 5.44,
       "navChangePct": -0.17,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-06-23",
+        "title": "博时标普500交易型开放式指数证券投资基金联接基金E类份额调整大额申购、转换转入、定期定额投资业务公告",
+        "artId": "AN202606231823757896",
+        "limits": [
+          100,
+          500
+        ],
+        "review": false
+      }
     },
     {
       "code": "161125",
@@ -976,7 +1302,14 @@
       "minPurchase": 10,
       "nav": 3.0679,
       "navChangePct": -0.17,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-03-31",
+        "title": "关于旗下部分基金2026年4月3日暂停申购、赎回、转换、定期定额投资业务的提示性公告",
+        "artId": "AN202603301820859738",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "007721",
@@ -994,7 +1327,14 @@
       "minPurchase": 10,
       "nav": 2.1999,
       "navChangePct": -0.1,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-05-29",
+        "title": "天弘基金管理有限公司关于天弘标普500发起式证券投资基金(QDII-FOF)暂停申购及定期定额投资业务的公告",
+        "artId": "AN202605291822984235",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "159612",
@@ -1012,7 +1352,14 @@
       "minPurchase": null,
       "nav": 1.8774,
       "navChangePct": -0.18,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2025-11-03",
+        "title": "国泰标普500交易型开放式指数证券投资基金(QDII)暂停申购业务的公告",
+        "artId": "AN202511021773804221",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "159655",
@@ -1066,7 +1413,17 @@
       "minPurchase": 10,
       "nav": 5.2694,
       "navChangePct": -0.17,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-06-23",
+        "title": "博时标普500交易型开放式指数证券投资基金联接基金E类份额调整大额申购、转换转入、定期定额投资业务公告",
+        "artId": "AN202606231823757896",
+        "limits": [
+          100,
+          500
+        ],
+        "review": false
+      }
     },
     {
       "code": "003718",
@@ -1084,7 +1441,14 @@
       "minPurchase": 10,
       "nav": 0.4515,
       "navChangePct": -0.2,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-03-31",
+        "title": "关于旗下部分基金2026年4月3日暂停申购、赎回、转换、定期定额投资业务的提示性公告",
+        "artId": "AN202603301820859738",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "012860",
@@ -1102,7 +1466,14 @@
       "minPurchase": 10,
       "nav": 3.0155,
       "navChangePct": -0.17,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-03-31",
+        "title": "关于旗下部分基金2026年4月3日暂停申购、赎回、转换、定期定额投资业务的提示性公告",
+        "artId": "AN202603301820859738",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "012861",
@@ -1120,7 +1491,14 @@
       "minPurchase": 10,
       "nav": 0.4438,
       "navChangePct": -0.2,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-03-31",
+        "title": "关于旗下部分基金2026年4月3日暂停申购、赎回、转换、定期定额投资业务的提示性公告",
+        "artId": "AN202603301820859738",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "019305",
@@ -1138,7 +1516,16 @@
       "minPurchase": 10,
       "nav": 1.6435,
       "navChangePct": -0.16,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-07-10",
+        "title": "摩根标普500指数型发起式证券投资基金(QDII)调整直销渠道大额申购、定期定额投资及转换转入业务限制金额的公告",
+        "artId": "AN202607091826843544",
+        "limits": [
+          300
+        ],
+        "review": true
+      }
     },
     {
       "code": "017028",
@@ -1156,7 +1543,14 @@
       "minPurchase": 10,
       "nav": 1.6777,
       "navChangePct": -0.16,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2025-10-17",
+        "title": "国泰标普500交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购、定期定额投资业务的公告",
+        "artId": "AN202510171763661096",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "017030",
@@ -1174,7 +1568,14 @@
       "minPurchase": 10,
       "nav": 1.6594,
       "navChangePct": -0.16,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2025-10-17",
+        "title": "国泰标普500交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购、定期定额投资业务的公告",
+        "artId": "AN202510171763661096",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "018064",
@@ -1192,7 +1593,14 @@
       "minPurchase": 10,
       "nav": 1.6652,
       "navChangePct": -0.32,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2025-11-22",
+        "title": "华夏标普500交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购及定期定额申购业务的公告",
+        "artId": "AN202511221785999863",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "018065",
@@ -1210,7 +1618,14 @@
       "minPurchase": 10,
       "nav": 1.6493,
       "navChangePct": -0.33,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2025-11-22",
+        "title": "华夏标普500交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购及定期定额申购业务的公告",
+        "artId": "AN202511221785999863",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "018066",
@@ -1228,7 +1643,14 @@
       "minPurchase": 1,
       "nav": 0.2461,
       "navChangePct": -0.16,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2025-11-22",
+        "title": "华夏标普500交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购及定期定额申购业务的公告",
+        "artId": "AN202511221785999863",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "018738",
@@ -1246,7 +1668,16 @@
       "minPurchase": 1,
       "nav": 5.4383,
       "navChangePct": -0.17,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-07-14",
+        "title": "博时标普500交易型开放式指数证券投资基金联接基金E类份额调整大额申购、转换转入、定期定额投资业务公告",
+        "artId": "AN202607141826942637",
+        "limits": [
+          100
+        ],
+        "review": false
+      }
     },
     {
       "code": "013425",
@@ -1264,7 +1695,17 @@
       "minPurchase": 1,
       "nav": 0.8006,
       "navChangePct": -0.19,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-06-23",
+        "title": "博时标普500交易型开放式指数证券投资基金联接基金E类份额调整大额申购、转换转入、定期定额投资业务公告",
+        "artId": "AN202606231823757896",
+        "limits": [
+          100,
+          500
+        ],
+        "review": false
+      }
     },
     {
       "code": "013499",
@@ -1282,7 +1723,17 @@
       "minPurchase": 1,
       "nav": 0.7755,
       "navChangePct": -0.19,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-06-23",
+        "title": "博时标普500交易型开放式指数证券投资基金联接基金E类份额调整大额申购、转换转入、定期定额投资业务公告",
+        "artId": "AN202606231823757896",
+        "limits": [
+          100,
+          500
+        ],
+        "review": false
+      }
     },
     {
       "code": "017642",
@@ -1298,9 +1749,18 @@
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 1,
-      "nav": 0.2445,
-      "navChangePct": -0.97,
-      "navDate": "2026-07-17"
+      "nav": 0.2441,
+      "navChangePct": -0.16,
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-07-10",
+        "title": "摩根标普500指数型发起式证券投资基金(QDII)调整直销渠道大额申购、定期定额投资及转换转入业务限制金额的公告",
+        "artId": "AN202607091826843544",
+        "limits": [
+          300
+        ],
+        "review": false
+      }
     },
     {
       "code": "017643",
@@ -1316,9 +1776,18 @@
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 1,
-      "nav": 0.2445,
-      "navChangePct": -0.97,
-      "navDate": "2026-07-17"
+      "nav": 0.2441,
+      "navChangePct": -0.16,
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-07-10",
+        "title": "摩根标普500指数型发起式证券投资基金(QDII)调整直销渠道大额申购、定期定额投资及转换转入业务限制金额的公告",
+        "artId": "AN202607091826843544",
+        "limits": [
+          300
+        ],
+        "review": false
+      }
     },
     {
       "code": "008401",
@@ -1336,7 +1805,17 @@
       "minPurchase": 10,
       "nav": 2.7582,
       "navChangePct": -0.45,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-06-03",
+        "title": "关于大成标普500等权重指数证券投资基金调整大额申购(含定期定额申购)的公告",
+        "artId": "AN202606031823187833",
+        "limits": [
+          10,
+          100
+        ],
+        "review": false
+      }
     },
     {
       "code": "013404",
@@ -1354,7 +1833,17 @@
       "minPurchase": 1,
       "nav": 0.4081,
       "navChangePct": -0.46,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-06-03",
+        "title": "关于大成标普500等权重指数证券投资基金调整大额申购(含定期定额申购)的公告",
+        "artId": "AN202606031823187833",
+        "limits": [
+          10,
+          100
+        ],
+        "review": false
+      }
     },
     {
       "code": "015545",
@@ -1372,7 +1861,17 @@
       "minPurchase": 1,
       "nav": 0.4059,
       "navChangePct": -0.49,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-06-03",
+        "title": "关于大成标普500等权重指数证券投资基金调整大额申购(含定期定额申购)的公告",
+        "artId": "AN202606031823187833",
+        "limits": [
+          10,
+          100
+        ],
+        "review": false
+      }
     },
     {
       "code": "007722",
@@ -1390,7 +1889,14 @@
       "minPurchase": 10,
       "nav": 2.1598,
       "navChangePct": -0.1,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-05-29",
+        "title": "天弘基金管理有限公司关于天弘标普500发起式证券投资基金(QDII-FOF)暂停申购及定期定额投资业务的公告",
+        "artId": "AN202605291822984235",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "022523",
@@ -1408,7 +1914,14 @@
       "minPurchase": 1,
       "nav": 2.1594,
       "navChangePct": -0.09,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-05-29",
+        "title": "天弘基金管理有限公司关于天弘标普500发起式证券投资基金(QDII-FOF)暂停申购及定期定额投资业务的公告",
+        "artId": "AN202605291822984235",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "513050",
@@ -1516,7 +2029,14 @@
       "minPurchase": 10,
       "nav": 1.624,
       "navChangePct": 0.56,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-07-14",
+        "title": "易方达亚洲精选股票型证券投资基金2026年7月17日暂停申购、赎回、转换及定期定额投资业务的公告",
+        "artId": "AN202607141826938358",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "000041",
@@ -1534,7 +2054,14 @@
       "minPurchase": 10,
       "nav": 1.3524,
       "navChangePct": 0.26,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2025-07-07",
+        "title": "华夏全球精选股票型证券投资基金调整人民币销售申购、定期定额申购业务上限的公告",
+        "artId": "AN202507071704203429",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "470888",
@@ -1552,7 +2079,14 @@
       "minPurchase": 10,
       "nav": 1.216,
       "navChangePct": 3.75,
-      "navDate": "2026-07-20"
+      "navDate": "2026-07-20",
+      "announcement": {
+        "date": "2026-06-26",
+        "title": "关于汇添富香港优势精选混合型证券投资基金恢复申购，并限制大额申购业务的公告",
+        "artId": "AN202606261823873444",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "019118",
@@ -2311,6 +2845,24 @@
       "navDate": "2026-07-21"
     },
     {
+      "code": "009193",
+      "name": "富国红利精选混合(QDII)美元",
+      "type": "qdii",
+      "group": "其他",
+      "index": "--",
+      "company": "富国基金",
+      "status": "normal",
+      "statusText": "开放申购",
+      "limit": null,
+      "limitText": "不限",
+      "limitReliable": false,
+      "limitSource": "api",
+      "minPurchase": null,
+      "nav": 0.268,
+      "navChangePct": 2.37,
+      "navDate": "2026-07-20"
+    },
+    {
       "code": "009108",
       "name": "富国红利精选混合(QDII)人民币",
       "type": "qdii",
@@ -2543,42 +3095,6 @@
       "nav": 1.256,
       "navChangePct": 0.96,
       "navDate": "2026-07-20"
-    },
-    {
-      "code": "378546",
-      "name": "摩根全球天然资源混合(QDII)A",
-      "type": "qdii",
-      "group": "全球",
-      "index": "--",
-      "company": "摩根基金(中国)",
-      "status": "limited",
-      "statusText": "限大额",
-      "limit": 1000,
-      "limitText": "1000 元",
-      "limitReliable": true,
-      "limitSource": "api",
-      "minPurchase": 10,
-      "nav": 1.4034,
-      "navChangePct": 0.2,
-      "navDate": "2026-07-17"
-    },
-    {
-      "code": "019578",
-      "name": "摩根全球天然资源混合(QDII)C",
-      "type": "qdii",
-      "group": "全球",
-      "index": "--",
-      "company": "摩根基金(中国)",
-      "status": "limited",
-      "statusText": "限大额",
-      "limit": 1000,
-      "limitText": "1000 元",
-      "limitReliable": true,
-      "limitSource": "api",
-      "minPurchase": 10,
-      "nav": 1.4129,
-      "navChangePct": 0.2,
-      "navDate": "2026-07-17"
     },
     {
       "code": "009562",
@@ -2851,6 +3367,24 @@
       "navDate": "2026-07-20"
     },
     {
+      "code": "003606",
+      "name": "海富通全球收益债券美元",
+      "type": "qdii",
+      "group": "全球",
+      "index": "--",
+      "company": "海富通基金",
+      "status": "limited",
+      "statusText": "限大额",
+      "limit": null,
+      "limitText": "限大额",
+      "limitReliable": false,
+      "limitSource": "api",
+      "minPurchase": 1000,
+      "nav": 0.1383,
+      "navChangePct": -0.14,
+      "navDate": "2026-07-20"
+    },
+    {
       "code": "002879",
       "name": "华夏大中华信用债美元现钞A",
       "type": "qdii",
@@ -2921,24 +3455,6 @@
       "nav": 1.0289,
       "navChangePct": -0.34,
       "navDate": "2026-07-20"
-    },
-    {
-      "code": "008368",
-      "name": "富国亚洲收益债券(QDII)美元现汇",
-      "type": "qdii",
-      "group": "亚太",
-      "index": "--",
-      "company": "富国基金",
-      "status": "limited",
-      "statusText": "限大额",
-      "limit": null,
-      "limitText": "限大额",
-      "limitReliable": false,
-      "limitSource": "api",
-      "minPurchase": null,
-      "nav": 0.156,
-      "navChangePct": 0.13,
-      "navDate": "2026-07-17"
     },
     {
       "code": "019481",
@@ -3193,22 +3709,22 @@
       "navDate": "2026-07-20"
     },
     {
-      "code": "003606",
-      "name": "海富通全球收益债券美元",
+      "code": "007140",
+      "name": "富国全球债券(QDII)美元现汇",
       "type": "qdii",
       "group": "全球",
       "index": "--",
-      "company": "海富通基金",
-      "status": "limited",
-      "statusText": "限大额",
+      "company": "富国基金",
+      "status": "suspended",
+      "statusText": "暂停申购",
       "limit": null,
-      "limitText": "限大额",
+      "limitText": "—",
       "limitReliable": false,
       "limitSource": "api",
-      "minPurchase": 1000,
-      "nav": 0.1385,
-      "navChangePct": 0.07,
-      "navDate": "2026-07-17"
+      "minPurchase": 200,
+      "nav": 0.1867,
+      "navChangePct": -0.21,
+      "navDate": "2026-07-20"
     },
     {
       "code": "011941",
@@ -3443,24 +3959,6 @@
       "nav": 0.0947,
       "navChangePct": 0.0,
       "navDate": "2026-07-20"
-    },
-    {
-      "code": "007140",
-      "name": "富国全球债券(QDII)美元现汇",
-      "type": "qdii",
-      "group": "全球",
-      "index": "--",
-      "company": "富国基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
-      "limit": null,
-      "limitText": "—",
-      "limitReliable": false,
-      "limitSource": "api",
-      "minPurchase": 200,
-      "nav": 0.1871,
-      "navChangePct": 0.05,
-      "navDate": "2026-07-17"
     },
     {
       "code": "007360",
@@ -3859,6 +4357,24 @@
       "navDate": "2026-07-20"
     },
     {
+      "code": "008368",
+      "name": "富国亚洲收益债券(QDII)美元现汇",
+      "type": "qdii",
+      "group": "亚太",
+      "index": "--",
+      "company": "富国基金",
+      "status": "limited",
+      "statusText": "限大额",
+      "limit": null,
+      "limitText": "限大额",
+      "limitReliable": false,
+      "limitSource": "api",
+      "minPurchase": null,
+      "nav": 0.1558,
+      "navChangePct": -0.13,
+      "navDate": "2026-07-20"
+    },
+    {
       "code": "017971",
       "name": "摩根海外稳健配置混合(QDII-FOF)美元现汇",
       "type": "qdii",
@@ -3874,7 +4390,7 @@
       "minPurchase": 1,
       "nav": 0.1561,
       "navChangePct": 0.0,
-      "navDate": "2026-07-17"
+      "navDate": "2026-07-20"
     },
     {
       "code": "017972",
@@ -3892,7 +4408,7 @@
       "minPurchase": 1,
       "nav": 0.1561,
       "navChangePct": 0.0,
-      "navDate": "2026-07-17"
+      "navDate": "2026-07-20"
     },
     {
       "code": "004422",
@@ -4417,6 +4933,24 @@
       "navDate": "2026-07-20"
     },
     {
+      "code": "378546",
+      "name": "摩根全球天然资源混合(QDII)A",
+      "type": "qdii",
+      "group": "全球",
+      "index": "--",
+      "company": "摩根基金(中国)",
+      "status": "limited",
+      "statusText": "限大额",
+      "limit": 1000,
+      "limitText": "1000 元",
+      "limitReliable": true,
+      "limitSource": "api",
+      "minPurchase": 10,
+      "nav": 1.4052,
+      "navChangePct": 0.13,
+      "navDate": "2026-07-20"
+    },
+    {
       "code": "020571",
       "name": "融通中国概念债券(QDII)C",
       "type": "qdii",
@@ -4432,6 +4966,24 @@
       "minPurchase": 10,
       "nav": 1.1588,
       "navChangePct": -0.19,
+      "navDate": "2026-07-20"
+    },
+    {
+      "code": "019578",
+      "name": "摩根全球天然资源混合(QDII)C",
+      "type": "qdii",
+      "group": "全球",
+      "index": "--",
+      "company": "摩根基金(中国)",
+      "status": "limited",
+      "statusText": "限大额",
+      "limit": 1000,
+      "limitText": "1000 元",
+      "limitReliable": true,
+      "limitSource": "api",
+      "minPurchase": 10,
+      "nav": 1.4147,
+      "navChangePct": 0.13,
       "navDate": "2026-07-20"
     },
     {
@@ -4612,6 +5164,24 @@
       "minPurchase": 10,
       "nav": 1.6231,
       "navChangePct": -0.15,
+      "navDate": "2026-07-20"
+    },
+    {
+      "code": "012061",
+      "name": "富国全球消费精选混合(QDII)美元",
+      "type": "qdii",
+      "group": "消费",
+      "index": "--",
+      "company": "富国基金",
+      "status": "normal",
+      "statusText": "开放申购",
+      "limit": null,
+      "limitText": "不限",
+      "limitReliable": false,
+      "limitSource": "api",
+      "minPurchase": null,
+      "nav": 0.2215,
+      "navChangePct": 1.75,
       "navDate": "2026-07-20"
     },
     {
@@ -4831,24 +5401,6 @@
       "navDate": "2026-07-20"
     },
     {
-      "code": "025853",
-      "name": "富国港股精选混合(QDII)美元现汇",
-      "type": "qdii",
-      "group": "其他",
-      "index": "--",
-      "company": "富国基金",
-      "status": "normal",
-      "statusText": "开放申购",
-      "limit": null,
-      "limitText": "不限",
-      "limitReliable": false,
-      "limitSource": "api",
-      "minPurchase": null,
-      "nav": 0.1319,
-      "navChangePct": 1.85,
-      "navDate": "2026-07-20"
-    },
-    {
       "code": "023591",
       "name": "南方全球精选配置股票(QDII-FOF)C",
       "type": "qdii",
@@ -4939,6 +5491,24 @@
       "navDate": "2026-07-20"
     },
     {
+      "code": "025853",
+      "name": "富国港股精选混合(QDII)美元现汇",
+      "type": "qdii",
+      "group": "其他",
+      "index": "--",
+      "company": "富国基金",
+      "status": "normal",
+      "statusText": "开放申购",
+      "limit": null,
+      "limitText": "不限",
+      "limitReliable": false,
+      "limitSource": "api",
+      "minPurchase": null,
+      "nav": 0.133,
+      "navChangePct": 0.83,
+      "navDate": "2026-07-21"
+    },
+    {
       "code": "006309",
       "name": "汇添富全球消费混合(QDII)人民币C",
       "type": "qdii",
@@ -4973,6 +5543,42 @@
       "nav": 0.9036,
       "navChangePct": 0.84,
       "navDate": "2026-07-21"
+    },
+    {
+      "code": "003631",
+      "name": "摩根全球多元配置(QDII-FOF)美元现汇",
+      "type": "qdii",
+      "group": "全球",
+      "index": "--",
+      "company": "摩根基金(中国)",
+      "status": "limited",
+      "statusText": "限大额",
+      "limit": null,
+      "limitText": "限大额",
+      "limitReliable": false,
+      "limitSource": "api",
+      "minPurchase": 1,
+      "nav": 0.2732,
+      "navChangePct": 0.15,
+      "navDate": "2026-07-20"
+    },
+    {
+      "code": "003630",
+      "name": "摩根全球多元配置(QDII-FOF)美元现钞",
+      "type": "qdii",
+      "group": "全球",
+      "index": "--",
+      "company": "摩根基金(中国)",
+      "status": "limited",
+      "statusText": "限大额",
+      "limit": null,
+      "limitText": "限大额",
+      "limitReliable": false,
+      "limitSource": "api",
+      "minPurchase": 1,
+      "nav": 0.2732,
+      "navChangePct": 0.15,
+      "navDate": "2026-07-20"
     },
     {
       "code": "378006",
@@ -5137,6 +5743,24 @@
       "navDate": "2026-07-20"
     },
     {
+      "code": "010591",
+      "name": "富国中国中小盘混合(QDII)美元",
+      "type": "qdii",
+      "group": "其他",
+      "index": "--",
+      "company": "富国基金",
+      "status": "normal",
+      "statusText": "开放申购",
+      "limit": null,
+      "limitText": "不限",
+      "limitReliable": false,
+      "limitSource": "api",
+      "minPurchase": 1,
+      "nav": 0.4574,
+      "navChangePct": 1.64,
+      "navDate": "2026-07-20"
+    },
+    {
       "code": "025655",
       "name": "富国医药精选混合(QDII)C",
       "type": "qdii",
@@ -5189,42 +5813,6 @@
       "nav": 3.0946,
       "navChangePct": 1.65,
       "navDate": "2026-07-20"
-    },
-    {
-      "code": "003631",
-      "name": "摩根全球多元配置(QDII-FOF)美元现汇",
-      "type": "qdii",
-      "group": "全球",
-      "index": "--",
-      "company": "摩根基金(中国)",
-      "status": "limited",
-      "statusText": "限大额",
-      "limit": null,
-      "limitText": "限大额",
-      "limitReliable": false,
-      "limitSource": "api",
-      "minPurchase": 1,
-      "nav": 0.2728,
-      "navChangePct": -0.91,
-      "navDate": "2026-07-17"
-    },
-    {
-      "code": "003630",
-      "name": "摩根全球多元配置(QDII-FOF)美元现钞",
-      "type": "qdii",
-      "group": "全球",
-      "index": "--",
-      "company": "摩根基金(中国)",
-      "status": "limited",
-      "statusText": "限大额",
-      "limit": null,
-      "limitText": "限大额",
-      "limitReliable": false,
-      "limitSource": "api",
-      "minPurchase": 1,
-      "nav": 0.2728,
-      "navChangePct": -0.91,
-      "navDate": "2026-07-17"
     },
     {
       "code": "377016",
@@ -5315,6 +5903,24 @@
       "nav": 2.1771,
       "navChangePct": 2.51,
       "navDate": "2026-07-21"
+    },
+    {
+      "code": "010645",
+      "name": "富国全球健康生活主题混合(QDII)美元",
+      "type": "qdii",
+      "group": "医药",
+      "index": "--",
+      "company": "富国基金",
+      "status": "normal",
+      "statusText": "开放申购",
+      "limit": null,
+      "limitText": "不限",
+      "limitReliable": false,
+      "limitSource": "api",
+      "minPurchase": null,
+      "nav": 0.1607,
+      "navChangePct": 2.29,
+      "navDate": "2026-07-20"
     },
     {
       "code": "015204",
@@ -5533,6 +6139,24 @@
       "navDate": "2026-07-20"
     },
     {
+      "code": "010583",
+      "name": "富国蓝筹精选股票(QDII)美元",
+      "type": "qdii",
+      "group": "其他",
+      "index": "--",
+      "company": "富国基金",
+      "status": "limited",
+      "statusText": "限大额",
+      "limit": null,
+      "limitText": "限大额",
+      "limitReliable": false,
+      "limitSource": "api",
+      "minPurchase": 1,
+      "nav": 0.4225,
+      "navChangePct": 2.08,
+      "navDate": "2026-07-20"
+    },
+    {
       "code": "007729",
       "name": "招商普盛全球配置(QDII)人民币A",
       "type": "qdii",
@@ -5731,24 +6355,6 @@
       "navDate": "2026-07-20"
     },
     {
-      "code": "009193",
-      "name": "富国红利精选混合(QDII)美元",
-      "type": "qdii",
-      "group": "其他",
-      "index": "--",
-      "company": "富国基金",
-      "status": "normal",
-      "statusText": "开放申购",
-      "limit": null,
-      "limitText": "不限",
-      "limitReliable": false,
-      "limitSource": "api",
-      "minPurchase": null,
-      "nav": 0.2618,
-      "navChangePct": -1.8,
-      "navDate": "2026-07-17"
-    },
-    {
       "code": "019232",
       "name": "广发全球稳健配置混合(QDII)美元A",
       "type": "qdii",
@@ -5818,6 +6424,24 @@
       "minPurchase": 10,
       "nav": 1.1153,
       "navChangePct": 0.25,
+      "navDate": "2026-07-20"
+    },
+    {
+      "code": "080006",
+      "name": "长盛环球行业混合(QDII)",
+      "type": "qdii",
+      "group": "其他",
+      "index": "--",
+      "company": "长盛基金",
+      "status": "limited",
+      "statusText": "限大额",
+      "limit": 2000000,
+      "limitText": "200 万",
+      "limitReliable": true,
+      "limitSource": "api",
+      "minPurchase": 10,
+      "nav": 1.343,
+      "navChangePct": 0.0,
       "navDate": "2026-07-20"
     },
     {
@@ -5891,24 +6515,6 @@
       "nav": 1.5792,
       "navChangePct": 0.67,
       "navDate": "2026-07-20"
-    },
-    {
-      "code": "012061",
-      "name": "富国全球消费精选混合(QDII)美元",
-      "type": "qdii",
-      "group": "消费",
-      "index": "--",
-      "company": "富国基金",
-      "status": "normal",
-      "statusText": "开放申购",
-      "limit": null,
-      "limitText": "不限",
-      "limitReliable": false,
-      "limitSource": "api",
-      "minPurchase": null,
-      "nav": 0.2177,
-      "navChangePct": -2.42,
-      "navDate": "2026-07-17"
     },
     {
       "code": "016201",
@@ -6667,24 +7273,6 @@
       "navDate": "2026-07-20"
     },
     {
-      "code": "080006",
-      "name": "长盛环球行业混合(QDII)",
-      "type": "qdii",
-      "group": "其他",
-      "index": "--",
-      "company": "长盛基金",
-      "status": "limited",
-      "statusText": "限大额",
-      "limit": 2000000,
-      "limitText": "200 万",
-      "limitReliable": true,
-      "limitSource": "api",
-      "minPurchase": 10,
-      "nav": 1.343,
-      "navChangePct": -1.47,
-      "navDate": "2026-07-17"
-    },
-    {
       "code": "262001",
       "name": "景顺长城大中华混合(QDII)A人民币",
       "type": "qdii",
@@ -6755,24 +7343,6 @@
       "nav": 2.7179,
       "navChangePct": 0.61,
       "navDate": "2026-07-20"
-    },
-    {
-      "code": "010591",
-      "name": "富国中国中小盘混合(QDII)美元",
-      "type": "qdii",
-      "group": "其他",
-      "index": "--",
-      "company": "富国基金",
-      "status": "normal",
-      "statusText": "开放申购",
-      "limit": null,
-      "limitText": "不限",
-      "limitReliable": false,
-      "limitSource": "api",
-      "minPurchase": 1,
-      "nav": 0.45,
-      "navChangePct": -3.1,
-      "navDate": "2026-07-17"
     },
     {
       "code": "012584",
@@ -6899,42 +7469,6 @@
       "nav": 0.4293,
       "navChangePct": 1.18,
       "navDate": "2026-07-20"
-    },
-    {
-      "code": "010645",
-      "name": "富国全球健康生活主题混合(QDII)美元",
-      "type": "qdii",
-      "group": "医药",
-      "index": "--",
-      "company": "富国基金",
-      "status": "normal",
-      "statusText": "开放申购",
-      "limit": null,
-      "limitText": "不限",
-      "limitReliable": false,
-      "limitSource": "api",
-      "minPurchase": null,
-      "nav": 0.1571,
-      "navChangePct": -5.08,
-      "navDate": "2026-07-17"
-    },
-    {
-      "code": "010583",
-      "name": "富国蓝筹精选股票(QDII)美元",
-      "type": "qdii",
-      "group": "其他",
-      "index": "--",
-      "company": "富国基金",
-      "status": "limited",
-      "statusText": "限大额",
-      "limit": null,
-      "limitText": "限大额",
-      "limitReliable": false,
-      "limitSource": "api",
-      "minPurchase": 1,
-      "nav": 0.4139,
-      "navChangePct": -3.77,
-      "navDate": "2026-07-17"
     },
     {
       "code": "006374",
