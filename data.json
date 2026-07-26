@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-25 16:31:52",
+  "updatedAt": "2026-07-26 12:52:02",
   "source": "eastmoney FundMNNBasicInformation + rankhandler 发现",
   "universeSource": "搜索\"标普500\"发现 0 只（过滤后新增 0） + 搜索\"纳斯达克\"发现 50 只（过滤后新增 13） + 自动发现(rankhandler) 358 只",
   "note": "MAXSG 为可信当前限额；CORE 热门基金附公告交叉校验；分组按名称自动分类。",
@@ -1728,7 +1728,10 @@
         "date": "2026-06-23",
         "title": "博时标普500交易型开放式指数证券投资基金联接基金E类份额调整大额申购、转换转入、定期定额投资业务公告",
         "artId": "AN202606231823757896",
-        "limits": [],
+        "limits": [
+          100,
+          500
+        ],
         "review": false
       }
     },
