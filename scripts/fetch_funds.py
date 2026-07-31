@@ -16,20 +16,62 @@ fetch_funds.py —— 每日抓取 QDII 基金申购状态 / 限额 / 净值，�
   - 分组(group)即展示分类：CORE 精确分类优先，否则按基金名称关键词归类。
 """
 
+from __future__ import annotations
+
+import argparse
+import datetime
 import json
 import os
 import re
 import sys
 import time
-import datetime
+import urllib.parse
 import urllib.request
+from dataclasses import dataclass, field
 
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# ── 核心：精确分组 + 公告交叉校验 ──────────────────────
-CORE = {
+# ════════════════════════════════════════════════════════════════════════════
+# 常量定义
+# ════════════════════════════════════════════════════════════════════════════
+
+SCRIPT_DIR: str = os.path.dirname(os.path.abspath(__file__))
+
+# ── 接口 URL 统一管理 ──────────────────────────────────────────────────────
+class Endpoints:
+    """东方财富 / 腾讯行情接口 URL 集中管理"""
+
+    # 基金基本信息（状态/限额/净值/费率/规模）
+    FUND_INFO = "https://fundmobapi.eastmoney.com/FundMNewApi/FundMNNBasicInformation"
+    # 基金公告列表
+    ANNOUNCEMENT = "https://api.fund.eastmoney.com/f10/jjgg"
+    # 公告正文
+    ANNOUNCEMENT_CONTENT = "https://np-cnotice-stock.eastmoney.com/api/content/ann"
+    # 全量 QDII 基金排名（自动发现）
+    RANK = "http://fund.eastmoney.com/data/rankhandler.aspx"
+    # 基金搜索
+    SEARCH = "https://fundsuggest.eastmoney.com/FundSearch/api/FundSearchPageAPI.ashx"
+    # 腾讯行情（ETF 溢价率）
+    QT = "https://qt.gtimg.cn/q="
+
+
+# ── HTTP 请求头 ─────────────────────────────────────────────────────────────
+HTTP_HEADERS: dict[str, str] = {
+    "User-Agent": "Mozilla/5.0 (Linux; Android 10) AppleWebKit/537.36 "
+                  "(KHTML, like Gecko) Chrome/96.0 Mobile Safari/537.36",
+    "Referer": "http://fundf10.eastmoney.com/",
+}
+
+# ── 兜底清单文件路径 ────────────────────────────────────────────────────────
+FALLBACK_FILE: str = os.path.join(SCRIPT_DIR, "fallback_codes.json")
+
+# ── CORE 基金：精确分组 + 公告交叉校验 ─────────────────────────────────────
+# 注意：只含跟踪纳斯达克100指数的基金，排除纳斯达克生物科技/科技/精选等
+# 以下不是纳斯达克100，不纳入该分组：
+#   017436/017437 华宝纳斯达克精选（主动选股，非跟踪100指数）
+#   513290/017894/017895/017951/017952 纳斯达克生物科技
+#   019118/017092 纳斯达克科技
+CORE_FUNDS: dict[str, str] = {
     # 纳斯达克100（场内ETF + 场外联接/指数，含各份额）
-    # 注意：只含跟踪纳斯达克100指数的基金，排除纳斯达克生物科技/科技/精选等
     "159941": "纳斯达克100", "513100": "纳斯达克100", "513300": "纳斯达克100", "161130": "纳斯达克100",
     "270042": "纳斯达克100", "040046": "纳斯达克100", "160213": "纳斯达克100", "000834": "纳斯达克100",
     "159513": "纳斯达克100", "159659": "纳斯达克100", "159632": "纳斯达克100", "513870": "纳斯达克100",
@@ -43,10 +85,6 @@ CORE = {
     "021773": "纳斯达克100", "021838": "纳斯达克100", "024237": "纳斯达克100", "016534": "纳斯达克100",
     "016535": "纳斯达克100", "012751": "纳斯达克100", "012753": "纳斯达克100", "023422": "纳斯达克100",
     "019173": "纳斯达克100", "019174": "纳斯达克100", "019175": "纳斯达克100",
-    # 以下不是纳斯达克100，不纳入该分组：
-    # 017436/017437 华宝纳斯达克精选（主动选股，非跟踪100指数）
-    # 513290/017894/017895/017951/017952 纳斯达克生物科技
-    # 019118/017092 纳斯达克科技
     # 标普500（场内ETF + 场外联接/指数，含各份额）
     "513500": "标普500", "050025": "标普500", "161125": "标普500", "007721": "标普500",
     "159612": "标普500", "159655": "标普500", "513650": "标普500", "006075": "标普500",
@@ -62,27 +100,18 @@ CORE = {
     # 主动
     "118001": "主动基金", "000041": "主动基金", "470888": "主动基金",
 }
-ANN_CORE = set(CORE.keys())  # 仅这些做公告交叉校验
+
+# 仅 CORE 基金做公告交叉校验
+ANN_CORE: set[str] = set(CORE_FUNDS.keys())
 
 # 手动覆盖额度（最高优先级，单位元，0=实质暂停）
-OVERRIDES = {
+OVERRIDES: dict[str, int] = {
     # "270042": 1000,
-}
-
-API = "https://fundmobapi.eastmoney.com/FundMNewApi/FundMNNBasicInformation"
-JJGG = "https://api.fund.eastmoney.com/f10/jjgg"
-CONTENT = "https://np-cnotice-stock.eastmoney.com/api/content/ann"
-RANK = "http://fund.eastmoney.com/data/rankhandler.aspx"
-SEARCH = "https://fundsuggest.eastmoney.com/FundSearch/api/FundSearchPageAPI.ashx"
-FALLBACK_FILE = os.path.join(SCRIPT_DIR, "fallback_codes.json")
-HDR = {
-    "User-Agent": "Mozilla/5.0 (Linux; Android 10) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0 Mobile Safari/537.36",
-    "Referer": "http://fundf10.eastmoney.com/",
 }
 
 # ── 名称分类规则（按优先级；不使用裸"美"，避免误匹配"美元"份额）──
 # 注意：纳斯达克100规则排除"纳斯达克生物科技""纳斯达克科技"等非100指数
-CAT_RULES = [
+CAT_RULES: list[tuple[str, str]] = [
     (r"纳斯达克生物科技|纳斯达克科技", "全球科技"),
     (r"纳斯达克100|纳斯达克.*ETF|纳指(?!.*生物)(?!.*科技)", "纳斯达克100"),
     (r"标普500", "标普500"),
@@ -101,51 +130,109 @@ CAT_RULES = [
     (r"新兴", "新兴市场"), (r"全球|世界", "全球"), (r"债|票息", "债券"),
 ]
 
+# 搜索关键词 → 分组映射（用于发现 CORE 和 rankhandler 遗漏的 ETF 联接/指数基金）
+SEARCH_KEYWORDS: dict[str, str] = {
+    "标普500": "标普500",
+    "纳斯达克": "纳斯达克100",
+}
 
-def beijing_now():
-    return (datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S")
+# 搜索结果过滤：只保留名称真正匹配的基金
+SEARCH_FILTERS: dict[str, re.Pattern] = {
+    "标普500": re.compile(r"标普500|标普.*500|S&P.?500", re.I),
+    "纳斯达克100": re.compile(r"纳斯达克100|纳斯达克.*ETF|纳指(?!.*生物)(?!.*科技)", re.I),
+}
+
+# ── 公告交叉校验正则 ────────────────────────────────────────────────────────
+ANN_INCLUDE: re.Pattern = re.compile(
+    r"(限制|暂停|调整|恢复).{0,6}(大额)?(申购|定期定额|转换转入)|大额申购|限额"
+)
+ANN_EXCLUDE: re.Pattern = re.compile(
+    r"节假日|休市|境外.{0,4}(休市|节假日)|清盘|分红|费率|销售(机构|渠道)|代销|"
+    r"基金经理|变更|估值|托管|成立|生效|招募|转托管|终止"
+)
+AMOUNT_RE: re.Pattern = re.compile(
+    r"(?:不超过|上限[为是]?|上限金额[为是]?|金额[为是]?|限额[为调是]?|限制金额[为是]?|"
+    r"单日[^。；]{0,10}为|将[^。；]{0,10}为)\s*0*(\d{1,3}(?:,\d{3})*(?:\.\d+)?)\s*元"
+)
+
+# ── 网络重试配置 ────────────────────────────────────────────────────────────
+HTTP_MAX_RETRIES: int = 3
+HTTP_RETRY_DELAY: float = 1.0
 
 
-def http_text(url):
-    req = urllib.request.Request(url, headers=HDR)
-    with urllib.request.urlopen(req, timeout=20) as r:
-        return r.read().decode("utf-8", "ignore")
+# ════════════════════════════════════════════════════════════════════════════
+# 工具函数
+# ════════════════════════════════════════════════════════════════════════════
+
+def beijing_now() -> str:
+    """当前北京时间（UTC+8）"""
+    return (datetime.datetime.now(datetime.timezone.utc)
+            + datetime.timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S")
 
 
-def http_json(url):
-    return json.loads(http_text(url))
-
-
-def to_float(v, d=None):
+def to_float(v: object, d: float | None = None) -> float | None:
+    """安全转 float，失败返回默认值"""
     try:
-        return float(v)
+        return float(v)  # type: ignore[arg-type]
     except (TypeError, ValueError):
         return d
 
 
-def to_int(v, d=None):
+def to_int(v: object, d: int | None = None) -> int | None:
+    """安全转 int，失败返回默认值"""
     f = to_float(v, None)
     return int(f) if f is not None else d
 
 
-def classify(name):
+def parse_fee(s: str | None) -> float | None:
+    """'1.10%' → 1.10, '--' → None"""
+    if not s or s == "--":
+        return None
+    m = re.search(r"(\d+\.?\d*)\s*%", str(s))
+    return to_float(m.group(1)) if m else None
+
+
+def fmt_scale(n: float | None) -> float | None:
+    """规模格式化：元 → 亿（小于1亿不显示）"""
+    if n is None or n == 0:
+        return None
+    if n >= 1_0000_0000:
+        return round(n / 1_0000_0000, 2)
+    return None
+
+
+def fmt_amount(n: int | None) -> str:
+    """限额金额格式化"""
+    if n is None:
+        return "—"
+    if n <= 0:
+        return "0 元（实质暂停）"
+    if n >= 100_000_000:
+        return "%g 亿" % (n / 100_000_000)
+    if n >= 10_000:
+        return "%g 万" % (n / 10_000)
+    return "%d 元" % n
+
+
+def classify(name: str) -> str:
+    """基金类型分类：ETF / LOF / QDII"""
     if "ETF" in name and "联接" not in name:
-        t = "etf"
-    elif "LOF" in name:
-        t = "lof"
-    else:
-        t = "qdii"
-    return t
+        return "etf"
+    if "LOF" in name:
+        return "lof"
+    return "qdii"
 
 
-def categorize(name):
+def categorize(name: str) -> str:
+    """按名称关键词自动分类（CAT_RULES 按优先级匹配）"""
     for pat, cat in CAT_RULES:
         if re.search(pat, name):
             return cat
     return "其他"
 
 
-def parse_status(sgzt):
+def parse_status(sgzt: str | None) -> tuple[str, str]:
+    """解析申购状态，返回 (状态码, 原始文本)"""
     s = (sgzt or "").strip()
     if "暂停" in s:
         return "suspended", s
@@ -158,19 +245,11 @@ def parse_status(sgzt):
     return "normal", s or "未知"
 
 
-def fmt_amount(n):
-    if n is None:
-        return "—"
-    if n <= 0:
-        return "0 元（实质暂停）"
-    if n >= 100_000_000:
-        return "%g 亿" % (n / 100_000_000)
-    if n >= 10_000:
-        return "%g 万" % (n / 10_000)
-    return "%d 元" % n
+def build_limit(status: str, maxsg_raw: str | None, code: str) -> tuple[int | None, str, bool, str]:
+    """根据状态和接口数据构建限额信息
 
-
-def build_limit(status, maxsg_raw, code):
+    返回 (limit, limit_text, reliable, source)
+    """
     if code in OVERRIDES:
         n = OVERRIDES[code]
         return n, fmt_amount(n), True, "manual"
@@ -186,133 +265,9 @@ def build_limit(status, maxsg_raw, code):
     return None, "限大额", False, "api"
 
 
-# ── 清单：自动发现 + 搜索补充 + 兜底 ──
-
-# 搜索关键词 → 分组映射（用于发现 CORE 和 rankhandler 遗漏的 ETF 联接/指数基金）
-SEARCH_KEYWORDS = {
-    "标普500": "标普500",
-    "纳斯达克": "纳斯达克100",
-}
-
-# 搜索结果过滤：只保留名称真正匹配的基金
-SEARCH_FILTERS = {
-    "标普500": re.compile(r"标普500|标普.*500|S&P.?500", re.I),
-    "纳斯达克100": re.compile(r"纳斯达克100|纳斯达克.*ETF|纳指(?!.*生物)(?!.*科技)", re.I),
-}
-
-
-def search_funds(keyword, max_pages=8):
-    """通过东方财富基金搜索 API 搜索基金，返回 [(code, name), ...]"""
-    import urllib.parse
-    results = []
-    for page in range(1, max_pages + 1):
-        try:
-            url = ("%s?m=1&key=%s&pageindex=%d&pagesize=30&_=%d"
-                   % (SEARCH, urllib.parse.quote(keyword), page, int(time.time())))
-            raw = http_text(url)
-            m = re.search(r"\{.*\}", raw, re.S)
-            if not m:
-                break
-            datas = json.loads(m.group(0)).get("Datas") or []
-            if not datas:
-                break
-            for d in datas:
-                results.append((d.get("CODE", ""), d.get("NAME", "")))
-        except Exception:
-            break
-        time.sleep(0.15)
-    return results
-
-
-def discover_universe():
-    """返回 [code, ...]（成功且数量足够）或 None"""
-    try:
-        url = ("%s?op=ph&dt=kf&ft=qdii&rs=&gs=0&sc=zzf&st=desc&pi=1&pn=800"
-               "&sd=2026-05-20&ed=2026-07-20&v=%d" % (RANK, int(time.time())))
-        raw = http_text(url)
-        pairs = re.findall(r'"(\d{6}),[^,"]+,', raw)
-        return pairs if len(pairs) > 50 else None
-    except Exception as e:
-        print("[discover] 失败，将用兜底清单：%s" % e)
-        return None
-
-
-def load_fallback():
-    try:
-        with open(FALLBACK_FILE, encoding="utf-8") as f:
-            return json.load(f)
-    except Exception:
-        return []
-
-
-def build_codes():
-    codes = list(CORE.keys())
-    seen = set(codes)
-    sources = []
-
-    # 1. 搜索 API 补充标普500、纳斯达克等（发现 rankhandler 遗漏的 ETF 联接/指数基金）
-    for keyword, group in SEARCH_KEYWORDS.items():
-        try:
-            results = search_funds(keyword)
-            filt = SEARCH_FILTERS.get(group)
-            added = 0
-            for code, name in results:
-                if code and code not in seen and filt and filt.search(name):
-                    codes.append(code)
-                    seen.add(code)
-                    added += 1
-            sources.append("搜索\"%s\"发现 %d 只（过滤后新增 %d）" % (keyword, len(results), added))
-        except Exception as e:
-            sources.append("搜索\"%s\"失败: %s" % (keyword, e))
-
-    # 2. rankhandler 全量 QDII
-    univ = discover_universe()
-    if univ:
-        sources.append("自动发现(rankhandler) %d 只" % len(univ))
-        for c in univ:
-            if c not in seen:
-                codes.append(c)
-                seen.add(c)
-    else:
-        fb = load_fallback()
-        sources.append("兜底清单 fallback_codes.json %d 只" % len(fb))
-        for c in fb:
-            if c not in seen:
-                codes.append(c)
-                seen.add(c)
-
-    src = " + ".join(sources)
-    return codes, src
-
-
-# ── 公告交叉校验（仅 CORE）──
-ANN_INCLUDE = re.compile(r"(限制|暂停|调整|恢复).{0,6}(大额)?(申购|定期定额|转换转入)|大额申购|限额")
-ANN_EXCLUDE = re.compile(r"节假日|休市|境外.{0,4}(休市|节假日)|清盘|分红|费率|销售(机构|渠道)|代销|"
-                         r"基金经理|变更|估值|托管|成立|生效|招募|转托管|终止")
-AMOUNT_RE = re.compile(
-    r"(?:不超过|上限[为是]?|上限金额[为是]?|金额[为是]?|限额[为调是]?|限制金额[为是]?|"
-    r"单日[^。；]{0,10}为|将[^。；]{0,10}为)\s*0*(\d{1,3}(?:,\d{3})*(?:\.\d+)?)\s*元")
-
-
-def latest_limit_announcement(code):
-    url = ("%s?callback=j&fundCode=%s&pageIndex=1&pageSize=120&type=5&_=%d000"
-           % (JJGG, code, int(time.time())))
-    try:
-        raw = http_text(url)
-        m = re.search(r"\{.*\}", raw, re.S)
-        data = json.loads(m.group(0)).get("Data") or []
-    except Exception:
-        return None
-    cands = [r for r in data if ANN_INCLUDE.search(r.get("TITLE", "") or "")
-             and not ANN_EXCLUDE.search(r.get("TITLE", "") or "")]
-    if not cands:
-        return None
-    cands.sort(key=lambda r: r.get("PUBLISHDATE", ""), reverse=True)
-    return cands[0]
-
-
-def extract_amounts(text):
-    out = []
+def extract_amounts(text: str) -> list[int]:
+    """从公告正文中提取金额（1 ~ 1亿元之间）"""
+    out: list[int] = []
     for m in AMOUNT_RE.finditer(text):
         try:
             n = int(float(m.group(1).replace(",", "")))
@@ -323,162 +278,396 @@ def extract_amounts(text):
     return sorted(set(out))
 
 
-def announcement_supplement(code, current_limit):
-    ann = latest_limit_announcement(code)
-    if not ann:
-        return None
-    art_id = ann.get("ID") or ""
-    body = ""
-    if art_id:
+# ════════════════════════════════════════════════════════════════════════════
+# HTTP 客户端（带重试）
+# ════════════════════════════════════════════════════════════════════════════
+
+class HttpClient:
+    """HTTP 请求封装，支持自动重试"""
+
+    def __init__(self, max_retries: int = HTTP_MAX_RETRIES,
+                 retry_delay: float = HTTP_RETRY_DELAY) -> None:
+        self.max_retries = max_retries
+        self.retry_delay = retry_delay
+
+    def _request(self, url: str) -> str:
+        """发起 HTTP GET 请求（带重试），返回响应文本"""
+        last_err: Exception | None = None
+        for attempt in range(1, self.max_retries + 1):
+            try:
+                req = urllib.request.Request(url, headers=HTTP_HEADERS)
+                with urllib.request.urlopen(req, timeout=20) as r:
+                    return r.read().decode("utf-8", "ignore")
+            except Exception as e:
+                last_err = e
+                if attempt < self.max_retries:
+                    time.sleep(self.retry_delay * attempt)
+        raise last_err  # type: ignore[misc]
+
+    def get_text(self, url: str) -> str:
+        """GET 请求，返回纯文本"""
+        return self._request(url)
+
+    def get_json(self, url: str) -> dict:
+        """GET 请求，返回解析后的 JSON dict"""
+        return json.loads(self._request(url))
+
+
+# ════════════════════════════════════════════════════════════════════════════
+# 基金清单构建器
+# ════════════════════════════════════════════════════════════════════════════
+
+class FundUniverse:
+    """基金清单构建：CORE + 搜索补充 + rankhandler 自动发现 / 兜底"""
+
+    def __init__(self, http: HttpClient) -> None:
+        self.http = http
+
+    def build(self) -> tuple[list[str], str]:
+        """构建基金代码清单，返回 (codes, 来源描述)"""
+        codes: list[str] = list(CORE_FUNDS.keys())
+        seen: set[str] = set(codes)
+        sources: list[str] = []
+
+        # 1. 搜索 API 补充标普500、纳斯达克等
+        for keyword, group in SEARCH_KEYWORDS.items():
+            try:
+                results = self._search_funds(keyword)
+                filt = SEARCH_FILTERS.get(group)
+                added = 0
+                for code, name in results:
+                    if code and code not in seen and filt and filt.search(name):
+                        codes.append(code)
+                        seen.add(code)
+                        added += 1
+                sources.append('搜索"%s"发现 %d 只（过滤后新增 %d）' % (keyword, len(results), added))
+            except Exception as e:
+                sources.append('搜索"%s"失败: %s' % (keyword, e))
+
+        # 2. rankhandler 全量 QDII
+        univ = self._discover_universe()
+        if univ:
+            sources.append("自动发现(rankhandler) %d 只" % len(univ))
+            for c in univ:
+                if c not in seen:
+                    codes.append(c)
+                    seen.add(c)
+        else:
+            fb = self._load_fallback()
+            sources.append("兜底清单 fallback_codes.json %d 只" % len(fb))
+            for c in fb:
+                if c not in seen:
+                    codes.append(c)
+                    seen.add(c)
+
+        return codes, " + ".join(sources)
+
+    def _search_funds(self, keyword: str, max_pages: int = 8) -> list[tuple[str, str]]:
+        """通过东方财富基金搜索 API 搜索基金，返回 [(code, name), ...]"""
+        results: list[tuple[str, str]] = []
+        for page in range(1, max_pages + 1):
+            try:
+                url = ("%s?m=1&key=%s&pageindex=%d&pagesize=30&_=%d"
+                       % (Endpoints.SEARCH, urllib.parse.quote(keyword), page, int(time.time())))
+                raw = self.http.get_text(url)
+                m = re.search(r"\{.*\}", raw, re.S)
+                if not m:
+                    break
+                datas = json.loads(m.group(0)).get("Datas") or []
+                if not datas:
+                    break
+                for d in datas:
+                    results.append((d.get("CODE", ""), d.get("NAME", "")))
+            except Exception:
+                break
+            time.sleep(0.15)
+        return results
+
+    def _discover_universe(self) -> list[str] | None:
+        """rankhandler 拉全量场外 QDII，返回 [code, ...]（成功且数量足够）或 None"""
         try:
-            d = http_json("%s?art_code=%s&client_source=web&page_index=1" % (CONTENT, art_id))
-            body = re.sub(r"<[^>]+>", "", d.get("data", {}).get("notice_content", "") or "")
+            url = ("%s?op=ph&dt=kf&ft=qdii&rs=&gs=0&sc=zzf&st=desc&pi=1&pn=800"
+                   "&sd=2026-05-20&ed=2026-07-20&v=%d" % (Endpoints.RANK, int(time.time())))
+            raw = self.http.get_text(url)
+            pairs = re.findall(r'"(\d{6}),[^,"]+,', raw)
+            return pairs if len(pairs) > 50 else None
+        except Exception as e:
+            print("[discover] 失败，将用兜底清单：%s" % e)
+            return None
+
+    @staticmethod
+    def _load_fallback() -> list[str]:
+        """加载兜底清单"""
+        try:
+            with open(FALLBACK_FILE, encoding="utf-8") as f:
+                return json.load(f)
         except Exception:
-            body = ""
-    limits = extract_amounts(body) if body else []
-    return {
-        "date": ann.get("PUBLISHDATEDesc") or "",
-        "title": (ann.get("TITLE") or "")[:60],
-        "artId": art_id,
-        "limits": limits,
-        "review": bool(limits and current_limit is not None and current_limit not in limits),
-    }
+            return []
 
 
-def parse_fee(s):
-    """'1.10%' → 1.10, '--' → None"""
-    if not s or s == "--":
-        return None
-    m = re.search(r"(\d+\.?\d*)\s*%", str(s))
-    return to_float(m.group(1)) if m else None
+# ════════════════════════════════════════════════════════════════════════════
+# 公告校验器
+# ════════════════════════════════════════════════════════════════════════════
 
+class AnnouncementChecker:
+    """公告交叉校验：拉取公告列表 → 提取正文 → 校验额度是否一致"""
 
-def fmt_scale(n):
-    """规模格式化：元 → 亿"""
-    if n is None or n == 0:
-        return None
-    if n >= 1_0000_0000:
-        return round(n / 1_0000_0000, 2)
-    return None  # 小于1亿不显示
+    def __init__(self, http: HttpClient) -> None:
+        self.http = http
 
-
-# ETF 场内品种溢价率（腾讯行情接口）
-QT_API = "https://qt.gtimg.cn/q="
-
-
-def fetch_etf_premium(code):
-    """返回 (price, nav, premium_pct) 或 None"""
-    # 0/1 前缀：深交所=0, 上交所=1
-    prefix = "sh" if code.startswith(("5", "11", "13")) else "sz"
-    try:
-        raw = http_text("%s%s%s" % (QT_API, prefix, code))
-        m = re.search(r'"([^"]+)"', raw)
-        if not m:
+    def _latest_limit_announcement(self, code: str) -> dict | None:
+        """获取最近一条限额相关公告"""
+        url = ("%s?callback=j&fundCode=%s&pageIndex=1&pageSize=120&type=5&_=%d000"
+               % (Endpoints.ANNOUNCEMENT, code, int(time.time())))
+        try:
+            raw = self.http.get_text(url)
+            m = re.search(r"\{.*\}", raw, re.S)
+            data = json.loads(m.group(0)).get("Data") or []
+        except Exception:
             return None
-        parts = m.group(1).split("~")
-        if len(parts) < 79:
+        cands = [r for r in data
+                 if ANN_INCLUDE.search(r.get("TITLE", "") or "")
+                 and not ANN_EXCLUDE.search(r.get("TITLE", "") or "")]
+        if not cands:
             return None
-        price = to_float(parts[3])
-        nav = to_float(parts[78])  # 基金净值
-        if not price or not nav or nav <= 0:
+        cands.sort(key=lambda r: r.get("PUBLISHDATE", ""), reverse=True)
+        return cands[0]
+
+    def supplement(self, code: str, current_limit: int | None) -> dict | None:
+        """获取公告并构建校验结果
+
+        返回 {"date", "title", "artId", "limits", "review"} 或 None
+        """
+        ann = self._latest_limit_announcement(code)
+        if not ann:
             return None
-        premium = round((price - nav) / nav * 100, 2)
-        return {"price": price, "iopvNav": nav, "premium": premium}
-    except Exception:
-        return None
+        art_id = ann.get("ID") or ""
+        body = ""
+        if art_id:
+            try:
+                d = self.http.get_json(
+                    "%s?art_code=%s&client_source=web&page_index=1"
+                    % (Endpoints.ANNOUNCEMENT_CONTENT, art_id)
+                )
+                body = re.sub(r"<[^>]+>", "",
+                              d.get("data", {}).get("notice_content", "") or "")
+            except Exception:
+                body = ""
+        limits = extract_amounts(body) if body else []
+        return {
+            "date": ann.get("PUBLISHDATEDesc") or "",
+            "title": (ann.get("TITLE") or "")[:60],
+            "artId": art_id,
+            "limits": limits,
+            "review": bool(limits and current_limit is not None
+                           and current_limit not in limits),
+        }
 
 
-def fetch_one(code, do_ann):
-    url = ("https://fundmobapi.eastmoney.com/FundMNewApi/FundMNNBasicInformation?FCODE=%s&deviceid=1&plat=Android&appType=ttjj&product=EFund&version=6.2.6"
-           % code)
-    datas = http_json(url).get("Datas") or {}
-    if not datas:
-        raise ValueError("无数据")
+# ════════════════════════════════════════════════════════════════════════════
+# ETF 溢价率获取
+# ════════════════════════════════════════════════════════════════════════════
 
-    name = datas.get("SHORTNAME") or ""
-    status, status_text = parse_status(datas.get("SGZT"))
-    limit, limit_text, reliable, source = build_limit(status, datas.get("MAXSG"), code)
-    fund_type = classify(name)
+class EtfPremiumFetcher:
+    """ETF 场内品种溢价率（腾讯行情接口）"""
 
-    item = {
-        "code": code,
-        "name": name,
-        "type": fund_type,
-        "group": CORE.get(code) or categorize(name),   # 分组即展示分类
-        "index": datas.get("INDEXNAME") or "",
-        "company": datas.get("JJGS") or "",
-        "status": status,
-        "statusText": status_text,
-        "limit": limit,
-        "limitText": limit_text,
-        "limitReliable": reliable,
-        "limitSource": source,
-        "minPurchase": to_int(datas.get("MINSG")),
-        "nav": to_float(datas.get("DWJZ")),
-        "navChangePct": to_float(datas.get("RZDF")),
-        "navDate": datas.get("FSRQ") or "",
-        # 费率
-        "mgmtFee": parse_fee(datas.get("HRGRT")),       # 管理费率 %
-        "custodyFee": parse_fee(datas.get("HSGRT")),     # 托管费率 %
-        "purchaseFee": parse_fee(datas.get("RATE")),     # 申购费率(折后) %
-        "purchaseFeeOrig": parse_fee(datas.get("SOURCERATE")),  # 申购费率(原) %
-        # 规模
-        "scale": fmt_scale(to_float(datas.get("ENDNAV"))),  # 亿元
-        "scaleDate": datas.get("FEGMRQ") or "",             # 规模日期
-    }
+    def __init__(self, http: HttpClient) -> None:
+        self.http = http
 
-    # ETF 场内品种：拉溢价率
-    if fund_type == "etf":
-        premium_data = fetch_etf_premium(code)
+    def fetch(self, code: str) -> dict | None:
+        """返回 {"price", "iopvNav", "premium"} 或 None"""
+        # 0/1 前缀：深交所=sz, 上交所=sh
+        prefix = "sh" if code.startswith(("5", "11", "13")) else "sz"
+        try:
+            raw = self.http.get_text("%s%s%s" % (Endpoints.QT, prefix, code))
+            m = re.search(r'"([^"]+)"', raw)
+            if not m:
+                return None
+            parts = m.group(1).split("~")
+            if len(parts) < 79:
+                return None
+            price = to_float(parts[3])
+            nav = to_float(parts[78])  # 基金净值
+            if not price or not nav or nav <= 0:
+                return None
+            premium = round((price - nav) / nav * 100, 2)
+            return {"price": price, "iopvNav": nav, "premium": premium}
+        except Exception:
+            return None
+
+
+# ════════════════════════════════════════════════════════════════════════════
+# 基金数据抓取器
+# ════════════════════════════════════════════════════════════════════════════
+
+class FundFetcher:
+    """单只基金数据抓取：获取基本信息 → 字段映射 → 溢价率 → 公告校验"""
+
+    def __init__(self, http: HttpClient) -> None:
+        self.http = http
+        self.ann_checker = AnnouncementChecker(http)
+        self.etf_premium = EtfPremiumFetcher(http)
+
+    # ── 数据获取 ──────────────────────────────────────────────────────────
+
+    def _fetch_raw_data(self, code: str) -> dict:
+        """从东方财富接口获取基金基本信息原始数据"""
+        url = ("%s?FCODE=%s&deviceid=1&plat=Android&appType=ttjj&product=EFund&version=6.2.6"
+               % (Endpoints.FUND_INFO, code))
+        datas = self.http.get_json(url).get("Datas") or {}
+        if not datas:
+            raise ValueError("无数据")
+        return datas
+
+    # ── 字段映射 ──────────────────────────────────────────────────────────
+
+    @staticmethod
+    def _map_fields(code: str, datas: dict) -> dict:
+        """将接口原始数据映射为前端所需的输出字段"""
+        name = datas.get("SHORTNAME") or ""
+        status, status_text = parse_status(datas.get("SGZT"))
+        limit, limit_text, reliable, source = build_limit(status, datas.get("MAXSG"), code)
+        fund_type = classify(name)
+
+        return {
+            "code": code,
+            "name": name,
+            "type": fund_type,
+            "group": CORE_FUNDS.get(code) or categorize(name),  # 分组即展示分类
+            "index": datas.get("INDEXNAME") or "",
+            "company": datas.get("JJGS") or "",
+            "status": status,
+            "statusText": status_text,
+            "limit": limit,
+            "limitText": limit_text,
+            "limitReliable": reliable,
+            "limitSource": source,
+            "minPurchase": to_int(datas.get("MINSG")),
+            "nav": to_float(datas.get("DWJZ")),
+            "navChangePct": to_float(datas.get("RZDF")),
+            "navDate": datas.get("FSRQ") or "",
+            # 费率
+            "mgmtFee": parse_fee(datas.get("HRGRT")),        # 管理费率 %
+            "custodyFee": parse_fee(datas.get("HSGRT")),      # 托管费率 %
+            "purchaseFee": parse_fee(datas.get("RATE")),      # 申购费率(折后) %
+            "purchaseFeeOrig": parse_fee(datas.get("SOURCERATE")),  # 申购费率(原) %
+            # 规模
+            "scale": fmt_scale(to_float(datas.get("ENDNAV"))),  # 亿元
+            "scaleDate": datas.get("FEGMRQ") or "",              # 规模日期
+        }
+
+    # ── 溢价率补充 ────────────────────────────────────────────────────────
+
+    def _add_premium(self, item: dict) -> None:
+        """ETF 场内品种：拉溢价率并写入 item"""
+        if item["type"] != "etf":
+            return
+        premium_data = self.etf_premium.fetch(item["code"])
         if premium_data:
             item["etfPrice"] = premium_data["price"]
             item["etfPremium"] = premium_data["premium"]
 
-    if do_ann and code in ANN_CORE and status in ("limited", "suspended"):
+    # ── 公告校验 ──────────────────────────────────────────────────────────
+
+    def _add_announcement(self, item: dict, do_ann: bool) -> None:
+        """CORE 基金且状态为限大额/暂停时：拉公告交叉校验"""
+        code = item["code"]
+        if not (do_ann and code in ANN_CORE and item["status"] in ("limited", "suspended")):
+            return
         try:
-            ann = announcement_supplement(code, limit)
+            ann = self.ann_checker.supplement(code, item["limit"])
             if ann:
                 item["announcement"] = ann
         except Exception as e:
             item["announcementError"] = str(e)
-    return item
+
+    # ── 主入口 ────────────────────────────────────────────────────────────
+
+    def fetch_one(self, code: str, do_ann: bool) -> dict:
+        """抓取单只基金完整数据"""
+        datas = self._fetch_raw_data(code)
+        item = self._map_fields(code, datas)
+        self._add_premium(item)
+        self._add_announcement(item, do_ann)
+        return item
 
 
-def main():
-    out_path = "data.json"
-    args = [a for a in sys.argv[1:] if not a.startswith("-")]
-    if args:
-        out_path = args[0]
-    do_ann = "--no-ann" not in sys.argv
+# ════════════════════════════════════════════════════════════════════════════
+# 主程序
+# ════════════════════════════════════════════════════════════════════════════
 
-    codes, src = build_codes()
-    print("清单来源：%s → 共 %d 只基金" % (src, len(codes)))
-    funds, errors = [], []
-    for i, code in enumerate(codes, 1):
-        try:
-            item = fetch_one(code, do_ann)
-            funds.append(item)
-            if i <= 5 or i % 50 == 0:
-                print("[%d/%d] %s %-22s %s %s" % (i, len(codes), code, item["name"][:22], item["status"], item["limitText"]))
-        except Exception as e:
-            errors.append((code, str(e)))
-        time.sleep(0.18)
+class QdiiQuotaApp:
+    """QDII 限额抓取主程序"""
 
-    result = {
-        "updatedAt": beijing_now(),
-        "source": "eastmoney FundMNNBasicInformation + rankhandler 发现",
-        "universeSource": src,
-        "note": "MAXSG 为可信当前限额；CORE 热门基金附公告交叉校验；分组按名称自动分类。",
-        "count": len(funds),
-        "failed": len(errors),
-        "funds": funds,
-    }
-    with open(out_path, "w", encoding="utf-8") as f:
-        json.dump(result, f, ensure_ascii=False, indent=2)
-    print("\n写入 %s：成功 %d，失败 %d" % (out_path, len(funds), len(errors)))
-    if errors[:5]:
-        print("失败示例：", errors[:5])
+    def __init__(self) -> None:
+        self.http = HttpClient()
+        self.universe = FundUniverse(self.http)
+        self.fetcher = FundFetcher(self.http)
 
+    @staticmethod
+    def _parse_args() -> argparse.Namespace:
+        """解析命令行参数"""
+        parser = argparse.ArgumentParser(
+            description="每日抓取 QDII 基金申购状态 / 限额 / 净值，写入 data.json"
+        )
+        parser.add_argument(
+            "output", nargs="?", default="data.json",
+            help="输出 JSON 文件路径（默认：data.json）"
+        )
+        parser.add_argument(
+            "--no-ann", action="store_true",
+            help="跳过公告交叉校验（加快速度）"
+        )
+        return parser.parse_args()
+
+    def run(self) -> None:
+        """主流程：构建清单 → 逐只抓取 → 写入 JSON"""
+        args = self._parse_args()
+        out_path: str = args.output
+        do_ann: bool = not args.no_ann
+
+        # 1. 构建基金代码清单
+        codes, src = self.universe.build()
+        print("清单来源：%s → 共 %d 只基金" % (src, len(codes)))
+
+        # 2. 逐只抓取
+        funds: list[dict] = []
+        errors: list[tuple[str, str]] = []
+        for i, code in enumerate(codes, 1):
+            try:
+                item = self.fetcher.fetch_one(code, do_ann)
+                funds.append(item)
+                if i <= 5 or i % 50 == 0:
+                    print("[%d/%d] %s %-22s %s %s" % (
+                        i, len(codes), code, item["name"][:22],
+                        item["status"], item["limitText"]
+                    ))
+            except Exception as e:
+                errors.append((code, str(e)))
+            time.sleep(0.18)
+
+        # 3. 组装结果并写入
+        result = {
+            "updatedAt": beijing_now(),
+            "source": "eastmoney FundMNNBasicInformation + rankhandler 发现",
+            "universeSource": src,
+            "note": "MAXSG 为可信当前限额；CORE 热门基金附公告交叉校验；分组按名称自动分类。",
+            "count": len(funds),
+            "failed": len(errors),
+            "funds": funds,
+        }
+        with open(out_path, "w", encoding="utf-8") as f:
+            json.dump(result, f, ensure_ascii=False, indent=2)
+
+        # 4. 输出统计
+        print("\n写入 %s：成功 %d，失败 %d" % (out_path, len(funds), len(errors)))
+        if errors[:5]:
+            print("失败示例：", errors[:5])
+
+
+# ════════════════════════════════════════════════════════════════════════════
+# 入口
+# ════════════════════════════════════════════════════════════════════════════
 
 if __name__ == "__main__":
-    main()
+    QdiiQuotaApp().run()
