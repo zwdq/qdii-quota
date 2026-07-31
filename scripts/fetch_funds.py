@@ -345,9 +345,52 @@ def announcement_supplement(code, current_limit):
     }
 
 
+def parse_fee(s):
+    """'1.10%' → 1.10, '--' → None"""
+    if not s or s == "--":
+        return None
+    m = re.search(r"(\d+\.?\d*)\s*%", str(s))
+    return to_float(m.group(1)) if m else None
+
+
+def fmt_scale(n):
+    """规模格式化：元 → 亿"""
+    if n is None or n == 0:
+        return None
+    if n >= 1_0000_0000:
+        return round(n / 1_0000_0000, 2)
+    return None  # 小于1亿不显示
+
+
+# ETF 场内品种溢价率（腾讯行情接口）
+QT_API = "https://qt.gtimg.cn/q="
+
+
+def fetch_etf_premium(code):
+    """返回 (price, nav, premium_pct) 或 None"""
+    # 0/1 前缀：深交所=0, 上交所=1
+    prefix = "sh" if code.startswith(("5", "11", "13")) else "sz"
+    try:
+        raw = http_text("%s%s%s" % (QT_API, prefix, code))
+        m = re.search(r'"([^"]+)"', raw)
+        if not m:
+            return None
+        parts = m.group(1).split("~")
+        if len(parts) < 79:
+            return None
+        price = to_float(parts[3])
+        nav = to_float(parts[78])  # 基金净值
+        if not price or not nav or nav <= 0:
+            return None
+        premium = round((price - nav) / nav * 100, 2)
+        return {"price": price, "iopvNav": nav, "premium": premium}
+    except Exception:
+        return None
+
+
 def fetch_one(code, do_ann):
-    url = ("%s?FCODE=%s&deviceid=1&plat=Android&appType=ttjj&product=EFund&version=6.2.6"
-           % (API, code))
+    url = ("https://fundmobapi.eastmoney.com/FundMNewApi/FundMNNBasicInformation?FCODE=%s&deviceid=1&plat=Android&appType=ttjj&product=EFund&version=6.2.6"
+           % code)
     datas = http_json(url).get("Datas") or {}
     if not datas:
         raise ValueError("无数据")
@@ -355,11 +398,12 @@ def fetch_one(code, do_ann):
     name = datas.get("SHORTNAME") or ""
     status, status_text = parse_status(datas.get("SGZT"))
     limit, limit_text, reliable, source = build_limit(status, datas.get("MAXSG"), code)
+    fund_type = classify(name)
 
     item = {
         "code": code,
         "name": name,
-        "type": classify(name),
+        "type": fund_type,
         "group": CORE.get(code) or categorize(name),   # 分组即展示分类
         "index": datas.get("INDEXNAME") or "",
         "company": datas.get("JJGS") or "",
@@ -373,7 +417,23 @@ def fetch_one(code, do_ann):
         "nav": to_float(datas.get("DWJZ")),
         "navChangePct": to_float(datas.get("RZDF")),
         "navDate": datas.get("FSRQ") or "",
+        # 费率
+        "mgmtFee": parse_fee(datas.get("HRGRT")),       # 管理费率 %
+        "custodyFee": parse_fee(datas.get("HSGRT")),     # 托管费率 %
+        "purchaseFee": parse_fee(datas.get("RATE")),     # 申购费率(折后) %
+        "purchaseFeeOrig": parse_fee(datas.get("SOURCERATE")),  # 申购费率(原) %
+        # 规模
+        "scale": fmt_scale(to_float(datas.get("ENDNAV"))),  # 亿元
+        "scaleDate": datas.get("FEGMRQ") or "",             # 规模日期
     }
+
+    # ETF 场内品种：拉溢价率
+    if fund_type == "etf":
+        premium_data = fetch_etf_premium(code)
+        if premium_data:
+            item["etfPrice"] = premium_data["price"]
+            item["etfPremium"] = premium_data["premium"]
+
     if do_ann and code in ANN_CORE and status in ("limited", "suspended"):
         try:
             ann = announcement_supplement(code, limit)

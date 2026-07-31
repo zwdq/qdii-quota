@@ -267,6 +267,11 @@
             <th data-key="index">跟踪指数 <span class="arrow"></span></th>
             <th class="right" data-key="nav">最新净值 <span class="arrow"></span></th>
             <th class="right" data-key="navChangePct">涨跌幅 <span class="arrow"></span></th>
+            <th class="right" data-key="etfPremium">溢价率 <span class="arrow"></span></th>
+            <th class="right" data-key="scale">规模(亿) <span class="arrow"></span></th>
+            <th class="right" data-key="mgmtFee">管理费 <span class="arrow"></span></th>
+            <th class="right" data-key="custodyFee">托管费 <span class="arrow"></span></th>
+            <th class="right" data-key="purchaseFee">申购费 <span class="arrow"></span></th>
             <th data-key="status">申购状态 <span class="arrow"></span></th>
             <th class="right" data-key="limit">单日限额 <span class="arrow"></span></th>
           </tr>
@@ -380,6 +385,11 @@ function getView() {
     switch (key) {
       case "nav":           va = a.nav ?? -1;        vb = b.nav ?? -1; break;
       case "navChangePct":  va = a.navChangePct ?? -999; vb = b.navChangePct ?? -999; break;
+      case "etfPremium":    va = a.etfPremium ?? -999;   vb = b.etfPremium ?? -999; break;
+      case "scale":         va = a.scale ?? -1;       vb = b.scale ?? -1; break;
+      case "mgmtFee":       va = a.mgmtFee ?? -1;     vb = b.mgmtFee ?? -1; break;
+      case "custodyFee":    va = a.custodyFee ?? -1;  vb = b.custodyFee ?? -1; break;
+      case "purchaseFee":   va = a.purchaseFee ?? -1; vb = b.purchaseFee ?? -1; break;
       case "status":        va = a.status;           vb = b.status; break;
       case "limit":         va = a.limit == null ? Infinity : a.limit; vb = b.limit == null ? Infinity : b.limit; break;
       default:              va = a[key] || "";       vb = b[key] || "";
@@ -393,16 +403,26 @@ function getView() {
 
 function render() {
   const view = getView(), tb = document.getElementById("tbody");
-  if (view.length === 0) { tb.innerHTML = `<tr><td colspan="7"><div class="empty">没有符合条件的基金</div></td></tr>`; return; }
+  if (view.length === 0) { tb.innerHTML = `<tr><td colspan="12"><div class="empty">没有符合条件的基金</div></td></tr>`; return; }
   tb.innerHTML = view.map(f => {
     const st = STATUS_LABEL[f.status] || STATUS_LABEL.normal;
     const nav = f.nav != null ? `<span class="nav-main">${f.nav.toFixed(4)}</span><span class="nav-date">${f.navDate || ""}</span>` : '<span class="flat">—</span>';
+    const premium = f.etfPremium != null
+      ? `<span class="${f.etfPremium > 3 ? 'up' : f.etfPremium < -1 ? 'down' : 'flat'} num-mono">${f.etfPremium > 0 ? '+' : ''}${f.etfPremium.toFixed(2)}%</span>`
+      : '<span class="flat">—</span>';
+    const scale = f.scale != null ? `<span class="num-mono">${f.scale}</span>` : '<span class="flat">—</span>';
+    const fee = v => v != null ? `<span class="num-mono">${v.toFixed(2)}%</span>` : '<span class="flat">—</span>';
     return `<tr>
       <td><span class="code">${f.code}</span></td>
       <td class="fname">${f.name}<span class="tag ${f.type}">${(f.type||'').toUpperCase()}</span><span class="co">${f.company || ""}</span></td>
       <td>${f.index || "—"}</td>
       <td class="right">${nav}</td>
       <td class="right">${pct(f.navChangePct)}</td>
+      <td class="right">${premium}</td>
+      <td class="right">${scale}</td>
+      <td class="right">${fee(f.mgmtFee)}</td>
+      <td class="right">${fee(f.custodyFee)}</td>
+      <td class="right">${fee(f.purchaseFee)}</td>
       <td><span class="status ${st.cls}" title="${f.statusText || ''}">${st.text}</span></td>
       <td class="right num-mono">${limitCell(f)}</td>
     </tr>`;
