@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-02 16:45:49",
+  "updatedAt": "2026-08-03 12:57:16",
   "source": "eastmoney FundMNNBasicInformation + rankhandler 发现",
   "universeSource": "搜索\"标普500\"发现 0 只（过滤后新增 0） + 搜索\"纳斯达克\"发现 50 只（过滤后新增 13） + 自动发现(rankhandler) 358 只",
   "note": "MAXSG 为可信当前限额；CORE 热门基金附公告交叉校验；分组按名称自动分类。",
@@ -29,8 +29,8 @@
       "purchaseFeeOrig": null,
       "scale": 346.82,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.574,
-      "etfPremium": 10.43
+      "etfPrice": 1.59,
+      "etfPremium": 10.9
     },
     {
       "code": "513100",
@@ -55,8 +55,8 @@
       "purchaseFeeOrig": null,
       "scale": 194.68,
       "scaleDate": "2026-06-30",
-      "etfPrice": 2.112,
-      "etfPremium": 10.98,
+      "etfPrice": 2.129,
+      "etfPremium": 11.23,
       "announcement": {
         "date": "2024-11-23",
         "title": "纳斯达克100交易型开放式指数证券投资基金暂停申购业务的公告",
@@ -88,8 +88,8 @@
       "purchaseFeeOrig": null,
       "scale": 132.88,
       "scaleDate": "2026-06-30",
-      "etfPrice": 2.578,
-      "etfPremium": 9.02
+      "etfPrice": 2.596,
+      "etfPremium": 9.3
     },
     {
       "code": "161130",
@@ -277,8 +277,8 @@
       "purchaseFeeOrig": null,
       "scale": 73.84,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.72,
-      "etfPremium": 8.13
+      "etfPrice": 1.733,
+      "etfPremium": 8.36
     },
     {
       "code": "159659",
@@ -303,8 +303,8 @@
       "purchaseFeeOrig": null,
       "scale": 99.36,
       "scaleDate": "2026-06-30",
-      "etfPrice": 2.235,
-      "etfPremium": 8.77
+      "etfPrice": 2.249,
+      "etfPremium": 8.81
     },
     {
       "code": "159632",
@@ -329,8 +329,8 @@
       "purchaseFeeOrig": null,
       "scale": 113.0,
       "scaleDate": "2026-06-30",
-      "etfPrice": 2.339,
-      "etfPremium": 8.21
+      "etfPrice": 2.357,
+      "etfPremium": 8.42
     },
     {
       "code": "513870",
@@ -355,8 +355,8 @@
       "purchaseFeeOrig": null,
       "scale": 24.71,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.977,
-      "etfPremium": 9.12
+      "etfPrice": 1.99,
+      "etfPremium": 9.19
     },
     {
       "code": "159660",
@@ -381,8 +381,8 @@
       "purchaseFeeOrig": null,
       "scale": 49.1,
       "scaleDate": "2026-06-30",
-      "etfPrice": 2.253,
-      "etfPremium": 8.35
+      "etfPrice": 2.271,
+      "etfPremium": 8.58
     },
     {
       "code": "159696",
@@ -407,8 +407,8 @@
       "purchaseFeeOrig": null,
       "scale": 50.11,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.944,
-      "etfPremium": 9.77
+      "etfPrice": 1.958,
+      "etfPremium": 9.91
     },
     {
       "code": "513110",
@@ -433,8 +433,8 @@
       "purchaseFeeOrig": null,
       "scale": 50.98,
       "scaleDate": "2026-06-30",
-      "etfPrice": 2.364,
-      "etfPremium": 8.15
+      "etfPrice": 2.381,
+      "etfPremium": 8.3
     },
     {
       "code": "513390",
@@ -459,8 +459,8 @@
       "purchaseFeeOrig": null,
       "scale": 42.5,
       "scaleDate": "2026-06-30",
-      "etfPrice": 2.315,
-      "etfPremium": 8.4
+      "etfPrice": 2.333,
+      "etfPremium": 8.6
     },
     {
       "code": "008971",
@@ -1591,8 +1591,8 @@
       "purchaseFeeOrig": null,
       "scale": 239.99,
       "scaleDate": "2026-06-30",
-      "etfPrice": 2.509,
-      "etfPremium": 5.16
+      "etfPrice": 2.528,
+      "etfPremium": 5.19
     },
     {
       "code": "050025",
@@ -1713,8 +1713,8 @@
       "purchaseFeeOrig": null,
       "scale": 8.44,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.976,
-      "etfPremium": 5.55,
+      "etfPrice": 2.004,
+      "etfPremium": 6.26,
       "announcement": {
         "date": "2025-11-03",
         "title": "国泰标普500交易型开放式指数证券投资基金(QDII)暂停申购业务的公告",
@@ -1746,8 +1746,8 @@
       "purchaseFeeOrig": null,
       "scale": 39.37,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.903,
-      "etfPremium": 4.09
+      "etfPrice": 1.921,
+      "etfPremium": 4.49
     },
     {
       "code": "513650",
@@ -1772,8 +1772,8 @@
       "purchaseFeeOrig": null,
       "scale": 76.94,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.897,
-      "etfPremium": 4.31
+      "etfPrice": 1.916,
+      "etfPremium": 4.61
     },
     {
       "code": "006075",
@@ -2444,8 +2444,8 @@
       "purchaseFeeOrig": null,
       "scale": 330.26,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.145,
-      "etfPremium": 0.47
+      "etfPrice": 1.178,
+      "etfPremium": 2.19
     },
     {
       "code": "164906",
@@ -2518,8 +2518,8 @@
       "purchaseFeeOrig": null,
       "scale": 254.86,
       "scaleDate": "2026-06-30",
-      "etfPrice": 0.402,
-      "etfPremium": -0.22
+      "etfPrice": 0.412,
+      "etfPremium": 0.07
     },
     {
       "code": "513180",
@@ -2544,8 +2544,8 @@
       "purchaseFeeOrig": null,
       "scale": 415.96,
       "scaleDate": "2026-06-30",
-      "etfPrice": 0.609,
-      "etfPremium": -0.15
+      "etfPrice": 0.616,
+      "etfPremium": 0.02
     },
     {
       "code": "118001",
