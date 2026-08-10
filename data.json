@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-09 15:29:14",
+  "updatedAt": "2026-08-10 11:28:06",
   "source": "eastmoney FundMNNBasicInformation + rankhandler 发现",
   "universeSource": "搜索\"标普500\"发现 0 只（过滤后新增 0） + 搜索\"纳斯达克\"发现 50 只（过滤后新增 13） + 自动发现(rankhandler) 359 只",
   "note": "MAXSG 为可信当前限额；CORE 热门基金附公告交叉校验；分组按名称自动分类。",
@@ -29,8 +29,8 @@
       "purchaseFeeOrig": null,
       "scale": 346.82,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.687,
-      "etfPremium": 13.29
+      "etfPrice": 1.691,
+      "etfPremium": 12.22
     },
     {
       "code": "513100",
@@ -55,8 +55,8 @@
       "purchaseFeeOrig": null,
       "scale": 194.68,
       "scaleDate": "2026-06-30",
-      "etfPrice": 2.266,
-      "etfPremium": 13.97,
+      "etfPrice": 2.275,
+      "etfPremium": 13.06,
       "announcement": {
         "date": "2024-11-23",
         "title": "纳斯达克100交易型开放式指数证券投资基金暂停申购业务的公告",
@@ -88,8 +88,8 @@
       "purchaseFeeOrig": null,
       "scale": 132.88,
       "scaleDate": "2026-06-30",
-      "etfPrice": 2.725,
-      "etfPremium": 10.38
+      "etfPrice": 2.734,
+      "etfPremium": 9.51
     },
     {
       "code": "161130",
@@ -277,8 +277,8 @@
       "purchaseFeeOrig": null,
       "scale": 73.84,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.824,
-      "etfPremium": 9.81
+      "etfPrice": 1.832,
+      "etfPremium": 8.98
     },
     {
       "code": "159659",
@@ -303,8 +303,8 @@
       "purchaseFeeOrig": null,
       "scale": 99.36,
       "scaleDate": "2026-06-30",
-      "etfPrice": 2.366,
-      "etfPremium": 10.2
+      "etfPrice": 2.374,
+      "etfPremium": 9.25
     },
     {
       "code": "159632",
@@ -329,8 +329,8 @@
       "purchaseFeeOrig": null,
       "scale": 113.0,
       "scaleDate": "2026-06-30",
-      "etfPrice": 2.481,
-      "etfPremium": 9.87
+      "etfPrice": 2.493,
+      "etfPremium": 9.09
     },
     {
       "code": "513870",
@@ -355,8 +355,8 @@
       "purchaseFeeOrig": null,
       "scale": 24.71,
       "scaleDate": "2026-06-30",
-      "etfPrice": 2.088,
-      "etfPremium": 10.3
+      "etfPrice": 2.095,
+      "etfPremium": 9.35
     },
     {
       "code": "159660",
@@ -381,8 +381,8 @@
       "purchaseFeeOrig": null,
       "scale": 49.1,
       "scaleDate": "2026-06-30",
-      "etfPrice": 2.393,
-      "etfPremium": 10.15
+      "etfPrice": 2.4,
+      "etfPremium": 9.17
     },
     {
       "code": "159696",
@@ -407,8 +407,8 @@
       "purchaseFeeOrig": null,
       "scale": 50.11,
       "scaleDate": "2026-06-30",
-      "etfPrice": 2.053,
-      "etfPremium": 10.95
+      "etfPrice": 2.061,
+      "etfPremium": 10.07
     },
     {
       "code": "513110",
@@ -433,8 +433,8 @@
       "purchaseFeeOrig": null,
       "scale": 50.98,
       "scaleDate": "2026-06-30",
-      "etfPrice": 2.504,
-      "etfPremium": 9.68
+      "etfPrice": 2.519,
+      "etfPremium": 9.03
     },
     {
       "code": "513390",
@@ -459,8 +459,8 @@
       "purchaseFeeOrig": null,
       "scale": 42.5,
       "scaleDate": "2026-06-30",
-      "etfPrice": 2.455,
-      "etfPremium": 10.02
+      "etfPrice": 2.465,
+      "etfPremium": 9.15
     },
     {
       "code": "008971",
@@ -1591,8 +1591,8 @@
       "purchaseFeeOrig": null,
       "scale": 239.99,
       "scaleDate": "2026-06-30",
-      "etfPrice": 2.695,
-      "etfPremium": 8.93
+      "etfPrice": 2.709,
+      "etfPremium": 8.83
     },
     {
       "code": "050025",
@@ -1713,8 +1713,8 @@
       "purchaseFeeOrig": null,
       "scale": 8.44,
       "scaleDate": "2026-06-30",
-      "etfPrice": 2.083,
-      "etfPremium": 7.29,
+      "etfPrice": 2.096,
+      "etfPremium": 7.31,
       "announcement": {
         "date": "2025-11-03",
         "title": "国泰标普500交易型开放式指数证券投资基金(QDII)暂停申购业务的公告",
@@ -1746,8 +1746,8 @@
       "purchaseFeeOrig": null,
       "scale": 39.37,
       "scaleDate": "2026-06-30",
-      "etfPrice": 2.02,
-      "etfPremium": 6.68
+      "etfPrice": 2.033,
+      "etfPremium": 6.77
     },
     {
       "code": "513650",
@@ -1772,8 +1772,8 @@
       "purchaseFeeOrig": null,
       "scale": 76.94,
       "scaleDate": "2026-06-30",
-      "etfPrice": 2.027,
-      "etfPremium": 7.52
+      "etfPrice": 2.033,
+      "etfPremium": 7.16
     },
     {
       "code": "006075",
@@ -2444,8 +2444,8 @@
       "purchaseFeeOrig": null,
       "scale": 330.26,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.16,
-      "etfPremium": -0.91
+      "etfPrice": 1.171,
+      "etfPremium": 0.02
     },
     {
       "code": "164906",
@@ -2518,8 +2518,8 @@
       "purchaseFeeOrig": null,
       "scale": 254.86,
       "scaleDate": "2026-06-30",
-      "etfPrice": 0.404,
-      "etfPremium": -0.15
+      "etfPrice": 0.406,
+      "etfPremium": -0.27
     },
     {
       "code": "513180",
@@ -2544,8 +2544,8 @@
       "purchaseFeeOrig": null,
       "scale": 415.96,
       "scaleDate": "2026-06-30",
-      "etfPrice": 0.613,
-      "etfPremium": -0.21
+      "etfPrice": 0.616,
+      "etfPremium": 0.03
     },
     {
       "code": "118001",
@@ -8815,10 +8815,10 @@
       "group": "亚太",
       "index": "--",
       "company": "博时基金",
-      "status": "limited",
-      "statusText": "限大额",
+      "status": "suspended",
+      "statusText": "暂停申购",
       "limit": null,
-      "limitText": "限大额",
+      "limitText": "—",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 10,
@@ -8839,10 +8839,10 @@
       "group": "亚太",
       "index": "--",
       "company": "博时基金",
-      "status": "limited",
-      "statusText": "限大额",
+      "status": "suspended",
+      "statusText": "暂停申购",
       "limit": null,
-      "limitText": "限大额",
+      "limitText": "—",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 10,
@@ -8959,10 +8959,10 @@
       "group": "亚太",
       "index": "--",
       "company": "博时基金",
-      "status": "limited",
-      "statusText": "限大额",
+      "status": "suspended",
+      "statusText": "暂停申购",
       "limit": null,
-      "limitText": "限大额",
+      "limitText": "—",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 10,
