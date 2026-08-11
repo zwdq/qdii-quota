@@ -42,6 +42,8 @@ class Endpoints:
 
     # 基金基本信息（状态/限额/净值/费率/规模）
     FUND_INFO = "https://fundmobapi.eastmoney.com/FundMNewApi/FundMNNBasicInformation"
+    # 全量基金名单（天天基金官方，含全部公募基金，无榜单缺漏）
+    FUND_ALL = "https://fund.eastmoney.com/js/fundcode_search.js"
     # 基金公告列表
     ANNOUNCEMENT = "https://api.fund.eastmoney.com/f10/jjgg"
     # 公告正文
@@ -384,12 +386,22 @@ class FundUniverse:
         return results
 
     def _discover_universe(self) -> list[str] | None:
-        """rankhandler 拉全量场外 QDII，返回 [code, ...]（成功且数量足够）或 None"""
+        """天天基金全量名单筛 QDII/海外型（含指数型-海外股票等非标分类）。
+        替代 rankhandler 榜单——实测 rankhandler 缺整个摩根基金（2026-08-11 019172 事件）。"""
+        try:
+            raw = self.http.get_text(Endpoints.FUND_ALL)
+            rows = re.findall(r'\["(\d{6})","[^"]*","([^"]*)","([^"]*)"', raw)
+            codes = [c for c, name, typ in rows
+                     if 'QDII' in typ.upper() or 'QDII' in name.upper() or '海外' in typ]
+            return codes if len(codes) > 100 else None
+        except Exception as e:
+            print("[discover] fundcode_search 失败(%s)，退回 rankhandler" % e)
+        # 兜底1：rankhandler 榜单（已知缺摩根等公司）
         try:
             url = ("%s?op=ph&dt=kf&ft=qdii&rs=&gs=0&sc=zzf&st=desc&pi=1&pn=800"
                    "&sd=2026-05-20&ed=2026-07-20&v=%d" % (Endpoints.RANK, int(time.time())))
             raw = self.http.get_text(url)
-            pairs = re.findall(r'"(\d{6}),[^,"]+,', raw)
+            pairs = re.findall(r'"(\d{6}),[^,",]+,', raw)
             return pairs if len(pairs) > 50 else None
         except Exception as e:
             print("[discover] 失败，将用兜底清单：%s" % e)
