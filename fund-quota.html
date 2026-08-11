@@ -271,8 +271,8 @@
             <th class="right" data-key="scale">规模(亿) <span class="arrow"></span></th>
             <th class="right" data-key="mgmtFee">管理费 <span class="arrow"></span></th>
             <th class="right" data-key="custodyFee">托管费 <span class="arrow"></span></th>
-            <th class="right" data-key="totalFee">总费率 <span class="arrow"></span></th>
             <th class="right" data-key="purchaseFee">申购费 <span class="arrow"></span></th>
+            <th class="right" data-key="totalFee">总费率 <span class="arrow"></span></th>
             <th data-key="status">申购状态 <span class="arrow"></span></th>
             <th class="right" data-key="limit">单日限额 <span class="arrow"></span></th>
           </tr>
@@ -427,8 +427,8 @@ function render() {
       <td class="right">${scale}</td>
       <td class="right">${fee(f.mgmtFee)}</td>
       <td class="right">${fee(f.custodyFee)}</td>
-      <td class="right">${fee(totalFee)}</td>
       <td class="right">${fee(f.purchaseFee)}</td>
+      <td class="right">${fee(totalFee)}</td>
       <td><span class="status ${st.cls}" title="${f.statusText || ''}">${st.text}</span></td>
       <td class="right num-mono">${limitCell(f)}</td>
     </tr>`;
