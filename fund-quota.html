@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN" data-theme="dark">
+<html lang="zh-CN" data-theme="gold">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -180,6 +180,45 @@
   [data-theme="light"] .ts-sun  { color: var(--amber); filter: drop-shadow(0 0 6px rgba(251, 191, 36, 0.7)); }
   [data-theme="dark"]  .ts-moon { color: var(--primary); filter: drop-shadow(0 0 6px rgba(56, 189, 248, 0.7)); }
 
+  /* ===== 圣殿金（默认，移植自圣殿·工作中心） ===== */
+  [data-theme="gold"] {
+    --bg-0: #08070a; --bg-1: #100e0c;
+    --card: rgba(22, 19, 15, 0.82); --card-solid: #16130f;
+    --surface-2: rgba(13, 11, 8, 0.6);
+    --shadow: none;
+    --border: rgba(201, 168, 76, 0.16); --border-strong: rgba(201, 168, 76, 0.38);
+    --text: #d8cfc4; --text-sub: #a09484; --text-dim: #6b6156;
+    --primary: #c9a84c; --primary-2: #f0d068; --primary-soft: rgba(201, 168, 76, 0.12);
+    --glow: 0 0 22px rgba(201, 168, 76, 0.30);
+    --green: #7fb069; --green-soft: rgba(127, 176, 105, 0.14);
+    --amber: #e0a63f; --amber-soft: rgba(224, 166, 63, 0.14);
+    --red: #c96a5a;   --red-soft: rgba(201, 106, 90, 0.14);
+    --blue: #8a9ac9;  --blue-soft: rgba(138, 154, 201, 0.14);
+  }
+  [data-theme="gold"] body {
+    background:
+      radial-gradient(ellipse at 20% 10%, rgba(201, 168, 76, 0.06) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 80%, rgba(106, 58, 138, 0.04) 0%, transparent 50%),
+      linear-gradient(175deg, #0a0908 0%, #0e0c0a 50%, #08070a 100%);
+  }
+  [data-theme="gold"] body::before {
+    background-image:
+      linear-gradient(rgba(201, 168, 76, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(201, 168, 76, 0.05) 1px, transparent 1px);
+  }
+  [data-theme="gold"] h1 {
+    background: linear-gradient(95deg, #f5edd8 0%, var(--primary) 55%, var(--primary-2) 100%);
+    -webkit-background-clip: text; background-clip: text;
+  }
+  [data-theme="gold"] thead th { background: rgba(16, 14, 12, 0.94); }
+  [data-theme="gold"] .chip.active {
+    background: linear-gradient(135deg, rgba(201, 168, 76, 0.25), rgba(240, 208, 104, 0.18));
+    border-color: rgba(201, 168, 76, 0.65); color: #f5edd8;
+    box-shadow: 0 0 16px rgba(201, 168, 76, 0.28), inset 0 0 8px rgba(201, 168, 76, 0.1);
+  }
+  [data-theme="gold"] .ts-moon { color: var(--primary); filter: drop-shadow(0 0 6px rgba(201, 168, 76, 0.7)); }
+  [data-theme="gold"] ::-webkit-scrollbar-thumb { background: rgba(201, 168, 76, 0.25); }
+
   /* ===== 浅色主题（在深色基础上覆盖变量） ===== */
   [data-theme="light"] {
     --bg-0: #e9eff8; --bg-1: #f5f8fc;
@@ -221,10 +260,25 @@
   [data-theme="light"] .controls,
   [data-theme="light"] .table-wrap,
   [data-theme="light"] footer .src { box-shadow: 0 4px 16px rgba(30, 50, 90, 0.08); }
-  @media (max-width: 700px) { .stats { grid-template-columns: repeat(2, 1fr); } h1 { font-size: 22px; } }
+  /* ===== 左右分栏布局：左侧统计+筛选，右侧列表 ===== */
+  .layout { display: flex; gap: 16px; align-items: flex-start; }
+  .sidebar { width: 250px; flex-shrink: 0; position: sticky; top: 16px; }
+  .sidebar .stats { grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 12px; }
+  .sidebar .stat { padding: 12px 14px; }
+  .sidebar .stat .num { font-size: 22px; margin-top: 4px; }
+  .sidebar .controls { flex-direction: column; align-items: stretch; margin-bottom: 0; }
+  .sidebar .search { flex: none; }
+  .sidebar .filters { align-items: flex-start; }
+  .main-col { flex: 1; min-width: 0; }
+  @media (max-width: 960px) {
+    .layout { flex-direction: column; }
+    .sidebar { width: 100%; position: static; }
+    .sidebar .stats { grid-template-columns: repeat(4, 1fr); }
+  }
+  @media (max-width: 700px) { .stats { grid-template-columns: repeat(2, 1fr) !important; } h1 { font-size: 22px; } }
 </style>
 <script>/* 防闪烁：在渲染前尽早读取主题偏好 */
-  (function(){try{var t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
+  (function(){try{var t=localStorage.getItem('theme')||'gold';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
 </script>
 </head>
 <body>
@@ -247,16 +301,20 @@
   </header>
 
   <div id="banner"></div>
-  <div class="stats" id="stats"></div>
 
-  <div class="controls">
-    <div class="search">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-      <input id="search" type="text" placeholder="搜索基金代码 / 名称 / 公司 / 跟踪指数…">
-    </div>
-    <div class="filters" id="filters"></div>
-  </div>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="stats" id="stats"></div>
+      <div class="controls">
+        <div class="search">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          <input id="search" type="text" placeholder="搜索基金代码 / 名称 / 公司 / 跟踪指数…">
+        </div>
+        <div class="filters" id="filters"></div>
+      </div>
+    </aside>
 
+    <div class="main-col">
   <div class="table-wrap">
     <div class="scroll">
       <table>
@@ -279,6 +337,8 @@
         </thead>
         <tbody id="tbody"></tbody>
       </table>
+    </div>
+  </div>
     </div>
   </div>
 
@@ -523,10 +583,11 @@ document.querySelectorAll("thead th").forEach(th => {
 });
 document.getElementById("refreshBtn").addEventListener("click", loadData);
 
-/* 主题切换：深色 ↔ 浅色，记忆到 localStorage（高亮由 CSS 按 data-theme 自动控制） */
+/* 主题切换：圣殿金 → 深色 → 浅色 循环，记忆到 localStorage */
+const THEME_CYCLE = { gold: "dark", dark: "light", light: "gold" };
 document.getElementById("themeToggle").addEventListener("click", () => {
-  const cur = document.documentElement.getAttribute("data-theme") || "dark";
-  const next = cur === "dark" ? "light" : "dark";
+  const cur = document.documentElement.getAttribute("data-theme") || "gold";
+  const next = THEME_CYCLE[cur] || "gold";
   document.documentElement.setAttribute("data-theme", next);
   try { localStorage.setItem("theme", next); } catch (e) {}
 });
