@@ -590,9 +590,10 @@ class FundFetcher:
     # ── 公告校验 ──────────────────────────────────────────────────────────
 
     def _add_announcement(self, item: dict, do_ann: bool) -> None:
-        """CORE 基金且状态为限大额/暂停时：拉公告交叉校验；API 无额度时用公告金额兜底"""
+        """公告校验：CORE 基金 + 纳指100/标普500 全组（F/E/I 类份额常只有公告有额度）"""
         code = item["code"]
-        if not (do_ann and code in ANN_CORE and item["status"] in ("limited", "suspended")):
+        hot = code in ANN_CORE or item.get("group") in ("纳斯达克100", "标普500")
+        if not (do_ann and hot and item["status"] in ("limited", "suspended")):
             return
         try:
             ann = self.ann_checker.supplement(code, item["limit"], item.get("name", ""))

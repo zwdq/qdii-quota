@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-11 17:02:25",
+  "updatedAt": "2026-08-11 17:13:46",
   "source": "eastmoney FundMNNBasicInformation + rankhandler 发现",
   "universeSource": "搜索\"标普500\"发现 0 只（过滤后新增 0） + 搜索\"纳斯达克\"发现 50 只（过滤后新增 13） + 自动发现(rankhandler) 739 只",
   "note": "MAXSG 为可信当前限额；CORE 热门基金附公告交叉校验；分组按名称自动分类。",
@@ -2713,7 +2713,14 @@
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
       "scale": 17.83,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-06-30",
+      "announcement": {
+        "date": "2026-03-31",
+        "title": "关于旗下部分基金2026年4月3日暂停申购、赎回、转换、定期定额投资业务的提示性公告",
+        "artId": "AN202603301820859738",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "040047",
@@ -2737,7 +2744,17 @@
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": 58.1,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-06-30",
+      "announcement": {
+        "date": "2026-07-21",
+        "title": "关于华安纳斯达克100交易型开放式指数证券投资基金联接基金(QDII)暂停大额申购、大额定期定额投资的公告",
+        "artId": "AN202607211827178744",
+        "limits": [
+          10,
+          100
+        ],
+        "review": false
+      }
     },
     {
       "code": "017895",
@@ -2833,7 +2850,16 @@
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": 15.04,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-06-30",
+      "announcement": {
+        "date": "2025-11-18",
+        "title": "博时纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)调整大额申购、转换转入、定期定额投资业务的公告",
+        "artId": "AN202511181783502485",
+        "limits": [
+          100
+        ],
+        "review": false
+      }
     },
     {
       "code": "018969",
@@ -2857,7 +2883,14 @@
       "purchaseFee": null,
       "purchaseFeeOrig": 1.2,
       "scale": null,
-      "scaleDate": "2023-12-31"
+      "scaleDate": "2023-12-31",
+      "announcement": {
+        "date": "2026-07-17",
+        "title": "关于汇添富纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)调整大额申购、定期定额投资业务限制金额的公",
+        "artId": "AN202607171827041199",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "017952",
@@ -2929,7 +2962,16 @@
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": 7.07,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-06-30",
+      "announcement": {
+        "date": "2025-11-18",
+        "title": "博时纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)调整大额申购、转换转入、定期定额投资业务的公告",
+        "artId": "AN202511181783502485",
+        "limits": [
+          100
+        ],
+        "review": false
+      }
     },
     {
       "code": "017951",
@@ -5178,8 +5220,8 @@
       "limitSource": "api",
       "minPurchase": 10,
       "nav": 2.957,
-      "navChangePct": -0.1,
-      "navDate": "2026-08-07",
+      "navChangePct": 0.0,
+      "navDate": "2026-08-10",
       "mgmtFee": 1.2,
       "custodyFee": 0.2,
       "purchaseFee": 0.0,
@@ -5809,7 +5851,16 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": 64.93,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-06-30",
+      "announcement": {
+        "date": "2026-07-20",
+        "title": "关于广发纳斯达克100交易型开放式指数证券投资基金联接基金(QDII)A类及C类基金份额调整大额申购(含转换转入、定期定",
+        "artId": "AN202607201827126800",
+        "limits": [
+          5
+        ],
+        "review": false
+      }
     },
     {
       "code": "006555",
@@ -6449,9 +6500,9 @@
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 10,
-      "nav": 1.1875,
-      "navChangePct": 5.75,
-      "navDate": "2026-08-07",
+      "nav": 1.2108,
+      "navChangePct": 1.96,
+      "navDate": "2026-08-10",
       "mgmtFee": 0.12,
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
@@ -6473,9 +6524,9 @@
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 10,
-      "nav": 0.1749,
-      "navChangePct": 5.74,
-      "navDate": "2026-08-07",
+      "nav": 0.1784,
+      "navChangePct": 2.0,
+      "navDate": "2026-08-10",
       "mgmtFee": 1.2,
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
@@ -7657,7 +7708,14 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": 12.88,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-06-30",
+      "announcement": {
+        "date": "2026-07-09",
+        "title": "建信纳斯达克100指数型证券投资基金(QDII)在直销渠道暂停大额申购、定期定额投资公告",
+        "artId": "AN202607091826839817",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "012804",
@@ -8569,7 +8627,17 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": 13.48,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-06-30",
+      "announcement": {
+        "date": "2026-07-21",
+        "title": "关于华安纳斯达克100交易型开放式指数证券投资基金联接基金(QDII)暂停大额申购、大额定期定额投资的公告",
+        "artId": "AN202607211827178744",
+        "limits": [
+          10,
+          100
+        ],
+        "review": false
+      }
     },
     {
       "code": "014982",
@@ -9097,7 +9165,16 @@
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
       "scale": 62.1,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-06-30",
+      "announcement": {
+        "date": "2026-07-08",
+        "title": "关于调整南方纳斯达克100指数发起式证券投资基金(QDII)申购、定投及转换转入业务金额限制的公告",
+        "artId": "AN202607081826816306",
+        "limits": [
+          10
+        ],
+        "review": false
+      }
     },
     {
       "code": "016453",
@@ -9121,7 +9198,16 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": 48.33,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-06-30",
+      "announcement": {
+        "date": "2026-07-08",
+        "title": "关于调整南方纳斯达克100指数发起式证券投资基金(QDII)申购、定投及转换转入业务金额限制的公告",
+        "artId": "AN202607081826816306",
+        "limits": [
+          10
+        ],
+        "review": false
+      }
     },
     {
       "code": "016470",
@@ -9193,7 +9279,14 @@
       "purchaseFee": 0.1,
       "purchaseFeeOrig": 1.0,
       "scale": 20.77,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-06-30",
+      "announcement": {
+        "date": "2026-02-03",
+        "title": "嘉实纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购(含定期定额投资)业务的公告",
+        "artId": "AN202602031819507007",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "016533",
@@ -9217,7 +9310,14 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": 16.4,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-06-30",
+      "announcement": {
+        "date": "2026-02-03",
+        "title": "嘉实纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购(含定期定额投资)业务的公告",
+        "artId": "AN202602031819507007",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "016664",
@@ -9793,7 +9893,16 @@
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
       "scale": 53.03,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-06-30",
+      "announcement": {
+        "date": "2026-07-27",
+        "title": "摩根标普500指数型发起式证券投资基金(QDII)调整大额申购、定期定额投资及转换转入业务限制金额的公告",
+        "artId": "AN202607241827315718",
+        "limits": [
+          10
+        ],
+        "review": false
+      }
     },
     {
       "code": "017653",
@@ -10033,7 +10142,16 @@
       "purchaseFee": 0.1,
       "purchaseFeeOrig": 1.0,
       "scale": 30.75,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-06-30",
+      "announcement": {
+        "date": "2025-09-25",
+        "title": "天弘基金管理有限公司关于天弘纳斯达克100指数型发起式证券投资基金(QDII)A类基金份额、C类基金份额调整大额申购及定",
+        "artId": "AN202509251750166840",
+        "limits": [
+          100
+        ],
+        "review": false
+      }
     },
     {
       "code": "018044",
@@ -10057,7 +10175,16 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": 29.34,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-06-30",
+      "announcement": {
+        "date": "2025-09-25",
+        "title": "天弘基金管理有限公司关于天弘纳斯达克100指数型发起式证券投资基金(QDII)A类基金份额、C类基金份额调整大额申购及定",
+        "artId": "AN202509251750166840",
+        "limits": [
+          100
+        ],
+        "review": false
+      }
     },
     {
       "code": "018078",
@@ -10601,9 +10728,9 @@
       "limitReliable": true,
       "limitSource": "api",
       "minPurchase": 10,
-      "nav": 1.0564,
-      "navChangePct": -0.28,
-      "navDate": "2026-08-07",
+      "nav": 1.1149,
+      "navChangePct": 5.54,
+      "navDate": "2026-08-10",
       "mgmtFee": 0.08,
       "custodyFee": 0.1,
       "purchaseFee": 0.1,
@@ -10625,9 +10752,9 @@
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 100,
-      "nav": 0.1556,
-      "navChangePct": -0.26,
-      "navDate": "2026-08-07",
+      "nav": 0.1642,
+      "navChangePct": 5.53,
+      "navDate": "2026-08-10",
       "mgmtFee": 0.8,
       "custodyFee": 1.0,
       "purchaseFee": null,
@@ -10649,9 +10776,9 @@
       "limitReliable": true,
       "limitSource": "api",
       "minPurchase": 10,
-      "nav": 1.0402,
-      "navChangePct": -0.29,
-      "navDate": "2026-08-07",
+      "nav": 1.0978,
+      "navChangePct": 5.54,
+      "navDate": "2026-08-10",
       "mgmtFee": 0.0,
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
@@ -10673,9 +10800,9 @@
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 100,
-      "nav": 0.1532,
-      "navChangePct": -0.26,
-      "navDate": "2026-08-07",
+      "nav": 0.1617,
+      "navChangePct": 5.55,
+      "navDate": "2026-08-10",
       "mgmtFee": 0.0,
       "custodyFee": 0.0,
       "purchaseFee": null,
@@ -10697,9 +10824,9 @@
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 10,
-      "nav": 1.1769,
-      "navChangePct": 5.74,
-      "navDate": "2026-08-07",
+      "nav": 1.2,
+      "navChangePct": 1.96,
+      "navDate": "2026-08-10",
       "mgmtFee": 1.2,
       "custodyFee": 0.2,
       "purchaseFee": 0.0,
@@ -10721,9 +10848,9 @@
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 10,
-      "nav": 0.1733,
-      "navChangePct": 5.74,
-      "navDate": "2026-08-07",
+      "nav": 0.1768,
+      "navChangePct": 2.02,
+      "navDate": "2026-08-10",
       "mgmtFee": 1.2,
       "custodyFee": 0.2,
       "purchaseFee": 0.0,
@@ -12492,10 +12619,10 @@
       "company": "广发基金",
       "status": "limited",
       "statusText": "限大额",
-      "limit": null,
-      "limitText": "限大额",
-      "limitReliable": false,
-      "limitSource": "api",
+      "limit": 100,
+      "limitText": "100 元",
+      "limitReliable": true,
+      "limitSource": "ann",
       "minPurchase": 500,
       "nav": 8.2168,
       "navChangePct": 1.2,
@@ -12505,7 +12632,16 @@
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": 21.47,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-06-30",
+      "announcement": {
+        "date": "2026-07-11",
+        "title": "关于广发纳斯达克100交易型开放式指数证券投资基金联接基金(QDII)F类基金份额调整大额申购(含转换转入、定期定额和不",
+        "artId": "AN202607101826876558",
+        "limits": [
+          100
+        ],
+        "review": false
+      }
     },
     {
       "code": "021842",
@@ -14833,7 +14969,17 @@
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": 58.1,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-06-30",
+      "announcement": {
+        "date": "2026-07-21",
+        "title": "关于华安纳斯达克100交易型开放式指数证券投资基金联接基金(QDII)暂停大额申购、大额定期定额投资的公告",
+        "artId": "AN202607211827178744",
+        "limits": [
+          10,
+          100
+        ],
+        "review": false
+      }
     },
     {
       "code": "050015",
@@ -15049,7 +15195,17 @@
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
       "scale": 7.3,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-06-30",
+      "announcement": {
+        "date": "2026-06-03",
+        "title": "关于大成标普500等权重指数证券投资基金调整大额申购(含定期定额申购)的公告",
+        "artId": "AN202606031823187833",
+        "limits": [
+          10,
+          100
+        ],
+        "review": false
+      }
     },
     {
       "code": "100050",
@@ -15233,9 +15389,9 @@
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 10,
-      "nav": 3.022,
-      "navChangePct": -0.07,
-      "navDate": "2026-08-07",
+      "nav": 3.021,
+      "navChangePct": -0.03,
+      "navDate": "2026-08-10",
       "mgmtFee": 1.0,
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
@@ -17887,9 +18043,9 @@
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": null,
-      "nav": 1.7696,
-      "navChangePct": 0.55,
-      "navDate": "2026-08-07",
+      "nav": 1.7658,
+      "navChangePct": -0.21,
+      "navDate": "2026-08-10",
       "mgmtFee": 0.8,
       "custodyFee": null,
       "purchaseFee": null,
@@ -18245,9 +18401,9 @@
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": null,
-      "nav": 1.0869,
-      "navChangePct": -1.86,
-      "navDate": "2026-08-07",
+      "nav": 1.0828,
+      "navChangePct": -0.38,
+      "navDate": "2026-08-10",
       "mgmtFee": 0.8,
       "custodyFee": null,
       "purchaseFee": null,
@@ -18305,7 +18461,14 @@
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
       "scale": 21.76,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-06-30",
+      "announcement": {
+        "date": "2026-07-09",
+        "title": "建信纳斯达克100指数型证券投资基金(QDII)在直销渠道暂停大额申购、定期定额投资公告",
+        "artId": "AN202607091826839817",
+        "limits": [],
+        "review": false
+      }
     },
     {
       "code": "539002",
