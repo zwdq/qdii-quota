@@ -146,7 +146,7 @@ SEARCH_FILTERS: dict[str, re.Pattern] = {
 
 # ── 公告交叉校验正则 ────────────────────────────────────────────────────────
 ANN_INCLUDE: re.Pattern = re.compile(
-    r"(限制|暂停|调整|恢复).{0,6}(大额)?(申购|定期定额|转换转入)|大额申购|限额"
+    r"(限制|暂停|调整|恢复).{0,6}(大额)?(申购|定期定额|转换转入)|大额申购|限额|金额限制"
 )
 ANN_EXCLUDE: re.Pattern = re.compile(
     r"节假日|休市|境外.{0,4}(休市|节假日)|清盘|分红|费率|销售(机构|渠道)|代销|"
@@ -427,8 +427,8 @@ class AnnouncementChecker:
     def __init__(self, http: HttpClient) -> None:
         self.http = http
 
-    def _latest_limit_announcement(self, code: str) -> dict | None:
-        """获取最近一条限额相关公告"""
+    def _latest_limit_announcement(self, code: str, fund_name: str = "") -> dict | None:
+        """获取最近一条限额相关公告；I类/E类等份额优先匹配带类标的公告"""
         url = ("%s?callback=j&fundCode=%s&pageIndex=1&pageSize=120&type=5&_=%d000"
                % (Endpoints.ANNOUNCEMENT, code, int(time.time())))
         try:
@@ -442,15 +442,23 @@ class AnnouncementChecker:
                  and not ANN_EXCLUDE.search(r.get("TITLE", "") or "")]
         if not cands:
             return None
-        cands.sort(key=lambda r: r.get("PUBLISHDATE", ""), reverse=True)
+        # PUBLISHDATE 常为空，改用公告 ID 内嵌时间戳排序（AN2026072018... 字典序=时间序）
+        cands.sort(key=lambda r: r.get("ID", "") or "", reverse=True)
+        # 份额类标优先（如 021000 是 I 类，优先选标题含"I类"的公告——金额和 A/C 类不同）
+        mcls = re.search(r"\(?([A-Z])\)?$", fund_name.strip())
+        if mcls:
+            tag = mcls.group(1) + "类"
+            specific = [r for r in cands if tag in (r.get("TITLE") or "")]
+            if specific:
+                return specific[0]
         return cands[0]
 
-    def supplement(self, code: str, current_limit: int | None) -> dict | None:
+    def supplement(self, code: str, current_limit: int | None, fund_name: str = "") -> dict | None:
         """获取公告并构建校验结果
 
         返回 {"date", "title", "artId", "limits", "review"} 或 None
         """
-        ann = self._latest_limit_announcement(code)
+        ann = self._latest_limit_announcement(code, fund_name)
         if not ann:
             return None
         art_id = ann.get("ID") or ""
@@ -582,16 +590,43 @@ class FundFetcher:
     # ── 公告校验 ──────────────────────────────────────────────────────────
 
     def _add_announcement(self, item: dict, do_ann: bool) -> None:
-        """CORE 基金且状态为限大额/暂停时：拉公告交叉校验"""
+        """CORE 基金且状态为限大额/暂停时：拉公告交叉校验；API 无额度时用公告金额兜底"""
         code = item["code"]
         if not (do_ann and code in ANN_CORE and item["status"] in ("limited", "suspended")):
             return
         try:
-            ann = self.ann_checker.supplement(code, item["limit"])
+            ann = self.ann_checker.supplement(code, item["limit"], item.get("name", ""))
             if ann:
                 item["announcement"] = ann
+                # API MAXSG='--'（未公布，如 I 类份额）→ 用公告抠出的金额当限额
+                if item["limit"] is None and item["status"] == "limited" and ann.get("limits"):
+                    amt = max(ann["limits"])
+                    item["limit"] = amt
+                    item["limitText"] = fmt_amount(amt)
+                    item["limitReliable"] = True
+                    item["limitSource"] = "ann"
         except Exception as e:
             item["announcementError"] = str(e)
+
+    # ── 费率兜底（F10 费率页）────────────────────────────────────────────
+
+    def _fee_fallback(self, item: dict) -> None:
+        """App API 对部分份额（如 I 类）费率返回 '--' 或错误的 0.00%，
+        此时刮 F10 费率页补全（管理/托管费率）。mgmtFee 缺失即触发。"""
+        if item.get("mgmtFee") is not None:
+            return
+        try:
+            raw = self.http.get_text(
+                "https://fundf10.eastmoney.com/jjfl_%s.html" % item["code"])
+            text = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", raw))
+            m = re.search(r"管理费率[^0-9]{0,20}([0-9.]+)%", text)
+            if m:
+                item["mgmtFee"] = float(m.group(1))
+            m = re.search(r"托管费率[^0-9]{0,20}([0-9.]+)%", text)
+            if m:
+                item["custodyFee"] = float(m.group(1))
+        except Exception:
+            pass
 
     # ── 主入口 ────────────────────────────────────────────────────────────
 
@@ -599,6 +634,7 @@ class FundFetcher:
         """抓取单只基金完整数据"""
         datas = self._fetch_raw_data(code)
         item = self._map_fields(code, datas)
+        self._fee_fallback(item)
         self._add_premium(item)
         self._add_announcement(item, do_ann)
         return item
