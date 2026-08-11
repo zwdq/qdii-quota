@@ -311,7 +311,7 @@ const STATUS_LABEL = {
   traded:    { text: "场内",     cls: "traded" },
 };
 
-const state = { data: null, cats: new Set(["纳斯达克100", "标普500"]), query: "", sortKey: "default", sortDir: "asc", withQuota: true };
+const state = { data: null, cats: new Set(["纳斯达克100", "标普500"]), query: "", sortKey: "default", sortDir: "asc", withQuota: true, hideUsd: true };
 
 // 分类：脚本输出的 group 即展示分类；chip 按数据动态生成、按 PREFERRED 顺序排列
 const PREFERRED = ["纳斯达克100","标普500","道琼斯","日经225","日本","德国","法国","欧洲",
@@ -374,6 +374,7 @@ function getView() {
   let view = state.data.funds.filter(f => {
     if (!state.cats.has(catOf(f))) return false;        // 主题多选过滤
     if (state.withQuota && !(f.status === "normal" || f.status === "limited")) return false; // 有额度=可申购
+    if (state.hideUsd && (f.name || "").includes("美元")) return false; // 美元份额默认隐藏
     if (q) {
       const hay = (f.code + f.name + f.index + f.company + (f.group || "") + catOf(f)).toLowerCase();
       if (!hay.includes(q)) return false;
@@ -458,6 +459,7 @@ function buildCategories() {
 function renderChips() {
   const el = document.getElementById("filters");
   el.innerHTML = '<button class="chip" data-cat="__quota" title="只显示可申购（正常/限大额）的基金；暂停和场内的隐藏">✅有额度</button>'
+    + '<button class="chip" data-cat="__usd" title="隐藏美元现汇/现钞份额，只看人民币份额">💵隐藏美元</button>'
     + '<span style="font-size:13px;color:var(--text-sub);align-self:center">主题：</span>'
     + CAT_ORDER.map(c => `<button class="chip" data-cat="${c}">${c}</button>`).join("")
     + '<button class="chip" data-cat="__all">全部</button>';
@@ -492,6 +494,7 @@ function syncChips() {
   document.querySelectorAll("#filters .chip").forEach(c => {
     const cat = c.dataset.cat;
     if (cat === "__quota") { c.classList.toggle("active", state.withQuota); return; }
+    if (cat === "__usd") { c.classList.toggle("active", state.hideUsd); return; }
     c.classList.toggle("active", cat === "__all" ? state.cats.size === CAT_ORDER.length : state.cats.has(cat));
   });
 }
@@ -500,6 +503,8 @@ document.getElementById("filters").addEventListener("click", e => {
   const cat = chip.dataset.cat;
   if (cat === "__quota") {
     state.withQuota = !state.withQuota;                  // 有额度开关
+  } else if (cat === "__usd") {
+    state.hideUsd = !state.hideUsd;                      // 美元份额开关
   } else if (cat === "__all") {
     state.cats = new Set(CAT_ORDER);                    // 全选
   } else {
