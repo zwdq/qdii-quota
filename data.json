@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-22 10:44:07",
+  "updatedAt": "2026-08-22 15:21:57",
   "source": "eastmoney FundMNNBasicInformation + rankhandler 发现",
   "universeSource": "搜索\"标普500\"发现 0 只（过滤后新增 0） + 搜索\"纳斯达克\"发现 50 只（过滤后新增 13） + 自动发现(rankhandler) 739 只",
   "note": "MAXSG 为可信当前限额；CORE 热门基金附公告交叉校验；分组按名称自动分类。",
@@ -1731,10 +1731,10 @@
       "group": "标普500",
       "index": "标准普尔500指数",
       "company": "国泰基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
+      "status": "traded",
+      "statusText": "场内交易",
       "limit": null,
-      "limitText": "—",
+      "limitText": "场内",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": null,
@@ -1748,14 +1748,7 @@
       "scale": 8.44,
       "scaleDate": "2026-06-30",
       "etfPrice": 2.064,
-      "etfPremium": 7.36,
-      "announcement": {
-        "date": "2026-08-22",
-        "title": "关于国泰标普500交易型开放式指数证券投资基金(QDII)恢复申购业务的公告",
-        "artId": "AN202608211828272242",
-        "limits": [],
-        "review": false
-      }
+      "etfPremium": 7.36
     },
     {
       "code": "159655",
