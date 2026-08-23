@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-23 10:55:38",
+  "updatedAt": "2026-08-23 15:28:17",
   "source": "eastmoney FundMNNBasicInformation + rankhandler 发现",
   "universeSource": "搜索\"标普500\"发现 0 只（过滤后新增 0） + 搜索\"纳斯达克\"发现 50 只（过滤后新增 13） + 自动发现(rankhandler) 739 只",
   "note": "MAXSG 为可信当前限额；CORE 热门基金附公告交叉校验；分组按名称自动分类。",
@@ -8671,8 +8671,8 @@
       "nav": 2.0211,
       "navChangePct": 0.17,
       "navDate": "2026-08-20",
-      "mgmtFee": 0.8,
-      "custodyFee": 0.2,
+      "mgmtFee": null,
+      "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": 2.64,
