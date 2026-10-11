@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-10 15:28:21",
+  "updatedAt": "2026-10-11 15:42:23",
   "source": "eastmoney FundMNNBasicInformation + rankhandler 发现",
   "universeSource": "搜索\"标普500\"发现 0 只（过滤后新增 0） + 搜索\"纳斯达克\"发现 50 只（过滤后新增 13） + 自动发现(rankhandler) 742 只",
   "note": "MAXSG 为可信当前限额；CORE 热门基金附公告交叉校验；分组按名称自动分类。",
@@ -481,17 +481,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": 11.1,
-      "scaleDate": "2026-06-30",
-      "announcement": {
-        "date": "2026-06-03",
-        "title": "关于大成纳斯达克100交易型开放式指数证券投资基金联接基金(QDII)调整大额申购(含定期定额申购)的公告",
-        "artId": "AN202606031823188725",
-        "limits": [
-          10,
-          100
-        ],
-        "review": false
-      }
+      "scaleDate": "2026-06-30"
     },
     {
       "code": "012870",
@@ -12728,8 +12718,8 @@
       "nav": 1.428,
       "navChangePct": -1.01,
       "navDate": "2026-10-08",
-      "mgmtFee": null,
-      "custodyFee": 0.0,
+      "mgmtFee": 1.2,
+      "custodyFee": 0.2,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": 1.5,
