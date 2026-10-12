@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-11 15:42:23",
+  "updatedAt": "2026-10-12 15:47:14",
   "source": "eastmoney FundMNNBasicInformation + rankhandler 发现",
   "universeSource": "搜索\"标普500\"发现 0 只（过滤后新增 0） + 搜索\"纳斯达克\"发现 50 只（过滤后新增 13） + 自动发现(rankhandler) 742 只",
   "note": "MAXSG 为可信当前限额；CORE 热门基金附公告交叉校验；分组按名称自动分类。",
@@ -29,8 +29,8 @@
       "purchaseFeeOrig": null,
       "scale": 346.82,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.769,
-      "etfPremium": 14.55
+      "etfPrice": 1.768,
+      "etfPremium": 14.01
     },
     {
       "code": "513100",
@@ -55,8 +55,8 @@
       "purchaseFeeOrig": null,
       "scale": 194.68,
       "scaleDate": "2026-06-30",
-      "etfPrice": 2.398,
-      "etfPremium": 16.29,
+      "etfPrice": 2.4,
+      "etfPremium": 15.85,
       "announcement": {
         "date": "2026-09-30",
         "title": "关于纳斯达克100交易型开放式指数证券投资基金暂停申购业务的公告",
@@ -88,8 +88,8 @@
       "purchaseFeeOrig": null,
       "scale": 132.88,
       "scaleDate": "2026-06-30",
-      "etfPrice": 2.875,
-      "etfPremium": 12.16
+      "etfPrice": 2.896,
+      "etfPremium": 12.57
     },
     {
       "code": "161130",
@@ -274,8 +274,8 @@
       "purchaseFeeOrig": null,
       "scale": 73.84,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.91,
-      "etfPremium": 11.07
+      "etfPrice": 1.92,
+      "etfPremium": 11.11
     },
     {
       "code": "159659",
@@ -300,8 +300,8 @@
       "purchaseFeeOrig": null,
       "scale": 99.36,
       "scaleDate": "2026-06-30",
-      "etfPrice": 2.503,
-      "etfPremium": 12.28
+      "etfPrice": 2.529,
+      "etfPremium": 12.94
     },
     {
       "code": "159632",
@@ -326,8 +326,8 @@
       "purchaseFeeOrig": null,
       "scale": 113.0,
       "scaleDate": "2026-06-30",
-      "etfPrice": 2.612,
-      "etfPremium": 11.42
+      "etfPrice": 2.627,
+      "etfPremium": 11.57
     },
     {
       "code": "513870",
@@ -352,8 +352,8 @@
       "purchaseFeeOrig": null,
       "scale": 24.71,
       "scaleDate": "2026-06-30",
-      "etfPrice": 2.201,
-      "etfPremium": 12.05
+      "etfPrice": 2.218,
+      "etfPremium": 12.39
     },
     {
       "code": "159660",
@@ -378,8 +378,8 @@
       "purchaseFeeOrig": null,
       "scale": 49.1,
       "scaleDate": "2026-06-30",
-      "etfPrice": 2.532,
-      "etfPremium": 12.35
+      "etfPrice": 2.563,
+      "etfPremium": 13.21
     },
     {
       "code": "159696",
@@ -404,8 +404,8 @@
       "purchaseFeeOrig": null,
       "scale": 50.11,
       "scaleDate": "2026-06-30",
-      "etfPrice": 2.182,
-      "etfPremium": 13.62
+      "etfPrice": 2.206,
+      "etfPremium": 14.35
     },
     {
       "code": "513110",
@@ -430,8 +430,8 @@
       "purchaseFeeOrig": null,
       "scale": 50.98,
       "scaleDate": "2026-06-30",
-      "etfPrice": 2.636,
-      "etfPremium": 11.29
+      "etfPrice": 2.652,
+      "etfPremium": 11.48
     },
     {
       "code": "513390",
@@ -456,8 +456,8 @@
       "purchaseFeeOrig": null,
       "scale": 42.5,
       "scaleDate": "2026-06-30",
-      "etfPrice": 2.59,
-      "etfPremium": 11.85
+      "etfPrice": 2.58,
+      "etfPremium": 10.92
     },
     {
       "code": "008971",
@@ -481,7 +481,17 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": 11.1,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-06-30",
+      "announcement": {
+        "date": "2026-06-03",
+        "title": "关于大成纳斯达克100交易型开放式指数证券投资基金联接基金(QDII)调整大额申购(含定期定额申购)的公告",
+        "artId": "AN202606031823188725",
+        "limits": [
+          10,
+          100
+        ],
+        "review": false
+      }
     },
     {
       "code": "012870",
@@ -1616,8 +1626,8 @@
       "purchaseFeeOrig": null,
       "scale": 239.99,
       "scaleDate": "2026-06-30",
-      "etfPrice": 2.726,
-      "etfPremium": 10.1
+      "etfPrice": 2.735,
+      "etfPremium": 9.87
     },
     {
       "code": "050025",
@@ -1737,8 +1747,8 @@
       "purchaseFeeOrig": null,
       "scale": 8.44,
       "scaleDate": "2026-06-30",
-      "etfPrice": 2.087,
-      "etfPremium": 7.42,
+      "etfPrice": 2.108,
+      "etfPremium": 7.95,
       "announcement": {
         "date": "2026-09-30",
         "title": "关于国泰标普500交易型开放式指数证券投资基金(QDII)暂停申购业务的公告",
@@ -1770,8 +1780,8 @@
       "purchaseFeeOrig": null,
       "scale": 39.37,
       "scaleDate": "2026-06-30",
-      "etfPrice": 2.033,
-      "etfPremium": 7.2
+      "etfPrice": 2.052,
+      "etfPremium": 7.72
     },
     {
       "code": "513650",
@@ -1796,8 +1806,8 @@
       "purchaseFeeOrig": null,
       "scale": 76.94,
       "scaleDate": "2026-06-30",
-      "etfPrice": 2.02,
-      "etfPremium": 7.16
+      "etfPrice": 2.038,
+      "etfPremium": 7.53
     },
     {
       "code": "006075",
@@ -2094,9 +2104,9 @@
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 1,
-      "nav": 0.2566,
-      "navChangePct": 1.42,
-      "navDate": "2026-10-08",
+      "nav": 0.2581,
+      "navChangePct": 0.58,
+      "navDate": "2026-10-09",
       "mgmtFee": 0.6,
       "custodyFee": 0.15,
       "purchaseFee": null,
@@ -2459,8 +2469,8 @@
       "purchaseFeeOrig": null,
       "scale": 330.26,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.002,
-      "etfPremium": 2.19
+      "etfPrice": 1.008,
+      "etfPremium": -0.36
     },
     {
       "code": "164906",
@@ -2534,7 +2544,7 @@
       "scale": 254.86,
       "scaleDate": "2026-06-30",
       "etfPrice": 0.337,
-      "etfPremium": 0.0
+      "etfPremium": 0.03
     },
     {
       "code": "513180",
@@ -2559,8 +2569,8 @@
       "purchaseFeeOrig": null,
       "scale": 415.96,
       "scaleDate": "2026-06-30",
-      "etfPrice": 0.525,
-      "etfPremium": 0.0
+      "etfPrice": 0.523,
+      "etfPremium": 0.23
     },
     {
       "code": "118001",
@@ -3327,11 +3337,11 @@
       "group": "医药",
       "index": "标普全球1200医疗保健指数",
       "company": "广发基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
-      "limit": null,
-      "limitText": "—",
-      "limitReliable": false,
+      "status": "limited",
+      "statusText": "限大额",
+      "limit": 100,
+      "limitText": "100 元",
+      "limitReliable": true,
       "limitSource": "api",
       "minPurchase": 10,
       "nav": 2.528,
@@ -3351,10 +3361,10 @@
       "group": "医药",
       "index": "标普全球1200医疗保健指数",
       "company": "广发基金",
-      "status": "limited",
-      "statusText": "限大额",
+      "status": "suspended",
+      "statusText": "暂停申购",
       "limit": null,
-      "limitText": "限大额",
+      "limitText": "—",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 1,
@@ -3855,11 +3865,11 @@
       "group": "债券",
       "index": "--",
       "company": "中银基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
-      "limit": null,
-      "limitText": "—",
-      "limitReliable": false,
+      "status": "limited",
+      "statusText": "限大额",
+      "limit": 300000,
+      "limitText": "30 万",
+      "limitReliable": true,
       "limitSource": "api",
       "minPurchase": 10,
       "nav": 1.1775,
@@ -3879,10 +3889,10 @@
       "group": "债券",
       "index": "--",
       "company": "中银基金",
-      "status": "limited",
-      "statusText": "限大额",
+      "status": "suspended",
+      "statusText": "暂停申购",
       "limit": null,
-      "limitText": "限大额",
+      "limitText": "—",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": null,
@@ -3951,11 +3961,11 @@
       "group": "全球",
       "index": "--",
       "company": "华安基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
-      "limit": null,
-      "limitText": "—",
-      "limitReliable": false,
+      "status": "limited",
+      "statusText": "限大额",
+      "limit": 1000,
+      "limitText": "1000 元",
+      "limitReliable": true,
       "limitSource": "api",
       "minPurchase": 10,
       "nav": 1.147,
@@ -3975,10 +3985,10 @@
       "group": "全球",
       "index": "--",
       "company": "华安基金",
-      "status": "limited",
-      "statusText": "限大额",
+      "status": "suspended",
+      "statusText": "暂停申购",
       "limit": null,
-      "limitText": "限大额",
+      "limitText": "—",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": null,
@@ -3999,11 +4009,11 @@
       "group": "全球",
       "index": "--",
       "company": "华安基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
-      "limit": null,
-      "limitText": "—",
-      "limitReliable": false,
+      "status": "limited",
+      "statusText": "限大额",
+      "limit": 1000,
+      "limitText": "1000 元",
+      "limitReliable": true,
       "limitSource": "api",
       "minPurchase": 10,
       "nav": 1.097,
@@ -4126,9 +4136,9 @@
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 1000,
-      "nav": 0.4051,
-      "navChangePct": 2.43,
-      "navDate": "2026-10-08",
+      "nav": 0.409,
+      "navChangePct": 0.96,
+      "navDate": "2026-10-09",
       "mgmtFee": 1.0,
       "custodyFee": 1.2,
       "purchaseFee": null,
@@ -4143,11 +4153,11 @@
       "group": "全球",
       "index": "--",
       "company": "华安基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
-      "limit": null,
-      "limitText": "—",
-      "limitReliable": false,
+      "status": "limited",
+      "statusText": "限大额",
+      "limit": 1000,
+      "limitText": "1000 元",
+      "limitReliable": true,
       "limitSource": "api",
       "minPurchase": 10,
       "nav": 1.135,
@@ -4167,10 +4177,10 @@
       "group": "全球",
       "index": "--",
       "company": "华安基金",
-      "status": "limited",
-      "statusText": "限大额",
+      "status": "suspended",
+      "statusText": "暂停申购",
       "limit": null,
-      "limitText": "限大额",
+      "limitText": "—",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": null,
@@ -4191,11 +4201,11 @@
       "group": "全球",
       "index": "--",
       "company": "华安基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
-      "limit": null,
-      "limitText": "—",
-      "limitReliable": false,
+      "status": "limited",
+      "statusText": "限大额",
+      "limit": 1000,
+      "limitText": "1000 元",
+      "limitReliable": true,
       "limitSource": "api",
       "minPurchase": 10,
       "nav": 1.085,
@@ -4767,11 +4777,11 @@
       "group": "债券",
       "index": "--",
       "company": "国海富兰克林基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
-      "limit": null,
-      "limitText": "—",
-      "limitReliable": false,
+      "status": "limited",
+      "statusText": "限大额",
+      "limit": 10000,
+      "limitText": "1 万",
+      "limitReliable": true,
       "limitSource": "api",
       "minPurchase": 10,
       "nav": 0.9364,
@@ -4791,10 +4801,10 @@
       "group": "债券",
       "index": "--",
       "company": "国海富兰克林基金",
-      "status": "limited",
-      "statusText": "限大额",
+      "status": "suspended",
+      "statusText": "暂停申购",
       "limit": null,
-      "limitText": "限大额",
+      "limitText": "—",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": null,
@@ -5007,11 +5017,11 @@
       "group": "全球",
       "index": "--",
       "company": "长信基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
-      "limit": null,
-      "limitText": "—",
-      "limitReliable": false,
+      "status": "limited",
+      "statusText": "限大额",
+      "limit": 1000000,
+      "limitText": "100 万",
+      "limitReliable": true,
       "limitSource": "api",
       "minPurchase": 10,
       "nav": 1.1908,
@@ -5055,11 +5065,11 @@
       "group": "债券",
       "index": "--",
       "company": "融通基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
-      "limit": null,
-      "limitText": "—",
-      "limitReliable": false,
+      "status": "limited",
+      "statusText": "限大额",
+      "limit": 1000000,
+      "limitText": "100 万",
+      "limitReliable": true,
       "limitSource": "api",
       "minPurchase": 10,
       "nav": 1.1442,
@@ -5247,10 +5257,10 @@
       "group": "其他",
       "index": "--",
       "company": "工银瑞信基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
+      "status": "normal",
+      "statusText": "开放申购",
       "limit": null,
-      "limitText": "—",
+      "limitText": "不限",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 10,
@@ -5271,10 +5281,10 @@
       "group": "其他",
       "index": "--",
       "company": "工银瑞信基金",
-      "status": "limited",
-      "statusText": "限大额",
+      "status": "suspended",
+      "statusText": "暂停申购",
       "limit": null,
-      "limitText": "限大额",
+      "limitText": "—",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 1,
@@ -5689,8 +5699,8 @@
       "nav": 5.8073,
       "navChangePct": 0.59,
       "navDate": "2026-10-08",
-      "mgmtFee": 1.2,
-      "custodyFee": 0.2,
+      "mgmtFee": null,
+      "custodyFee": 0.16,
       "purchaseFee": 0.16,
       "purchaseFeeOrig": 1.6,
       "scale": null,
@@ -6024,11 +6034,11 @@
       "group": "日本",
       "index": "--",
       "company": "摩根基金(中国)",
-      "status": "suspended",
-      "statusText": "暂停申购",
-      "limit": null,
-      "limitText": "—",
-      "limitReliable": false,
+      "status": "limited",
+      "statusText": "限大额",
+      "limit": 2000,
+      "limitText": "2000 元",
+      "limitReliable": true,
       "limitSource": "api",
       "minPurchase": 10,
       "nav": 2.2451,
@@ -6048,11 +6058,11 @@
       "group": "债券",
       "index": "--",
       "company": "易方达基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
-      "limit": null,
-      "limitText": "—",
-      "limitReliable": false,
+      "status": "limited",
+      "statusText": "限大额",
+      "limit": 100000,
+      "limitText": "10 万",
+      "limitReliable": true,
       "limitSource": "api",
       "minPurchase": 10,
       "nav": 1.1432,
@@ -6072,11 +6082,11 @@
       "group": "债券",
       "index": "--",
       "company": "易方达基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
-      "limit": null,
-      "limitText": "—",
-      "limitReliable": false,
+      "status": "limited",
+      "statusText": "限大额",
+      "limit": 100000,
+      "limitText": "10 万",
+      "limitReliable": true,
       "limitSource": "api",
       "minPurchase": 10,
       "nav": 1.1188,
@@ -6312,11 +6322,11 @@
       "group": "亚太",
       "index": "--",
       "company": "中银基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
-      "limit": null,
-      "limitText": "—",
-      "limitReliable": false,
+      "status": "limited",
+      "statusText": "限大额",
+      "limit": 300000,
+      "limitText": "30 万",
+      "limitReliable": true,
       "limitSource": "api",
       "minPurchase": 10,
       "nav": 1.0191,
@@ -6336,11 +6346,11 @@
       "group": "亚太",
       "index": "--",
       "company": "中银基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
-      "limit": null,
-      "limitText": "—",
-      "limitReliable": false,
+      "status": "limited",
+      "statusText": "限大额",
+      "limit": 300000,
+      "limitText": "30 万",
+      "limitReliable": true,
       "limitSource": "api",
       "minPurchase": 10,
       "nav": 0.9969,
@@ -6360,10 +6370,10 @@
       "group": "亚太",
       "index": "--",
       "company": "中银基金",
-      "status": "limited",
-      "statusText": "限大额",
+      "status": "suspended",
+      "statusText": "暂停申购",
       "limit": null,
-      "limitText": "限大额",
+      "limitText": "—",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": null,
@@ -6384,10 +6394,10 @@
       "group": "亚太",
       "index": "--",
       "company": "中银基金",
-      "status": "limited",
-      "statusText": "限大额",
+      "status": "suspended",
+      "statusText": "暂停申购",
       "limit": null,
-      "limitText": "限大额",
+      "limitText": "—",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": null,
@@ -6576,11 +6586,11 @@
       "group": "亚太",
       "index": "--",
       "company": "富国基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
-      "limit": null,
-      "limitText": "—",
-      "limitReliable": false,
+      "status": "limited",
+      "statusText": "限大额",
+      "limit": 10000000,
+      "limitText": "1000 万",
+      "limitReliable": true,
       "limitSource": "api",
       "minPurchase": 10,
       "nav": 1.0491,
@@ -6600,10 +6610,10 @@
       "group": "亚太",
       "index": "--",
       "company": "富国基金",
-      "status": "limited",
-      "statusText": "限大额",
+      "status": "suspended",
+      "statusText": "暂停申购",
       "limit": null,
-      "limitText": "限大额",
+      "limitText": "—",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": null,
@@ -6943,9 +6953,9 @@
       "limitReliable": true,
       "limitSource": "api",
       "minPurchase": 10,
-      "nav": 2.657,
-      "navChangePct": 2.47,
-      "navDate": "2026-10-08",
+      "nav": 2.681,
+      "navChangePct": 0.9,
+      "navDate": "2026-10-09",
       "mgmtFee": 1.0,
       "custodyFee": 0.2,
       "purchaseFee": 0.0,
@@ -7066,8 +7076,8 @@
       "nav": 0.315,
       "navChangePct": -0.94,
       "navDate": "2026-10-08",
-      "mgmtFee": 1.2,
-      "custodyFee": 0.2,
+      "mgmtFee": null,
+      "custodyFee": 0.16,
       "purchaseFee": 0.16,
       "purchaseFeeOrig": 1.6,
       "scale": 5.89,
@@ -8479,10 +8489,10 @@
       "group": "其他",
       "index": "--",
       "company": "融通基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
+      "status": "normal",
+      "statusText": "开放申购",
       "limit": null,
-      "limitText": "—",
+      "limitText": "不限",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 10,
@@ -9088,11 +9098,11 @@
       "group": "医药",
       "index": "标普全球1200医疗保健指数",
       "company": "广发基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
-      "limit": null,
-      "limitText": "—",
-      "limitReliable": false,
+      "status": "limited",
+      "statusText": "限大额",
+      "limit": 100,
+      "limitText": "100 元",
+      "limitReliable": true,
       "limitSource": "api",
       "minPurchase": 10,
       "nav": 2.484,
@@ -9112,10 +9122,10 @@
       "group": "医药",
       "index": "标普全球1200医疗保健指数",
       "company": "广发基金",
-      "status": "limited",
-      "statusText": "限大额",
+      "status": "suspended",
+      "statusText": "暂停申购",
       "limit": null,
-      "limitText": "限大额",
+      "limitText": "—",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 1,
@@ -9897,11 +9907,11 @@
       "group": "半导体",
       "index": "--",
       "company": "创金合信基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
-      "limit": null,
-      "limitText": "—",
-      "limitReliable": false,
+      "status": "limited",
+      "statusText": "限大额",
+      "limit": 100000,
+      "limitText": "10 万",
+      "limitReliable": true,
       "limitSource": "api",
       "minPurchase": 10,
       "nav": 2.2392,
@@ -9921,11 +9931,11 @@
       "group": "半导体",
       "index": "--",
       "company": "创金合信基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
-      "limit": null,
-      "limitText": "—",
-      "limitReliable": false,
+      "status": "limited",
+      "statusText": "限大额",
+      "limit": 100000,
+      "limitText": "10 万",
+      "limitReliable": true,
       "limitSource": "api",
       "minPurchase": 10,
       "nav": 2.202,
@@ -10017,11 +10027,11 @@
       "group": "其他",
       "index": "--",
       "company": "摩根基金(中国)",
-      "status": "suspended",
-      "statusText": "暂停申购",
-      "limit": null,
-      "limitText": "—",
-      "limitReliable": false,
+      "status": "limited",
+      "statusText": "限大额",
+      "limit": 100000,
+      "limitText": "10 万",
+      "limitReliable": true,
       "limitSource": "api",
       "minPurchase": 10,
       "nav": 1.0516,
@@ -10041,10 +10051,10 @@
       "group": "其他",
       "index": "--",
       "company": "摩根基金(中国)",
-      "status": "limited",
-      "statusText": "限大额",
+      "status": "suspended",
+      "statusText": "暂停申购",
       "limit": null,
-      "limitText": "限大额",
+      "limitText": "—",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 1,
@@ -10065,10 +10075,10 @@
       "group": "其他",
       "index": "--",
       "company": "摩根基金(中国)",
-      "status": "limited",
-      "statusText": "限大额",
+      "status": "suspended",
+      "statusText": "暂停申购",
       "limit": null,
-      "limitText": "限大额",
+      "limitText": "—",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 1,
@@ -10803,10 +10813,10 @@
       "group": "全球",
       "index": "--",
       "company": "嘉实基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
+      "status": "normal",
+      "statusText": "开放申购",
       "limit": null,
-      "limitText": "—",
+      "limitText": "不限",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 10,
@@ -11235,11 +11245,11 @@
       "group": "日本",
       "index": "--",
       "company": "摩根基金(中国)",
-      "status": "suspended",
-      "statusText": "暂停申购",
-      "limit": null,
-      "limitText": "—",
-      "limitReliable": false,
+      "status": "limited",
+      "statusText": "限大额",
+      "limit": 2000,
+      "limitText": "2000 元",
+      "limitReliable": true,
       "limitSource": "api",
       "minPurchase": 10,
       "nav": 2.2231,
@@ -11331,11 +11341,11 @@
       "group": "亚太",
       "index": "--",
       "company": "博时基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
-      "limit": null,
-      "limitText": "—",
-      "limitReliable": false,
+      "status": "limited",
+      "statusText": "限大额",
+      "limit": 2000,
+      "limitText": "2000 元",
+      "limitReliable": true,
       "limitSource": "api",
       "minPurchase": 10,
       "nav": 1.4047,
@@ -11355,10 +11365,10 @@
       "group": "亚太",
       "index": "--",
       "company": "博时基金",
-      "status": "limited",
-      "statusText": "限大额",
+      "status": "suspended",
+      "statusText": "暂停申购",
       "limit": null,
-      "limitText": "限大额",
+      "limitText": "—",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 10,
@@ -11427,11 +11437,11 @@
       "group": "全球",
       "index": "--",
       "company": "富国基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
-      "limit": null,
-      "limitText": "—",
-      "limitReliable": false,
+      "status": "limited",
+      "statusText": "限大额",
+      "limit": 1000000,
+      "limitText": "100 万",
+      "limitReliable": true,
       "limitSource": "api",
       "minPurchase": 10,
       "nav": 1.2162,
@@ -11643,11 +11653,11 @@
       "group": "亚太",
       "index": "--",
       "company": "富国基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
-      "limit": null,
-      "limitText": "—",
-      "limitReliable": false,
+      "status": "limited",
+      "statusText": "限大额",
+      "limit": 10000000,
+      "limitText": "1000 万",
+      "limitReliable": true,
       "limitSource": "api",
       "minPurchase": 10,
       "nav": 1.0406,
@@ -11715,11 +11725,11 @@
       "group": "债券",
       "index": "--",
       "company": "中银基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
-      "limit": null,
-      "limitText": "—",
-      "limitReliable": false,
+      "status": "limited",
+      "statusText": "限大额",
+      "limit": 300000,
+      "limitText": "30 万",
+      "limitReliable": true,
       "limitSource": "api",
       "minPurchase": 10,
       "nav": 1.1702,
@@ -11787,11 +11797,11 @@
       "group": "其他",
       "index": "--",
       "company": "摩根基金(中国)",
-      "status": "suspended",
-      "statusText": "暂停申购",
-      "limit": null,
-      "limitText": "—",
-      "limitReliable": false,
+      "status": "limited",
+      "statusText": "限大额",
+      "limit": 100000,
+      "limitText": "10 万",
+      "limitReliable": true,
       "limitSource": "api",
       "minPurchase": 10,
       "nav": 1.0402,
@@ -11811,11 +11821,11 @@
       "group": "全球科技",
       "index": "新交所泛东南亚科技指数",
       "company": "华泰柏瑞基金",
-      "status": "limited",
-      "statusText": "限大额",
-      "limit": 500,
-      "limitText": "500 元",
-      "limitReliable": true,
+      "status": "suspended",
+      "statusText": "暂停申购",
+      "limit": null,
+      "limitText": "—",
+      "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 10,
       "nav": 0.9947,
@@ -11835,11 +11845,11 @@
       "group": "全球科技",
       "index": "新交所泛东南亚科技指数",
       "company": "华泰柏瑞基金",
-      "status": "limited",
-      "statusText": "限大额",
-      "limit": 500,
-      "limitText": "500 元",
-      "limitReliable": true,
+      "status": "suspended",
+      "statusText": "暂停申购",
+      "limit": null,
+      "limitText": "—",
+      "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 10,
       "nav": 0.9858,
@@ -11859,11 +11869,11 @@
       "group": "债券",
       "index": "--",
       "company": "融通基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
-      "limit": null,
-      "limitText": "—",
-      "limitReliable": false,
+      "status": "limited",
+      "statusText": "限大额",
+      "limit": 1000000,
+      "limitText": "100 万",
+      "limitReliable": true,
       "limitSource": "api",
       "minPurchase": 10,
       "nav": 1.1331,
@@ -11979,11 +11989,11 @@
       "group": "日经225",
       "index": "东京日经225指数",
       "company": "华安基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
-      "limit": null,
-      "limitText": "—",
-      "limitReliable": false,
+      "status": "limited",
+      "statusText": "限大额",
+      "limit": 10,
+      "limitText": "10 元",
+      "limitReliable": true,
       "limitSource": "api",
       "minPurchase": 10,
       "nav": 1.4668,
@@ -12003,11 +12013,11 @@
       "group": "日经225",
       "index": "东京日经225指数",
       "company": "华安基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
-      "limit": null,
-      "limitText": "—",
-      "limitReliable": false,
+      "status": "limited",
+      "statusText": "限大额",
+      "limit": 10,
+      "limitText": "10 元",
+      "limitReliable": true,
       "limitSource": "api",
       "minPurchase": 10,
       "nav": 1.4572,
@@ -12075,11 +12085,11 @@
       "group": "全球",
       "index": "--",
       "company": "中银基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
-      "limit": null,
-      "limitText": "—",
-      "limitReliable": false,
+      "status": "limited",
+      "statusText": "限大额",
+      "limit": 5000000,
+      "limitText": "500 万",
+      "limitReliable": true,
       "limitSource": "api",
       "minPurchase": 10,
       "nav": 1.1311,
@@ -12099,10 +12109,10 @@
       "group": "全球",
       "index": "--",
       "company": "中信保诚基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
+      "status": "normal",
+      "statusText": "开放申购",
       "limit": null,
-      "limitText": "—",
+      "limitText": "不限",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 10,
@@ -12243,11 +12253,11 @@
       "group": "亚太",
       "index": "富时亚太低碳精选指数",
       "company": "南方基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
-      "limit": null,
-      "limitText": "—",
-      "limitReliable": false,
+      "status": "limited",
+      "statusText": "限大额",
+      "limit": 20000,
+      "limitText": "2 万",
+      "limitReliable": true,
       "limitSource": "api",
       "minPurchase": 10,
       "nav": 1.4776,
@@ -12267,11 +12277,11 @@
       "group": "亚太",
       "index": "富时亚太低碳精选指数",
       "company": "南方基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
-      "limit": null,
-      "limitText": "—",
-      "limitReliable": false,
+      "status": "limited",
+      "statusText": "限大额",
+      "limit": 20000,
+      "limitText": "2 万",
+      "limitReliable": true,
       "limitSource": "api",
       "minPurchase": 10,
       "nav": 1.4707,
@@ -12804,10 +12814,10 @@
       "group": "亚太",
       "index": "--",
       "company": "富国基金",
-      "status": "limited",
-      "statusText": "限大额",
+      "status": "suspended",
+      "statusText": "暂停申购",
       "limit": null,
-      "limitText": "限大额",
+      "limitText": "—",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 1,
@@ -12828,10 +12838,10 @@
       "group": "全球",
       "index": "--",
       "company": "富国基金",
-      "status": "limited",
-      "statusText": "限大额",
+      "status": "suspended",
+      "statusText": "暂停申购",
       "limit": null,
-      "limitText": "限大额",
+      "limitText": "—",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 1,
@@ -13692,10 +13702,10 @@
       "group": "其他",
       "index": "--",
       "company": "工银瑞信基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
+      "status": "normal",
+      "statusText": "开放申购",
       "limit": null,
-      "limitText": "—",
+      "limitText": "不限",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 10,
@@ -14629,7 +14639,7 @@
       "index": "--",
       "company": "交银施罗德基金",
       "status": "normal",
-      "statusText": "封闭期",
+      "statusText": "开放申购",
       "limit": null,
       "limitText": "不限",
       "limitReliable": false,
@@ -15069,11 +15079,11 @@
       "group": "亚太",
       "index": "--",
       "company": "博时基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
-      "limit": null,
-      "limitText": "—",
-      "limitReliable": false,
+      "status": "limited",
+      "statusText": "限大额",
+      "limit": 2000,
+      "limitText": "2000 元",
+      "limitReliable": true,
       "limitSource": "api",
       "minPurchase": 10,
       "nav": 1.4062,
@@ -15093,10 +15103,10 @@
       "group": "亚太",
       "index": "--",
       "company": "博时基金",
-      "status": "limited",
-      "statusText": "限大额",
+      "status": "suspended",
+      "statusText": "暂停申购",
       "limit": null,
-      "limitText": "限大额",
+      "limitText": "—",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 10,
@@ -15117,10 +15127,10 @@
       "group": "亚太",
       "index": "--",
       "company": "博时基金",
-      "status": "limited",
-      "statusText": "限大额",
+      "status": "suspended",
+      "statusText": "暂停申购",
       "limit": null,
-      "limitText": "限大额",
+      "limitText": "—",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 10,
@@ -15165,11 +15175,11 @@
       "group": "REITs",
       "index": "--",
       "company": "嘉实基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
-      "limit": null,
-      "limitText": "—",
-      "limitReliable": false,
+      "status": "limited",
+      "statusText": "限大额",
+      "limit": 100,
+      "limitText": "100 元",
+      "limitReliable": true,
       "limitSource": "api",
       "minPurchase": 10,
       "nav": 1.033,
@@ -15247,11 +15257,11 @@
       "group": "全球",
       "index": "--",
       "company": "富国基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
-      "limit": null,
-      "limitText": "—",
-      "limitReliable": false,
+      "status": "limited",
+      "statusText": "限大额",
+      "limit": 1000000,
+      "limitText": "100 万",
+      "limitReliable": true,
       "limitSource": "api",
       "minPurchase": 10,
       "nav": 1.2261,
@@ -15455,8 +15465,8 @@
       "purchaseFeeOrig": null,
       "scale": 2.17,
       "scaleDate": "2026-09-17",
-      "etfPrice": 0.947,
-      "etfPremium": -0.21
+      "etfPrice": 0.944,
+      "etfPremium": -0.11
     },
     {
       "code": "159100",
@@ -15465,10 +15475,10 @@
       "group": "其他",
       "index": "巴西BOVESPA",
       "company": "华夏基金",
-      "status": "traded",
-      "statusText": "场内交易",
+      "status": "suspended",
+      "statusText": "暂停申购",
       "limit": null,
-      "limitText": "场内",
+      "limitText": "—",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": null,
@@ -15481,8 +15491,8 @@
       "purchaseFeeOrig": null,
       "scale": 5.04,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.33,
-      "etfPremium": 1.3
+      "etfPrice": 1.36,
+      "etfPremium": 1.65
     },
     {
       "code": "159202",
@@ -15507,8 +15517,8 @@
       "purchaseFeeOrig": null,
       "scale": 8.48,
       "scaleDate": "2026-06-30",
-      "etfPrice": 0.725,
-      "etfPremium": 0.18
+      "etfPrice": 0.727,
+      "etfPremium": 0.14
     },
     {
       "code": "159303",
@@ -15533,8 +15543,8 @@
       "purchaseFeeOrig": null,
       "scale": null,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.579,
-      "etfPremium": -0.12
+      "etfPrice": 1.575,
+      "etfPremium": 0.13
     },
     {
       "code": "159329",
@@ -15559,8 +15569,8 @@
       "purchaseFeeOrig": null,
       "scale": 11.14,
       "scaleDate": "2026-06-30",
-      "etfPrice": 0.867,
-      "etfPremium": 0.24
+      "etfPrice": 0.865,
+      "etfPremium": 0.52
     },
     {
       "code": "159501",
@@ -15585,8 +15595,8 @@
       "purchaseFeeOrig": null,
       "scale": 124.11,
       "scaleDate": "2026-06-30",
-      "etfPrice": 2.22,
-      "etfPremium": 14.58
+      "etfPrice": 2.238,
+      "etfPremium": 15.0
     },
     {
       "code": "159502",
@@ -15611,8 +15621,8 @@
       "purchaseFeeOrig": null,
       "scale": 17.76,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.58,
-      "etfPremium": 6.47
+      "etfPrice": 1.599,
+      "etfPremium": 4.7
     },
     {
       "code": "159509",
@@ -15637,8 +15647,8 @@
       "purchaseFeeOrig": null,
       "scale": 151.28,
       "scaleDate": "2026-06-30",
-      "etfPrice": 3.345,
-      "etfPremium": 39.8
+      "etfPrice": 3.183,
+      "etfPremium": 32.6
     },
     {
       "code": "159518",
@@ -15663,8 +15673,8 @@
       "purchaseFeeOrig": null,
       "scale": 19.29,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.307,
-      "etfPremium": 0.44
+      "etfPrice": 1.303,
+      "etfPremium": 1.17
     },
     {
       "code": "159519",
@@ -15689,8 +15699,8 @@
       "purchaseFeeOrig": null,
       "scale": 1.08,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.754,
-      "etfPremium": -0.11
+      "etfPrice": 1.766,
+      "etfPremium": -0.05
     },
     {
       "code": "159529",
@@ -15715,8 +15725,8 @@
       "purchaseFeeOrig": null,
       "scale": 10.44,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.295,
-      "etfPremium": 4.37
+      "etfPrice": 1.305,
+      "etfPremium": 4.39
     },
     {
       "code": "159557",
@@ -15741,8 +15751,8 @@
       "purchaseFeeOrig": null,
       "scale": 1.88,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.437,
-      "etfPremium": -0.87
+      "etfPrice": 1.435,
+      "etfPremium": -0.54
     },
     {
       "code": "159561",
@@ -15767,8 +15777,8 @@
       "purchaseFeeOrig": null,
       "scale": 19.21,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.283,
-      "etfPremium": 2.74
+      "etfPrice": 1.287,
+      "etfPremium": 2.01
     },
     {
       "code": "159577",
@@ -15793,8 +15803,8 @@
       "purchaseFeeOrig": null,
       "scale": 11.26,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.751,
-      "etfPremium": 9.14
+      "etfPrice": 1.752,
+      "etfPremium": 8.6
     },
     {
       "code": "159605",
@@ -15819,8 +15829,8 @@
       "purchaseFeeOrig": null,
       "scale": 34.4,
       "scaleDate": "2026-06-30",
-      "etfPrice": 0.74,
-      "etfPremium": 2.82
+      "etfPrice": 0.744,
+      "etfPremium": -0.01
     },
     {
       "code": "159607",
@@ -15845,8 +15855,8 @@
       "purchaseFeeOrig": null,
       "scale": 9.28,
       "scaleDate": "2026-06-30",
-      "etfPrice": 0.735,
-      "etfPremium": 2.27
+      "etfPrice": 0.74,
+      "etfPremium": -0.38
     },
     {
       "code": "159615",
@@ -15871,8 +15881,8 @@
       "purchaseFeeOrig": null,
       "scale": 5.3,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.142,
-      "etfPremium": -0.35
+      "etfPrice": 1.138,
+      "etfPremium": -0.21
     },
     {
       "code": "159687",
@@ -15881,10 +15891,10 @@
       "group": "亚太",
       "index": "富时亚太低碳精选指数",
       "company": "南方基金",
-      "status": "traded",
-      "statusText": "场内交易",
+      "status": "suspended",
+      "statusText": "暂停申购",
       "limit": null,
-      "limitText": "场内",
+      "limitText": "—",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": null,
@@ -15897,8 +15907,8 @@
       "purchaseFeeOrig": null,
       "scale": 30.8,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.842,
-      "etfPremium": 0.33
+      "etfPrice": 1.835,
+      "etfPremium": -0.3
     },
     {
       "code": "159688",
@@ -15923,8 +15933,8 @@
       "purchaseFeeOrig": null,
       "scale": 10.42,
       "scaleDate": "2026-06-30",
-      "etfPrice": 0.687,
-      "etfPremium": 0.28
+      "etfPrice": 0.688,
+      "etfPremium": 0.13
     },
     {
       "code": "159699",
@@ -15949,8 +15959,8 @@
       "purchaseFeeOrig": null,
       "scale": 4.47,
       "scaleDate": "2026-06-30",
-      "etfPrice": 0.839,
-      "etfPremium": 0.23
+      "etfPrice": 0.831,
+      "etfPremium": 0.0
     },
     {
       "code": "159740",
@@ -15975,8 +15985,8 @@
       "purchaseFeeOrig": null,
       "scale": 162.48,
       "scaleDate": "2026-06-30",
-      "etfPrice": 0.517,
-      "etfPremium": -0.17
+      "etfPrice": 0.515,
+      "etfPremium": -0.1
     },
     {
       "code": "159741",
@@ -16001,8 +16011,8 @@
       "purchaseFeeOrig": null,
       "scale": 9.41,
       "scaleDate": "2026-06-30",
-      "etfPrice": 0.52,
-      "etfPremium": -0.54
+      "etfPrice": 0.518,
+      "etfPremium": -0.5
     },
     {
       "code": "159742",
@@ -16027,8 +16037,8 @@
       "purchaseFeeOrig": null,
       "scale": 40.71,
       "scaleDate": "2026-06-30",
-      "etfPrice": 0.532,
-      "etfPremium": 0.08
+      "etfPrice": 0.53,
+      "etfPremium": 0.15
     },
     {
       "code": "159747",
@@ -16053,8 +16063,8 @@
       "purchaseFeeOrig": null,
       "scale": 3.75,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.08,
-      "etfPremium": 0.14
+      "etfPrice": 1.076,
+      "etfPremium": 0.2
     },
     {
       "code": "159750",
@@ -16079,8 +16089,8 @@
       "purchaseFeeOrig": null,
       "scale": 11.52,
       "scaleDate": "2026-06-30",
-      "etfPrice": 0.795,
-      "etfPremium": -0.5
+      "etfPrice": 0.794,
+      "etfPremium": -0.24
     },
     {
       "code": "159822",
@@ -16105,8 +16115,8 @@
       "purchaseFeeOrig": null,
       "scale": 1.84,
       "scaleDate": "2026-06-30",
-      "etfPrice": 0.558,
-      "etfPremium": 1.66
+      "etfPrice": 0.559,
+      "etfPremium": -0.14
     },
     {
       "code": "159850",
@@ -16131,8 +16141,8 @@
       "purchaseFeeOrig": null,
       "scale": 4.11,
       "scaleDate": "2026-06-30",
-      "etfPrice": 0.783,
-      "etfPremium": -0.23
+      "etfPrice": 0.786,
+      "etfPremium": -0.24
     },
     {
       "code": "159866",
@@ -16141,10 +16151,10 @@
       "group": "日经225",
       "index": "东京日经225指数",
       "company": "工银瑞信基金",
-      "status": "traded",
-      "statusText": "场内交易",
+      "status": "suspended",
+      "statusText": "暂停申购",
       "limit": null,
-      "limitText": "场内",
+      "limitText": "—",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": null,
@@ -16157,8 +16167,8 @@
       "purchaseFeeOrig": null,
       "scale": 13.9,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.769,
-      "etfPremium": 2.83
+      "etfPrice": 1.759,
+      "etfPremium": 2.42
     },
     {
       "code": "159892",
@@ -16183,8 +16193,8 @@
       "purchaseFeeOrig": null,
       "scale": 44.12,
       "scaleDate": "2026-06-30",
-      "etfPrice": 0.798,
-      "etfPremium": -0.29
+      "etfPrice": 0.796,
+      "etfPremium": -0.03
     },
     {
       "code": "159920",
@@ -16209,8 +16219,8 @@
       "purchaseFeeOrig": null,
       "scale": 87.12,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.421,
-      "etfPremium": 0.15
+      "etfPrice": 1.426,
+      "etfPremium": 0.21
     },
     {
       "code": "160125",
@@ -16627,10 +16637,10 @@
       "group": "其他",
       "index": "--",
       "company": "融通基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
+      "status": "normal",
+      "statusText": "开放申购",
       "limit": null,
-      "limitText": "—",
+      "limitText": "不限",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 10,
@@ -16730,9 +16740,9 @@
       "limitReliable": true,
       "limitSource": "api",
       "minPurchase": 10,
-      "nav": 2.729,
-      "navChangePct": 2.44,
-      "navDate": "2026-10-08",
+      "nav": 2.754,
+      "navChangePct": 0.92,
+      "navDate": "2026-10-09",
       "mgmtFee": 1.0,
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
@@ -16795,11 +16805,11 @@
       "group": "全球",
       "index": "--",
       "company": "中银基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
-      "limit": null,
-      "limitText": "—",
-      "limitReliable": false,
+      "status": "limited",
+      "statusText": "限大额",
+      "limit": 5000000,
+      "limitText": "500 万",
+      "limitReliable": true,
       "limitSource": "api",
       "minPurchase": 10,
       "nav": 1.1449,
@@ -16915,10 +16925,10 @@
       "group": "全球",
       "index": "--",
       "company": "中信保诚基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
+      "status": "normal",
+      "statusText": "开放申购",
       "limit": null,
-      "limitText": "—",
+      "limitText": "不限",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 10,
@@ -17435,8 +17445,8 @@
       "purchaseFeeOrig": null,
       "scale": 32.52,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.002,
-      "etfPremium": -0.09
+      "etfPrice": 1.005,
+      "etfPremium": -0.13
     },
     {
       "code": "513000",
@@ -17445,10 +17455,10 @@
       "group": "日经225",
       "index": "东京日经225指数",
       "company": "易方达基金",
-      "status": "traded",
-      "statusText": "场内交易",
+      "status": "suspended",
+      "statusText": "暂停申购",
       "limit": null,
-      "limitText": "场内",
+      "limitText": "—",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": null,
@@ -17461,8 +17471,8 @@
       "purchaseFeeOrig": null,
       "scale": 22.7,
       "scaleDate": "2026-06-30",
-      "etfPrice": 2.396,
-      "etfPremium": 3.55
+      "etfPrice": 2.382,
+      "etfPremium": 3.06
     },
     {
       "code": "513010",
@@ -17487,8 +17497,8 @@
       "purchaseFeeOrig": null,
       "scale": 267.44,
       "scaleDate": "2026-06-30",
-      "etfPrice": 0.542,
-      "etfPremium": -0.02
+      "etfPrice": 0.539,
+      "etfPremium": 0.06
     },
     {
       "code": "513030",
@@ -17514,7 +17524,7 @@
       "scale": 18.0,
       "scaleDate": "2026-06-30",
       "etfPrice": 1.766,
-      "etfPremium": 3.52
+      "etfPremium": 2.48
     },
     {
       "code": "513060",
@@ -17539,8 +17549,8 @@
       "purchaseFeeOrig": null,
       "scale": 54.63,
       "scaleDate": "2026-06-30",
-      "etfPrice": 0.568,
-      "etfPremium": -0.11
+      "etfPrice": 0.567,
+      "etfPremium": 0.04
     },
     {
       "code": "513080",
@@ -17565,8 +17575,8 @@
       "purchaseFeeOrig": null,
       "scale": 11.12,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.655,
-      "etfPremium": 5.7
+      "etfPrice": 1.647,
+      "etfPremium": 4.24
     },
     {
       "code": "513120",
@@ -17591,8 +17601,8 @@
       "purchaseFeeOrig": null,
       "scale": 240.39,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.308,
-      "etfPremium": -0.09
+      "etfPrice": 1.304,
+      "etfPremium": -0.07
     },
     {
       "code": "513130",
@@ -17617,8 +17627,8 @@
       "purchaseFeeOrig": null,
       "scale": 367.81,
       "scaleDate": "2026-06-30",
-      "etfPrice": 0.516,
-      "etfPremium": -0.25
+      "etfPrice": 0.514,
+      "etfPremium": -0.12
     },
     {
       "code": "513140",
@@ -17643,8 +17653,8 @@
       "purchaseFeeOrig": null,
       "scale": 1.3,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.665,
-      "etfPremium": 0.16
+      "etfPrice": 1.685,
+      "etfPremium": 0.06
     },
     {
       "code": "513170",
@@ -17669,8 +17679,8 @@
       "purchaseFeeOrig": null,
       "scale": 3.11,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.569,
-      "etfPremium": 0.07
+      "etfPrice": 1.568,
+      "etfPremium": -0.3
     },
     {
       "code": "513210",
@@ -17695,8 +17705,8 @@
       "purchaseFeeOrig": null,
       "scale": null,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.433,
-      "etfPremium": 0.09
+      "etfPrice": 1.438,
+      "etfPremium": 0.12
     },
     {
       "code": "513220",
@@ -17721,8 +17731,8 @@
       "purchaseFeeOrig": null,
       "scale": 4.9,
       "scaleDate": "2026-06-30",
-      "etfPrice": 0.879,
-      "etfPremium": 3.11
+      "etfPrice": 0.881,
+      "etfPremium": -0.15
     },
     {
       "code": "513260",
@@ -17747,8 +17757,8 @@
       "purchaseFeeOrig": null,
       "scale": 58.52,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.01,
-      "etfPremium": -0.03
+      "etfPrice": 1.005,
+      "etfPremium": 0.1
     },
     {
       "code": "513280",
@@ -17773,8 +17783,8 @@
       "purchaseFeeOrig": null,
       "scale": 3.88,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.127,
-      "etfPremium": -0.3
+      "etfPrice": 1.121,
+      "etfPremium": -0.46
     },
     {
       "code": "513290",
@@ -17799,8 +17809,8 @@
       "purchaseFeeOrig": null,
       "scale": 15.28,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.785,
-      "etfPremium": 8.75
+      "etfPrice": 1.862,
+      "etfPremium": 10.52
     },
     {
       "code": "513310",
@@ -17825,8 +17835,8 @@
       "purchaseFeeOrig": null,
       "scale": 134.65,
       "scaleDate": "2026-06-30",
-      "etfPrice": 4.545,
-      "etfPremium": 3.47
+      "etfPrice": 4.426,
+      "etfPremium": 4.62
     },
     {
       "code": "513350",
@@ -17851,8 +17861,8 @@
       "purchaseFeeOrig": null,
       "scale": 8.83,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.392,
-      "etfPremium": 1.99
+      "etfPrice": 1.376,
+      "etfPremium": 1.84
     },
     {
       "code": "513360",
@@ -17877,8 +17887,8 @@
       "purchaseFeeOrig": null,
       "scale": 2.79,
       "scaleDate": "2026-06-30",
-      "etfPrice": 0.467,
-      "etfPremium": 0.8
+      "etfPrice": 0.464,
+      "etfPremium": -1.38
     },
     {
       "code": "513380",
@@ -17903,8 +17913,8 @@
       "purchaseFeeOrig": null,
       "scale": 99.13,
       "scaleDate": "2026-06-30",
-      "etfPrice": 0.476,
-      "etfPremium": 0.13
+      "etfPrice": 0.474,
+      "etfPremium": 0.3
     },
     {
       "code": "513400",
@@ -17929,8 +17939,8 @@
       "purchaseFeeOrig": null,
       "scale": 29.55,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.301,
-      "etfPremium": 3.6
+      "etfPrice": 1.33,
+      "etfPremium": 5.02
     },
     {
       "code": "513520",
@@ -17939,10 +17949,10 @@
       "group": "日经225",
       "index": "东京日经225指数",
       "company": "华夏基金",
-      "status": "traded",
-      "statusText": "场内交易",
+      "status": "suspended",
+      "statusText": "暂停申购",
       "limit": null,
-      "limitText": "场内",
+      "limitText": "—",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": null,
@@ -17955,8 +17965,8 @@
       "purchaseFeeOrig": null,
       "scale": 24.29,
       "scaleDate": "2026-06-30",
-      "etfPrice": 2.394,
-      "etfPremium": 4.41
+      "etfPrice": 2.388,
+      "etfPremium": 4.22
     },
     {
       "code": "513530",
@@ -17981,8 +17991,8 @@
       "purchaseFeeOrig": null,
       "scale": 37.4,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.561,
-      "etfPremium": 0.2
+      "etfPrice": 1.575,
+      "etfPremium": 0.3
     },
     {
       "code": "513580",
@@ -18007,8 +18017,8 @@
       "purchaseFeeOrig": null,
       "scale": 38.21,
       "scaleDate": "2026-06-30",
-      "etfPrice": 0.522,
-      "etfPremium": -0.76
+      "etfPrice": 0.52,
+      "etfPremium": -0.48
     },
     {
       "code": "513730",
@@ -18033,8 +18043,8 @@
       "purchaseFeeOrig": null,
       "scale": 10.39,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.063,
-      "etfPremium": 0.59
+      "etfPrice": 1.061,
+      "etfPremium": 0.05
     },
     {
       "code": "513800",
@@ -18043,10 +18053,10 @@
       "group": "日本",
       "index": "东证指数",
       "company": "南方基金",
-      "status": "traded",
-      "statusText": "场内交易",
+      "status": "suspended",
+      "statusText": "暂停申购",
       "limit": null,
-      "limitText": "场内",
+      "limitText": "—",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": null,
@@ -18059,8 +18069,8 @@
       "purchaseFeeOrig": null,
       "scale": 19.29,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.899,
-      "etfPremium": 0.43
+      "etfPrice": 1.906,
+      "etfPremium": 0.86
     },
     {
       "code": "513810",
@@ -18085,8 +18095,8 @@
       "purchaseFeeOrig": null,
       "scale": null,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.721,
-      "etfPremium": -0.1
+      "etfPrice": 1.73,
+      "etfPremium": -0.29
     },
     {
       "code": "513850",
@@ -18111,8 +18121,8 @@
       "purchaseFeeOrig": null,
       "scale": 20.56,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.954,
-      "etfPremium": 9.59
+      "etfPrice": 1.955,
+      "etfPremium": 9.02
     },
     {
       "code": "513880",
@@ -18121,10 +18131,10 @@
       "group": "日经225",
       "index": "东京日经225指数",
       "company": "华安基金",
-      "status": "traded",
-      "statusText": "场内交易",
+      "status": "suspended",
+      "statusText": "暂停申购",
       "limit": null,
-      "limitText": "场内",
+      "limitText": "—",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": null,
@@ -18137,8 +18147,8 @@
       "purchaseFeeOrig": null,
       "scale": 27.3,
       "scaleDate": "2026-06-30",
-      "etfPrice": 2.246,
-      "etfPremium": 4.45
+      "etfPrice": 2.231,
+      "etfPremium": 3.88
     },
     {
       "code": "513890",
@@ -18163,8 +18173,8 @@
       "purchaseFeeOrig": null,
       "scale": 8.08,
       "scaleDate": "2026-06-30",
-      "etfPrice": 0.804,
-      "etfPremium": 0.1
+      "etfPrice": 0.802,
+      "etfPremium": 0.49
     },
     {
       "code": "513950",
@@ -18189,8 +18199,8 @@
       "purchaseFeeOrig": null,
       "scale": 23.32,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.246,
-      "etfPremium": -0.09
+      "etfPrice": 1.247,
+      "etfPremium": -0.24
     },
     {
       "code": "513970",
@@ -18215,8 +18225,8 @@
       "purchaseFeeOrig": null,
       "scale": 11.9,
       "scaleDate": "2026-06-30",
-      "etfPrice": 0.775,
-      "etfPremium": 0.43
+      "etfPrice": 0.769,
+      "etfPremium": 0.61
     },
     {
       "code": "519601",
@@ -18313,8 +18323,8 @@
       "purchaseFeeOrig": null,
       "scale": 24.5,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.35,
-      "etfPremium": 0.3
+      "etfPrice": 1.344,
+      "etfPremium": 0.02
     },
     {
       "code": "520520",
@@ -18339,8 +18349,8 @@
       "purchaseFeeOrig": null,
       "scale": null,
       "scaleDate": "2026-06-30",
-      "etfPrice": 0.897,
-      "etfPremium": 0.06
+      "etfPrice": 0.889,
+      "etfPremium": 0.15
     },
     {
       "code": "520570",
@@ -18365,8 +18375,8 @@
       "purchaseFeeOrig": null,
       "scale": 25.68,
       "scaleDate": "2026-06-30",
-      "etfPrice": 0.664,
-      "etfPremium": 0.17
+      "etfPrice": 0.661,
+      "etfPremium": 0.36
     },
     {
       "code": "520580",
@@ -18375,10 +18385,10 @@
       "group": "亚太",
       "index": "iEdge Emerging Asia Select 50 Index",
       "company": "招商基金",
-      "status": "traded",
-      "statusText": "场内交易",
+      "status": "suspended",
+      "statusText": "暂停申购",
       "limit": null,
-      "limitText": "场内",
+      "limitText": "—",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": null,
@@ -18391,8 +18401,8 @@
       "purchaseFeeOrig": null,
       "scale": 2.75,
       "scaleDate": "2026-06-30",
-      "etfPrice": 0.89,
-      "etfPremium": -1.02
+      "etfPrice": 0.887,
+      "etfPremium": 0.68
     },
     {
       "code": "520590",
@@ -18417,8 +18427,8 @@
       "purchaseFeeOrig": null,
       "scale": 1.73,
       "scaleDate": "2026-06-30",
-      "etfPrice": 0.708,
-      "etfPremium": -0.35
+      "etfPrice": 0.705,
+      "etfPremium": -0.13
     },
     {
       "code": "520830",
@@ -18443,8 +18453,8 @@
       "purchaseFeeOrig": null,
       "scale": 10.5,
       "scaleDate": "2026-06-30",
-      "etfPrice": 0.858,
-      "etfPremium": 1.16
+      "etfPrice": 0.857,
+      "etfPremium": 1.1
     },
     {
       "code": "520870",
@@ -18453,10 +18463,10 @@
       "group": "其他",
       "index": "巴西BOVESPA",
       "company": "易方达基金",
-      "status": "traded",
-      "statusText": "场内交易",
+      "status": "suspended",
+      "statusText": "暂停申购",
       "limit": null,
-      "limitText": "场内",
+      "limitText": "—",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": null,
@@ -18469,8 +18479,8 @@
       "purchaseFeeOrig": null,
       "scale": 5.86,
       "scaleDate": "2026-06-30",
-      "etfPrice": 1.323,
-      "etfPremium": 0.93
+      "etfPrice": 1.361,
+      "etfPremium": 2.05
     },
     {
       "code": "520920",
@@ -18495,8 +18505,8 @@
       "purchaseFeeOrig": null,
       "scale": 128.0,
       "scaleDate": "2026-06-30",
-      "etfPrice": 0.616,
-      "etfPremium": -0.24
+      "etfPrice": 0.612,
+      "etfPremium": -0.23
     },
     {
       "code": "539001",
