@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-17 13:55:47",
+  "updatedAt": "2026-10-17 19:04:00",
   "source": "eastmoney FundMNNBasicInformation + rankhandler 发现",
   "universeSource": "搜索\"标普500\"发现 0 只（过滤后新增 0） + 搜索\"纳斯达克\"发现 50 只（过滤后新增 13） + 自动发现(rankhandler) 742 只",
   "note": "MAXSG 为可信当前限额；CORE 热门基金附公告交叉校验；分组按名称自动分类。",
@@ -1183,8 +1183,11 @@
         "date": "2024-11-23",
         "title": "华泰柏瑞纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)I类份额开放日常申购(赎回、定期定额投资)及",
         "artId": "AN202411231641037680",
-        "limits": [],
-        "review": false
+        "limits": [
+          10,
+          50000
+        ],
+        "review": true
       }
     },
     {
