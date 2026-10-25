@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-25 14:27:29",
+  "updatedAt": "2026-10-25 19:41:41",
   "source": "eastmoney FundMNNBasicInformation + rankhandler 发现",
   "universeSource": "搜索\"标普500\"发现 0 只（过滤后新增 0） + 搜索\"纳斯达克\"发现 50 只（过滤后新增 13） + 自动发现(rankhandler) 742 只",
   "note": "MAXSG 为可信当前限额；CORE 热门基金附公告交叉校验；分组按名称自动分类。",
@@ -5950,8 +5950,8 @@
       "custodyFee": 0.2,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 23.43,
-      "scaleDate": "2026-06-30"
+      "scale": 11.36,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "007140",
@@ -12119,8 +12119,8 @@
       "custodyFee": 0.3,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 1.25,
-      "scaleDate": "2026-06-30"
+      "scale": 1.29,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "020988",
@@ -12551,8 +12551,8 @@
       "custodyFee": 0.35,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 3.47,
-      "scaleDate": "2026-06-30"
+      "scale": 3.9,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "021778",
@@ -13665,7 +13665,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "025339",
@@ -14937,7 +14937,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "--"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "040018",
@@ -16107,8 +16107,8 @@
       "custodyFee": null,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 1.84,
-      "scaleDate": "2026-06-30",
+      "scale": 1.69,
+      "scaleDate": "2026-09-30",
       "etfPrice": 0.531,
       "etfPremium": 1.26
     },
@@ -16357,8 +16357,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 23.43,
-      "scaleDate": "2026-06-30"
+      "scale": 11.36,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "160717",
@@ -16622,7 +16622,7 @@
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "161620",
@@ -16669,8 +16669,8 @@
       "custodyFee": 0.16,
       "purchaseFee": 0.16,
       "purchaseFeeOrig": 1.6,
-      "scale": 4.16,
-      "scaleDate": "2026-06-30"
+      "scale": 4.55,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "161831",
@@ -16693,8 +16693,8 @@
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 1.45,
-      "scaleDate": "2026-06-30"
+      "scale": 1.47,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "162411",
@@ -16933,8 +16933,8 @@
       "custodyFee": 0.16,
       "purchaseFee": 0.16,
       "purchaseFeeOrig": 1.6,
-      "scale": 2.96,
-      "scaleDate": "2026-06-30"
+      "scale": 2.68,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "202801",
