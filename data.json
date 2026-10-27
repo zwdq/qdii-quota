@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-26 21:18:55",
+  "updatedAt": "2026-10-27 14:41:09",
   "source": "eastmoney FundMNNBasicInformation + rankhandler 发现",
   "universeSource": "搜索\"标普500\"发现 0 只（过滤后新增 0） + 搜索\"纳斯达克\"发现 50 只（过滤后新增 13） + 自动发现(rankhandler) 742 只",
   "note": "MAXSG 为可信当前限额；CORE 热门基金附公告交叉校验；分组按名称自动分类。",
@@ -29,8 +29,8 @@
       "purchaseFeeOrig": null,
       "scale": 350.53,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.661,
-      "etfPremium": 14.59
+      "etfPrice": 1.665,
+      "etfPremium": 13.68
     },
     {
       "code": "513100",
@@ -55,8 +55,8 @@
       "purchaseFeeOrig": null,
       "scale": 197.66,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.236,
-      "etfPremium": 15.38,
+      "etfPrice": 2.254,
+      "etfPremium": 15.08,
       "announcement": {
         "date": "2026-09-30",
         "title": "关于纳斯达克100交易型开放式指数证券投资基金暂停申购业务的公告",
@@ -88,8 +88,8 @@
       "purchaseFeeOrig": null,
       "scale": 139.14,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.68,
-      "etfPremium": 11.51
+      "etfPrice": 2.702,
+      "etfPremium": 11.26
     },
     {
       "code": "161130",
@@ -112,8 +112,8 @@
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 17.83,
-      "scaleDate": "2026-06-30",
+      "scale": 17.41,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-03-31",
         "title": "关于旗下部分基金2026年4月3日暂停申购、赎回、转换、定期定额投资业务的提示性公告",
@@ -143,8 +143,8 @@
       "custodyFee": 0.13,
       "purchaseFee": 0.13,
       "purchaseFeeOrig": 1.3,
-      "scale": 122.23,
-      "scaleDate": "2026-06-30",
+      "scale": 122.81,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-07-20",
         "title": "关于广发纳斯达克100交易型开放式指数证券投资基金联接基金(QDII)A类及C类基金份额调整大额申购(含转换转入、定期定",
@@ -176,8 +176,8 @@
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 58.1,
-      "scaleDate": "2026-06-30",
+      "scale": 63.39,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2023-07-21",
         "title": "关于华安纳斯达克100交易型开放式指数证券投资基金联接基金(QDII)恢复A类美元现钞、A类美元现汇份额申购业务并暂停大",
@@ -207,8 +207,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 21.77,
-      "scaleDate": "2026-06-30",
+      "scale": 28.82,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-09-22",
         "title": "国泰纳斯达克100指数证券投资基金暂停申购、定期定额投资业务的公告",
@@ -238,8 +238,8 @@
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 48.87,
-      "scaleDate": "2026-06-30",
+      "scale": 49.58,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-06-03",
         "title": "关于大成纳斯达克100交易型开放式指数证券投资基金联接基金(QDII)调整大额申购(含定期定额申购)的公告",
@@ -274,8 +274,8 @@
       "purchaseFeeOrig": null,
       "scale": 82.47,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.774,
-      "etfPremium": 9.87
+      "etfPrice": 1.787,
+      "etfPremium": 9.51
     },
     {
       "code": "159659",
@@ -300,8 +300,8 @@
       "purchaseFeeOrig": null,
       "scale": 102.74,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.369,
-      "etfPremium": 13.1
+      "etfPrice": 2.374,
+      "etfPremium": 12.15
     },
     {
       "code": "159632",
@@ -326,8 +326,8 @@
       "purchaseFeeOrig": null,
       "scale": 118.08,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.434,
-      "etfPremium": 10.54
+      "etfPrice": 2.446,
+      "etfPremium": 9.92
     },
     {
       "code": "513870",
@@ -350,10 +350,10 @@
       "custodyFee": null,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 24.71,
-      "scaleDate": "2026-06-30",
-      "etfPrice": 2.065,
-      "etfPremium": 11.88
+      "scale": 28.9,
+      "scaleDate": "2026-09-30",
+      "etfPrice": 2.085,
+      "etfPremium": 11.77
     },
     {
       "code": "159660",
@@ -378,8 +378,8 @@
       "purchaseFeeOrig": null,
       "scale": 57.74,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.366,
-      "etfPremium": 11.73
+      "etfPrice": 2.381,
+      "etfPremium": 11.26
     },
     {
       "code": "159696",
@@ -402,10 +402,10 @@
       "custodyFee": null,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 50.11,
-      "scaleDate": "2026-06-30",
-      "etfPrice": 2.065,
-      "etfPremium": 14.42
+      "scale": 57.05,
+      "scaleDate": "2026-09-30",
+      "etfPrice": 2.086,
+      "etfPremium": 14.38
     },
     {
       "code": "513110",
@@ -430,8 +430,8 @@
       "purchaseFeeOrig": null,
       "scale": 52.06,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.447,
-      "etfPremium": 9.97
+      "etfPrice": 2.473,
+      "etfPremium": 9.98
     },
     {
       "code": "513390",
@@ -456,8 +456,8 @@
       "purchaseFeeOrig": null,
       "scale": 50.48,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.405,
-      "etfPremium": 10.59
+      "etfPrice": 2.433,
+      "etfPremium": 10.71
     },
     {
       "code": "008971",
@@ -480,8 +480,8 @@
       "custodyFee": 0.2,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 11.1,
-      "scaleDate": "2026-06-30",
+      "scale": 11.15,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-06-03",
         "title": "关于大成纳斯达克100交易型开放式指数证券投资基金联接基金(QDII)调整大额申购(含定期定额申购)的公告",
@@ -514,8 +514,8 @@
       "custodyFee": 0.1,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 1.8,
-      "scaleDate": "2026-06-30",
+      "scale": 1.65,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-03-31",
         "title": "关于旗下部分基金2026年4月3日暂停申购、赎回、转换、定期定额投资业务的提示性公告",
@@ -545,8 +545,8 @@
       "custodyFee": 0.1,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 1.8,
-      "scaleDate": "2026-06-30",
+      "scale": 1.65,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-03-31",
         "title": "关于旗下部分基金2026年4月3日暂停申购、赎回、转换、定期定额投资业务的提示性公告",
@@ -576,8 +576,8 @@
       "custodyFee": 0.2,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 64.93,
-      "scaleDate": "2026-06-30",
+      "scale": 64.63,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-07-20",
         "title": "关于广发纳斯达克100交易型开放式指数证券投资基金联接基金(QDII)A类及C类基金份额调整大额申购(含转换转入、定期定",
@@ -609,8 +609,8 @@
       "custodyFee": 0.2,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 122.23,
-      "scaleDate": "2026-06-30",
+      "scale": 122.81,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-07-20",
         "title": "关于广发纳斯达克100交易型开放式指数证券投资基金联接基金(QDII)A类及C类基金份额调整大额申购(含转换转入、定期定",
@@ -642,8 +642,8 @@
       "custodyFee": 0.1,
       "purchaseFee": 0.1,
       "purchaseFeeOrig": 1.0,
-      "scale": 15.04,
-      "scaleDate": "2026-06-30",
+      "scale": 14.57,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2025-11-18",
         "title": "博时纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)调整大额申购、转换转入、定期定额投资业务的公告",
@@ -675,8 +675,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 7.07,
-      "scaleDate": "2026-06-30",
+      "scale": 6.69,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2025-11-18",
         "title": "博时纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)调整大额申购、转换转入、定期定额投资业务的公告",
@@ -708,8 +708,8 @@
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 3.23,
-      "scaleDate": "2026-06-30",
+      "scale": 3.26,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2025-11-22",
         "title": "华夏纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购及定期定额申购业务的公告",
@@ -739,8 +739,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 1.68,
-      "scaleDate": "2026-06-30",
+      "scale": 1.64,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2025-11-22",
         "title": "华夏纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购及定期定额申购业务的公告",
@@ -770,8 +770,8 @@
       "custodyFee": 0.2,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 3.23,
-      "scaleDate": "2026-06-30",
+      "scale": 3.26,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2025-11-22",
         "title": "华夏纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购及定期定额申购业务的公告",
@@ -801,8 +801,8 @@
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 16.33,
-      "scaleDate": "2026-06-30",
+      "scale": 20.35,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2025-02-13",
         "title": "关于汇添富纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)人民币A类份额恢复线上直销系统申购、定期定",
@@ -832,8 +832,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 11.09,
-      "scaleDate": "2026-06-30",
+      "scale": 11.58,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-09-24",
         "title": "关于汇添富纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购、定期定额投资业务的公告",
@@ -864,7 +864,7 @@
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
       "scale": null,
-      "scaleDate": "2026-06-30",
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-09-24",
         "title": "关于汇添富纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购、定期定额投资业务的公告",
@@ -894,8 +894,8 @@
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 8.16,
-      "scaleDate": "2026-06-30",
+      "scale": 8.12,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-09-22",
         "title": "华泰柏瑞纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)调整大额申购(含定期定额投资)业务的公告",
@@ -925,8 +925,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 6.39,
-      "scaleDate": "2026-06-30",
+      "scale": 6.03,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-09-22",
         "title": "华泰柏瑞纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)调整大额申购(含定期定额投资)业务的公告",
@@ -956,8 +956,8 @@
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 21.78,
-      "scaleDate": "2026-06-30",
+      "scale": 23.23,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-09-01",
         "title": "关于调整招商纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)在直销机构大额申购(含定期定额投资)业务",
@@ -987,8 +987,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 15.17,
-      "scaleDate": "2026-06-30",
+      "scale": 14.46,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-09-01",
         "title": "关于调整招商纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)在直销机构大额申购(含定期定额投资)业务",
@@ -1018,8 +1018,8 @@
       "custodyFee": 0.1,
       "purchaseFee": 0.1,
       "purchaseFeeOrig": 1.0,
-      "scale": 9.68,
-      "scaleDate": "2026-06-30",
+      "scale": 14.86,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-10-21",
         "title": "关于万家纳斯达克100指数型发起式证券投资基金(QDII)调整大额申购(含定期定额投资)业务金额限制的公告",
@@ -1049,8 +1049,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 4.29,
-      "scaleDate": "2026-06-30",
+      "scale": 6.97,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-10-21",
         "title": "关于万家纳斯达克100指数型发起式证券投资基金(QDII)调整大额申购(含定期定额投资)业务金额限制的公告",
@@ -1080,8 +1080,8 @@
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 10.63,
-      "scaleDate": "2026-06-30",
+      "scale": 14.46,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-09-24",
         "title": "宝盈纳斯达克100指数型发起式证券投资基金(QDII)调整大额申购、定期定额投资业务限制金额的公告",
@@ -1113,8 +1113,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 4.06,
-      "scaleDate": "2026-06-30",
+      "scale": 5.52,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-09-24",
         "title": "宝盈纳斯达克100指数型发起式证券投资基金(QDII)调整大额申购、定期定额投资业务限制金额的公告",
@@ -1146,8 +1146,8 @@
       "custodyFee": 0.1,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 1.71,
-      "scaleDate": "2026-06-30",
+      "scale": 1.62,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2025-03-11",
         "title": "天弘基金管理有限公司关于天弘纳斯达克100指数型发起式证券投资基金(QDII)D类基金份额调整大额申购及定期定额投资业务",
@@ -1178,7 +1178,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30",
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2024-11-23",
         "title": "华泰柏瑞纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)I类份额开放日常申购(赎回、定期定额投资)及",
@@ -1211,8 +1211,8 @@
       "custodyFee": 0.15,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 31.36,
-      "scaleDate": "2026-06-30",
+      "scale": 40.79,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-07-20",
         "title": "关于调整南方纳斯达克100指数发起式证券投资基金(QDII)I类基金份额申购、定投及转换转入业务金额限制的公告",
@@ -1244,8 +1244,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 3.64,
-      "scaleDate": "2026-06-30",
+      "scale": 4.66,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2024-07-02",
         "title": "关于汇添富纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)人民币E类份额暂停大额申购、定期定额投资业",
@@ -1276,7 +1276,7 @@
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": null,
-      "scaleDate": "2026-06-30",
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-02-03",
         "title": "嘉实纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购(含定期定额投资)业务的公告",
@@ -1306,8 +1306,8 @@
       "custodyFee": 0.15,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 1.7,
-      "scaleDate": "2026-06-30",
+      "scale": 1.63,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2025-11-21",
         "title": "博时纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)I类份额暂停申购、转换转入、定期定额投资业务的公",
@@ -1337,8 +1337,8 @@
       "custodyFee": 0.1,
       "purchaseFee": 0.1,
       "purchaseFeeOrig": 1.0,
-      "scale": 20.77,
-      "scaleDate": "2026-06-30",
+      "scale": 19.89,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-02-03",
         "title": "嘉实纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购(含定期定额投资)业务的公告",
@@ -1368,8 +1368,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 16.4,
-      "scaleDate": "2026-06-30",
+      "scale": 15.39,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-02-03",
         "title": "嘉实纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购(含定期定额投资)业务的公告",
@@ -1492,8 +1492,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 10.8,
-      "scaleDate": "2026-06-30",
+      "scale": 11.09,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-07-27",
         "title": "摩根纳斯达克100指数型发起式证券投资基金(QDII)调整大额申购、定期定额投资及转换转入业务限制金额的公告",
@@ -1526,7 +1526,7 @@
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": null,
-      "scaleDate": "2026-06-30",
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-07-27",
         "title": "摩根纳斯达克100指数型发起式证券投资基金(QDII)调整大额申购、定期定额投资及转换转入业务限制金额的公告",
@@ -1559,7 +1559,7 @@
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": null,
-      "scaleDate": "2026-06-30",
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-07-27",
         "title": "摩根纳斯达克100指数型发起式证券投资基金(QDII)调整大额申购、定期定额投资及转换转入业务限制金额的公告",
@@ -1591,8 +1591,8 @@
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 29.69,
-      "scaleDate": "2026-06-30",
+      "scale": 32.03,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-07-27",
         "title": "摩根纳斯达克100指数型发起式证券投资基金(QDII)调整大额申购、定期定额投资及转换转入业务限制金额的公告",
@@ -1626,8 +1626,8 @@
       "purchaseFeeOrig": null,
       "scale": 251.81,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.603,
-      "etfPremium": 7.45
+      "etfPrice": 2.668,
+      "etfPremium": 9.42
     },
     {
       "code": "050025",
@@ -1650,8 +1650,8 @@
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 64.67,
-      "scaleDate": "2026-06-30",
+      "scale": 63.48,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-04-09",
         "title": "博时标普500交易型开放式指数证券投资基金联接基金A类、C类份额恢复申购、转换转入、定期定额投资业务的公告",
@@ -1681,8 +1681,8 @@
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 15.43,
-      "scaleDate": "2026-06-30",
+      "scale": 15.26,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-03-31",
         "title": "关于旗下部分基金2026年4月3日暂停申购、赎回、转换、定期定额投资业务的提示性公告",
@@ -1712,15 +1712,13 @@
       "custodyFee": 0.1,
       "purchaseFee": 0.1,
       "purchaseFeeOrig": 1.0,
-      "scale": 25.25,
-      "scaleDate": "2026-06-30",
+      "scale": 26.83,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-09-18",
         "title": "天弘基金管理有限公司关于天弘标普500发起式证券投资基金(QDII-FOF)A类基金份额、C类基金份额暂停申购及定期定额",
         "artId": "AN202609181829580336",
-        "limits": [
-          100
-        ],
+        "limits": [],
         "review": false
       }
     },
@@ -1747,8 +1745,8 @@
       "purchaseFeeOrig": null,
       "scale": 9.78,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.037,
-      "etfPremium": 7.18,
+      "etfPrice": 2.06,
+      "etfPremium": 7.7,
       "announcement": {
         "date": "2026-09-30",
         "title": "关于国泰标普500交易型开放式指数证券投资基金(QDII)暂停申购业务的公告",
@@ -1780,8 +1778,8 @@
       "purchaseFeeOrig": null,
       "scale": 41.71,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.969,
-      "etfPremium": 6.35
+      "etfPrice": 1.995,
+      "etfPremium": 7.06
     },
     {
       "code": "513650",
@@ -1804,10 +1802,10 @@
       "custodyFee": null,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 76.94,
-      "scaleDate": "2026-06-30",
-      "etfPrice": 1.953,
-      "etfPremium": 5.84
+      "scale": 87.11,
+      "scaleDate": "2026-09-30",
+      "etfPrice": 1.987,
+      "etfPremium": 6.97
     },
     {
       "code": "006075",
@@ -1830,8 +1828,8 @@
       "custodyFee": 0.2,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 12.86,
-      "scaleDate": "2026-06-30",
+      "scale": 12.43,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-04-09",
         "title": "博时标普500交易型开放式指数证券投资基金联接基金A类、C类份额恢复申购、转换转入、定期定额投资业务的公告",
@@ -1861,8 +1859,8 @@
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 15.43,
-      "scaleDate": "2026-06-30",
+      "scale": 15.26,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-03-31",
         "title": "关于旗下部分基金2026年4月3日暂停申购、赎回、转换、定期定额投资业务的提示性公告",
@@ -1892,8 +1890,8 @@
       "custodyFee": 0.2,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 1.23,
-      "scaleDate": "2026-06-30",
+      "scale": 1.15,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-03-31",
         "title": "关于旗下部分基金2026年4月3日暂停申购、赎回、转换、定期定额投资业务的提示性公告",
@@ -1923,8 +1921,8 @@
       "custodyFee": 0.2,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 1.23,
-      "scaleDate": "2026-06-30",
+      "scale": 1.15,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-03-31",
         "title": "关于旗下部分基金2026年4月3日暂停申购、赎回、转换、定期定额投资业务的提示性公告",
@@ -1954,8 +1952,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 18.52,
-      "scaleDate": "2026-06-30",
+      "scale": 19.88,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-07-27",
         "title": "摩根标普500指数型发起式证券投资基金(QDII)调整大额申购、定期定额投资及转换转入业务限制金额的公告",
@@ -1987,8 +1985,8 @@
       "custodyFee": 0.1,
       "purchaseFee": 0.1,
       "purchaseFeeOrig": 1.0,
-      "scale": 1.32,
-      "scaleDate": "2026-06-30",
+      "scale": 1.27,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2025-10-17",
         "title": "国泰标普500交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购、定期定额投资业务的公告",
@@ -2019,7 +2017,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30",
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2025-10-17",
         "title": "国泰标普500交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购、定期定额投资业务的公告",
@@ -2049,8 +2047,8 @@
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 3.19,
-      "scaleDate": "2026-06-30",
+      "scale": 3.27,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2025-11-22",
         "title": "华夏标普500交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购及定期定额申购业务的公告",
@@ -2080,8 +2078,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 1.66,
-      "scaleDate": "2026-06-30",
+      "scale": 1.65,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2025-11-22",
         "title": "华夏标普500交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购及定期定额申购业务的公告",
@@ -2111,8 +2109,8 @@
       "custodyFee": 0.15,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 3.19,
-      "scaleDate": "2026-06-30",
+      "scale": 3.27,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2025-11-22",
         "title": "华夏标普500交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购及定期定额申购业务的公告",
@@ -2142,8 +2140,8 @@
       "custodyFee": 0.2,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 23.04,
-      "scaleDate": "2026-06-30",
+      "scale": 24.43,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-08-19",
         "title": "博时标普500交易型开放式指数证券投资基金联接基金E类份额暂停申购、转换转入、定期定额投资业务公告",
@@ -2173,8 +2171,8 @@
       "custodyFee": 0.2,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 64.67,
-      "scaleDate": "2026-06-30",
+      "scale": 63.48,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-04-09",
         "title": "博时标普500交易型开放式指数证券投资基金联接基金A类、C类份额恢复申购、转换转入、定期定额投资业务的公告",
@@ -2204,8 +2202,8 @@
       "custodyFee": 0.2,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 12.86,
-      "scaleDate": "2026-06-30",
+      "scale": 12.43,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-04-09",
         "title": "博时标普500交易型开放式指数证券投资基金联接基金A类、C类份额恢复申购、转换转入、定期定额投资业务的公告",
@@ -2228,15 +2226,15 @@
       "limitReliable": true,
       "limitSource": "ann",
       "minPurchase": 1,
-      "nav": 0.2514,
-      "navChangePct": -1.18,
-      "navDate": "2026-10-22",
+      "nav": 0.2502,
+      "navChangePct": -0.48,
+      "navDate": "2026-10-23",
       "mgmtFee": 1.0,
       "custodyFee": 1.2,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 53.03,
-      "scaleDate": "2026-06-30",
+      "scale": 59.31,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-07-27",
         "title": "摩根标普500指数型发起式证券投资基金(QDII)调整大额申购、定期定额投资及转换转入业务限制金额的公告",
@@ -2261,15 +2259,15 @@
       "limitReliable": true,
       "limitSource": "ann",
       "minPurchase": 1,
-      "nav": 0.2514,
-      "navChangePct": -1.18,
-      "navDate": "2026-10-22",
+      "nav": 0.2502,
+      "navChangePct": -0.48,
+      "navDate": "2026-10-23",
       "mgmtFee": 1.0,
       "custodyFee": 1.2,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 53.03,
-      "scaleDate": "2026-06-30",
+      "scale": 59.31,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-07-27",
         "title": "摩根标普500指数型发起式证券投资基金(QDII)调整大额申购、定期定额投资及转换转入业务限制金额的公告",
@@ -2301,8 +2299,8 @@
       "custodyFee": 0.2,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 2.1,
-      "scaleDate": "2026-06-30",
+      "scale": 2.81,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-10-15",
         "title": "关于大成标普500等权重指数证券投资基金调整大额申购(含定期定额申购)的公告",
@@ -2335,8 +2333,8 @@
       "custodyFee": 0.2,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 7.3,
-      "scaleDate": "2026-06-30",
+      "scale": 8.83,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-10-15",
         "title": "关于大成标普500等权重指数证券投资基金调整大额申购(含定期定额申购)的公告",
@@ -2369,8 +2367,8 @@
       "custodyFee": 0.2,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 2.1,
-      "scaleDate": "2026-06-30",
+      "scale": 2.81,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-10-15",
         "title": "关于大成标普500等权重指数证券投资基金调整大额申购(含定期定额申购)的公告",
@@ -2403,8 +2401,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 16.07,
-      "scaleDate": "2026-06-30",
+      "scale": 17.84,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-09-18",
         "title": "天弘基金管理有限公司关于天弘标普500发起式证券投资基金(QDII-FOF)A类基金份额、C类基金份额暂停申购及定期定额",
@@ -2436,8 +2434,8 @@
       "custodyFee": 0.2,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 1.84,
-      "scaleDate": "2026-06-30",
+      "scale": 1.83,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2025-03-11",
         "title": "天弘基金管理有限公司关于天弘标普500发起式证券投资基金(QDII-FOF)D类基金份额调整大额申购及定期定额投资业务的",
@@ -2467,10 +2465,10 @@
       "custodyFee": null,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 330.26,
-      "scaleDate": "2026-06-30",
-      "etfPrice": 0.946,
-      "etfPremium": -0.42
+      "scale": 352.63,
+      "scaleDate": "2026-09-30",
+      "etfPrice": 0.936,
+      "etfPremium": -1.58
     },
     {
       "code": "164906",
@@ -2517,8 +2515,8 @@
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 59.03,
-      "scaleDate": "2026-06-30"
+      "scale": 65.65,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "513330",
@@ -2543,8 +2541,8 @@
       "purchaseFeeOrig": null,
       "scale": 259.02,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.32,
-      "etfPremium": 0.19
+      "etfPrice": 0.315,
+      "etfPremium": 0.38
     },
     {
       "code": "513180",
@@ -2569,8 +2567,8 @@
       "purchaseFeeOrig": null,
       "scale": 382.85,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.482,
-      "etfPremium": 0.04
+      "etfPrice": 0.476,
+      "etfPremium": 0.11
     },
     {
       "code": "118001",
@@ -2593,8 +2591,8 @@
       "custodyFee": 0.16,
       "purchaseFee": 0.16,
       "purchaseFeeOrig": 1.6,
-      "scale": 36.02,
-      "scaleDate": "2026-06-30",
+      "scale": 36.9,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-10-14",
         "title": "易方达亚洲精选股票型证券投资基金2026年10月19日暂停申购、赎回、转换及定期定额投资业务的公告",
@@ -2624,8 +2622,8 @@
       "custodyFee": 0.16,
       "purchaseFee": 0.16,
       "purchaseFeeOrig": 1.6,
-      "scale": 30.27,
-      "scaleDate": "2026-06-30",
+      "scale": 28.66,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2025-07-07",
         "title": "华夏全球精选股票型证券投资基金调整人民币销售申购、定期定额申购业务上限的公告",
@@ -2655,8 +2653,8 @@
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 2.84,
-      "scaleDate": "2026-06-30",
+      "scale": 3.89,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-10-20",
         "title": "关于汇添富香港优势精选混合型证券投资基金暂停申购业务的公告",
@@ -2686,8 +2684,8 @@
       "custodyFee": 0.2,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 8.88,
-      "scaleDate": "2026-06-30"
+      "scale": 11.24,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "003722",
@@ -2741,8 +2739,8 @@
       "custodyFee": 1.2,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 58.1,
-      "scaleDate": "2026-06-30",
+      "scale": 63.39,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-10-20",
         "title": "关于华安纳斯达克100交易型开放式指数证券投资基金联接基金(QDII)暂停申购及定期定额投资的公告",
@@ -2772,8 +2770,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 2.24,
-      "scaleDate": "2026-06-30"
+      "scale": 2.36,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "017894",
@@ -2796,8 +2794,8 @@
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 2.89,
-      "scaleDate": "2026-06-30"
+      "scale": 3.3,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "017092",
@@ -2820,8 +2818,8 @@
       "custodyFee": 0.2,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 27.7,
-      "scaleDate": "2026-06-30"
+      "scale": 31.25,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "016056",
@@ -2844,8 +2842,8 @@
       "custodyFee": 1.0,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 15.04,
-      "scaleDate": "2026-06-30",
+      "scale": 14.57,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2025-11-18",
         "title": "博时纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)调整大额申购、转换转入、定期定额投资业务的公告",
@@ -2878,7 +2876,7 @@
       "purchaseFee": null,
       "purchaseFeeOrig": 1.2,
       "scale": null,
-      "scaleDate": "2023-12-31",
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-09-24",
         "title": "关于汇添富纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购、定期定额投资业务的公告",
@@ -2909,7 +2907,7 @@
       "purchaseFee": null,
       "purchaseFeeOrig": 1.2,
       "scale": null,
-      "scaleDate": "2023-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "019738",
@@ -2932,8 +2930,8 @@
       "custodyFee": 1.2,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 10.63,
-      "scaleDate": "2026-06-30"
+      "scale": 14.46,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "016058",
@@ -2956,8 +2954,8 @@
       "custodyFee": 0.0,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 7.07,
-      "scaleDate": "2026-06-30",
+      "scale": 6.69,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2025-11-18",
         "title": "博时纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)调整大额申购、转换转入、定期定额投资业务的公告",
@@ -2990,7 +2988,7 @@
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "019739",
@@ -3013,8 +3011,8 @@
       "custodyFee": 0.0,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 4.06,
-      "scaleDate": "2026-06-30"
+      "scale": 5.52,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "000043",
@@ -3037,8 +3035,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 49.88,
-      "scaleDate": "2026-06-30"
+      "scale": 54.39,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "000044",
@@ -3061,8 +3059,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 1.08,
-      "scaleDate": "2026-06-30"
+      "scale": 1.05,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "000071",
@@ -3085,8 +3083,8 @@
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 32.96,
-      "scaleDate": "2026-06-30"
+      "scale": 33.94,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "000075",
@@ -3109,8 +3107,8 @@
       "custodyFee": 0.0,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 32.96,
-      "scaleDate": "2026-06-30"
+      "scale": 33.94,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "000076",
@@ -3133,8 +3131,8 @@
       "custodyFee": 0.0,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 32.96,
-      "scaleDate": "2026-06-30"
+      "scale": 33.94,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "000103",
@@ -3157,8 +3155,8 @@
       "custodyFee": 0.08,
       "purchaseFee": 0.08,
       "purchaseFeeOrig": 0.8,
-      "scale": 9.43,
-      "scaleDate": "2026-06-30"
+      "scale": 9.93,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "000179",
@@ -3181,8 +3179,8 @@
       "custodyFee": 0.13,
       "purchaseFee": 0.13,
       "purchaseFeeOrig": 1.3,
-      "scale": 1.15,
-      "scaleDate": "2026-06-30"
+      "scale": 1.11,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "000180",
@@ -3205,8 +3203,8 @@
       "custodyFee": 1.3,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 1.15,
-      "scaleDate": "2026-06-30"
+      "scale": 1.11,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "000274",
@@ -3230,7 +3228,7 @@
       "purchaseFee": 0.08,
       "purchaseFeeOrig": 0.8,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "000275",
@@ -3254,7 +3252,7 @@
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "000290",
@@ -3301,8 +3299,8 @@
       "custodyFee": 0.0,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 1.15,
-      "scaleDate": "2026-06-30"
+      "scale": 2.42,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "000342",
@@ -3325,8 +3323,8 @@
       "custodyFee": 0.08,
       "purchaseFee": 0.08,
       "purchaseFeeOrig": 0.8,
-      "scale": 34.61,
-      "scaleDate": "2026-06-30"
+      "scale": 30.24,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "000369",
@@ -3349,8 +3347,8 @@
       "custodyFee": 0.13,
       "purchaseFee": 0.13,
       "purchaseFeeOrig": 1.3,
-      "scale": 13.7,
-      "scaleDate": "2026-06-30"
+      "scale": 14.03,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "000370",
@@ -3373,8 +3371,8 @@
       "custodyFee": 1.3,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 13.7,
-      "scaleDate": "2026-06-30"
+      "scale": 14.03,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "000593",
@@ -3397,8 +3395,8 @@
       "custodyFee": 0.2,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 3.22,
-      "scaleDate": "2026-06-30"
+      "scale": 2.76,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "000614",
@@ -3421,8 +3419,8 @@
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 3.81,
-      "scaleDate": "2026-06-30"
+      "scale": 4.09,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "000906",
@@ -3445,8 +3443,8 @@
       "custodyFee": 0.2,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 183.54,
-      "scaleDate": "2026-06-30"
+      "scale": 159.07,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "000927",
@@ -3469,8 +3467,8 @@
       "custodyFee": 0.2,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 1.68,
-      "scaleDate": "2026-06-30"
+      "scale": 1.55,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "000934",
@@ -3493,8 +3491,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 22.28,
-      "scaleDate": "2026-06-30"
+      "scale": 20.77,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "000988",
@@ -3517,8 +3515,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 4.08,
-      "scaleDate": "2026-06-30"
+      "scale": 4.1,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "000989",
@@ -3541,8 +3539,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 2.48,
-      "scaleDate": "2026-06-30"
+      "scale": 2.5,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "000990",
@@ -3565,8 +3563,8 @@
       "custodyFee": 0.15,
       "purchaseFee": null,
       "purchaseFeeOrig": 1.5,
-      "scale": 2.48,
-      "scaleDate": "2026-06-30"
+      "scale": 2.5,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "001061",
@@ -3589,8 +3587,8 @@
       "custodyFee": 0.08,
       "purchaseFee": 0.08,
       "purchaseFeeOrig": 0.8,
-      "scale": 6.94,
-      "scaleDate": "2026-06-30"
+      "scale": 5.93,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "001063",
@@ -3613,8 +3611,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 2.01,
-      "scaleDate": "2026-06-30"
+      "scale": 2.28,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "001065",
@@ -3637,8 +3635,8 @@
       "custodyFee": 0.8,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 6.94,
-      "scaleDate": "2026-06-30"
+      "scale": 5.93,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "001066",
@@ -3661,8 +3659,8 @@
       "custodyFee": 0.8,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 6.94,
-      "scaleDate": "2026-06-30"
+      "scale": 5.93,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "001092",
@@ -3685,8 +3683,8 @@
       "custodyFee": 0.13,
       "purchaseFee": 0.13,
       "purchaseFeeOrig": 1.3,
-      "scale": 1.69,
-      "scaleDate": "2026-06-30"
+      "scale": 1.92,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "001093",
@@ -3709,8 +3707,8 @@
       "custodyFee": 1.3,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 1.69,
-      "scaleDate": "2026-06-30"
+      "scale": 1.92,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "001481",
@@ -3757,8 +3755,8 @@
       "custodyFee": 0.16,
       "purchaseFee": 0.16,
       "purchaseFeeOrig": 1.6,
-      "scale": 19.62,
-      "scaleDate": "2026-06-30"
+      "scale": 19.3,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "001691",
@@ -3781,8 +3779,8 @@
       "custodyFee": 0.16,
       "purchaseFee": 0.16,
       "purchaseFeeOrig": 1.6,
-      "scale": 14.79,
-      "scaleDate": "2026-06-30"
+      "scale": 8.74,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "001876",
@@ -3829,8 +3827,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 4.76,
-      "scaleDate": "2026-06-30"
+      "scale": 5.15,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "002230",
@@ -3853,8 +3851,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 8.22,
-      "scaleDate": "2026-06-30"
+      "scale": 4.08,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "002286",
@@ -3877,8 +3875,8 @@
       "custodyFee": 0.08,
       "purchaseFee": 0.08,
       "purchaseFeeOrig": 0.8,
-      "scale": 11.94,
-      "scaleDate": "2026-06-30"
+      "scale": 13.96,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "002287",
@@ -3901,8 +3899,8 @@
       "custodyFee": 0.8,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 11.94,
-      "scaleDate": "2026-06-30"
+      "scale": 13.96,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "002379",
@@ -3925,8 +3923,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 1.16,
-      "scaleDate": "2026-06-30"
+      "scale": null,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "002380",
@@ -3949,8 +3947,8 @@
       "custodyFee": 1.5,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 1.16,
-      "scaleDate": "2026-06-30"
+      "scale": null,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "002391",
@@ -3973,8 +3971,8 @@
       "custodyFee": 0.08,
       "purchaseFee": 0.08,
       "purchaseFeeOrig": 0.8,
-      "scale": 10.31,
-      "scaleDate": "2026-06-30"
+      "scale": 9.57,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "002392",
@@ -3997,8 +3995,8 @@
       "custodyFee": 0.8,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 10.31,
-      "scaleDate": "2026-06-30"
+      "scale": 9.57,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "002393",
@@ -4021,8 +4019,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 1.48,
-      "scaleDate": "2026-06-30"
+      "scale": 1.07,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "002400",
@@ -4045,8 +4043,8 @@
       "custodyFee": 0.08,
       "purchaseFee": 0.08,
       "purchaseFeeOrig": 0.8,
-      "scale": 44.24,
-      "scaleDate": "2026-06-30"
+      "scale": 35.89,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "002401",
@@ -4069,8 +4067,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 10.5,
-      "scaleDate": "2026-06-30"
+      "scale": 10.85,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "002402",
@@ -4093,8 +4091,8 @@
       "custodyFee": 0.8,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 44.24,
-      "scaleDate": "2026-06-30"
+      "scale": 35.89,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "002403",
@@ -4117,8 +4115,8 @@
       "custodyFee": 0.0,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 10.5,
-      "scaleDate": "2026-06-30"
+      "scale": 10.85,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "002423",
@@ -4165,8 +4163,8 @@
       "custodyFee": 0.08,
       "purchaseFee": 0.08,
       "purchaseFeeOrig": 0.8,
-      "scale": 1.76,
-      "scaleDate": "2026-06-30"
+      "scale": 1.56,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "002427",
@@ -4189,8 +4187,8 @@
       "custodyFee": 0.8,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 1.76,
-      "scaleDate": "2026-06-30"
+      "scale": 1.56,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "002429",
@@ -4214,7 +4212,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "002877",
@@ -4237,8 +4235,8 @@
       "custodyFee": 0.08,
       "purchaseFee": 0.08,
       "purchaseFeeOrig": 0.8,
-      "scale": 1.79,
-      "scaleDate": "2026-06-30"
+      "scale": 1.48,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "002878",
@@ -4261,8 +4259,8 @@
       "custodyFee": 0.8,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 1.79,
-      "scaleDate": "2026-06-30"
+      "scale": 1.48,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "002879",
@@ -4285,8 +4283,8 @@
       "custodyFee": 0.8,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 1.79,
-      "scaleDate": "2026-06-30"
+      "scale": 1.48,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "002880",
@@ -4310,7 +4308,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "002891",
@@ -4333,8 +4331,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 40.69,
-      "scaleDate": "2026-06-30"
+      "scale": 33.18,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "002892",
@@ -4357,8 +4355,8 @@
       "custodyFee": 1.5,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 40.69,
-      "scaleDate": "2026-06-30"
+      "scale": 33.18,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "002893",
@@ -4381,8 +4379,8 @@
       "custodyFee": 1.5,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 40.69,
-      "scaleDate": "2026-06-30"
+      "scale": 33.18,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "003243",
@@ -4405,8 +4403,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 1.24,
-      "scaleDate": "2026-06-30"
+      "scale": null,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "003244",
@@ -4429,8 +4427,8 @@
       "custodyFee": 1.5,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 1.24,
-      "scaleDate": "2026-06-30"
+      "scale": null,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "003245",
@@ -4453,8 +4451,8 @@
       "custodyFee": 1.5,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 1.24,
-      "scaleDate": "2026-06-30"
+      "scale": null,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "003321",
@@ -4549,8 +4547,8 @@
       "custodyFee": 0.08,
       "purchaseFee": 0.08,
       "purchaseFeeOrig": 0.8,
-      "scale": 11.76,
-      "scaleDate": "2026-06-30"
+      "scale": 12.14,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "003386",
@@ -4573,8 +4571,8 @@
       "custodyFee": 0.8,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 11.76,
-      "scaleDate": "2026-06-30"
+      "scale": 12.14,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "003387",
@@ -4597,8 +4595,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 1.81,
-      "scaleDate": "2026-06-30"
+      "scale": 2.43,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "003606",
@@ -4614,9 +4612,9 @@
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 1000,
-      "nav": 0.1373,
-      "navChangePct": 0.59,
-      "navDate": "2026-10-22",
+      "nav": 0.1371,
+      "navChangePct": -0.15,
+      "navDate": "2026-10-23",
       "mgmtFee": 0.8,
       "custodyFee": 0.8,
       "purchaseFee": null,
@@ -4645,8 +4643,8 @@
       "custodyFee": 1.5,
       "purchaseFee": 1.5,
       "purchaseFeeOrig": 1.5,
-      "scale": 6.69,
-      "scaleDate": "2026-06-30"
+      "scale": 6.74,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "003630",
@@ -4662,15 +4660,15 @@
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 1,
-      "nav": 0.2729,
-      "navChangePct": -0.55,
-      "navDate": "2026-10-22",
+      "nav": 0.2719,
+      "navChangePct": -0.37,
+      "navDate": "2026-10-23",
       "mgmtFee": 1.2,
       "custodyFee": 1.5,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 6.69,
-      "scaleDate": "2026-06-30"
+      "scale": 6.74,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "003631",
@@ -4686,15 +4684,15 @@
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 1,
-      "nav": 0.2729,
-      "navChangePct": -0.55,
-      "navDate": "2026-10-22",
+      "nav": 0.2719,
+      "navChangePct": -0.37,
+      "navDate": "2026-10-23",
       "mgmtFee": 1.2,
       "custodyFee": 1.5,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 6.69,
-      "scaleDate": "2026-06-30"
+      "scale": 6.74,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "003719",
@@ -4789,8 +4787,8 @@
       "custodyFee": 0.08,
       "purchaseFee": 0.08,
       "purchaseFeeOrig": 0.8,
-      "scale": 16.97,
-      "scaleDate": "2026-06-30"
+      "scale": 6.97,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "003973",
@@ -4813,8 +4811,8 @@
       "custodyFee": 0.8,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 16.97,
-      "scaleDate": "2026-06-30"
+      "scale": 6.97,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "004243",
@@ -4861,8 +4859,8 @@
       "custodyFee": 0.08,
       "purchaseFee": 0.08,
       "purchaseFeeOrig": 0.8,
-      "scale": 14.09,
-      "scaleDate": "2026-06-30"
+      "scale": 12.42,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "004420",
@@ -4885,8 +4883,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 1.49,
-      "scaleDate": "2026-06-30"
+      "scale": 1.45,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "004421",
@@ -4910,7 +4908,7 @@
       "purchaseFee": 0.08,
       "purchaseFeeOrig": 0.8,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "004422",
@@ -4934,7 +4932,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "004877",
@@ -4957,8 +4955,8 @@
       "custodyFee": 0.16,
       "purchaseFee": 0.16,
       "purchaseFeeOrig": 1.6,
-      "scale": 4.34,
-      "scaleDate": "2026-06-30"
+      "scale": 4.68,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "004878",
@@ -4982,7 +4980,7 @@
       "purchaseFee": 0.16,
       "purchaseFeeOrig": 1.6,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "004879",
@@ -5006,7 +5004,7 @@
       "purchaseFee": null,
       "purchaseFeeOrig": 1.6,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "004998",
@@ -5029,8 +5027,8 @@
       "custodyFee": 0.08,
       "purchaseFee": 0.08,
       "purchaseFeeOrig": 0.8,
-      "scale": 23.32,
-      "scaleDate": "2026-06-30"
+      "scale": 20.32,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "004999",
@@ -5053,8 +5051,8 @@
       "custodyFee": 0.08,
       "purchaseFee": null,
       "purchaseFeeOrig": 0.8,
-      "scale": 23.32,
-      "scaleDate": "2026-06-30"
+      "scale": 20.32,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "005243",
@@ -5101,8 +5099,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 5.47,
-      "scaleDate": "2026-06-30"
+      "scale": 3.72,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "005613",
@@ -5125,8 +5123,8 @@
       "custodyFee": 0.1,
       "purchaseFee": 0.1,
       "purchaseFeeOrig": 1.0,
-      "scale": 3.13,
-      "scaleDate": "2026-06-30"
+      "scale": 3.22,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "005614",
@@ -5142,15 +5140,15 @@
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 1,
-      "nav": 0.2153,
-      "navChangePct": 0.47,
-      "navDate": "2026-10-22",
+      "nav": 0.2151,
+      "navChangePct": -0.09,
+      "navDate": "2026-10-23",
       "mgmtFee": 0.8,
       "custodyFee": 1.0,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 3.13,
-      "scaleDate": "2026-06-30"
+      "scale": 3.22,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "005615",
@@ -5166,15 +5164,15 @@
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 1,
-      "nav": 0.2153,
-      "navChangePct": 0.47,
-      "navDate": "2026-10-22",
+      "nav": 0.2151,
+      "navChangePct": -0.09,
+      "navDate": "2026-10-23",
       "mgmtFee": 0.8,
       "custodyFee": 1.0,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 3.13,
-      "scaleDate": "2026-06-30"
+      "scale": 3.22,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "005675",
@@ -5197,8 +5195,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 1.62,
-      "scaleDate": "2026-06-30"
+      "scale": 1.66,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "005676",
@@ -5221,8 +5219,8 @@
       "custodyFee": 0.2,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 1.11,
-      "scaleDate": "2026-06-30"
+      "scale": 1.14,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "005698",
@@ -5245,8 +5243,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 97.51,
-      "scaleDate": "2026-06-30"
+      "scale": 53.85,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "005699",
@@ -5269,8 +5267,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 2.1,
-      "scaleDate": "2026-06-30"
+      "scale": 1.84,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "005700",
@@ -5293,8 +5291,8 @@
       "custodyFee": 1.5,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 2.1,
-      "scaleDate": "2026-06-30"
+      "scale": 1.84,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "005801",
@@ -5341,8 +5339,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 17.44,
-      "scaleDate": "2026-06-30"
+      "scale": 16.7,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "006263",
@@ -5389,8 +5387,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 6.35,
-      "scaleDate": "2026-06-30"
+      "scale": 6.75,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "006283",
@@ -5461,8 +5459,8 @@
       "custodyFee": 0.16,
       "purchaseFee": 0.16,
       "purchaseFeeOrig": 1.6,
-      "scale": 2.0,
-      "scaleDate": "2026-06-30"
+      "scale": 1.92,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "006309",
@@ -5486,7 +5484,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "006310",
@@ -5509,8 +5507,8 @@
       "custodyFee": 0.16,
       "purchaseFee": 0.16,
       "purchaseFeeOrig": 1.6,
-      "scale": 1.35,
-      "scaleDate": "2026-06-30"
+      "scale": 1.21,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "006328",
@@ -5533,8 +5531,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 18.54,
-      "scaleDate": "2026-06-30"
+      "scale": 21.17,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "006329",
@@ -5557,8 +5555,8 @@
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 59.03,
-      "scaleDate": "2026-06-30"
+      "scale": 65.65,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "006330",
@@ -5581,8 +5579,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 18.54,
-      "scaleDate": "2026-06-30"
+      "scale": 21.17,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "006370",
@@ -5591,10 +5589,10 @@
       "group": "其他",
       "index": "--",
       "company": "国海富兰克林基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
+      "status": "normal",
+      "statusText": "开放申购",
       "limit": null,
-      "limitText": "—",
+      "limitText": "不限",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": null,
@@ -5605,8 +5603,8 @@
       "custodyFee": 0.2,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 22.28,
-      "scaleDate": "2026-06-30"
+      "scale": 20.77,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "006373",
@@ -5629,8 +5627,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 58.83,
-      "scaleDate": "2026-06-30"
+      "scale": 55.31,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "006374",
@@ -5653,8 +5651,8 @@
       "custodyFee": 1.5,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 2.45,
-      "scaleDate": "2026-06-30"
+      "scale": 2.46,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "006381",
@@ -5677,8 +5675,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 3.61,
-      "scaleDate": "2026-06-30"
+      "scale": 3.31,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "006426",
@@ -5702,7 +5700,7 @@
       "purchaseFee": 0.16,
       "purchaseFeeOrig": 1.6,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "006445",
@@ -5725,8 +5723,8 @@
       "custodyFee": 0.1,
       "purchaseFee": 0.1,
       "purchaseFeeOrig": 1.0,
-      "scale": 1.74,
-      "scaleDate": "2026-06-30"
+      "scale": 1.53,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "006446",
@@ -5749,8 +5747,8 @@
       "custodyFee": 1.0,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 1.74,
-      "scaleDate": "2026-06-30"
+      "scale": 1.53,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "006447",
@@ -5773,8 +5771,8 @@
       "custodyFee": 1.0,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 1.74,
-      "scaleDate": "2026-06-30"
+      "scale": 1.53,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "006448",
@@ -5798,7 +5796,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "006476",
@@ -5845,8 +5843,8 @@
       "custodyFee": 0.2,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 64.93,
-      "scaleDate": "2026-06-30",
+      "scale": 64.63,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-07-20",
         "title": "关于广发纳斯达克100交易型开放式指数证券投资基金联接基金(QDII)A类及C类基金份额调整大额申购(含转换转入、定期定",
@@ -5878,8 +5876,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 18.5,
-      "scaleDate": "2026-06-30"
+      "scale": 15.59,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "006679",
@@ -5967,15 +5965,15 @@
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 200,
-      "nav": 0.1854,
-      "navChangePct": 0.98,
-      "navDate": "2026-10-22",
+      "nav": 0.1849,
+      "navChangePct": -0.27,
+      "navDate": "2026-10-23",
       "mgmtFee": 0.5,
       "custodyFee": 0.1,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 45.43,
-      "scaleDate": "2026-06-30"
+      "scale": 38.18,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "007204",
@@ -6046,8 +6044,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 23.94,
-      "scaleDate": "2026-06-30"
+      "scale": 26.6,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "007360",
@@ -6070,8 +6068,8 @@
       "custodyFee": 0.05,
       "purchaseFee": 0.05,
       "purchaseFeeOrig": 0.5,
-      "scale": 22.92,
-      "scaleDate": "2026-06-30"
+      "scale": 20.37,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "007361",
@@ -6094,8 +6092,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 4.29,
-      "scaleDate": "2026-06-30"
+      "scale": 4.23,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "007362",
@@ -6118,8 +6116,8 @@
       "custodyFee": 0.05,
       "purchaseFee": 0.05,
       "purchaseFeeOrig": 0.5,
-      "scale": 22.92,
-      "scaleDate": "2026-06-30"
+      "scale": 20.37,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "007363",
@@ -6142,8 +6140,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 4.29,
-      "scaleDate": "2026-06-30"
+      "scale": 4.23,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "007455",
@@ -6166,8 +6164,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 12.28,
-      "scaleDate": "2026-06-30"
+      "scale": 9.91,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "007729",
@@ -6190,8 +6188,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 4.88,
-      "scaleDate": "2026-06-30"
+      "scale": 3.49,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "007844",
@@ -6238,8 +6236,8 @@
       "custodyFee": 0.15,
       "purchaseFee": null,
       "purchaseFeeOrig": 1.5,
-      "scale": 4.88,
-      "scaleDate": "2026-06-30"
+      "scale": 3.49,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "007976",
@@ -6334,8 +6332,8 @@
       "custodyFee": 0.08,
       "purchaseFee": 0.08,
       "purchaseFeeOrig": 0.8,
-      "scale": 2.58,
-      "scaleDate": "2026-06-30"
+      "scale": 2.47,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "008096",
@@ -6359,7 +6357,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "008097",
@@ -6382,8 +6380,8 @@
       "custodyFee": 0.8,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 2.58,
-      "scaleDate": "2026-06-30"
+      "scale": 2.47,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "008098",
@@ -6407,7 +6405,7 @@
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "008183",
@@ -6430,8 +6428,8 @@
       "custodyFee": 0.15,
       "purchaseFee": null,
       "purchaseFeeOrig": 1.5,
-      "scale": 4.88,
-      "scaleDate": "2026-06-30"
+      "scale": 3.49,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "008253",
@@ -6454,8 +6452,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 11.01,
-      "scaleDate": "2026-06-30"
+      "scale": 8.94,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "008254",
@@ -6478,8 +6476,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 28.04,
-      "scaleDate": "2026-06-30"
+      "scale": 17.39,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "008284",
@@ -6502,8 +6500,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 8.55,
-      "scaleDate": "2026-06-30"
+      "scale": 8.78,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "008285",
@@ -6526,8 +6524,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 8.55,
-      "scaleDate": "2026-06-30"
+      "scale": 8.78,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "008320",
@@ -6598,8 +6596,8 @@
       "custodyFee": 0.08,
       "purchaseFee": 0.08,
       "purchaseFeeOrig": 0.8,
-      "scale": 20.31,
-      "scaleDate": "2026-06-30"
+      "scale": 20.87,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "008368",
@@ -6615,15 +6613,15 @@
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": null,
-      "nav": 0.1564,
-      "navChangePct": 0.19,
-      "navDate": "2026-10-22",
+      "nav": 0.1562,
+      "navChangePct": -0.13,
+      "navDate": "2026-10-23",
       "mgmtFee": 0.6,
       "custodyFee": 0.8,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 20.31,
-      "scaleDate": "2026-06-30"
+      "scale": 20.87,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "008706",
@@ -6718,8 +6716,8 @@
       "custodyFee": 0.08,
       "purchaseFee": 0.08,
       "purchaseFeeOrig": 0.8,
-      "scale": 1.49,
-      "scaleDate": "2026-06-30"
+      "scale": 1.55,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "008752",
@@ -6743,7 +6741,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "008763",
@@ -6766,8 +6764,8 @@
       "custodyFee": 0.1,
       "purchaseFee": 0.1,
       "purchaseFeeOrig": 1.0,
-      "scale": 24.88,
-      "scaleDate": "2026-06-30"
+      "scale": 22.7,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "008764",
@@ -6790,8 +6788,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 15.21,
-      "scaleDate": "2026-06-30"
+      "scale": 13.63,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "009108",
@@ -6814,8 +6812,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 11.47,
-      "scaleDate": "2026-06-30"
+      "scale": 10.8,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "009193",
@@ -6831,15 +6829,15 @@
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": null,
-      "nav": 0.2611,
-      "navChangePct": -1.73,
-      "navDate": "2026-10-22",
+      "nav": 0.2619,
+      "navChangePct": 0.31,
+      "navDate": "2026-10-23",
       "mgmtFee": 1.2,
       "custodyFee": 1.5,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 11.47,
-      "scaleDate": "2026-06-30"
+      "scale": 10.8,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "009225",
@@ -6863,7 +6861,7 @@
       "purchaseFee": 0.1,
       "purchaseFeeOrig": 1.0,
       "scale": 1.92,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "009226",
@@ -6886,8 +6884,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 1.01,
-      "scaleDate": "2026-06-30"
+      "scale": null,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "009562",
@@ -6910,8 +6908,8 @@
       "custodyFee": 0.2,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 3.55,
-      "scaleDate": "2026-06-30"
+      "scale": 3.38,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "009563",
@@ -6934,8 +6932,8 @@
       "custodyFee": 0.2,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 3.55,
-      "scaleDate": "2026-06-30"
+      "scale": 3.38,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "009975",
@@ -6975,15 +6973,15 @@
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 1,
-      "nav": 0.3673,
-      "navChangePct": -3.09,
-      "navDate": "2026-10-22",
+      "nav": 0.3683,
+      "navChangePct": 0.27,
+      "navDate": "2026-10-23",
       "mgmtFee": 1.2,
       "custodyFee": 0.2,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 12.28,
-      "scaleDate": "2026-06-30"
+      "scale": 9.91,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "010591",
@@ -6999,15 +6997,15 @@
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 1,
-      "nav": 0.4229,
-      "navChangePct": -2.87,
-      "navDate": "2026-10-22",
+      "nav": 0.4256,
+      "navChangePct": 0.64,
+      "navDate": "2026-10-23",
       "mgmtFee": 1.2,
       "custodyFee": 0.2,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 30.23,
-      "scaleDate": "2026-06-30"
+      "scale": 27.53,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "010644",
@@ -7030,8 +7028,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 3.17,
-      "scaleDate": "2026-06-30"
+      "scale": 2.88,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "010645",
@@ -7047,15 +7045,15 @@
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": null,
-      "nav": 0.1293,
-      "navChangePct": -3.44,
-      "navDate": "2026-10-22",
+      "nav": 0.1306,
+      "navChangePct": 1.01,
+      "navDate": "2026-10-23",
       "mgmtFee": 1.2,
       "custodyFee": 1.5,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 3.17,
-      "scaleDate": "2026-06-30"
+      "scale": 2.88,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "010671",
@@ -7078,8 +7076,8 @@
       "custodyFee": 0.2,
       "purchaseFee": 0.16,
       "purchaseFeeOrig": 1.6,
-      "scale": 5.89,
-      "scaleDate": "2026-06-30"
+      "scale": 5.38,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "010789",
@@ -7126,8 +7124,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 6.23,
-      "scaleDate": "2026-06-30"
+      "scale": 5.36,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "011421",
@@ -7150,8 +7148,8 @@
       "custodyFee": 1.5,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 6.23,
-      "scaleDate": "2026-06-30"
+      "scale": 5.36,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "011422",
@@ -7174,8 +7172,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 1.88,
-      "scaleDate": "2026-06-30"
+      "scale": 1.63,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "011423",
@@ -7198,8 +7196,8 @@
       "custodyFee": 0.0,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 1.88,
-      "scaleDate": "2026-06-30"
+      "scale": 1.63,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "011583",
@@ -7222,8 +7220,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 4.5,
-      "scaleDate": "2026-06-30"
+      "scale": 4.18,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "011584",
@@ -7246,8 +7244,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 5.74,
-      "scaleDate": "2026-06-30"
+      "scale": 5.76,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "011706",
@@ -7270,8 +7268,8 @@
       "custodyFee": 0.2,
       "purchaseFee": null,
       "purchaseFeeOrig": 0.1,
-      "scale": 17.14,
-      "scaleDate": "2026-06-30"
+      "scale": 25.94,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "011940",
@@ -7294,8 +7292,8 @@
       "custodyFee": 0.2,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 1.49,
-      "scaleDate": "2026-06-30"
+      "scale": 1.55,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "011941",
@@ -7319,7 +7317,7 @@
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "012060",
@@ -7342,8 +7340,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 6.11,
-      "scaleDate": "2026-06-30"
+      "scale": 5.21,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "012061",
@@ -7359,15 +7357,15 @@
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": null,
-      "nav": 0.2096,
-      "navChangePct": -1.46,
-      "navDate": "2026-10-22",
+      "nav": 0.2118,
+      "navChangePct": 1.05,
+      "navDate": "2026-10-23",
       "mgmtFee": 1.2,
       "custodyFee": 1.5,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 6.11,
-      "scaleDate": "2026-06-30"
+      "scale": 5.21,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "012062",
@@ -7390,8 +7388,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 4.84,
-      "scaleDate": "2026-06-30"
+      "scale": 3.94,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "012208",
@@ -7414,8 +7412,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 6.63,
-      "scaleDate": "2026-06-30"
+      "scale": 5.4,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "012209",
@@ -7439,7 +7437,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "012348",
@@ -7462,8 +7460,8 @@
       "custodyFee": 0.1,
       "purchaseFee": 0.1,
       "purchaseFeeOrig": 1.0,
-      "scale": 44.01,
-      "scaleDate": "2026-06-30"
+      "scale": 42.09,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "012349",
@@ -7486,8 +7484,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 80.67,
-      "scaleDate": "2026-06-30"
+      "scale": 75.84,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "012379",
@@ -7558,8 +7556,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 7.06,
-      "scaleDate": "2026-06-30"
+      "scale": 5.43,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "012536",
@@ -7582,8 +7580,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 2.02,
-      "scaleDate": "2026-06-30"
+      "scale": 1.7,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "012570",
@@ -7654,8 +7652,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 6.41,
-      "scaleDate": "2026-06-30"
+      "scale": 4.51,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "012585",
@@ -7679,7 +7677,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "012752",
@@ -7733,8 +7731,8 @@
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 17.22,
-      "scaleDate": "2026-06-30"
+      "scale": 16.11,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "012805",
@@ -7757,8 +7755,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 55.95,
-      "scaleDate": "2026-06-30"
+      "scale": 52.29,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "012864",
@@ -7925,8 +7923,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 74.92,
-      "scaleDate": "2026-06-30"
+      "scale": 40.19,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "012921",
@@ -7949,8 +7947,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 74.92,
-      "scaleDate": "2026-06-30"
+      "scale": 40.19,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "012922",
@@ -7973,8 +7971,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 119.64,
-      "scaleDate": "2026-06-30"
+      "scale": 56.25,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "012923",
@@ -7997,8 +7995,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 119.64,
-      "scaleDate": "2026-06-30"
+      "scale": 56.25,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "012924",
@@ -8021,8 +8019,8 @@
       "custodyFee": 0.2,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 5.47,
-      "scaleDate": "2026-06-30"
+      "scale": 3.72,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "012925",
@@ -8045,8 +8043,8 @@
       "custodyFee": 0.2,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 5.47,
-      "scaleDate": "2026-06-30"
+      "scale": 3.72,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "012979",
@@ -8069,8 +8067,8 @@
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 22.93,
-      "scaleDate": "2026-06-30"
+      "scale": 21.19,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "012980",
@@ -8093,8 +8091,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 18.14,
-      "scaleDate": "2026-06-30"
+      "scale": 16.04,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "013127",
@@ -8117,8 +8115,8 @@
       "custodyFee": 0.1,
       "purchaseFee": 0.1,
       "purchaseFeeOrig": 1.0,
-      "scale": 11.25,
-      "scaleDate": "2026-06-30"
+      "scale": 11.4,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "013128",
@@ -8141,8 +8139,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 18.65,
-      "scaleDate": "2026-06-30"
+      "scale": 18.16,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "013171",
@@ -8165,8 +8163,8 @@
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 11.07,
-      "scaleDate": "2026-06-30"
+      "scale": 11.75,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "013172",
@@ -8189,8 +8187,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 17.34,
-      "scaleDate": "2026-06-30"
+      "scale": 18.7,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "013308",
@@ -8213,8 +8211,8 @@
       "custodyFee": 0.06,
       "purchaseFee": 0.06,
       "purchaseFeeOrig": 0.6,
-      "scale": 57.37,
-      "scaleDate": "2026-06-30"
+      "scale": 58.87,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "013309",
@@ -8237,8 +8235,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 97.35,
-      "scaleDate": "2026-06-30"
+      "scale": 94.58,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "013328",
@@ -8261,8 +8259,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 2.16,
-      "scaleDate": "2026-06-30"
+      "scale": 2.23,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "013329",
@@ -8286,7 +8284,7 @@
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "013363",
@@ -8310,7 +8308,7 @@
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "013364",
@@ -8334,7 +8332,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "013402",
@@ -8357,8 +8355,8 @@
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 43.72,
-      "scaleDate": "2026-06-30"
+      "scale": 42.36,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "013403",
@@ -8381,8 +8379,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 47.47,
-      "scaleDate": "2026-06-30"
+      "scale": 44.06,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "013508",
@@ -8405,8 +8403,8 @@
       "custodyFee": 0.1,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 5.47,
-      "scaleDate": "2026-06-30"
+      "scale": 4.65,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "013509",
@@ -8429,8 +8427,8 @@
       "custodyFee": 0.1,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 5.47,
-      "scaleDate": "2026-06-30"
+      "scale": 4.65,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "013945",
@@ -8477,8 +8475,8 @@
       "custodyFee": 0.2,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 31.2,
-      "scaleDate": "2026-06-30"
+      "scale": 31.56,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "014127",
@@ -8525,8 +8523,8 @@
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 5.16,
-      "scaleDate": "2026-06-30"
+      "scale": 6.92,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "014425",
@@ -8549,8 +8547,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 5.75,
-      "scaleDate": "2026-06-30"
+      "scale": 5.78,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "014438",
@@ -8573,8 +8571,8 @@
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 8.19,
-      "scaleDate": "2026-06-30"
+      "scale": 7.85,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "014439",
@@ -8597,8 +8595,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 11.26,
-      "scaleDate": "2026-06-30"
+      "scale": 10.76,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "014978",
@@ -8621,8 +8619,8 @@
       "custodyFee": 0.2,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 13.48,
-      "scaleDate": "2026-06-30",
+      "scale": 15.14,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-10-20",
         "title": "关于华安纳斯达克100交易型开放式指数证券投资基金联接基金(QDII)暂停申购及定期定额投资的公告",
@@ -8676,8 +8674,8 @@
       "custodyFee": 0.2,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 2.64,
-      "scaleDate": "2026-06-30"
+      "scale": 2.49,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "015202",
@@ -8700,8 +8698,8 @@
       "custodyFee": 0.2,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 6.33,
-      "scaleDate": "2026-06-30"
+      "scale": 6.4,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "015203",
@@ -8725,7 +8723,7 @@
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "015204",
@@ -8796,8 +8794,8 @@
       "custodyFee": 0.05,
       "purchaseFee": 0.05,
       "purchaseFeeOrig": 0.5,
-      "scale": 4.45,
-      "scaleDate": "2026-06-30"
+      "scale": 4.33,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "015283",
@@ -8820,8 +8818,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 20.04,
-      "scaleDate": "2026-06-30"
+      "scale": 19.22,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "015310",
@@ -8844,8 +8842,8 @@
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 4.64,
-      "scaleDate": "2026-06-30"
+      "scale": 4.49,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "015311",
@@ -8868,8 +8866,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 26.53,
-      "scaleDate": "2026-06-30"
+      "scale": 25.67,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "015546",
@@ -8916,8 +8914,8 @@
       "custodyFee": 0.18,
       "purchaseFee": 0.18,
       "purchaseFeeOrig": 1.8,
-      "scale": 1.26,
-      "scaleDate": "2026-06-30"
+      "scale": null,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "015885",
@@ -8940,8 +8938,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 1.39,
-      "scaleDate": "2026-06-30"
+      "scale": null,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "016199",
@@ -8965,7 +8963,7 @@
       "purchaseFee": 0.16,
       "purchaseFeeOrig": 1.6,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "016200",
@@ -8989,7 +8987,7 @@
       "purchaseFee": 0.16,
       "purchaseFeeOrig": 1.6,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "016201",
@@ -9013,7 +9011,7 @@
       "purchaseFee": null,
       "purchaseFeeOrig": 1.6,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "016202",
@@ -9037,7 +9035,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "016278",
@@ -9061,7 +9059,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "016279",
@@ -9085,7 +9083,7 @@
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "016280",
@@ -9108,8 +9106,8 @@
       "custodyFee": 0.2,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 2.08,
-      "scaleDate": "2026-06-30"
+      "scale": 1.95,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "016281",
@@ -9132,8 +9130,8 @@
       "custodyFee": 0.2,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 2.08,
-      "scaleDate": "2026-06-30"
+      "scale": 1.95,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "016452",
@@ -9156,13 +9154,15 @@
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 62.1,
-      "scaleDate": "2026-06-30",
+      "scale": 67.32,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-07-08",
         "title": "关于调整南方纳斯达克100指数发起式证券投资基金(QDII)申购、定投及转换转入业务金额限制的公告",
         "artId": "AN202607081826816306",
-        "limits": [],
+        "limits": [
+          10
+        ],
         "review": false
       }
     },
@@ -9187,13 +9187,15 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 48.33,
-      "scaleDate": "2026-06-30",
+      "scale": 46.49,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-07-08",
         "title": "关于调整南方纳斯达克100指数发起式证券投资基金(QDII)申购、定投及转换转入业务金额限制的公告",
         "artId": "AN202607081826816306",
-        "limits": [],
+        "limits": [
+          10
+        ],
         "review": false
       }
     },
@@ -9219,7 +9221,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "016471",
@@ -9243,7 +9245,7 @@
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "016532",
@@ -9266,8 +9268,8 @@
       "custodyFee": 0.1,
       "purchaseFee": 0.1,
       "purchaseFeeOrig": 1.0,
-      "scale": 20.77,
-      "scaleDate": "2026-06-30",
+      "scale": 19.89,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-02-03",
         "title": "嘉实纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购(含定期定额投资)业务的公告",
@@ -9297,8 +9299,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 16.4,
-      "scaleDate": "2026-06-30",
+      "scale": 15.39,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-02-03",
         "title": "嘉实纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购(含定期定额投资)业务的公告",
@@ -9328,8 +9330,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 16.82,
-      "scaleDate": "2026-06-30"
+      "scale": 12.73,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "016665",
@@ -9352,8 +9354,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 41.44,
-      "scaleDate": "2026-06-30"
+      "scale": 25.76,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "016667",
@@ -9412,8 +9414,8 @@
       "company": "银华基金",
       "status": "limited",
       "statusText": "限大额",
-      "limit": 10000,
-      "limitText": "1 万",
+      "limit": 5000,
+      "limitText": "5000 元",
       "limitReliable": true,
       "limitSource": "api",
       "minPurchase": 10,
@@ -9436,8 +9438,8 @@
       "company": "银华基金",
       "status": "limited",
       "statusText": "限大额",
-      "limit": 10000,
-      "limitText": "1 万",
+      "limit": 5000,
+      "limitText": "5000 元",
       "limitReliable": true,
       "limitSource": "api",
       "minPurchase": 10,
@@ -9472,8 +9474,8 @@
       "custodyFee": 0.2,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 1.94,
-      "scaleDate": "2026-06-30"
+      "scale": 1.45,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "016823",
@@ -9513,15 +9515,15 @@
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 10,
-      "nav": 1.0798,
-      "navChangePct": 1.25,
-      "navDate": "2026-10-23",
+      "nav": 1.0763,
+      "navChangePct": -0.32,
+      "navDate": "2026-10-26",
       "mgmtFee": 1.0,
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 3.67,
-      "scaleDate": "2026-06-30"
+      "scale": 4.39,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "016971",
@@ -9537,15 +9539,15 @@
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 10,
-      "nav": 1.0672,
-      "navChangePct": 1.24,
-      "navDate": "2026-10-23",
+      "nav": 1.0637,
+      "navChangePct": -0.33,
+      "navDate": "2026-10-26",
       "mgmtFee": 0.0,
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 10.0,
-      "scaleDate": "2026-06-30"
+      "scale": 10.34,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "016988",
@@ -9569,7 +9571,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "017071",
@@ -9592,8 +9594,8 @@
       "custodyFee": 0.1,
       "purchaseFee": 0.1,
       "purchaseFeeOrig": 1.0,
-      "scale": 1.03,
-      "scaleDate": "2026-06-30"
+      "scale": null,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "017072",
@@ -9616,8 +9618,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 2.38,
-      "scaleDate": "2026-06-30"
+      "scale": 1.32,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "017091",
@@ -9640,8 +9642,8 @@
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 27.7,
-      "scaleDate": "2026-06-30"
+      "scale": 31.25,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "017093",
@@ -9664,8 +9666,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 13.28,
-      "scaleDate": "2026-06-30"
+      "scale": 15.24,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "017144",
@@ -9689,7 +9691,7 @@
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "017145",
@@ -9712,8 +9714,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 2.27,
-      "scaleDate": "2026-06-30"
+      "scale": 2.15,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "017204",
@@ -9761,7 +9763,7 @@
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "017430",
@@ -9785,7 +9787,7 @@
       "purchaseFee": null,
       "purchaseFeeOrig": 1.5,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "017431",
@@ -9809,7 +9811,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "017436",
@@ -9832,8 +9834,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 47.06,
-      "scaleDate": "2026-06-30"
+      "scale": 58.17,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "017437",
@@ -9856,8 +9858,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 56.2,
-      "scaleDate": "2026-06-30"
+      "scale": 67.0,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "017641",
@@ -9880,8 +9882,8 @@
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 53.03,
-      "scaleDate": "2026-06-30",
+      "scale": 59.31,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-07-27",
         "title": "摩根标普500指数型发起式证券投资基金(QDII)调整大额申购、定期定额投资及转换转入业务限制金额的公告",
@@ -9959,8 +9961,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 31.48,
-      "scaleDate": "2026-06-30"
+      "scale": 33.14,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "017731",
@@ -9983,8 +9985,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 37.9,
-      "scaleDate": "2026-06-30"
+      "scale": 38.65,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "017873",
@@ -10007,8 +10009,8 @@
       "custodyFee": 0.2,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": null,
-      "scaleDate": "2026-06-30"
+      "scale": 1.3,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "017970",
@@ -10031,8 +10033,8 @@
       "custodyFee": 0.2,
       "purchaseFee": 0.2,
       "purchaseFeeOrig": 0.2,
-      "scale": 12.3,
-      "scaleDate": "2026-06-30"
+      "scale": 10.08,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "017971",
@@ -10049,14 +10051,14 @@
       "limitSource": "api",
       "minPurchase": 1,
       "nav": 0.1564,
-      "navChangePct": 0.06,
-      "navDate": "2026-10-22",
+      "navChangePct": 0.0,
+      "navDate": "2026-10-23",
       "mgmtFee": 0.2,
       "custodyFee": 0.2,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 12.3,
-      "scaleDate": "2026-06-30"
+      "scale": 10.08,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "017972",
@@ -10073,14 +10075,14 @@
       "limitSource": "api",
       "minPurchase": 1,
       "nav": 0.1564,
-      "navChangePct": 0.06,
-      "navDate": "2026-10-22",
+      "navChangePct": 0.0,
+      "navDate": "2026-10-23",
       "mgmtFee": 0.2,
       "custodyFee": 0.2,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 12.3,
-      "scaleDate": "2026-06-30"
+      "scale": 10.08,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "018036",
@@ -10103,8 +10105,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 32.11,
-      "scaleDate": "2026-06-30"
+      "scale": 31.73,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "018043",
@@ -10127,13 +10129,15 @@
       "custodyFee": 0.1,
       "purchaseFee": 0.1,
       "purchaseFeeOrig": 1.0,
-      "scale": 30.75,
-      "scaleDate": "2026-06-30",
+      "scale": 32.44,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-09-18",
         "title": "天弘基金管理有限公司关于天弘纳斯达克100指数型发起式证券投资基金(QDII)A类基金份额、C类基金份额暂停申购及定期定",
         "artId": "AN202609181829590491",
-        "limits": [],
+        "limits": [
+          100
+        ],
         "review": false
       }
     },
@@ -10158,13 +10162,15 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 29.34,
-      "scaleDate": "2026-06-30",
+      "scale": 31.7,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-09-18",
         "title": "天弘基金管理有限公司关于天弘纳斯达克100指数型发起式证券投资基金(QDII)A类基金份额、C类基金份额暂停申购及定期定",
         "artId": "AN202609181829590491",
-        "limits": [],
+        "limits": [
+          100
+        ],
         "review": false
       }
     },
@@ -10190,7 +10196,7 @@
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "018079",
@@ -10213,8 +10219,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 1.56,
-      "scaleDate": "2026-06-30"
+      "scale": 1.04,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "018147",
@@ -10309,8 +10315,8 @@
       "custodyFee": 0.1,
       "purchaseFee": 0.1,
       "purchaseFeeOrig": 1.0,
-      "scale": 1.33,
-      "scaleDate": "2026-06-30"
+      "scale": null,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "018201",
@@ -10334,7 +10340,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "018229",
@@ -10357,8 +10363,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 44.2,
-      "scaleDate": "2026-06-30"
+      "scale": 30.34,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "018230",
@@ -10381,8 +10387,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 51.99,
-      "scaleDate": "2026-06-30"
+      "scale": 29.2,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "018231",
@@ -10405,8 +10411,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 44.2,
-      "scaleDate": "2026-06-30"
+      "scale": 30.34,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "018232",
@@ -10429,8 +10435,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 51.99,
-      "scaleDate": "2026-06-30"
+      "scale": 29.2,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "018432",
@@ -10454,7 +10460,7 @@
       "purchaseFee": 0.1,
       "purchaseFeeOrig": 1.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "018433",
@@ -10478,7 +10484,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "018475",
@@ -10502,7 +10508,7 @@
       "purchaseFee": 0.1,
       "purchaseFeeOrig": 1.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "018476",
@@ -10525,8 +10531,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 1.48,
-      "scaleDate": "2026-06-30"
+      "scale": 1.69,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "018523",
@@ -10550,7 +10556,7 @@
       "purchaseFee": 0.1,
       "purchaseFeeOrig": 1.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "018524",
@@ -10573,8 +10579,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 1.67,
-      "scaleDate": "2026-06-30"
+      "scale": 1.91,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "018543",
@@ -10621,8 +10627,8 @@
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 1.12,
-      "scaleDate": "2026-06-30"
+      "scale": 1.29,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "018578",
@@ -10645,8 +10651,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 2.55,
-      "scaleDate": "2026-06-30"
+      "scale": 2.4,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "018851",
@@ -10670,7 +10676,7 @@
       "purchaseFee": 0.1,
       "purchaseFeeOrig": 1.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "018852",
@@ -10694,7 +10700,7 @@
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "018853",
@@ -10717,8 +10723,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 1.18,
-      "scaleDate": "2026-06-30"
+      "scale": 1.79,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "018854",
@@ -10741,8 +10747,8 @@
       "custodyFee": 0.0,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 1.18,
-      "scaleDate": "2026-06-30"
+      "scale": 1.79,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "019035",
@@ -10765,8 +10771,8 @@
       "custodyFee": 0.2,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 4.38,
-      "scaleDate": "2026-06-30"
+      "scale": 4.19,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "019036",
@@ -10789,8 +10795,8 @@
       "custodyFee": 0.2,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 4.38,
-      "scaleDate": "2026-06-30"
+      "scale": 4.19,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "019075",
@@ -10814,7 +10820,7 @@
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "019076",
@@ -10838,7 +10844,7 @@
       "purchaseFee": null,
       "purchaseFeeOrig": 1.5,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "019102",
@@ -10861,8 +10867,8 @@
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 1.73,
-      "scaleDate": "2026-06-30"
+      "scale": 1.75,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "019103",
@@ -10885,8 +10891,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 1.35,
-      "scaleDate": "2026-06-30"
+      "scale": 1.37,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "019155",
@@ -10909,8 +10915,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 4.27,
-      "scaleDate": "2026-06-30"
+      "scale": 3.33,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "019156",
@@ -10933,8 +10939,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 4.12,
-      "scaleDate": "2026-06-30"
+      "scale": 3.0,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "019157",
@@ -10957,8 +10963,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 4.27,
-      "scaleDate": "2026-06-30"
+      "scale": 3.33,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "019158",
@@ -10981,8 +10987,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 4.12,
-      "scaleDate": "2026-06-30"
+      "scale": 3.0,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "019230",
@@ -11005,8 +11011,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 8.3,
-      "scaleDate": "2026-06-30"
+      "scale": 8.72,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "019231",
@@ -11029,8 +11035,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 15.88,
-      "scaleDate": "2026-06-30"
+      "scale": 8.42,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "019232",
@@ -11053,8 +11059,8 @@
       "custodyFee": 1.5,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 8.3,
-      "scaleDate": "2026-06-30"
+      "scale": 8.72,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "019233",
@@ -11077,8 +11083,8 @@
       "custodyFee": 0.0,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 15.88,
-      "scaleDate": "2026-06-30"
+      "scale": 8.42,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "019265",
@@ -11102,7 +11108,7 @@
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "019266",
@@ -11126,7 +11132,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "019415",
@@ -11197,8 +11203,8 @@
       "custodyFee": 0.2,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 97.51,
-      "scaleDate": "2026-06-30"
+      "scale": 53.85,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "019448",
@@ -11221,8 +11227,8 @@
       "custodyFee": 0.2,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 97.51,
-      "scaleDate": "2026-06-30"
+      "scale": 53.85,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "019449",
@@ -11245,8 +11251,8 @@
       "custodyFee": 0.2,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 11.14,
-      "scaleDate": "2026-06-30"
+      "scale": 12.62,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "019450",
@@ -11269,8 +11275,8 @@
       "custodyFee": 0.2,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 2.3,
-      "scaleDate": "2026-06-30"
+      "scale": 2.43,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "019454",
@@ -11293,8 +11299,8 @@
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 1.42,
-      "scaleDate": "2026-06-30"
+      "scale": 1.07,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "019455",
@@ -11317,8 +11323,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 2.36,
-      "scaleDate": "2026-06-30"
+      "scale": 1.73,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "019480",
@@ -11341,8 +11347,8 @@
       "custodyFee": 0.25,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 32.38,
-      "scaleDate": "2026-06-30"
+      "scale": 26.48,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "019481",
@@ -11365,8 +11371,8 @@
       "custodyFee": 0.25,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 32.38,
-      "scaleDate": "2026-06-30"
+      "scale": 26.48,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "019495",
@@ -11390,7 +11396,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "019512",
@@ -11413,8 +11419,8 @@
       "custodyFee": 0.2,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 3.97,
-      "scaleDate": "2026-06-30"
+      "scale": 4.96,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "019518",
@@ -11437,8 +11443,8 @@
       "custodyFee": 0.1,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 4.4,
-      "scaleDate": "2026-06-30"
+      "scale": 4.63,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "019549",
@@ -11461,8 +11467,8 @@
       "custodyFee": 0.2,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 30.27,
-      "scaleDate": "2026-06-30"
+      "scale": 28.66,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "019550",
@@ -11485,8 +11491,8 @@
       "custodyFee": 0.2,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 30.27,
-      "scaleDate": "2026-06-30"
+      "scale": 28.66,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "019573",
@@ -11510,7 +11516,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "019578",
@@ -11533,8 +11539,8 @@
       "custodyFee": 0.2,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 2.57,
-      "scaleDate": "2026-06-30"
+      "scale": 2.43,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "019630",
@@ -11581,8 +11587,8 @@
       "custodyFee": 0.2,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": null,
-      "scaleDate": "2026-06-30"
+      "scale": 1.17,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "019670",
@@ -11605,8 +11611,8 @@
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 8.85,
-      "scaleDate": "2026-06-30"
+      "scale": 10.69,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "019671",
@@ -11629,8 +11635,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 22.01,
-      "scaleDate": "2026-06-30"
+      "scale": 25.41,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "019709",
@@ -11654,7 +11660,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "019710",
@@ -11725,8 +11731,8 @@
       "custodyFee": 0.2,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 5.07,
-      "scaleDate": "2026-06-30"
+      "scale": 5.14,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "019936",
@@ -11750,7 +11756,7 @@
       "purchaseFee": 0.05,
       "purchaseFeeOrig": 0.5,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "019937",
@@ -11773,8 +11779,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 1.77,
-      "scaleDate": "2026-06-30"
+      "scale": 2.02,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "020512",
@@ -11797,8 +11803,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 1.42,
-      "scaleDate": "2026-06-30"
+      "scale": 1.23,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "020515",
@@ -11821,8 +11827,8 @@
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 1.09,
-      "scaleDate": "2026-06-30"
+      "scale": null,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "020516",
@@ -11845,8 +11851,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 1.47,
-      "scaleDate": "2026-06-30"
+      "scale": 1.18,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "020571",
@@ -11886,15 +11892,15 @@
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 10,
-      "nav": 1.4855,
-      "navChangePct": 0.07,
-      "navDate": "2026-10-23",
+      "nav": 1.5016,
+      "navChangePct": 1.08,
+      "navDate": "2026-10-26",
       "mgmtFee": 0.1,
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "020622",
@@ -11910,15 +11916,15 @@
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 10,
-      "nav": 1.4722,
-      "navChangePct": 0.07,
-      "navDate": "2026-10-23",
+      "nav": 1.4881,
+      "navChangePct": 1.08,
+      "navDate": "2026-10-26",
       "mgmtFee": 0.0,
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "020634",
@@ -11942,7 +11948,7 @@
       "purchaseFee": 0.1,
       "purchaseFeeOrig": 1.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "020635",
@@ -11966,7 +11972,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "020712",
@@ -11989,8 +11995,8 @@
       "custodyFee": 0.06,
       "purchaseFee": 0.06,
       "purchaseFeeOrig": 0.6,
-      "scale": 2.87,
-      "scaleDate": "2026-06-30"
+      "scale": 3.04,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "020713",
@@ -12013,8 +12019,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 1.6,
-      "scaleDate": "2026-06-30"
+      "scale": 1.69,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "020743",
@@ -12038,7 +12044,7 @@
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "020744",
@@ -12062,7 +12068,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "020957",
@@ -12085,8 +12091,8 @@
       "custodyFee": 0.2,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 4.23,
-      "scaleDate": "2026-06-30"
+      "scale": 4.25,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "020969",
@@ -12133,8 +12139,8 @@
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 6.26,
-      "scaleDate": "2026-06-30"
+      "scale": 6.32,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "020989",
@@ -12157,8 +12163,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 14.21,
-      "scaleDate": "2026-06-30"
+      "scale": 14.11,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "021044",
@@ -12182,7 +12188,7 @@
       "purchaseFee": 0.1,
       "purchaseFeeOrig": 1.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "021045",
@@ -12206,7 +12212,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "021053",
@@ -12230,7 +12236,7 @@
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "021189",
@@ -12253,8 +12259,8 @@
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 1.55,
-      "scaleDate": "2026-06-30"
+      "scale": 1.9,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "021190",
@@ -12277,8 +12283,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 9.48,
-      "scaleDate": "2026-06-30"
+      "scale": 8.87,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "021277",
@@ -12301,8 +12307,8 @@
       "custodyFee": 0.2,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 67.93,
-      "scaleDate": "2026-06-30"
+      "scale": 56.71,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "021539",
@@ -12325,8 +12331,8 @@
       "custodyFee": 0.06,
       "purchaseFee": 0.06,
       "purchaseFeeOrig": 0.6,
-      "scale": 1.05,
-      "scaleDate": "2026-06-30"
+      "scale": 1.08,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "021540",
@@ -12350,7 +12356,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "021583",
@@ -12373,8 +12379,8 @@
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 1.21,
-      "scaleDate": "2026-06-30"
+      "scale": 1.39,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "021584",
@@ -12397,8 +12403,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 1.85,
-      "scaleDate": "2026-06-30"
+      "scale": 1.91,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "021633",
@@ -12421,8 +12427,8 @@
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 2.56,
-      "scaleDate": "2026-06-30"
+      "scale": 2.53,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "021634",
@@ -12445,8 +12451,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 4.73,
-      "scaleDate": "2026-06-30"
+      "scale": 4.51,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "021658",
@@ -12470,7 +12476,7 @@
       "purchaseFee": 0.1,
       "purchaseFeeOrig": 1.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "021659",
@@ -12494,7 +12500,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "021662",
@@ -12517,8 +12523,8 @@
       "custodyFee": 0.2,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 23.23,
-      "scaleDate": "2026-06-30"
+      "scale": 24.53,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "021694",
@@ -12565,13 +12571,15 @@
       "custodyFee": 0.2,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 21.47,
-      "scaleDate": "2026-06-30",
+      "scale": 24.6,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-07-11",
         "title": "关于广发纳斯达克100交易型开放式指数证券投资基金联接基金(QDII)F类基金份额调整大额申购(含转换转入、定期定额和不",
         "artId": "AN202607101826876558",
-        "limits": [],
+        "limits": [
+          100
+        ],
         "review": false
       }
     },
@@ -12596,8 +12604,8 @@
       "custodyFee": 0.2,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 27.8,
-      "scaleDate": "2026-06-30"
+      "scale": 31.8,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "021843",
@@ -12621,7 +12629,7 @@
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "022005",
@@ -12644,8 +12652,8 @@
       "custodyFee": 0.1,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 2.38,
-      "scaleDate": "2026-06-30"
+      "scale": 2.29,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "022121",
@@ -12669,7 +12677,7 @@
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "022122",
@@ -12693,7 +12701,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "022170",
@@ -12716,8 +12724,8 @@
       "custodyFee": 0.2,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 1.5,
-      "scaleDate": "2026-06-30"
+      "scale": null,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "022184",
@@ -12740,8 +12748,8 @@
       "custodyFee": 0.2,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 116.4,
-      "scaleDate": "2026-06-30"
+      "scale": 57.2,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "022325",
@@ -12765,7 +12773,7 @@
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "022326",
@@ -12789,7 +12797,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "022374",
@@ -12812,8 +12820,8 @@
       "custodyFee": 0.1,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 5.23,
-      "scaleDate": "2026-06-30"
+      "scale": 4.33,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "022503",
@@ -12836,8 +12844,8 @@
       "custodyFee": 0.1,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 8.14,
-      "scaleDate": "2026-06-30"
+      "scale": 8.77,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "022512",
@@ -12860,8 +12868,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 3.69,
-      "scaleDate": "2026-06-30"
+      "scale": 3.47,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "022524",
@@ -12885,7 +12893,7 @@
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "022647",
@@ -12909,7 +12917,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "022680",
@@ -12932,8 +12940,8 @@
       "custodyFee": 0.1,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 1.72,
-      "scaleDate": "2026-06-30"
+      "scale": 1.67,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "022681",
@@ -12957,7 +12965,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "023034",
@@ -12981,7 +12989,7 @@
       "purchaseFee": 0.1,
       "purchaseFeeOrig": 1.0,
       "scale": 1.03,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "023035",
@@ -13004,8 +13012,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 2.46,
-      "scaleDate": "2026-06-30"
+      "scale": 2.42,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "023073",
@@ -13029,7 +13037,7 @@
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "023074",
@@ -13053,7 +13061,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "023242",
@@ -13077,7 +13085,7 @@
       "purchaseFee": 0.1,
       "purchaseFeeOrig": 1.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "023243",
@@ -13101,7 +13109,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "023373",
@@ -13148,8 +13156,8 @@
       "custodyFee": 0.2,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 15.83,
-      "scaleDate": "2026-06-30"
+      "scale": 14.45,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "023559",
@@ -13172,8 +13180,8 @@
       "custodyFee": 0.2,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 1.34,
-      "scaleDate": "2026-06-30"
+      "scale": 1.35,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "023591",
@@ -13196,8 +13204,8 @@
       "custodyFee": 0.2,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 3.76,
-      "scaleDate": "2026-06-30"
+      "scale": 3.99,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "023763",
@@ -13220,8 +13228,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 3.21,
-      "scaleDate": "2026-06-30"
+      "scale": 3.41,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "023764",
@@ -13244,8 +13252,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 2.62,
-      "scaleDate": "2026-06-30"
+      "scale": 3.12,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "023907",
@@ -13269,7 +13277,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "024055",
@@ -13293,7 +13301,7 @@
       "purchaseFee": 0.1,
       "purchaseFeeOrig": 1.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "024056",
@@ -13317,7 +13325,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "024148",
@@ -13341,7 +13349,7 @@
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "024149",
@@ -13364,8 +13372,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 1.02,
-      "scaleDate": "2026-06-30"
+      "scale": null,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "024166",
@@ -13436,8 +13444,8 @@
       "custodyFee": 0.2,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 105.73,
-      "scaleDate": "2026-06-30"
+      "scale": 43.65,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "024393",
@@ -13461,7 +13469,7 @@
       "purchaseFee": 0.1,
       "purchaseFeeOrig": 1.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "024394",
@@ -13485,7 +13493,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "024846",
@@ -13508,8 +13516,8 @@
       "custodyFee": 0.2,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 1.45,
-      "scaleDate": "2026-06-30"
+      "scale": 1.13,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "025070",
@@ -13532,8 +13540,8 @@
       "custodyFee": 1.5,
       "purchaseFee": 1.5,
       "purchaseFeeOrig": 1.5,
-      "scale": 9.14,
-      "scaleDate": "2026-06-30"
+      "scale": 9.82,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "025071",
@@ -13556,8 +13564,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 3.52,
-      "scaleDate": "2026-06-30"
+      "scale": 3.58,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "025162",
@@ -13605,7 +13613,7 @@
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "025175",
@@ -13629,7 +13637,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "025330",
@@ -13677,7 +13685,7 @@
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "025403",
@@ -13700,8 +13708,8 @@
       "custodyFee": 0.2,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 1.17,
-      "scaleDate": "2026-06-30"
+      "scale": null,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "025587",
@@ -13725,7 +13733,7 @@
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "025588",
@@ -13749,7 +13757,7 @@
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "025589",
@@ -13773,7 +13781,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "025654",
@@ -13796,8 +13804,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 1.65,
-      "scaleDate": "2026-06-30"
+      "scale": 1.26,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "025655",
@@ -13820,8 +13828,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 1.93,
-      "scaleDate": "2026-06-30"
+      "scale": 1.34,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "025787",
@@ -13844,8 +13852,8 @@
       "custodyFee": 1.5,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 13.56,
-      "scaleDate": "2026-06-30"
+      "scale": 12.77,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "025852",
@@ -13868,8 +13876,8 @@
       "custodyFee": 1.5,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 21.38,
-      "scaleDate": "2026-06-30"
+      "scale": 19.12,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "025853",
@@ -13885,15 +13893,15 @@
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": null,
-      "nav": 0.1209,
-      "navChangePct": 0.33,
-      "navDate": "2026-10-23",
+      "nav": 0.1211,
+      "navChangePct": 0.17,
+      "navDate": "2026-10-26",
       "mgmtFee": 1.2,
       "custodyFee": 1.5,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 21.38,
-      "scaleDate": "2026-06-30"
+      "scale": 19.12,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "026015",
@@ -13917,7 +13925,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "026206",
@@ -13940,8 +13948,8 @@
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 4.15,
-      "scaleDate": "2026-06-30"
+      "scale": 3.85,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "026207",
@@ -13964,8 +13972,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 2.14,
-      "scaleDate": "2026-06-30"
+      "scale": 2.06,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "026228",
@@ -13988,8 +13996,8 @@
       "custodyFee": 0.2,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 1.02,
-      "scaleDate": "2026-06-30"
+      "scale": null,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "026246",
@@ -14012,8 +14020,8 @@
       "custodyFee": 0.08,
       "purchaseFee": 0.08,
       "purchaseFeeOrig": 0.8,
-      "scale": 2.54,
-      "scaleDate": "2026-06-30"
+      "scale": 2.36,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "026247",
@@ -14037,7 +14045,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "026248",
@@ -14060,8 +14068,8 @@
       "custodyFee": 0.8,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 2.54,
-      "scaleDate": "2026-06-30"
+      "scale": 2.36,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "026259",
@@ -14133,7 +14141,7 @@
       "purchaseFee": 0.08,
       "purchaseFeeOrig": 0.8,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "026292",
@@ -14157,7 +14165,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "026357",
@@ -14229,7 +14237,7 @@
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "026443",
@@ -14253,7 +14261,7 @@
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "026492",
@@ -14276,8 +14284,8 @@
       "custodyFee": 0.8,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 3.36,
-      "scaleDate": "2026-05-27"
+      "scale": 2.63,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "026534",
@@ -14300,8 +14308,8 @@
       "custodyFee": 0.03,
       "purchaseFee": 0.03,
       "purchaseFeeOrig": 0.3,
-      "scale": 1.29,
-      "scaleDate": "2026-06-30"
+      "scale": 1.22,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "026535",
@@ -14325,7 +14333,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "026703",
@@ -14348,8 +14356,8 @@
       "custodyFee": 0.08,
       "purchaseFee": 0.08,
       "purchaseFeeOrig": 0.8,
-      "scale": 2.16,
-      "scaleDate": "2026-06-30"
+      "scale": 2.13,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "026704",
@@ -14373,7 +14381,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "027164",
@@ -14397,7 +14405,7 @@
       "purchaseFee": 0.3,
       "purchaseFeeOrig": 0.3,
       "scale": null,
-      "scaleDate": "2026-06-02"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "027165",
@@ -14420,8 +14428,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 3.4,
-      "scaleDate": "2026-06-02"
+      "scale": 2.03,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "027170",
@@ -14444,8 +14452,8 @@
       "custodyFee": 0.2,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": null,
-      "scaleDate": "2026-06-30"
+      "scale": 8.53,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "027186",
@@ -14492,8 +14500,8 @@
       "custodyFee": 0.08,
       "purchaseFee": 0.08,
       "purchaseFeeOrig": 0.8,
-      "scale": 3.23,
-      "scaleDate": "2026-06-24"
+      "scale": 3.01,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "027206",
@@ -14516,8 +14524,8 @@
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": 4.06,
-      "scaleDate": "2026-06-24"
+      "scale": 3.78,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "027379",
@@ -14581,15 +14589,15 @@
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 10,
-      "nav": null,
+      "nav": 1.0,
       "navChangePct": null,
-      "navDate": "--",
+      "navDate": "2026-10-26",
       "mgmtFee": 0.3,
       "custodyFee": 0.03,
-      "purchaseFee": 0.3,
+      "purchaseFee": 0.03,
       "purchaseFeeOrig": 0.3,
       "scale": null,
-      "scaleDate": "--"
+      "scaleDate": "2026-10-26"
     },
     {
       "code": "027396",
@@ -14605,15 +14613,15 @@
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 10,
-      "nav": null,
+      "nav": 1.0,
       "navChangePct": null,
-      "navDate": "--",
+      "navDate": "2026-10-26",
       "mgmtFee": 0.0,
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "--"
+      "scaleDate": "2026-10-26"
     },
     {
       "code": "027450",
@@ -14733,7 +14741,7 @@
       "purchaseFee": 0.03,
       "purchaseFeeOrig": 0.3,
       "scale": null,
-      "scaleDate": "2026-06-12"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "027766",
@@ -14757,7 +14765,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-12"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "027784",
@@ -14781,7 +14789,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "027794",
@@ -14805,7 +14813,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "028041",
@@ -14876,8 +14884,8 @@
       "custodyFee": 0.2,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 21.25,
-      "scaleDate": "2026-06-30"
+      "scale": 17.26,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "028491",
@@ -14900,8 +14908,8 @@
       "custodyFee": 0.2,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
-      "scale": null,
-      "scaleDate": "--"
+      "scale": 2.85,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "029177",
@@ -14948,8 +14956,8 @@
       "custodyFee": 0.16,
       "purchaseFee": 0.16,
       "purchaseFeeOrig": 1.6,
-      "scale": 7.98,
-      "scaleDate": "2026-06-30"
+      "scale": 6.95,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "040021",
@@ -14972,8 +14980,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 1.69,
-      "scaleDate": "2026-06-30"
+      "scale": 1.57,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "040048",
@@ -14996,8 +15004,8 @@
       "custodyFee": 1.2,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 58.1,
-      "scaleDate": "2026-06-30",
+      "scale": 63.39,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-10-20",
         "title": "关于华安纳斯达克100交易型开放式指数证券投资基金联接基金(QDII)暂停申购及定期定额投资的公告",
@@ -15027,8 +15035,8 @@
       "custodyFee": 0.16,
       "purchaseFee": 0.16,
       "purchaseFeeOrig": 1.6,
-      "scale": 1.68,
-      "scaleDate": "2026-06-30"
+      "scale": 1.55,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "050020",
@@ -15051,8 +15059,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 1.06,
-      "scaleDate": "2026-06-30"
+      "scale": 1.42,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "050030",
@@ -15075,8 +15083,8 @@
       "custodyFee": 0.08,
       "purchaseFee": 0.08,
       "purchaseFeeOrig": 0.8,
-      "scale": 17.46,
-      "scaleDate": "2026-06-30"
+      "scale": 10.76,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "050202",
@@ -15099,8 +15107,8 @@
       "custodyFee": 0.25,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 17.46,
-      "scaleDate": "2026-06-30"
+      "scale": 10.76,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "050203",
@@ -15123,8 +15131,8 @@
       "custodyFee": 0.25,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 17.46,
-      "scaleDate": "2026-06-30"
+      "scale": 10.76,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "070012",
@@ -15147,8 +15155,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 15.65,
-      "scaleDate": "2026-06-30"
+      "scale": 15.85,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "070031",
@@ -15172,7 +15180,7 @@
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "080006",
@@ -15195,8 +15203,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": null,
-      "scaleDate": "2026-06-30"
+      "scale": 3.72,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "096001",
@@ -15219,8 +15227,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 7.3,
-      "scaleDate": "2026-06-30",
+      "scale": 8.83,
+      "scaleDate": "2026-09-30",
       "announcement": {
         "date": "2026-10-15",
         "title": "关于大成标普500等权重指数证券投资基金调整大额申购(含定期定额申购)的公告",
@@ -15250,8 +15258,8 @@
       "custodyFee": 0.08,
       "purchaseFee": 0.08,
       "purchaseFeeOrig": 0.8,
-      "scale": 45.43,
-      "scaleDate": "2026-06-30"
+      "scale": 38.18,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "100055",
@@ -15274,8 +15282,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 66.94,
-      "scaleDate": "2026-06-30"
+      "scale": 45.47,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "100061",
@@ -15298,8 +15306,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 30.23,
-      "scaleDate": "2026-06-30"
+      "scale": 27.53,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "110011",
@@ -15322,8 +15330,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 67.77,
-      "scaleDate": "2026-06-30"
+      "scale": 66.84,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "110031",
@@ -15346,8 +15354,8 @@
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 8.41,
-      "scaleDate": "2026-06-30"
+      "scale": 8.84,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "110032",
@@ -15370,8 +15378,8 @@
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 8.41,
-      "scaleDate": "2026-06-30"
+      "scale": 8.84,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "110033",
@@ -15394,8 +15402,8 @@
       "custodyFee": 1.2,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
-      "scale": 8.41,
-      "scaleDate": "2026-06-30"
+      "scale": 8.84,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "118002",
@@ -15418,8 +15426,8 @@
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
-      "scale": 3.22,
-      "scaleDate": "2026-06-30"
+      "scale": 2.76,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "158042",
@@ -15444,8 +15452,8 @@
       "purchaseFeeOrig": null,
       "scale": 2.17,
       "scaleDate": "2026-09-17",
-      "etfPrice": 0.873,
-      "etfPremium": 0.09
+      "etfPrice": 0.859,
+      "etfPremium": -0.15
     },
     {
       "code": "159100",
@@ -15470,8 +15478,8 @@
       "purchaseFeeOrig": null,
       "scale": 5.54,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.169,
-      "etfPremium": -9.8
+      "etfPrice": 1.052,
+      "etfPremium": 3.23
     },
     {
       "code": "159202",
@@ -15496,8 +15504,8 @@
       "purchaseFeeOrig": null,
       "scale": 9.6,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.689,
-      "etfPremium": 0.01
+      "etfPrice": 0.679,
+      "etfPremium": 0.38
     },
     {
       "code": "159303",
@@ -15522,8 +15530,8 @@
       "purchaseFeeOrig": null,
       "scale": null,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.467,
-      "etfPremium": -0.27
+      "etfPrice": 1.43,
+      "etfPremium": -0.16
     },
     {
       "code": "159329",
@@ -15548,8 +15556,8 @@
       "purchaseFeeOrig": null,
       "scale": 10.12,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.784,
-      "etfPremium": 0.17
+      "etfPrice": 0.814,
+      "etfPremium": 0.49
     },
     {
       "code": "159501",
@@ -15574,8 +15582,8 @@
       "purchaseFeeOrig": null,
       "scale": 133.68,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.139,
-      "etfPremium": 17.51
+      "etfPrice": 2.162,
+      "etfPremium": 17.53
     },
     {
       "code": "159502",
@@ -15600,8 +15608,8 @@
       "purchaseFeeOrig": null,
       "scale": 17.93,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.55,
-      "etfPremium": 4.55
+      "etfPrice": 1.535,
+      "etfPremium": 2.92
     },
     {
       "code": "159509",
@@ -15626,8 +15634,8 @@
       "purchaseFeeOrig": null,
       "scale": 160.83,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.957,
-      "etfPremium": 33.66
+      "etfPrice": 3.012,
+      "etfPremium": 34.86
     },
     {
       "code": "159518",
@@ -15652,8 +15660,8 @@
       "purchaseFeeOrig": null,
       "scale": 20.18,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.376,
-      "etfPremium": 1.73
+      "etfPrice": 1.416,
+      "etfPremium": 3.09
     },
     {
       "code": "159519",
@@ -15678,8 +15686,8 @@
       "purchaseFeeOrig": null,
       "scale": null,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.684,
-      "etfPremium": -0.3
+      "etfPrice": 1.698,
+      "etfPremium": -0.33
     },
     {
       "code": "159529",
@@ -15704,8 +15712,8 @@
       "purchaseFeeOrig": null,
       "scale": 9.75,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.375,
-      "etfPremium": 7.97
+      "etfPrice": 1.376,
+      "etfPremium": 7.24
     },
     {
       "code": "159557",
@@ -15730,8 +15738,8 @@
       "purchaseFeeOrig": null,
       "scale": 1.83,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.338,
-      "etfPremium": -0.87
+      "etfPrice": 1.301,
+      "etfPremium": -1.03
     },
     {
       "code": "159561",
@@ -15756,8 +15764,8 @@
       "purchaseFeeOrig": null,
       "scale": 17.25,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.263,
-      "etfPremium": 0.01
+      "etfPrice": 1.266,
+      "etfPremium": -0.53
     },
     {
       "code": "159577",
@@ -15782,8 +15790,8 @@
       "purchaseFeeOrig": null,
       "scale": 13.2,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.643,
-      "etfPremium": 6.27
+      "etfPrice": 1.661,
+      "etfPremium": 6.62
     },
     {
       "code": "159605",
@@ -15808,8 +15816,8 @@
       "purchaseFeeOrig": null,
       "scale": 32.45,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.714,
-      "etfPremium": 0.21
+      "etfPrice": 0.705,
+      "etfPremium": -1.37
     },
     {
       "code": "159607",
@@ -15834,8 +15842,8 @@
       "purchaseFeeOrig": null,
       "scale": 10.09,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.709,
-      "etfPremium": -0.27
+      "etfPrice": 0.698,
+      "etfPremium": -2.16
     },
     {
       "code": "159615",
@@ -15860,8 +15868,8 @@
       "purchaseFeeOrig": null,
       "scale": 3.86,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.041,
-      "etfPremium": -0.53
+      "etfPrice": 1.015,
+      "etfPremium": -0.41
     },
     {
       "code": "159687",
@@ -15886,8 +15894,8 @@
       "purchaseFeeOrig": null,
       "scale": 31.46,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.693,
-      "etfPremium": -0.89
+      "etfPrice": 1.714,
+      "etfPremium": 0.14
     },
     {
       "code": "159688",
@@ -15912,8 +15920,8 @@
       "purchaseFeeOrig": null,
       "scale": 10.01,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.65,
-      "etfPremium": -0.08
+      "etfPrice": 0.639,
+      "etfPremium": 0.09
     },
     {
       "code": "159699",
@@ -15938,8 +15946,8 @@
       "purchaseFeeOrig": null,
       "scale": 4.27,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.822,
-      "etfPremium": -0.25
+      "etfPrice": 0.815,
+      "etfPremium": 0.02
     },
     {
       "code": "159740",
@@ -15964,8 +15972,8 @@
       "purchaseFeeOrig": null,
       "scale": 140.6,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.475,
-      "etfPremium": -0.21
+      "etfPrice": 0.469,
+      "etfPremium": -0.11
     },
     {
       "code": "159741",
@@ -15990,8 +15998,8 @@
       "purchaseFeeOrig": null,
       "scale": 8.12,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.477,
-      "etfPremium": -0.93
+      "etfPrice": 0.472,
+      "etfPremium": -0.61
     },
     {
       "code": "159742",
@@ -16016,8 +16024,8 @@
       "purchaseFeeOrig": null,
       "scale": 34.37,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.488,
-      "etfPremium": -0.14
+      "etfPrice": 0.482,
+      "etfPremium": 0.02
     },
     {
       "code": "159747",
@@ -16042,8 +16050,8 @@
       "purchaseFeeOrig": null,
       "scale": 3.45,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.986,
-      "etfPremium": -0.17
+      "etfPrice": 0.972,
+      "etfPremium": 0.13
     },
     {
       "code": "159750",
@@ -16068,8 +16076,8 @@
       "purchaseFeeOrig": null,
       "scale": 10.36,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.73,
-      "etfPremium": -0.44
+      "etfPrice": 0.717,
+      "etfPremium": -0.51
     },
     {
       "code": "159822",
@@ -16094,8 +16102,8 @@
       "purchaseFeeOrig": null,
       "scale": 1.69,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.531,
-      "etfPremium": -0.36
+      "etfPrice": 0.528,
+      "etfPremium": -0.88
     },
     {
       "code": "159850",
@@ -16121,7 +16129,7 @@
       "scale": 3.24,
       "scaleDate": "2026-09-30",
       "etfPrice": 0.748,
-      "etfPremium": -0.35
+      "etfPremium": -0.04
     },
     {
       "code": "159866",
@@ -16146,8 +16154,8 @@
       "purchaseFeeOrig": null,
       "scale": 20.93,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.596,
-      "etfPremium": 2.5
+      "etfPrice": 1.615,
+      "etfPremium": 2.68
     },
     {
       "code": "159892",
@@ -16172,8 +16180,8 @@
       "purchaseFeeOrig": null,
       "scale": 43.13,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.729,
-      "etfPremium": -0.21
+      "etfPrice": 0.711,
+      "etfPremium": -0.08
     },
     {
       "code": "159920",
@@ -16198,8 +16206,8 @@
       "purchaseFeeOrig": null,
       "scale": 82.43,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.36,
-      "etfPremium": 0.18
+      "etfPrice": 1.349,
+      "etfPremium": -0.02
     },
     {
       "code": "160125",
@@ -16798,8 +16806,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 5.73,
-      "scaleDate": "2026-06-30"
+      "scale": 5.47,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "164212",
@@ -16942,8 +16950,8 @@
       "custodyFee": 0.16,
       "purchaseFee": 0.16,
       "purchaseFeeOrig": 1.6,
-      "scale": 21.25,
-      "scaleDate": "2026-06-30"
+      "scale": 17.26,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "206006",
@@ -17015,7 +17023,7 @@
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "262001",
@@ -17038,8 +17046,8 @@
       "custodyFee": 0.16,
       "purchaseFee": 0.16,
       "purchaseFeeOrig": 1.6,
-      "scale": 5.89,
-      "scaleDate": "2026-06-30"
+      "scale": 5.38,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "270023",
@@ -17062,8 +17070,8 @@
       "custodyFee": 0.16,
       "purchaseFee": 0.16,
       "purchaseFeeOrig": 1.6,
-      "scale": 183.54,
-      "scaleDate": "2026-06-30"
+      "scale": 159.07,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "320013",
@@ -17086,8 +17094,8 @@
       "custodyFee": 0.08,
       "purchaseFee": 0.08,
       "purchaseFeeOrig": 0.8,
-      "scale": 7.61,
-      "scaleDate": "2026-06-30"
+      "scale": 8.15,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "320017",
@@ -17111,7 +17119,7 @@
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "377016",
@@ -17134,8 +17142,8 @@
       "custodyFee": 0.18,
       "purchaseFee": 0.18,
       "purchaseFeeOrig": 1.8,
-      "scale": 25.91,
-      "scaleDate": "2026-06-30"
+      "scale": 25.33,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "378006",
@@ -17158,8 +17166,8 @@
       "custodyFee": 0.16,
       "purchaseFee": 0.16,
       "purchaseFeeOrig": 1.6,
-      "scale": 6.73,
-      "scaleDate": "2026-06-30"
+      "scale": 7.0,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "378546",
@@ -17182,8 +17190,8 @@
       "custodyFee": 0.16,
       "purchaseFee": 0.16,
       "purchaseFeeOrig": 1.6,
-      "scale": 2.87,
-      "scaleDate": "2026-06-30"
+      "scale": 3.15,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "457001",
@@ -17206,8 +17214,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 11.58,
-      "scaleDate": "2026-06-30"
+      "scale": 12.16,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "460010",
@@ -17231,7 +17239,7 @@
       "purchaseFee": 0.16,
       "purchaseFeeOrig": 1.6,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "486001",
@@ -17254,8 +17262,8 @@
       "custodyFee": 0.16,
       "purchaseFee": 0.16,
       "purchaseFeeOrig": 1.6,
-      "scale": 3.55,
-      "scaleDate": "2026-06-30"
+      "scale": 3.38,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "486002",
@@ -17278,8 +17286,8 @@
       "custodyFee": 0.16,
       "purchaseFee": 0.16,
       "purchaseFeeOrig": 1.6,
-      "scale": 13.96,
-      "scaleDate": "2026-06-30"
+      "scale": 13.73,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "501018",
@@ -17350,8 +17358,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 12.68,
-      "scaleDate": "2026-06-30"
+      "scale": 16.99,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "501300",
@@ -17424,8 +17432,8 @@
       "purchaseFeeOrig": null,
       "scale": 32.08,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.958,
-      "etfPremium": -0.13
+      "etfPrice": 0.955,
+      "etfPremium": -0.05
     },
     {
       "code": "513000",
@@ -17450,8 +17458,8 @@
       "purchaseFeeOrig": null,
       "scale": 24.22,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.151,
-      "etfPremium": 2.86
+      "etfPrice": 2.182,
+      "etfPremium": 3.05
     },
     {
       "code": "513010",
@@ -17476,8 +17484,8 @@
       "purchaseFeeOrig": null,
       "scale": 249.43,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.498,
-      "etfPremium": 0.12
+      "etfPrice": 0.491,
+      "etfPremium": 0.1
     },
     {
       "code": "513030",
@@ -17502,8 +17510,8 @@
       "purchaseFeeOrig": null,
       "scale": 18.18,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.737,
-      "etfPremium": 0.72
+      "etfPrice": 1.741,
+      "etfPremium": 0.18
     },
     {
       "code": "513060",
@@ -17528,8 +17536,8 @@
       "purchaseFeeOrig": null,
       "scale": 49.65,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.528,
-      "etfPremium": -0.02
+      "etfPrice": 0.513,
+      "etfPremium": -0.31
     },
     {
       "code": "513080",
@@ -17554,8 +17562,8 @@
       "purchaseFeeOrig": null,
       "scale": 11.11,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.584,
-      "etfPremium": 0.81
+      "etfPrice": 1.585,
+      "etfPremium": 0.16
     },
     {
       "code": "513120",
@@ -17580,8 +17588,8 @@
       "purchaseFeeOrig": null,
       "scale": 233.19,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.196,
-      "etfPremium": 0.02
+      "etfPrice": 1.158,
+      "etfPremium": -0.46
     },
     {
       "code": "513130",
@@ -17606,8 +17614,8 @@
       "purchaseFeeOrig": null,
       "scale": 321.51,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.475,
-      "etfPremium": 0.0
+      "etfPrice": 0.469,
+      "etfPremium": 0.09
     },
     {
       "code": "513140",
@@ -17633,7 +17641,7 @@
       "scale": 1.35,
       "scaleDate": "2026-09-30",
       "etfPrice": 1.626,
-      "etfPremium": -0.19
+      "etfPremium": -0.25
     },
     {
       "code": "513170",
@@ -17658,8 +17666,8 @@
       "purchaseFeeOrig": null,
       "scale": 2.43,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.495,
-      "etfPremium": -0.1
+      "etfPrice": 1.499,
+      "etfPremium": -0.3
     },
     {
       "code": "513210",
@@ -17684,8 +17692,8 @@
       "purchaseFeeOrig": null,
       "scale": null,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.368,
-      "etfPremium": -0.2
+      "etfPrice": 1.361,
+      "etfPremium": 0.01
     },
     {
       "code": "513220",
@@ -17710,8 +17718,8 @@
       "purchaseFeeOrig": null,
       "scale": 4.7,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.845,
-      "etfPremium": -0.08
+      "etfPrice": 0.832,
+      "etfPremium": -1.99
     },
     {
       "code": "513260",
@@ -17736,8 +17744,8 @@
       "purchaseFeeOrig": null,
       "scale": 51.43,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.926,
-      "etfPremium": -0.16
+      "etfPrice": 0.914,
+      "etfPremium": -0.07
     },
     {
       "code": "513280",
@@ -17762,8 +17770,8 @@
       "purchaseFeeOrig": null,
       "scale": 4.07,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.029,
-      "etfPremium": -0.37
+      "etfPrice": 1.002,
+      "etfPremium": -0.43
     },
     {
       "code": "513290",
@@ -17788,8 +17796,8 @@
       "purchaseFeeOrig": null,
       "scale": 18.38,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.772,
-      "etfPremium": 5.31
+      "etfPrice": 1.771,
+      "etfPremium": 4.97
     },
     {
       "code": "513310",
@@ -17814,8 +17822,8 @@
       "purchaseFeeOrig": null,
       "scale": 113.05,
       "scaleDate": "2026-09-30",
-      "etfPrice": 3.64,
-      "etfPremium": 2.35
+      "etfPrice": 3.647,
+      "etfPremium": 1.95
     },
     {
       "code": "513350",
@@ -17840,8 +17848,8 @@
       "purchaseFeeOrig": null,
       "scale": 10.92,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.454,
-      "etfPremium": 2.46
+      "etfPrice": 1.498,
+      "etfPremium": 3.95
     },
     {
       "code": "513360",
@@ -17866,8 +17874,8 @@
       "purchaseFeeOrig": null,
       "scale": 2.76,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.433,
-      "etfPremium": -0.71
+      "etfPrice": 0.427,
+      "etfPremium": -2.0
     },
     {
       "code": "513380",
@@ -17892,8 +17900,8 @@
       "purchaseFeeOrig": null,
       "scale": 88.62,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.436,
-      "etfPremium": -0.05
+      "etfPrice": 0.429,
+      "etfPremium": -0.21
     },
     {
       "code": "513400",
@@ -17918,8 +17926,8 @@
       "purchaseFeeOrig": null,
       "scale": 38.85,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.308,
-      "etfPremium": 2.51
+      "etfPrice": 1.315,
+      "etfPremium": 2.75
     },
     {
       "code": "513520",
@@ -17944,8 +17952,8 @@
       "purchaseFeeOrig": null,
       "scale": 24.39,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.157,
-      "etfPremium": 3.87
+      "etfPrice": 2.183,
+      "etfPremium": 3.77
     },
     {
       "code": "513530",
@@ -17970,8 +17978,8 @@
       "purchaseFeeOrig": null,
       "scale": 53.65,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.507,
-      "etfPremium": 0.14
+      "etfPrice": 1.504,
+      "etfPremium": 0.22
     },
     {
       "code": "513580",
@@ -17996,8 +18004,8 @@
       "purchaseFeeOrig": null,
       "scale": 32.35,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.479,
-      "etfPremium": -0.89
+      "etfPrice": 0.473,
+      "etfPremium": -0.69
     },
     {
       "code": "513730",
@@ -18022,8 +18030,8 @@
       "purchaseFeeOrig": null,
       "scale": 8.38,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.007,
-      "etfPremium": -2.82
+      "etfPrice": 1.012,
+      "etfPremium": -2.35
     },
     {
       "code": "513800",
@@ -18048,8 +18056,8 @@
       "purchaseFeeOrig": null,
       "scale": 20.16,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.837,
-      "etfPremium": -0.14
+      "etfPrice": 1.842,
+      "etfPremium": -0.1
     },
     {
       "code": "513810",
@@ -18074,8 +18082,8 @@
       "purchaseFeeOrig": null,
       "scale": null,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.655,
-      "etfPremium": -0.3
+      "etfPrice": 1.667,
+      "etfPremium": -0.25
     },
     {
       "code": "513850",
@@ -18100,8 +18108,8 @@
       "purchaseFeeOrig": null,
       "scale": 23.44,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.838,
-      "etfPremium": 6.76
+      "etfPrice": 1.854,
+      "etfPremium": 6.91
     },
     {
       "code": "513880",
@@ -18126,8 +18134,8 @@
       "purchaseFeeOrig": null,
       "scale": 27.77,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.032,
-      "etfPremium": 4.6
+      "etfPrice": 2.055,
+      "etfPremium": 4.53
     },
     {
       "code": "513890",
@@ -18152,8 +18160,8 @@
       "purchaseFeeOrig": null,
       "scale": 7.32,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.736,
-      "etfPremium": -0.22
+      "etfPrice": 0.727,
+      "etfPremium": -0.03
     },
     {
       "code": "513950",
@@ -18178,8 +18186,8 @@
       "purchaseFeeOrig": null,
       "scale": 29.28,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.181,
-      "etfPremium": -0.03
+      "etfPrice": 1.177,
+      "etfPremium": -0.28
     },
     {
       "code": "513970",
@@ -18204,8 +18212,8 @@
       "purchaseFeeOrig": null,
       "scale": 10.92,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.757,
-      "etfPremium": -0.04
+      "etfPrice": 0.748,
+      "etfPremium": -0.21
     },
     {
       "code": "519601",
@@ -18229,7 +18237,7 @@
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
       "scale": null,
-      "scaleDate": "2026-06-30"
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "519696",
@@ -18252,8 +18260,8 @@
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
-      "scale": 5.38,
-      "scaleDate": "2026-06-30"
+      "scale": 12.19,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "519981",
@@ -18276,8 +18284,8 @@
       "custodyFee": 0.14,
       "purchaseFee": 0.14,
       "purchaseFeeOrig": 1.4,
-      "scale": 17.14,
-      "scaleDate": "2026-06-30"
+      "scale": 25.94,
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "520500",
@@ -18302,8 +18310,8 @@
       "purchaseFeeOrig": null,
       "scale": 26.41,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.265,
-      "etfPremium": 0.15
+      "etfPrice": 1.204,
+      "etfPremium": 0.03
     },
     {
       "code": "520520",
@@ -18328,8 +18336,8 @@
       "purchaseFeeOrig": null,
       "scale": null,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.88,
-      "etfPremium": 0.03
+      "etfPrice": 0.871,
+      "etfPremium": 0.02
     },
     {
       "code": "520570",
@@ -18354,8 +18362,8 @@
       "purchaseFeeOrig": null,
       "scale": 24.73,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.609,
-      "etfPremium": 0.08
+      "etfPrice": 0.601,
+      "etfPremium": 0.13
     },
     {
       "code": "520580",
@@ -18380,8 +18388,8 @@
       "purchaseFeeOrig": null,
       "scale": 2.64,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.878,
-      "etfPremium": -1.29
+      "etfPrice": 0.883,
+      "etfPremium": -0.17
     },
     {
       "code": "520590",
@@ -18406,7 +18414,7 @@
       "purchaseFeeOrig": null,
       "scale": 1.61,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.651,
+      "etfPrice": 0.642,
       "etfPremium": -0.2
     },
     {
@@ -18432,8 +18440,8 @@
       "purchaseFeeOrig": null,
       "scale": 8.88,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.783,
-      "etfPremium": -0.29
+      "etfPrice": 0.804,
+      "etfPremium": 0.54
     },
     {
       "code": "520870",
@@ -18458,8 +18466,8 @@
       "purchaseFeeOrig": null,
       "scale": 5.96,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.168,
-      "etfPremium": -9.39
+      "etfPrice": 1.051,
+      "etfPremium": 1.89
     },
     {
       "code": "520920",
@@ -18484,8 +18492,8 @@
       "purchaseFeeOrig": null,
       "scale": 121.3,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.564,
-      "etfPremium": -0.55
+      "etfPrice": 0.558,
+      "etfPremium": -0.23
     },
     {
       "code": "539001",
