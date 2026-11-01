@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-31 15:28:41",
+  "updatedAt": "2026-11-01 16:01:44",
   "source": "eastmoney FundMNNBasicInformation + rankhandler 发现",
   "universeSource": "搜索\"标普500\"发现 0 只（过滤后新增 0） + 搜索\"纳斯达克\"发现 50 只（过滤后新增 13） + 自动发现(rankhandler) 742 只",
   "note": "MAXSG 为可信当前限额；CORE 热门基金附公告交叉校验；分组按名称自动分类。",
@@ -2256,10 +2256,10 @@
       "company": "摩根基金(中国)",
       "status": "limited",
       "statusText": "限大额",
-      "limit": null,
-      "limitText": "限大额",
-      "limitReliable": false,
-      "limitSource": "api",
+      "limit": 10,
+      "limitText": "10 元",
+      "limitReliable": true,
+      "limitSource": "ann",
       "minPurchase": 1,
       "nav": 0.2531,
       "navChangePct": -0.32,
@@ -2274,7 +2274,9 @@
         "date": "2026-07-27",
         "title": "摩根标普500指数型发起式证券投资基金(QDII)调整大额申购、定期定额投资及转换转入业务限制金额的公告",
         "artId": "AN202607241827315718",
-        "limits": [],
+        "limits": [
+          10
+        ],
         "review": false
       }
     },
@@ -2305,7 +2307,10 @@
         "date": "2026-10-15",
         "title": "关于大成标普500等权重指数证券投资基金调整大额申购(含定期定额申购)的公告",
         "artId": "AN202610151830479604",
-        "limits": [],
+        "limits": [
+          50,
+          500
+        ],
         "review": false
       }
     },
@@ -2318,10 +2323,10 @@
       "company": "大成基金",
       "status": "limited",
       "statusText": "限大额",
-      "limit": null,
-      "limitText": "限大额",
-      "limitReliable": false,
-      "limitSource": "api",
+      "limit": 500,
+      "limitText": "500 元",
+      "limitReliable": true,
+      "limitSource": "ann",
       "minPurchase": 1,
       "nav": 0.4232,
       "navChangePct": 1.12,
@@ -2336,7 +2341,10 @@
         "date": "2026-10-15",
         "title": "关于大成标普500等权重指数证券投资基金调整大额申购(含定期定额申购)的公告",
         "artId": "AN202610151830479604",
-        "limits": [],
+        "limits": [
+          50,
+          500
+        ],
         "review": false
       }
     },
@@ -2349,10 +2357,10 @@
       "company": "大成基金",
       "status": "limited",
       "statusText": "限大额",
-      "limit": null,
-      "limitText": "限大额",
-      "limitReliable": false,
-      "limitSource": "api",
+      "limit": 500,
+      "limitText": "500 元",
+      "limitReliable": true,
+      "limitSource": "ann",
       "minPurchase": 1,
       "nav": 0.4206,
       "navChangePct": 1.13,
@@ -2367,7 +2375,10 @@
         "date": "2026-10-15",
         "title": "关于大成标普500等权重指数证券投资基金调整大额申购(含定期定额申购)的公告",
         "artId": "AN202610151830479604",
-        "limits": [],
+        "limits": [
+          50,
+          500
+        ],
         "review": false
       }
     },
@@ -2398,7 +2409,9 @@
         "date": "2026-09-18",
         "title": "天弘基金管理有限公司关于天弘标普500发起式证券投资基金(QDII-FOF)A类基金份额、C类基金份额暂停申购及定期定额",
         "artId": "AN202609181829580336",
-        "limits": [],
+        "limits": [
+          100
+        ],
         "review": false
       }
     },
@@ -11222,8 +11235,8 @@
       "nav": 2.1562,
       "navChangePct": -1.03,
       "navDate": "2026-10-30",
-      "mgmtFee": 1.2,
-      "custodyFee": 0.2,
+      "mgmtFee": null,
+      "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": 12.62,
