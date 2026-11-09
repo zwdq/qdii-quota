@@ -157,7 +157,7 @@ ANN_EXCLUDE: re.Pattern = re.compile(
 )
 AMOUNT_RE: re.Pattern = re.compile(
     r"(?:不得?超过|上限[为是]?|上限金额[为是]?|金额[为是]?|限额[为调是]?|限制金额[为是]?|"
-    r"单日[^。；]{0,10}为|将[^。；]{0,10}为)\s*0*(\d+(?:,\d{3})*(?:\.\d+)?)\s*(万)?\s*元"
+    r"单日[^。；]{0,10}为|将[^。；]{0,10}为)\s*0*(\d+(?:,\d{3})*(?:\.\d+)?)\s*(万)?\s*(美)?元"
 )
 # 超过这个天数的公告视为"较早公告"：只作参考，不触发 ⚠️ 校验，据此得出的额度标为不可靠
 ANN_RECENT_DAYS: int = 180
@@ -216,10 +216,12 @@ def fmt_scale(n: float | None) -> float | None:
     return None
 
 
-def fmt_amount(n: int | None) -> str:
-    """限额金额格式化"""
+def fmt_amount(n: int | None, usd: bool = False) -> str:
+    """限额金额格式化（usd=True 时单位为美元）"""
     if n is None:
         return "—"
+    if usd:
+        return "%d 美元" % n if n > 0 else "0 美元（实质暂停）"
     if n <= 0:
         return "0 元（实质暂停）"
     if n >= 100_000_000:
@@ -227,6 +229,18 @@ def fmt_amount(n: int | None) -> str:
     if n >= 10_000:
         return "%g 万" % (n / 10_000)
     return "%d 元" % n
+
+
+def is_usd_share(name: str) -> bool:
+    """美元现汇 / 现钞份额"""
+    return "美元" in name or name.endswith(("美汇", "美钞"))
+
+
+def share_class_of(name: str) -> str | None:
+    """份额类别字母：'…(QDII)A美元现汇' → 'A'；'…联接(QDII)' → None"""
+    m = re.search(r"(?<![A-Za-z])([A-Z])类?(?:人民币|美元现汇|美元现钞|美元|美汇|美钞|现汇|现钞)?$",
+                  name.strip())
+    return m.group(1) if m else None
 
 
 def classify(name: str) -> str:
@@ -280,15 +294,23 @@ def build_limit(status: str, maxsg_raw: str | None, code: str) -> tuple[int | No
     return None, "限额未公布", False, "api"
 
 
-def extract_amounts(text: str, share_class: str | None = None) -> list[int]:
-    """从公告正文中提取金额（1 ~ 1亿元之间）
+CHANNEL_DIRECT_RE: re.Pattern = re.compile(r"直销")
+CHANNEL_AGENCY_RE: re.Pattern = re.compile(r"代销|销售机构")
 
-    同一公告常对 A/C 类与 D/I 类给出不同额度；传入份额类别时，
-    优先只看提到该类别的句子，找不到再退回全文。
+
+def extract_limits(text: str, share_class: str | None = None,
+                   usd: bool = False) -> dict[str, list[int]]:
+    """从公告正文中按销售渠道提取额度（1 ~ 1亿之间）
+
+    返回 {"agency": 代销/销售机构, "direct": 基金公司直销, "general": 未注明渠道}。
+    - 同一公告常对 A/C 类与 D/I 类给出不同额度：传入份额类别时优先只看提到该类别的句子。
+    - 人民币份额只取"元"，美元份额只取"美元"，避免把另一币种的额度套错。
     """
     def scan(s: str) -> list[int]:
         out: list[int] = []
         for m in AMOUNT_RE.finditer(s):
+            if bool(m.group(3)) != usd:      # 币种不符
+                continue
             try:
                 n = float(m.group(1).replace(",", ""))
             except ValueError:
@@ -300,14 +322,26 @@ def extract_amounts(text: str, share_class: str | None = None) -> list[int]:
                 out.append(n)
         return out
 
+    # 句子切分前把换行去掉，公告正文常在数字和"元"之间断行
+    sentences = re.split(r"[。；]", re.sub(r"\s+", " ", text))
     if share_class:
         cls_re = re.compile(r"%s\s*类" % share_class)
-        # 句子切分时把换行也去掉，公告正文常在数字和"元"之间断行
-        sentences = re.split(r"[。；]", re.sub(r"\s+", " ", text))
-        hit = [n for s in sentences if cls_re.search(s) for n in scan(s)]
-        if hit:
-            return sorted(set(hit))
-    return sorted(set(scan(text)))
+        picked = [s for s in sentences if cls_re.search(s) and scan(s)]
+        if picked:
+            sentences = picked
+
+    out: dict[str, set[int]] = {"agency": set(), "direct": set(), "general": set()}
+    for s in sentences:
+        amounts = scan(s)
+        if not amounts:
+            continue
+        if CHANNEL_DIRECT_RE.search(s):
+            out["direct"].update(amounts)
+        elif CHANNEL_AGENCY_RE.search(s):
+            out["agency"].update(amounts)
+        else:
+            out["general"].update(amounts)
+    return {k: sorted(v) for k, v in out.items()}
 
 
 def announcement_date(art_id: str) -> datetime.date | None:
@@ -486,9 +520,9 @@ class AnnouncementChecker:
         # PUBLISHDATE 常为空，改用公告 ID 内嵌时间戳排序（AN2026072018... 字典序=时间序）
         cands.sort(key=lambda r: r.get("ID", "") or "", reverse=True)
         # 份额类标优先（如 021000 是 I 类，优先选标题含"I类"的公告——金额和 A/C 类不同）
-        mcls = re.search(r"\(?([A-Z])\)?$", fund_name.strip())
-        if mcls:
-            tag = mcls.group(1) + "类"
+        share_class = share_class_of(fund_name)
+        if share_class:
+            tag = share_class + "类"
             specific = [r for r in cands if tag in (r.get("TITLE") or "")]
             if specific:
                 return specific[0]
@@ -497,7 +531,8 @@ class AnnouncementChecker:
     def supplement(self, code: str, current_limit: int | None, fund_name: str = "") -> dict | None:
         """获取公告并构建校验结果
 
-        返回 {"date", "title", "artId", "limits", "stale", "review"} 或 None
+        返回 {"date", "title", "artId", "limits", "directLimits", "currency", "stale", "review"} 或 None
+        limits = 代销/通用渠道额度（与接口 MAXSG 同口径），directLimits = 基金公司直销渠道额度
         """
         ann = self._latest_limit_announcement(code, fund_name)
         if not ann:
@@ -507,7 +542,7 @@ class AnnouncementChecker:
         today = (datetime.datetime.now(datetime.timezone.utc)
                  + datetime.timedelta(hours=8)).date()
         stale = pub is None or (today - pub).days > ANN_RECENT_DAYS
-        mcls = re.search(r"\(?([A-Z])\)?$", fund_name.strip())
+        usd = is_usd_share(fund_name)
         body = ""
         if art_id:
             try:
@@ -519,12 +554,16 @@ class AnnouncementChecker:
                               d.get("data", {}).get("notice_content", "") or "")
             except Exception:
                 body = ""
-        limits = extract_amounts(body, mcls.group(1) if mcls else None) if body else []
+        parsed = (extract_limits(body, share_class_of(fund_name), usd) if body
+                  else {"agency": [], "direct": [], "general": []})
+        limits = sorted(set(parsed["agency"]) | set(parsed["general"]))
         return {
             "date": ann.get("PUBLISHDATEDesc") or (pub.isoformat() if pub else ""),
             "title": (ann.get("TITLE") or "")[:60],
             "artId": art_id,
             "limits": limits,
+            "directLimits": parsed["direct"],
+            "currency": "USD" if usd else "CNY",
             "stale": stale,
             # 较早的公告可能已被后续未匹配到的公告取代，不据此报"不符"
             "review": bool(not stale and limits and current_limit is not None
@@ -652,12 +691,19 @@ class FundFetcher:
             if ann:
                 item["announcement"] = ann
                 # API MAXSG='--'（未公布，如 I 类份额）→ 用公告抠出的金额当限额
+                usd = ann.get("currency") == "USD"
                 if item["limit"] is None and item["status"] == "limited" and ann.get("limits"):
                     amt = max(ann["limits"])
                     item["limit"] = amt
-                    item["limitText"] = fmt_amount(amt)
+                    item["limitText"] = fmt_amount(amt, usd)
                     item["limitReliable"] = not ann["stale"]
                     item["limitSource"] = "ann"
+                # 基金公司直销渠道（官方 App/官网）额度：只采用近期公告，且仅对可申购的基金
+                if (item["status"] == "limited" and not ann["stale"]
+                        and ann.get("directLimits")):
+                    amt = max(ann["directLimits"])
+                    item["directLimit"] = amt
+                    item["directLimitText"] = fmt_amount(amt, usd)
         except Exception as e:
             item["announcementError"] = str(e)
 

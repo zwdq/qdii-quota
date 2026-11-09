@@ -292,6 +292,12 @@
   .limit-cell .status { font-family: var(--mono); }
   .limit-sub { font-size: 11px; color: var(--text-dim); white-space: nowrap; }
   .ann-mark { cursor: help; border-bottom: 1px dotted var(--text-sub); }
+  .direct-tag {
+    display: inline-block; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 999px; white-space: nowrap;
+    background: var(--green-soft); color: var(--green); border: 1px solid rgba(5, 150, 105, 0.35); cursor: help;
+  }
+  .ci-limit .direct-tag { margin-top: 5px; }
+  .ci-limit { display: flex; flex-direction: column; align-items: flex-end; }
   .banner.stale { background: var(--red-soft); color: var(--red); border-color: rgba(201, 64, 64, 0.35); font-weight: 600; }
 
   /* ===== 主题筛选：手机上折叠 ===== */
@@ -396,7 +402,7 @@
   <footer>
     <div class="src">
       <p>数据来源：<strong>各基金公司公告</strong>（经天天基金 / 东方财富公开接口获取），每日由 GitHub Actions 自动抓取，<strong>仅供参考，不构成投资建议</strong>。</p>
-      <p style="margin-top:6px">⚠️ 单日限额单位为元；个别基金以"基金公司公告为准"，本表为 best-effort（限额可悬停看相关公告；带 * 的额度来自半年以前的公告，仅供参考）；ETF 场内品种在二级市场交易，无申购买卖额度概念。</p>
+      <p style="margin-top:6px">⚠️ 单日限额单位为元；个别基金以"基金公司公告为准"，本表为 best-effort（主额度为天天基金、支付宝等代销平台口径；绿色"直销"标签是基金公司官方 App / 官网的更高额度，来自公告；限额可悬停看相关公告；带 * 的额度来自半年以前的公告，仅供参考）；ETF 场内品种在二级市场交易，无申购买卖额度概念。</p>
       <p style="margin-top:6px">📌 加基金 / 改清单：编辑 <code>scripts/fetch_funds.py</code> 的 <code>CORE_FUNDS</code> 与 <code>OVERRIDES</code>。</p>
     </div>
   </footer>
@@ -445,7 +451,10 @@ function fmtLimit(f) {
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const yuan = n => n >= 10000 ? (n / 10000) + " 万" : n.toLocaleString() + " 元";
 function annTip(a) {
-  const amt = (a.limits && a.limits.length) ? a.limits.map(yuan).join(" / ") : "未抠出具体金额";
+  const fmt = n => a.currency === "USD" ? n + " 美元" : yuan(n);
+  let amt = (a.limits && a.limits.length) ? a.limits.map(fmt).join(" / ") : "";
+  if (a.directLimits && a.directLimits.length) amt += (amt ? "；" : "") + "直销 " + a.directLimits.map(fmt).join(" / ");
+  amt = amt || "未抠出具体金额";
   return (a.stale ? "较早公告（仅供参考，可能已被新公告取代）" : "最新相关公告") + " " + (a.date || "") + "：" + amt
     + (a.title ? "\n" + a.title : "");
 }
@@ -466,9 +475,17 @@ function minText(f) {
   const m = f.minDt ?? f.minPurchase;
   return m ? "起投 " + yuan(m) : "";
 }
+// 直销额度：基金公司官方 App / 官网额度比代销平台高时才显示
+function directTag(f) {
+  if (f.directLimit == null || f.status !== "limited") return "";
+  if (f.limit != null && f.directLimit <= f.limit) return "";
+  const a = f.announcement || {};
+  const tip = `基金公司直销渠道（官方 App / 官网 / 公众号）单日额度，来自 ${a.date || ""} 公告；天天基金、支付宝等代销平台按左侧额度`;
+  return `<span class="direct-tag" title="${esc(tip)}">直销 ${esc(f.directLimitText)}</span>`;
+}
 function limitCell(f) {
   const sub = minText(f);
-  return `<span class="limit-cell">${limitPill(f)}${sub ? `<span class="limit-sub">${sub}</span>` : ""}</span>`;
+  return `<span class="limit-cell">${limitPill(f)}${directTag(f)}${sub ? `<span class="limit-sub">${sub}</span>` : ""}</span>`;
 }
 function pct(n) {
   if (n == null || isNaN(n)) return '<span class="flat">—</span>';
@@ -553,7 +570,7 @@ function renderCards(view) {
     return `<div class="card-item">
       <div class="ci-top">
         <div class="ci-name">${esc(f.name)}<span class="tag ${f.type}">${(f.type || "").toUpperCase()}</span></div>
-        <div class="ci-limit">${limitPill(f)}</div>
+        <div class="ci-limit">${limitPill(f)}${directTag(f)}</div>
       </div>
       <div class="ci-meta">${meta.join("")}</div>
     </div>`;
