@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-09 10:21:58",
+  "updatedAt": "2026-11-09 10:38:38",
   "source": "eastmoney FundMNNBasicInformation + rankhandler 发现",
   "universeSource": "搜索\"标普500\"发现 0 只（过滤后新增 0） + 搜索\"纳斯达克\"发现 50 只（过滤后新增 13） + 自动发现(rankhandler) 742 只",
   "note": "MAXSG 为可信当前限额；CORE 热门基金附公告交叉校验；分组按名称自动分类。",
@@ -30,8 +30,8 @@
       "purchaseFeeOrig": null,
       "scale": 350.53,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.582,
-      "etfPremium": 17.18
+      "etfPrice": 1.591,
+      "etfPremium": 17.84
     },
     {
       "code": "513100",
@@ -57,8 +57,8 @@
       "purchaseFeeOrig": null,
       "scale": 197.66,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.158,
-      "etfPremium": 19.48
+      "etfPrice": 2.168,
+      "etfPremium": 20.03
     },
     {
       "code": "513300",
@@ -84,8 +84,8 @@
       "purchaseFeeOrig": null,
       "scale": 139.14,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.577,
-      "etfPremium": 15.08
+      "etfPrice": 2.596,
+      "etfPremium": 15.93
     },
     {
       "code": "161130",
@@ -116,6 +116,8 @@
         "title": "易方达纳斯达克100交易型开放式指数证券投资基金联接基金(LOF)暂停申购及定期定额投资业务的公告",
         "artId": "AN202603181820618456",
         "limits": [],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": true,
         "review": false
       }
@@ -151,6 +153,8 @@
         "limits": [
           5
         ],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": false,
         "review": false
       }
@@ -184,6 +188,8 @@
         "title": "关于华安纳斯达克100交易型开放式指数证券投资基金联接基金(QDII)恢复A类美元现钞、A类美元现汇份额申购业务并暂停大",
         "artId": "AN202307211592521008",
         "limits": [],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": true,
         "review": false
       }
@@ -217,6 +223,8 @@
         "title": "国泰纳斯达克100指数证券投资基金暂停申购、定期定额投资业务的公告",
         "artId": "AN202609221829740223",
         "limits": [],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": false,
         "review": false
       }
@@ -250,12 +258,17 @@
         "title": "关于大成纳斯达克100交易型开放式指数证券投资基金联接基金(QDII)调整大额申购(含定期定额申购)的公告",
         "artId": "AN202606031823188725",
         "limits": [
-          10,
+          10
+        ],
+        "directLimits": [
           100
         ],
+        "currency": "CNY",
         "stale": false,
         "review": false
-      }
+      },
+      "directLimit": 100,
+      "directLimitText": "100 元"
     },
     {
       "code": "159513",
@@ -281,8 +294,8 @@
       "purchaseFeeOrig": null,
       "scale": 82.47,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.705,
-      "etfPremium": 13.4
+      "etfPrice": 1.716,
+      "etfPremium": 14.13
     },
     {
       "code": "159659",
@@ -308,8 +321,8 @@
       "purchaseFeeOrig": null,
       "scale": 102.74,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.263,
-      "etfPremium": 15.91
+      "etfPrice": 2.277,
+      "etfPremium": 16.63
     },
     {
       "code": "159632",
@@ -335,8 +348,8 @@
       "purchaseFeeOrig": null,
       "scale": 118.08,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.34,
-      "etfPremium": 14.06
+      "etfPrice": 2.355,
+      "etfPremium": 14.79
     },
     {
       "code": "513870",
@@ -362,8 +375,8 @@
       "purchaseFeeOrig": null,
       "scale": 28.9,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.988,
-      "etfPremium": 15.59
+      "etfPrice": 2.002,
+      "etfPremium": 16.4
     },
     {
       "code": "159660",
@@ -389,8 +402,8 @@
       "purchaseFeeOrig": null,
       "scale": 57.74,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.276,
-      "etfPremium": 15.36
+      "etfPrice": 2.292,
+      "etfPremium": 16.17
     },
     {
       "code": "159696",
@@ -416,8 +429,8 @@
       "purchaseFeeOrig": null,
       "scale": 57.05,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.984,
-      "etfPremium": 17.99
+      "etfPrice": 1.998,
+      "etfPremium": 18.82
     },
     {
       "code": "513110",
@@ -443,8 +456,8 @@
       "purchaseFeeOrig": null,
       "scale": 52.06,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.353,
-      "etfPremium": 13.45
+      "etfPrice": 2.368,
+      "etfPremium": 14.18
     },
     {
       "code": "513390",
@@ -470,8 +483,8 @@
       "purchaseFeeOrig": null,
       "scale": 50.48,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.332,
-      "etfPremium": 15.08
+      "etfPrice": 2.347,
+      "etfPremium": 15.82
     },
     {
       "code": "008971",
@@ -502,12 +515,17 @@
         "title": "关于大成纳斯达克100交易型开放式指数证券投资基金联接基金(QDII)调整大额申购(含定期定额申购)的公告",
         "artId": "AN202606031823188725",
         "limits": [
-          10,
+          10
+        ],
+        "directLimits": [
           100
         ],
+        "currency": "CNY",
         "stale": false,
         "review": false
-      }
+      },
+      "directLimit": 100,
+      "directLimitText": "100 元"
     },
     {
       "code": "012870",
@@ -538,6 +556,8 @@
         "title": "易方达纳斯达克100交易型开放式指数证券投资基金联接基金(LOF)暂停申购及定期定额投资业务的公告",
         "artId": "AN202603181820618456",
         "limits": [],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": true,
         "review": false
       }
@@ -571,6 +591,8 @@
         "title": "易方达纳斯达克100交易型开放式指数证券投资基金联接基金(LOF)暂停申购及定期定额投资业务的公告",
         "artId": "AN202603181820618456",
         "limits": [],
+        "directLimits": [],
+        "currency": "USD",
         "stale": true,
         "review": false
       }
@@ -604,8 +626,10 @@
         "title": "关于广发纳斯达克100交易型开放式指数证券投资基金联接基金(QDII)A类及C类基金份额调整大额申购(含转换转入、定期定",
         "artId": "AN202607201827126800",
         "limits": [
-          5
+          20
         ],
+        "directLimits": [],
+        "currency": "USD",
         "stale": false,
         "review": false
       }
@@ -639,8 +663,10 @@
         "title": "关于广发纳斯达克100交易型开放式指数证券投资基金联接基金(QDII)A类及C类基金份额调整大额申购(含转换转入、定期定",
         "artId": "AN202607201827126800",
         "limits": [
-          5
+          20
         ],
+        "directLimits": [],
+        "currency": "USD",
         "stale": false,
         "review": false
       }
@@ -670,12 +696,12 @@
       "scale": 14.57,
       "scaleDate": "2026-09-30",
       "announcement": {
-        "date": "2025-11-18",
-        "title": "博时纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)调整大额申购、转换转入、定期定额投资业务的公告",
-        "artId": "AN202511181783502485",
-        "limits": [
-          100
-        ],
+        "date": "2025-09-27",
+        "title": "博时纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)A类、C类份额暂停申购、转换转入、定期定额投资业",
+        "artId": "AN202509271751405684",
+        "limits": [],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": true,
         "review": false
       }
@@ -705,12 +731,12 @@
       "scale": 6.69,
       "scaleDate": "2026-09-30",
       "announcement": {
-        "date": "2025-11-18",
-        "title": "博时纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)调整大额申购、转换转入、定期定额投资业务的公告",
-        "artId": "AN202511181783502485",
-        "limits": [
-          100
-        ],
+        "date": "2025-09-27",
+        "title": "博时纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)A类、C类份额暂停申购、转换转入、定期定额投资业",
+        "artId": "AN202509271751405684",
+        "limits": [],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": true,
         "review": false
       }
@@ -744,6 +770,8 @@
         "title": "华夏纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购及定期定额申购业务的公告",
         "artId": "AN202511221785999927",
         "limits": [],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": true,
         "review": false
       }
@@ -777,6 +805,8 @@
         "title": "华夏纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购及定期定额申购业务的公告",
         "artId": "AN202511221785999927",
         "limits": [],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": true,
         "review": false
       }
@@ -810,6 +840,8 @@
         "title": "华夏纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购及定期定额申购业务的公告",
         "artId": "AN202511221785999927",
         "limits": [],
+        "directLimits": [],
+        "currency": "USD",
         "stale": true,
         "review": false
       }
@@ -843,6 +875,8 @@
         "title": "关于汇添富纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)人民币A类份额恢复线上直销系统申购、定期定",
         "artId": "AN202502131643039222",
         "limits": [],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": true,
         "review": false
       }
@@ -876,6 +910,8 @@
         "title": "关于汇添富纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购、定期定额投资业务的公告",
         "artId": "AN202609241829835607",
         "limits": [],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": false,
         "review": false
       }
@@ -909,6 +945,8 @@
         "title": "关于汇添富纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购、定期定额投资业务的公告",
         "artId": "AN202609241829835607",
         "limits": [],
+        "directLimits": [],
+        "currency": "USD",
         "stale": false,
         "review": false
       }
@@ -942,6 +980,8 @@
         "title": "华泰柏瑞纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)调整大额申购(含定期定额投资)业务的公告",
         "artId": "AN202609221829732369",
         "limits": [],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": false,
         "review": false
       }
@@ -975,6 +1015,8 @@
         "title": "华泰柏瑞纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)调整大额申购(含定期定额投资)业务的公告",
         "artId": "AN202609221829732369",
         "limits": [],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": false,
         "review": false
       }
@@ -1008,6 +1050,8 @@
         "title": "关于调整招商纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)在直销机构大额申购(含定期定额投资)业务",
         "artId": "AN202609011828847866",
         "limits": [],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": false,
         "review": false
       }
@@ -1041,6 +1085,8 @@
         "title": "关于调整招商纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)在直销机构大额申购(含定期定额投资)业务",
         "artId": "AN202609011828847866",
         "limits": [],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": false,
         "review": false
       }
@@ -1074,6 +1120,8 @@
         "title": "关于万家纳斯达克100指数型发起式证券投资基金(QDII)调整大额申购(含定期定额投资)业务金额限制的公告",
         "artId": "AN202610211830733237",
         "limits": [],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": false,
         "review": false
       }
@@ -1107,6 +1155,8 @@
         "title": "关于万家纳斯达克100指数型发起式证券投资基金(QDII)调整大额申购(含定期定额投资)业务金额限制的公告",
         "artId": "AN202610211830733237",
         "limits": [],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": false,
         "review": false
       }
@@ -1142,6 +1192,8 @@
         "limits": [
           10
         ],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": false,
         "review": false
       }
@@ -1177,6 +1229,8 @@
         "limits": [
           10
         ],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": false,
         "review": false
       }
@@ -1212,6 +1266,8 @@
         "limits": [
           20000
         ],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": true,
         "review": false
       }
@@ -1245,10 +1301,14 @@
         "title": "华泰柏瑞纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)I类份额开放日常申购(赎回、定期定额投资)及",
         "artId": "AN202411231641037680",
         "limits": [
+          10
+        ],
+        "directLimits": [
           10,
           50000,
           100000
         ],
+        "currency": "CNY",
         "stale": true,
         "review": false
       }
@@ -1284,6 +1344,8 @@
         "limits": [
           200
         ],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": false,
         "review": false
       }
@@ -1317,6 +1379,8 @@
         "title": "关于汇添富纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)人民币E类份额暂停大额申购、定期定额投资业",
         "artId": "AN202407021637452016",
         "limits": [],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": true,
         "review": false
       }
@@ -1350,6 +1414,8 @@
         "title": "嘉实纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购(含定期定额投资)业务的公告",
         "artId": "AN202602031819507007",
         "limits": [],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": true,
         "review": false
       }
@@ -1383,6 +1449,8 @@
         "title": "博时纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)I类份额暂停申购、转换转入、定期定额投资业务的公",
         "artId": "AN202511211785379194",
         "limits": [],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": true,
         "review": false
       }
@@ -1416,6 +1484,8 @@
         "title": "嘉实纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购(含定期定额投资)业务的公告",
         "artId": "AN202602031819507007",
         "limits": [],
+        "directLimits": [],
+        "currency": "USD",
         "stale": true,
         "review": false
       }
@@ -1449,6 +1519,8 @@
         "title": "嘉实纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购(含定期定额投资)业务的公告",
         "artId": "AN202602031819507007",
         "limits": [],
+        "directLimits": [],
+        "currency": "USD",
         "stale": true,
         "review": false
       }
@@ -1482,6 +1554,8 @@
         "title": "建信纳斯达克100指数型证券投资基金(QDII)暂停大额申购、定期定额投资公告",
         "artId": "AN202608191828132673",
         "limits": [],
+        "directLimits": [],
+        "currency": "USD",
         "stale": false,
         "review": false
       }
@@ -1515,6 +1589,8 @@
         "title": "建信纳斯达克100指数型证券投资基金(QDII)暂停大额申购、定期定额投资公告",
         "artId": "AN202608191828132673",
         "limits": [],
+        "directLimits": [],
+        "currency": "USD",
         "stale": false,
         "review": false
       }
@@ -1544,11 +1620,13 @@
       "scale": 1.15,
       "scaleDate": "2026-09-30",
       "announcement": {
-        "date": "2026-08-19",
-        "title": "建信纳斯达克100指数型证券投资基金(QDII)暂停大额申购、定期定额投资公告",
-        "artId": "AN202608191828132673",
+        "date": "2025-02-12",
+        "title": "建信纳斯达克100指数型证券投资基金(QDII)D类(人民币)基金份额暂停大额申购、定期定额投资公告",
+        "artId": "AN202502121643006354",
         "limits": [],
-        "stale": false,
+        "directLimits": [],
+        "currency": "CNY",
+        "stale": true,
         "review": false
       }
     },
@@ -1583,6 +1661,8 @@
         "limits": [
           10
         ],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": false,
         "review": false
       }
@@ -1596,8 +1676,8 @@
       "company": "摩根基金(中国)",
       "status": "limited",
       "statusText": "限大额",
-      "limit": 10,
-      "limitText": "10 元",
+      "limit": 1,
+      "limitText": "1 美元",
       "limitReliable": true,
       "limitSource": "ann",
       "minPurchase": 1,
@@ -1616,8 +1696,10 @@
         "title": "摩根纳斯达克100指数型发起式证券投资基金(QDII)调整大额申购、定期定额投资及转换转入业务限制金额的公告",
         "artId": "AN202607241827315717",
         "limits": [
-          10
+          1
         ],
+        "directLimits": [],
+        "currency": "USD",
         "stale": false,
         "review": false
       }
@@ -1631,8 +1713,8 @@
       "company": "摩根基金(中国)",
       "status": "limited",
       "statusText": "限大额",
-      "limit": 10,
-      "limitText": "10 元",
+      "limit": 1,
+      "limitText": "1 美元",
       "limitReliable": true,
       "limitSource": "ann",
       "minPurchase": 1,
@@ -1651,8 +1733,10 @@
         "title": "摩根纳斯达克100指数型发起式证券投资基金(QDII)调整大额申购、定期定额投资及转换转入业务限制金额的公告",
         "artId": "AN202607241827315717",
         "limits": [
-          10
+          1
         ],
+        "directLimits": [],
+        "currency": "USD",
         "stale": false,
         "review": false
       }
@@ -1688,6 +1772,8 @@
         "limits": [
           10
         ],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": false,
         "review": false
       }
@@ -1716,8 +1802,8 @@
       "purchaseFeeOrig": null,
       "scale": 251.81,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.588,
-      "etfPremium": 10.46
+      "etfPrice": 2.604,
+      "etfPremium": 11.14
     },
     {
       "code": "050025",
@@ -1748,6 +1834,8 @@
         "title": "博时标普500交易型开放式指数证券投资基金联接基金A类、C类份额恢复申购、转换转入、定期定额投资业务的公告",
         "artId": "AN202604091821076760",
         "limits": [],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": true,
         "review": false
       }
@@ -1781,6 +1869,8 @@
         "title": "易方达标普500指数证券投资基金(LOF)暂停申购及定期定额投资业务的公告",
         "artId": "AN202603181820618457",
         "limits": [],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": true,
         "review": false
       }
@@ -1816,6 +1906,8 @@
         "limits": [
           100
         ],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": false,
         "review": false
       }
@@ -1844,8 +1936,8 @@
       "purchaseFeeOrig": null,
       "scale": 9.78,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.017,
-      "etfPremium": 9.73
+      "etfPrice": 2.022,
+      "etfPremium": 10.0
     },
     {
       "code": "159655",
@@ -1871,8 +1963,8 @@
       "purchaseFeeOrig": null,
       "scale": 41.71,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.952,
-      "etfPremium": 8.93
+      "etfPrice": 1.956,
+      "etfPremium": 9.16
     },
     {
       "code": "513650",
@@ -1898,8 +1990,8 @@
       "purchaseFeeOrig": null,
       "scale": 87.11,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.947,
-      "etfPremium": 9.08
+      "etfPrice": 1.95,
+      "etfPremium": 9.25
     },
     {
       "code": "006075",
@@ -1930,6 +2022,8 @@
         "title": "博时标普500交易型开放式指数证券投资基金联接基金A类、C类份额恢复申购、转换转入、定期定额投资业务的公告",
         "artId": "AN202604091821076760",
         "limits": [],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": true,
         "review": false
       }
@@ -1963,6 +2057,8 @@
         "title": "易方达标普500指数证券投资基金(LOF)暂停申购及定期定额投资业务的公告",
         "artId": "AN202603181820618457",
         "limits": [],
+        "directLimits": [],
+        "currency": "USD",
         "stale": true,
         "review": false
       }
@@ -1996,6 +2092,8 @@
         "title": "易方达标普500指数证券投资基金(LOF)暂停申购及定期定额投资业务的公告",
         "artId": "AN202603181820618457",
         "limits": [],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": true,
         "review": false
       }
@@ -2029,6 +2127,8 @@
         "title": "易方达标普500指数证券投资基金(LOF)暂停申购及定期定额投资业务的公告",
         "artId": "AN202603181820618457",
         "limits": [],
+        "directLimits": [],
+        "currency": "USD",
         "stale": true,
         "review": false
       }
@@ -2064,6 +2164,8 @@
         "limits": [
           10
         ],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": false,
         "review": false
       }
@@ -2097,6 +2199,8 @@
         "title": "国泰标普500交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购、定期定额投资业务的公告",
         "artId": "AN202510171763661096",
         "limits": [],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": true,
         "review": false
       }
@@ -2130,6 +2234,8 @@
         "title": "国泰标普500交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购、定期定额投资业务的公告",
         "artId": "AN202510171763661096",
         "limits": [],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": true,
         "review": false
       }
@@ -2163,6 +2269,8 @@
         "title": "华夏标普500交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购及定期定额申购业务的公告",
         "artId": "AN202511221785999863",
         "limits": [],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": true,
         "review": false
       }
@@ -2196,6 +2304,8 @@
         "title": "华夏标普500交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购及定期定额申购业务的公告",
         "artId": "AN202511221785999863",
         "limits": [],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": true,
         "review": false
       }
@@ -2229,6 +2339,8 @@
         "title": "华夏标普500交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购及定期定额申购业务的公告",
         "artId": "AN202511221785999863",
         "limits": [],
+        "directLimits": [],
+        "currency": "USD",
         "stale": true,
         "review": false
       }
@@ -2262,6 +2374,8 @@
         "title": "博时标普500交易型开放式指数证券投资基金联接基金E类份额暂停申购、转换转入、定期定额投资业务公告",
         "artId": "AN202608191828129205",
         "limits": [],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": false,
         "review": false
       }
@@ -2295,6 +2409,8 @@
         "title": "博时标普500交易型开放式指数证券投资基金联接基金A类、C类份额恢复申购、转换转入、定期定额投资业务的公告",
         "artId": "AN202604091821076760",
         "limits": [],
+        "directLimits": [],
+        "currency": "USD",
         "stale": true,
         "review": false
       }
@@ -2328,6 +2444,8 @@
         "title": "博时标普500交易型开放式指数证券投资基金联接基金A类、C类份额恢复申购、转换转入、定期定额投资业务的公告",
         "artId": "AN202604091821076760",
         "limits": [],
+        "directLimits": [],
+        "currency": "USD",
         "stale": true,
         "review": false
       }
@@ -2341,8 +2459,8 @@
       "company": "摩根基金(中国)",
       "status": "limited",
       "statusText": "限大额",
-      "limit": 10,
-      "limitText": "10 元",
+      "limit": 1,
+      "limitText": "1 美元",
       "limitReliable": true,
       "limitSource": "ann",
       "minPurchase": 1,
@@ -2361,8 +2479,10 @@
         "title": "摩根标普500指数型发起式证券投资基金(QDII)调整大额申购、定期定额投资及转换转入业务限制金额的公告",
         "artId": "AN202607241827315718",
         "limits": [
-          10
+          1
         ],
+        "directLimits": [],
+        "currency": "USD",
         "stale": false,
         "review": false
       }
@@ -2376,8 +2496,8 @@
       "company": "摩根基金(中国)",
       "status": "limited",
       "statusText": "限大额",
-      "limit": 10,
-      "limitText": "10 元",
+      "limit": 1,
+      "limitText": "1 美元",
       "limitReliable": true,
       "limitSource": "ann",
       "minPurchase": 1,
@@ -2396,8 +2516,10 @@
         "title": "摩根标普500指数型发起式证券投资基金(QDII)调整大额申购、定期定额投资及转换转入业务限制金额的公告",
         "artId": "AN202607241827315718",
         "limits": [
-          10
+          1
         ],
+        "directLimits": [],
+        "currency": "USD",
         "stale": false,
         "review": false
       }
@@ -2431,12 +2553,17 @@
         "title": "关于大成标普500等权重指数证券投资基金调整大额申购(含定期定额申购)的公告",
         "artId": "AN202610151830479604",
         "limits": [
-          50,
+          50
+        ],
+        "directLimits": [
           500
         ],
+        "currency": "CNY",
         "stale": false,
         "review": false
-      }
+      },
+      "directLimit": 500,
+      "directLimitText": "500 元"
     },
     {
       "code": "013404",
@@ -2447,10 +2574,10 @@
       "company": "大成基金",
       "status": "limited",
       "statusText": "限大额",
-      "limit": 500,
-      "limitText": "500 元",
-      "limitReliable": true,
-      "limitSource": "ann",
+      "limit": null,
+      "limitText": "限额未公布",
+      "limitReliable": false,
+      "limitSource": "api",
       "minPurchase": 1,
       "minDt": null,
       "nav": 0.4178,
@@ -2466,13 +2593,16 @@
         "date": "2026-10-15",
         "title": "关于大成标普500等权重指数证券投资基金调整大额申购(含定期定额申购)的公告",
         "artId": "AN202610151830479604",
-        "limits": [
-          50,
-          500
+        "limits": [],
+        "directLimits": [
+          75
         ],
+        "currency": "USD",
         "stale": false,
         "review": false
-      }
+      },
+      "directLimit": 75,
+      "directLimitText": "75 美元"
     },
     {
       "code": "015545",
@@ -2483,10 +2613,10 @@
       "company": "大成基金",
       "status": "limited",
       "statusText": "限大额",
-      "limit": 500,
-      "limitText": "500 元",
-      "limitReliable": true,
-      "limitSource": "ann",
+      "limit": null,
+      "limitText": "限额未公布",
+      "limitReliable": false,
+      "limitSource": "api",
       "minPurchase": 1,
       "minDt": null,
       "nav": 0.4152,
@@ -2502,13 +2632,16 @@
         "date": "2026-10-15",
         "title": "关于大成标普500等权重指数证券投资基金调整大额申购(含定期定额申购)的公告",
         "artId": "AN202610151830479604",
-        "limits": [
-          50,
-          500
+        "limits": [],
+        "directLimits": [
+          75
         ],
+        "currency": "USD",
         "stale": false,
         "review": false
-      }
+      },
+      "directLimit": 75,
+      "directLimitText": "75 美元"
     },
     {
       "code": "007722",
@@ -2541,6 +2674,8 @@
         "limits": [
           100
         ],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": false,
         "review": false
       }
@@ -2576,6 +2711,8 @@
         "limits": [
           20000
         ],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": true,
         "review": false
       }
@@ -2604,8 +2741,8 @@
       "purchaseFeeOrig": null,
       "scale": 352.63,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.029,
-      "etfPremium": -0.36
+      "etfPrice": 1.027,
+      "etfPremium": -0.55
     },
     {
       "code": "164906",
@@ -2682,7 +2819,7 @@
       "scale": 259.02,
       "scaleDate": "2026-09-30",
       "etfPrice": 0.343,
-      "etfPremium": 0.09
+      "etfPremium": 0.2
     },
     {
       "code": "513180",
@@ -2709,7 +2846,7 @@
       "scale": 382.85,
       "scaleDate": "2026-09-30",
       "etfPrice": 0.513,
-      "etfPremium": 0.06
+      "etfPremium": 0.02
     },
     {
       "code": "118001",
@@ -2743,6 +2880,8 @@
           1000000,
           5000000
         ],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": true,
         "review": false
       }
@@ -2776,6 +2915,8 @@
         "title": "华夏全球精选股票型证券投资基金调整人民币销售申购、定期定额申购业务上限的公告",
         "artId": "AN202507071704203429",
         "limits": [],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": true,
         "review": false
       }
@@ -2809,6 +2950,8 @@
         "title": "关于汇添富香港优势精选混合型证券投资基金暂停申购业务的公告",
         "artId": "AN202610201830700954",
         "limits": [],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": false,
         "review": false
       }
@@ -2867,6 +3010,8 @@
         "title": "易方达纳斯达克100交易型开放式指数证券投资基金联接基金(LOF)暂停申购及定期定额投资业务的公告",
         "artId": "AN202603181820618456",
         "limits": [],
+        "directLimits": [],
+        "currency": "USD",
         "stale": true,
         "review": false
       }
@@ -2896,11 +3041,15 @@
       "scale": 63.39,
       "scaleDate": "2026-09-30",
       "announcement": {
-        "date": "2026-10-20",
-        "title": "关于华安纳斯达克100交易型开放式指数证券投资基金联接基金(QDII)暂停申购及定期定额投资的公告",
-        "artId": "AN202610201830698096",
-        "limits": [],
-        "stale": false,
+        "date": "2023-07-21",
+        "title": "关于华安纳斯达克100交易型开放式指数证券投资基金联接基金(QDII)恢复A类美元现钞、A类美元现汇份额申购业务并暂停大",
+        "artId": "AN202307211592521008",
+        "limits": [
+          10000
+        ],
+        "directLimits": [],
+        "currency": "USD",
+        "stale": true,
         "review": false
       }
     },
@@ -3004,12 +3153,12 @@
       "scale": 14.57,
       "scaleDate": "2026-09-30",
       "announcement": {
-        "date": "2025-11-18",
-        "title": "博时纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)调整大额申购、转换转入、定期定额投资业务的公告",
-        "artId": "AN202511181783502485",
-        "limits": [
-          100
-        ],
+        "date": "2025-09-27",
+        "title": "博时纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)A类、C类份额暂停申购、转换转入、定期定额投资业",
+        "artId": "AN202509271751405684",
+        "limits": [],
+        "directLimits": [],
+        "currency": "USD",
         "stale": true,
         "review": false
       }
@@ -3043,6 +3192,8 @@
         "title": "关于汇添富纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购、定期定额投资业务的公告",
         "artId": "AN202609241829835607",
         "limits": [],
+        "directLimits": [],
+        "currency": "USD",
         "stale": false,
         "review": false
       }
@@ -3122,12 +3273,12 @@
       "scale": 6.69,
       "scaleDate": "2026-09-30",
       "announcement": {
-        "date": "2025-11-18",
-        "title": "博时纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)调整大额申购、转换转入、定期定额投资业务的公告",
-        "artId": "AN202511181783502485",
-        "limits": [
-          100
-        ],
+        "date": "2025-09-27",
+        "title": "博时纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)A类、C类份额暂停申购、转换转入、定期定额投资业",
+        "artId": "AN202509271751405684",
+        "limits": [],
+        "directLimits": [],
+        "currency": "USD",
         "stale": true,
         "review": false
       }
@@ -6138,6 +6289,8 @@
         "limits": [
           5
         ],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": false,
         "review": false
       }
@@ -6260,8 +6413,8 @@
       "nav": 0.1867,
       "navChangePct": 0.27,
       "navDate": "2026-11-05",
-      "mgmtFee": null,
-      "custodyFee": 0.8,
+      "mgmtFee": 0.5,
+      "custodyFee": 0.1,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": 38.18,
@@ -8071,6 +8224,8 @@
         "title": "建信纳斯达克100指数型证券投资基金(QDII)暂停大额申购、定期定额投资公告",
         "artId": "AN202608191828132673",
         "limits": [],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": false,
         "review": false
       }
@@ -8243,8 +8398,8 @@
       "nav": 5.9172,
       "navChangePct": -6.92,
       "navDate": "2026-11-05",
-      "mgmtFee": null,
-      "custodyFee": 0.0,
+      "mgmtFee": 0.8,
+      "custodyFee": 0.2,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": 1.19,
@@ -9029,6 +9184,8 @@
         "title": "关于华安纳斯达克100交易型开放式指数证券投资基金联接基金(QDII)暂停申购及定期定额投资的公告",
         "artId": "AN202610201830698096",
         "limits": [],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": false,
         "review": false
       }
@@ -9051,8 +9208,8 @@
       "nav": 2.1467,
       "navChangePct": -2.0,
       "navDate": "2026-11-05",
-      "mgmtFee": null,
-      "custodyFee": 0.0,
+      "mgmtFee": 0.8,
+      "custodyFee": 0.2,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": 1.35,
@@ -9589,6 +9746,8 @@
         "limits": [
           10
         ],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": false,
         "review": false
       }
@@ -9624,6 +9783,8 @@
         "limits": [
           10
         ],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": false,
         "review": false
       }
@@ -9707,6 +9868,8 @@
         "title": "嘉实纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购(含定期定额投资)业务的公告",
         "artId": "AN202602031819507007",
         "limits": [],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": true,
         "review": false
       }
@@ -9740,6 +9903,8 @@
         "title": "嘉实纳斯达克100交易型开放式指数证券投资基金发起式联接基金(QDII)暂停申购(含定期定额投资)业务的公告",
         "artId": "AN202602031819507007",
         "limits": [],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": true,
         "review": false
       }
@@ -10350,6 +10515,8 @@
         "limits": [
           10
         ],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": false,
         "review": false
       }
@@ -10610,6 +10777,8 @@
         "limits": [
           100
         ],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": false,
         "review": false
       }
@@ -10645,6 +10814,8 @@
         "limits": [
           100
         ],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": false,
         "review": false
       }
@@ -13092,8 +13263,8 @@
       "nav": 2.2023,
       "navChangePct": -6.27,
       "navDate": "2026-11-05",
-      "mgmtFee": null,
-      "custodyFee": 0.0,
+      "mgmtFee": 1.2,
+      "custodyFee": 0.2,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": 24.53,
@@ -13155,6 +13326,8 @@
         "limits": [
           100
         ],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": false,
         "review": false
       }
@@ -14627,8 +14800,8 @@
       "nav": 3.8765,
       "navChangePct": -5.88,
       "navDate": "2026-11-05",
-      "mgmtFee": 1.2,
-      "custodyFee": 0.2,
+      "mgmtFee": null,
+      "custodyFee": 1.5,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": null,
@@ -15684,11 +15857,15 @@
       "scale": 63.39,
       "scaleDate": "2026-09-30",
       "announcement": {
-        "date": "2026-10-20",
-        "title": "关于华安纳斯达克100交易型开放式指数证券投资基金联接基金(QDII)暂停申购及定期定额投资的公告",
-        "artId": "AN202610201830698096",
-        "limits": [],
-        "stale": false,
+        "date": "2023-07-21",
+        "title": "关于华安纳斯达克100交易型开放式指数证券投资基金联接基金(QDII)恢复A类美元现钞、A类美元现汇份额申购业务并暂停大",
+        "artId": "AN202307211592521008",
+        "limits": [
+          10000
+        ],
+        "directLimits": [],
+        "currency": "USD",
+        "stale": true,
         "review": false
       }
     },
@@ -15921,12 +16098,17 @@
         "title": "关于大成标普500等权重指数证券投资基金调整大额申购(含定期定额申购)的公告",
         "artId": "AN202610151830479604",
         "limits": [
-          50,
+          50
+        ],
+        "directLimits": [
           500
         ],
+        "currency": "CNY",
         "stale": false,
         "review": false
-      }
+      },
+      "directLimit": 500,
+      "directLimitText": "500 元"
     },
     {
       "code": "100050",
@@ -16153,7 +16335,7 @@
       "scale": 2.17,
       "scaleDate": "2026-09-17",
       "etfPrice": 0.926,
-      "etfPremium": 0.06
+      "etfPremium": 0.0
     },
     {
       "code": "159100",
@@ -16179,8 +16361,8 @@
       "purchaseFeeOrig": null,
       "scale": 5.54,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.987,
-      "etfPremium": 1.54
+      "etfPrice": 0.988,
+      "etfPremium": 1.65
     },
     {
       "code": "159202",
@@ -16206,8 +16388,8 @@
       "purchaseFeeOrig": null,
       "scale": 9.6,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.738,
-      "etfPremium": 0.04
+      "etfPrice": 0.737,
+      "etfPremium": -0.08
     },
     {
       "code": "159303",
@@ -16234,7 +16416,7 @@
       "scale": null,
       "scaleDate": "2026-09-30",
       "etfPrice": 1.549,
-      "etfPremium": -0.2
+      "etfPremium": -0.24
     },
     {
       "code": "159329",
@@ -16261,7 +16443,7 @@
       "scale": 10.12,
       "scaleDate": "2026-09-30",
       "etfPrice": 0.833,
-      "etfPremium": -0.57
+      "etfPremium": -0.55
     },
     {
       "code": "159501",
@@ -16287,8 +16469,8 @@
       "purchaseFeeOrig": null,
       "scale": 133.68,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.069,
-      "etfPremium": 21.99
+      "etfPrice": 2.074,
+      "etfPremium": 22.28
     },
     {
       "code": "159502",
@@ -16314,8 +16496,8 @@
       "purchaseFeeOrig": null,
       "scale": 17.93,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.566,
-      "etfPremium": 3.78
+      "etfPrice": 1.568,
+      "etfPremium": 3.91
     },
     {
       "code": "159509",
@@ -16341,8 +16523,8 @@
       "purchaseFeeOrig": null,
       "scale": 160.83,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.813,
-      "etfPremium": 39.42
+      "etfPrice": 2.827,
+      "etfPremium": 40.12
     },
     {
       "code": "159518",
@@ -16368,8 +16550,8 @@
       "purchaseFeeOrig": null,
       "scale": 20.18,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.188,
-      "etfPremium": 1.93
+      "etfPrice": 1.195,
+      "etfPremium": 2.53
     },
     {
       "code": "159519",
@@ -16395,8 +16577,8 @@
       "purchaseFeeOrig": null,
       "scale": null,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.769,
-      "etfPremium": -0.24
+      "etfPrice": 1.771,
+      "etfPremium": -0.26
     },
     {
       "code": "159529",
@@ -16422,8 +16604,8 @@
       "purchaseFeeOrig": null,
       "scale": 9.75,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.36,
-      "etfPremium": 3.59
+      "etfPrice": 1.358,
+      "etfPremium": 3.44
     },
     {
       "code": "159557",
@@ -16449,8 +16631,8 @@
       "purchaseFeeOrig": null,
       "scale": 1.83,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.411,
-      "etfPremium": -0.94
+      "etfPrice": 1.412,
+      "etfPremium": -0.95
     },
     {
       "code": "159561",
@@ -16476,8 +16658,8 @@
       "purchaseFeeOrig": null,
       "scale": 17.25,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.301,
-      "etfPremium": 0.45
+      "etfPrice": 1.297,
+      "etfPremium": 0.14
     },
     {
       "code": "159577",
@@ -16503,8 +16685,8 @@
       "purchaseFeeOrig": null,
       "scale": 13.2,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.622,
-      "etfPremium": 9.56
+      "etfPrice": 1.62,
+      "etfPremium": 9.42
     },
     {
       "code": "159605",
@@ -16557,8 +16739,8 @@
       "purchaseFeeOrig": null,
       "scale": 10.09,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.769,
-      "etfPremium": -1.02
+      "etfPrice": 0.768,
+      "etfPremium": -1.15
     },
     {
       "code": "159615",
@@ -16584,8 +16766,8 @@
       "purchaseFeeOrig": null,
       "scale": 3.86,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.106,
-      "etfPremium": -0.22
+      "etfPrice": 1.107,
+      "etfPremium": -0.23
     },
     {
       "code": "159687",
@@ -16611,8 +16793,8 @@
       "purchaseFeeOrig": null,
       "scale": 31.46,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.634,
-      "etfPremium": 1.8
+      "etfPrice": 1.635,
+      "etfPremium": 1.88
     },
     {
       "code": "159688",
@@ -16638,8 +16820,8 @@
       "purchaseFeeOrig": null,
       "scale": 10.01,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.694,
-      "etfPremium": 0.09
+      "etfPrice": 0.693,
+      "etfPremium": -0.01
     },
     {
       "code": "159699",
@@ -16665,8 +16847,8 @@
       "purchaseFeeOrig": null,
       "scale": 4.27,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.889,
-      "etfPremium": 0.0
+      "etfPrice": 0.887,
+      "etfPremium": -0.19
     },
     {
       "code": "159740",
@@ -16692,8 +16874,8 @@
       "purchaseFeeOrig": null,
       "scale": 140.6,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.504,
-      "etfPremium": -0.08
+      "etfPrice": 0.503,
+      "etfPremium": -0.34
     },
     {
       "code": "159741",
@@ -16720,7 +16902,7 @@
       "scale": 8.12,
       "scaleDate": "2026-09-30",
       "etfPrice": 0.507,
-      "etfPremium": -0.74
+      "etfPremium": -0.8
     },
     {
       "code": "159742",
@@ -16747,7 +16929,7 @@
       "scale": 34.37,
       "scaleDate": "2026-09-30",
       "etfPrice": 0.517,
-      "etfPremium": -0.12
+      "etfPremium": -0.15
     },
     {
       "code": "159747",
@@ -16773,8 +16955,8 @@
       "purchaseFeeOrig": null,
       "scale": 3.45,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.047,
-      "etfPremium": -0.19
+      "etfPrice": 1.048,
+      "etfPremium": -0.13
     },
     {
       "code": "159750",
@@ -16800,8 +16982,8 @@
       "purchaseFeeOrig": null,
       "scale": 10.36,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.772,
-      "etfPremium": -0.81
+      "etfPrice": 0.773,
+      "etfPremium": -0.73
     },
     {
       "code": "159822",
@@ -16827,8 +17009,8 @@
       "purchaseFeeOrig": null,
       "scale": 1.69,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.565,
-      "etfPremium": 0.37
+      "etfPrice": 0.566,
+      "etfPremium": 0.55
     },
     {
       "code": "159850",
@@ -16854,8 +17036,8 @@
       "purchaseFeeOrig": null,
       "scale": 3.24,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.799,
-      "etfPremium": -0.16
+      "etfPrice": 0.798,
+      "etfPremium": -0.37
     },
     {
       "code": "159866",
@@ -16881,8 +17063,8 @@
       "purchaseFeeOrig": null,
       "scale": 20.93,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.519,
-      "etfPremium": 3.07
+      "etfPrice": 1.518,
+      "etfPremium": 2.94
     },
     {
       "code": "159892",
@@ -16908,8 +17090,8 @@
       "purchaseFeeOrig": null,
       "scale": 43.13,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.771,
-      "etfPremium": -0.37
+      "etfPrice": 0.772,
+      "etfPremium": -0.34
     },
     {
       "code": "159920",
@@ -16936,7 +17118,7 @@
       "scale": 82.43,
       "scaleDate": "2026-09-30",
       "etfPrice": 1.446,
-      "etfPremium": 0.44
+      "etfPremium": 0.39
     },
     {
       "code": "160125",
@@ -18212,8 +18394,8 @@
       "purchaseFeeOrig": null,
       "scale": 32.08,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.02,
-      "etfPremium": -0.17
+      "etfPrice": 1.021,
+      "etfPremium": -0.18
     },
     {
       "code": "513000",
@@ -18239,8 +18421,8 @@
       "purchaseFeeOrig": null,
       "scale": 24.22,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.057,
-      "etfPremium": 3.71
+      "etfPrice": 2.054,
+      "etfPremium": 3.51
     },
     {
       "code": "513010",
@@ -18266,8 +18448,8 @@
       "purchaseFeeOrig": null,
       "scale": 249.43,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.527,
-      "etfPremium": -0.15
+      "etfPrice": 0.529,
+      "etfPremium": 0.09
     },
     {
       "code": "513030",
@@ -18293,8 +18475,8 @@
       "purchaseFeeOrig": null,
       "scale": 18.18,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.791,
-      "etfPremium": 1.28
+      "etfPrice": 1.793,
+      "etfPremium": 1.4
     },
     {
       "code": "513060",
@@ -18320,8 +18502,8 @@
       "purchaseFeeOrig": null,
       "scale": 49.65,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.555,
-      "etfPremium": -0.57
+      "etfPrice": 0.556,
+      "etfPremium": -0.45
     },
     {
       "code": "513080",
@@ -18347,8 +18529,8 @@
       "purchaseFeeOrig": null,
       "scale": 11.11,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.642,
-      "etfPremium": -0.08
+      "etfPrice": 1.643,
+      "etfPremium": -0.02
     },
     {
       "code": "513120",
@@ -18374,8 +18556,8 @@
       "purchaseFeeOrig": null,
       "scale": 233.19,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.264,
-      "etfPremium": -0.08
+      "etfPrice": 1.267,
+      "etfPremium": 0.04
     },
     {
       "code": "513130",
@@ -18401,8 +18583,8 @@
       "purchaseFeeOrig": null,
       "scale": 321.51,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.503,
-      "etfPremium": -0.22
+      "etfPrice": 0.504,
+      "etfPremium": -0.16
     },
     {
       "code": "513140",
@@ -18428,8 +18610,8 @@
       "purchaseFeeOrig": null,
       "scale": 1.35,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.711,
-      "etfPremium": -0.04
+      "etfPrice": 1.712,
+      "etfPremium": -0.08
     },
     {
       "code": "513170",
@@ -18455,8 +18637,8 @@
       "purchaseFeeOrig": null,
       "scale": 2.43,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.563,
-      "etfPremium": -0.25
+      "etfPrice": 1.565,
+      "etfPremium": -0.17
     },
     {
       "code": "513210",
@@ -18483,7 +18665,7 @@
       "scale": null,
       "scaleDate": "2026-09-30",
       "etfPrice": 1.451,
-      "etfPremium": -0.1
+      "etfPremium": -0.16
     },
     {
       "code": "513220",
@@ -18537,7 +18719,7 @@
       "scale": 51.43,
       "scaleDate": "2026-09-30",
       "etfPrice": 0.983,
-      "etfPremium": -0.11
+      "etfPremium": -0.25
     },
     {
       "code": "513280",
@@ -18563,8 +18745,8 @@
       "purchaseFeeOrig": null,
       "scale": 4.07,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.089,
-      "etfPremium": -0.48
+      "etfPrice": 1.091,
+      "etfPremium": -0.43
     },
     {
       "code": "513290",
@@ -18590,8 +18772,8 @@
       "purchaseFeeOrig": null,
       "scale": 18.38,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.843,
-      "etfPremium": 5.11
+      "etfPrice": 1.854,
+      "etfPremium": 5.74
     },
     {
       "code": "513310",
@@ -18617,8 +18799,8 @@
       "purchaseFeeOrig": null,
       "scale": 113.05,
       "scaleDate": "2026-09-30",
-      "etfPrice": 3.541,
-      "etfPremium": 7.87
+      "etfPrice": 3.596,
+      "etfPremium": 9.47
     },
     {
       "code": "513350",
@@ -18644,8 +18826,8 @@
       "purchaseFeeOrig": null,
       "scale": 10.92,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.253,
-      "etfPremium": 2.5
+      "etfPrice": 1.258,
+      "etfPremium": 2.91
     },
     {
       "code": "513360",
@@ -18699,7 +18881,7 @@
       "scale": 88.62,
       "scaleDate": "2026-09-30",
       "etfPrice": 0.462,
-      "etfPremium": -0.09
+      "etfPremium": -0.19
     },
     {
       "code": "513400",
@@ -18725,8 +18907,8 @@
       "purchaseFeeOrig": null,
       "scale": 38.85,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.298,
-      "etfPremium": 3.61
+      "etfPrice": 1.297,
+      "etfPremium": 3.53
     },
     {
       "code": "513520",
@@ -18752,8 +18934,8 @@
       "purchaseFeeOrig": null,
       "scale": 24.39,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.057,
-      "etfPremium": 4.5
+      "etfPrice": 2.055,
+      "etfPremium": 4.3
     },
     {
       "code": "513530",
@@ -18779,8 +18961,8 @@
       "purchaseFeeOrig": null,
       "scale": 53.65,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.554,
-      "etfPremium": -0.21
+      "etfPrice": 1.555,
+      "etfPremium": -0.17
     },
     {
       "code": "513580",
@@ -18807,7 +18989,7 @@
       "scale": 32.35,
       "scaleDate": "2026-09-30",
       "etfPrice": 0.508,
-      "etfPremium": -0.74
+      "etfPremium": -0.92
     },
     {
       "code": "513730",
@@ -18860,8 +19042,8 @@
       "purchaseFeeOrig": null,
       "scale": 20.16,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.76,
-      "etfPremium": -0.14
+      "etfPrice": 1.758,
+      "etfPremium": -0.25
     },
     {
       "code": "513810",
@@ -18887,8 +19069,8 @@
       "purchaseFeeOrig": null,
       "scale": null,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.736,
-      "etfPremium": -0.32
+      "etfPrice": 1.737,
+      "etfPremium": -0.35
     },
     {
       "code": "513850",
@@ -18942,7 +19124,7 @@
       "scale": 27.77,
       "scaleDate": "2026-09-30",
       "etfPrice": 1.934,
-      "etfPremium": 5.02
+      "etfPremium": 4.88
     },
     {
       "code": "513890",
@@ -18969,7 +19151,7 @@
       "scale": 7.32,
       "scaleDate": "2026-09-30",
       "etfPrice": 0.781,
-      "etfPremium": -0.01
+      "etfPremium": -0.19
     },
     {
       "code": "513950",
@@ -18996,7 +19178,7 @@
       "scale": 29.28,
       "scaleDate": "2026-09-30",
       "etfPrice": 1.224,
-      "etfPremium": -0.32
+      "etfPremium": -0.25
     },
     {
       "code": "513970",
@@ -19022,8 +19204,8 @@
       "purchaseFeeOrig": null,
       "scale": 10.92,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.818,
-      "etfPremium": -0.09
+      "etfPrice": 0.819,
+      "etfPremium": 0.05
     },
     {
       "code": "519601",
@@ -19124,8 +19306,8 @@
       "purchaseFeeOrig": null,
       "scale": 26.41,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.316,
-      "etfPremium": -0.26
+      "etfPrice": 1.318,
+      "etfPremium": -0.15
     },
     {
       "code": "520520",
@@ -19151,8 +19333,8 @@
       "purchaseFeeOrig": null,
       "scale": null,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.949,
-      "etfPremium": -0.08
+      "etfPrice": 0.95,
+      "etfPremium": 0.04
     },
     {
       "code": "520570",
@@ -19178,8 +19360,8 @@
       "purchaseFeeOrig": null,
       "scale": 24.73,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.645,
-      "etfPremium": -0.22
+      "etfPrice": 0.646,
+      "etfPremium": -0.29
     },
     {
       "code": "520580",
@@ -19205,8 +19387,8 @@
       "purchaseFeeOrig": null,
       "scale": 2.64,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.916,
-      "etfPremium": 0.31
+      "etfPrice": 0.919,
+      "etfPremium": 0.65
     },
     {
       "code": "520590",
@@ -19232,8 +19414,8 @@
       "purchaseFeeOrig": null,
       "scale": 1.61,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.691,
-      "etfPremium": 0.07
+      "etfPrice": 0.692,
+      "etfPremium": -0.01
     },
     {
       "code": "520830",
@@ -19260,7 +19442,7 @@
       "scale": 8.88,
       "scaleDate": "2026-09-30",
       "etfPrice": 0.822,
-      "etfPremium": -0.6
+      "etfPremium": -0.58
     },
     {
       "code": "520870",
@@ -19286,8 +19468,8 @@
       "purchaseFeeOrig": null,
       "scale": 5.96,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.986,
-      "etfPremium": 1.32
+      "etfPrice": 0.987,
+      "etfPremium": 1.42
     },
     {
       "code": "520920",
@@ -19313,8 +19495,8 @@
       "purchaseFeeOrig": null,
       "scale": 121.3,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.6,
-      "etfPremium": -0.13
+      "etfPrice": 0.601,
+      "etfPremium": -0.27
     },
     {
       "code": "539001",
@@ -19345,6 +19527,8 @@
         "title": "建信纳斯达克100指数型证券投资基金(QDII)暂停大额申购、定期定额投资公告",
         "artId": "AN202608191828132673",
         "limits": [],
+        "directLimits": [],
+        "currency": "CNY",
         "stale": false,
         "review": false
       }
