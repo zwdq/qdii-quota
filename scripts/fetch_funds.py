@@ -7,7 +7,7 @@ fetch_funds.py —— 每日抓取 QDII 基金申购状态 / 限额 / 净值，�
   基金状态/限额/净值：东方财富 FundMNNBasicInformation（MAXSG 已验证可信）
   基金清单（大幅扩充）：运行时自动发现东方财富全量场外 QDII（rankhandler），失败则用兜底清单
   公告交叉校验：仅对 CORE 热门基金做（控制耗时）
-运行：python3 scripts/fetch_funds.py [data.json] [--no-ann]   无第三方依赖
+运行：python3 scripts/fetch_funds.py [data.json] [--no-ann] [--workers N]   无第三方依赖
 
 【清单扩充策略】
   - CORE：人工核对的 ~20 只热门基金（分组精确，且做公告交叉校验）。
@@ -27,6 +27,7 @@ import sys
 import time
 import urllib.parse
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass, field
 
 
@@ -160,6 +161,10 @@ AMOUNT_RE: re.Pattern = re.compile(
 # ── 网络重试配置 ────────────────────────────────────────────────────────────
 HTTP_MAX_RETRIES: int = 3
 HTTP_RETRY_DELAY: float = 1.0
+
+# ── 并发配置 ────────────────────────────────────────────────────────────────
+DEFAULT_WORKERS: int = 6        # 并发线程数（太高易被东方财富限流）
+REQUEST_INTERVAL: float = 0.18  # 每个线程抓完一只后的间隔（秒）
 
 
 # ════════════════════════════════════════════════════════════════════════════
@@ -667,10 +672,14 @@ class QdiiQuotaApp:
             "--no-ann", action="store_true",
             help="跳过公告交叉校验（加快速度）"
         )
+        parser.add_argument(
+            "--workers", type=int, default=DEFAULT_WORKERS,
+            help="并发线程数（默认：%d）" % DEFAULT_WORKERS
+        )
         return parser.parse_args()
 
     def run(self) -> None:
-        """主流程：构建清单 → 逐只抓取 → 写入 JSON"""
+        """主流程：构建清单 → 并发抓取 → 写入 JSON"""
         args = self._parse_args()
         out_path: str = args.output
         do_ann: bool = not args.no_ann
@@ -679,21 +688,32 @@ class QdiiQuotaApp:
         codes, src = self.universe.build()
         print("清单来源：%s → 共 %d 只基金" % (src, len(codes)))
 
-        # 2. 逐只抓取
-        funds: list[dict] = []
+        # 2. 并发抓取（结果按清单原顺序输出，保证 data.json diff 稳定）
+        def task(code: str) -> dict:
+            item = self.fetcher.fetch_one(code, do_ann)
+            time.sleep(REQUEST_INTERVAL)  # 每个线程自我节流，避免被限流
+            return item
+
+        results: list[dict | None] = [None] * len(codes)
         errors: list[tuple[str, str]] = []
-        for i, code in enumerate(codes, 1):
-            try:
-                item = self.fetcher.fetch_one(code, do_ann)
-                funds.append(item)
-                if i <= 5 or i % 50 == 0:
-                    print("[%d/%d] %s %-22s %s %s" % (
-                        i, len(codes), code, item["name"][:22],
-                        item["status"], item["limitText"]
-                    ))
-            except Exception as e:
-                errors.append((code, str(e)))
-            time.sleep(0.18)
+        done = 0
+        with ThreadPoolExecutor(max_workers=args.workers) as pool:
+            futures = {pool.submit(task, code): idx for idx, code in enumerate(codes)}
+            for fut in as_completed(futures):
+                idx = futures[fut]
+                code = codes[idx]
+                done += 1
+                try:
+                    item = fut.result()
+                    results[idx] = item
+                    if done <= 5 or done % 50 == 0:
+                        print("[%d/%d] %s %-22s %s %s" % (
+                            done, len(codes), code, item["name"][:22],
+                            item["status"], item["limitText"]
+                        ))
+                except Exception as e:
+                    errors.append((code, str(e)))
+        funds: list[dict] = [r for r in results if r is not None]
 
         # 3. 组装结果并写入
         result = {

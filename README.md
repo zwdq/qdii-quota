@@ -19,7 +19,8 @@ GitHub Actions 每天定时跑  →  scripts/fetch_funds.py 抓东方财富接�
 | [fund-quota.html](fund-quota.html) | 网页本体（单文件，搜索/筛选/排序/统计卡片） |
 | [data.json](data.json) | 每天自动生成的数据，网页读取它 |
 | [scripts/fetch_funds.py](scripts/fetch_funds.py) | 抓取脚本（仅标准库，无依赖） |
-| [.github/workflows/daily.yml](.github/workflows/daily.yml) | 每天定时任务（北京时间 09:15、14:15） |
+| [.github/workflows/daily.yml](.github/workflows/daily.yml) | 抓取任务（由 Worker 准点触发；自带 schedule 仅兜底） |
+| [worker/](worker/) | Cloudflare Worker：北京时间 09:15、14:15 准点触发抓取 |
 
 ## 部署（3 步）
 
@@ -39,6 +40,20 @@ GitHub Actions 每天定时跑  →  scripts/fetch_funds.py 抓东方财富接�
 之后每天自动更新，打开网页即可，无需任何操作。
 
 > 💡 Pages 每天会自动重新发布最新的 `data.json`，无需额外配置 CDN/缓存刷新。
+
+### 准点触发（Cloudflare Worker）
+
+GitHub Actions 自带的 schedule 在高峰期常延迟 4~5 小时甚至直接跳过，所以改由 Cloudflare Worker 的 Cron 准点调用 `workflow_dispatch`。workflow 里的 schedule 只作兜底：数据 5 小时内已更新就跳过。
+
+1. GitHub → Settings → Developer settings → Fine-grained tokens，新建令牌：仓库只选本仓库，权限 **Actions: Read and write**。
+2. 部署 Worker（令牌只粘贴进终端提示，不要写进文件）：
+   ```bash
+   cd worker
+   npx wrangler login
+   npx wrangler secret put GH_TOKEN
+   npx wrangler deploy
+   ```
+3. 在 Cloudflare 后台 Workers → qdii-quota-trigger → Logs 查看每次触发结果。
 
 ## 加 / 删追踪基金
 

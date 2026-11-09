@@ -1,12 +1,12 @@
 name: 每日更新基金额度
 
 on:
+  # 主触发：Cloudflare Worker（worker/）在北京 09:15、14:15 准点调用 workflow_dispatch。
+  # GitHub 自带 schedule 高峰期常延迟 4~5 小时甚至跳过，这里只作兜底：
+  # 03:30 UTC = 北京 11:30，08:30 UTC = 北京 16:30；若数据 5 小时内已更新则跳过。
   schedule:
-    # UTC 时间 → 北京时间
-    # 01:15 UTC = 北京 09:15（美股收盘次日，抓最新净值）
-    # 06:15 UTC = 北京 14:15（盘中再抓一次，捕捉当日限购变动）
-    - cron: "15 1,6 * * *"
-  workflow_dispatch: {}  # 支持在 GitHub 页面手动触发
+    - cron: "30 3,8 * * *"
+  workflow_dispatch: {}  # Worker 准点触发 / 也可在 GitHub 页面手动触发
 
 permissions:
   contents: write   # 允许 Action 把新 data.json 提交回仓库
@@ -21,14 +21,34 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: 兜底任务检查数据是否新鲜
+        id: fresh
+        if: github.event_name == 'schedule'
+        run: |
+          python3 - <<'EOF' >> "$GITHUB_OUTPUT"
+          import datetime, json
+          s = json.load(open("data.json")).get("updatedAt", "")
+          bj = datetime.timezone(datetime.timedelta(hours=8))
+          try:
+              t = datetime.datetime.strptime(s, "%Y-%m-%d %H:%M:%S").replace(tzinfo=bj)
+              age = (datetime.datetime.now(bj) - t).total_seconds() / 3600
+          except ValueError:
+              age = 999
+          print("skip=%s" % ("true" if age < 5 else "false"))
+          EOF
+          cat "$GITHUB_OUTPUT"
+
       - uses: actions/setup-python@v5
+        if: steps.fresh.outputs.skip != 'true'
         with:
           python-version: "3.12"
 
       - name: 抓取基金数据
+        if: steps.fresh.outputs.skip != 'true'
         run: python3 scripts/fetch_funds.py data.json
 
       - name: 提交 data.json
+        if: steps.fresh.outputs.skip != 'true'
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -37,5 +57,7 @@ jobs:
             echo "数据无变化，跳过提交。"
           else
             git commit -m "chore(data): 每日基金额度更新 $(date -u +%Y-%m-%d)"
+            # 抓取期间 main 可能有新提交（代码改动/另一次触发），先 rebase 再推
+            git pull --rebase -X theirs origin main
             git push
           fi

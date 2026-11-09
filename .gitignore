@@ -6,3 +6,8 @@
 *.swp
 __pycache__/
 *.pyc
+
+# Cloudflare Worker 本地产物
+worker/.wrangler/
+worker/node_modules/
+worker/.dev.vars
