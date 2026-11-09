@@ -151,12 +151,16 @@ ANN_INCLUDE: re.Pattern = re.compile(
 )
 ANN_EXCLUDE: re.Pattern = re.compile(
     r"节假日|休市|境外.{0,4}(休市|节假日)|清盘|分红|费率|销售(机构|渠道)|代销|"
-    r"基金经理|变更|估值|托管|成立|生效|招募|转托管|终止"
+    r"基金经理|变更|估值|托管|成立|生效|招募|转托管|终止|"
+    # 节假日类公告通常同时暂停申购和赎回，额度公告只涉及申购
+    r"申购[、和及与]赎回|提示性"
 )
 AMOUNT_RE: re.Pattern = re.compile(
-    r"(?:不超过|上限[为是]?|上限金额[为是]?|金额[为是]?|限额[为调是]?|限制金额[为是]?|"
-    r"单日[^。；]{0,10}为|将[^。；]{0,10}为)\s*0*(\d{1,3}(?:,\d{3})*(?:\.\d+)?)\s*元"
+    r"(?:不得?超过|上限[为是]?|上限金额[为是]?|金额[为是]?|限额[为调是]?|限制金额[为是]?|"
+    r"单日[^。；]{0,10}为|将[^。；]{0,10}为)\s*0*(\d+(?:,\d{3})*(?:\.\d+)?)\s*(万)?\s*元"
 )
+# 超过这个天数的公告视为"较早公告"：只作参考，不触发 ⚠️ 校验，据此得出的额度标为不可靠
+ANN_RECENT_DAYS: int = 180
 
 # ── 网络重试配置 ────────────────────────────────────────────────────────────
 HTTP_MAX_RETRIES: int = 3
@@ -165,6 +169,10 @@ HTTP_RETRY_DELAY: float = 1.0
 # ── 并发配置 ────────────────────────────────────────────────────────────────
 DEFAULT_WORKERS: int = 6        # 并发线程数（太高易被东方财富限流）
 REQUEST_INTERVAL: float = 0.18  # 每个线程抓完一只后的间隔（秒）
+
+# ── 完整性保护 ──────────────────────────────────────────────────────────────
+MIN_KEEP_RATIO: float = 0.9     # 成功数低于上次的 90% 视为异常
+MAX_ERROR_RATIO: float = 0.1    # 失败超过清单的 10% 视为异常
 
 
 # ════════════════════════════════════════════════════════════════════════════
@@ -269,20 +277,48 @@ def build_limit(status: str, maxsg_raw: str | None, code: str) -> tuple[int | No
     maxsg = to_int(maxsg_raw, None)
     if maxsg is not None:
         return maxsg, fmt_amount(maxsg), True, "api"
-    return None, "限大额", False, "api"
+    return None, "限额未公布", False, "api"
 
 
-def extract_amounts(text: str) -> list[int]:
-    """从公告正文中提取金额（1 ~ 1亿元之间）"""
-    out: list[int] = []
-    for m in AMOUNT_RE.finditer(text):
-        try:
-            n = int(float(m.group(1).replace(",", "")))
-        except ValueError:
-            continue
-        if 1 <= n < 100_000_000:
-            out.append(n)
-    return sorted(set(out))
+def extract_amounts(text: str, share_class: str | None = None) -> list[int]:
+    """从公告正文中提取金额（1 ~ 1亿元之间）
+
+    同一公告常对 A/C 类与 D/I 类给出不同额度；传入份额类别时，
+    优先只看提到该类别的句子，找不到再退回全文。
+    """
+    def scan(s: str) -> list[int]:
+        out: list[int] = []
+        for m in AMOUNT_RE.finditer(s):
+            try:
+                n = float(m.group(1).replace(",", ""))
+            except ValueError:
+                continue
+            if m.group(2):
+                n *= 10_000
+            n = int(n)
+            if 1 <= n < 100_000_000:
+                out.append(n)
+        return out
+
+    if share_class:
+        cls_re = re.compile(r"%s\s*类" % share_class)
+        # 句子切分时把换行也去掉，公告正文常在数字和"元"之间断行
+        sentences = re.split(r"[。；]", re.sub(r"\s+", " ", text))
+        hit = [n for s in sentences if cls_re.search(s) for n in scan(s)]
+        if hit:
+            return sorted(set(hit))
+    return sorted(set(scan(text)))
+
+
+def announcement_date(art_id: str) -> datetime.date | None:
+    """公告 ID 内嵌发布日期：AN20260720xxxx → 2026-07-20"""
+    m = re.match(r"AN(\d{8})", art_id or "")
+    if not m:
+        return None
+    try:
+        return datetime.datetime.strptime(m.group(1), "%Y%m%d").date()
+    except ValueError:
+        return None
 
 
 # ════════════════════════════════════════════════════════════════════════════
@@ -461,12 +497,17 @@ class AnnouncementChecker:
     def supplement(self, code: str, current_limit: int | None, fund_name: str = "") -> dict | None:
         """获取公告并构建校验结果
 
-        返回 {"date", "title", "artId", "limits", "review"} 或 None
+        返回 {"date", "title", "artId", "limits", "stale", "review"} 或 None
         """
         ann = self._latest_limit_announcement(code, fund_name)
         if not ann:
             return None
         art_id = ann.get("ID") or ""
+        pub = announcement_date(art_id)
+        today = (datetime.datetime.now(datetime.timezone.utc)
+                 + datetime.timedelta(hours=8)).date()
+        stale = pub is None or (today - pub).days > ANN_RECENT_DAYS
+        mcls = re.search(r"\(?([A-Z])\)?$", fund_name.strip())
         body = ""
         if art_id:
             try:
@@ -478,13 +519,15 @@ class AnnouncementChecker:
                               d.get("data", {}).get("notice_content", "") or "")
             except Exception:
                 body = ""
-        limits = extract_amounts(body) if body else []
+        limits = extract_amounts(body, mcls.group(1) if mcls else None) if body else []
         return {
-            "date": ann.get("PUBLISHDATEDesc") or "",
+            "date": ann.get("PUBLISHDATEDesc") or (pub.isoformat() if pub else ""),
             "title": (ann.get("TITLE") or "")[:60],
             "artId": art_id,
             "limits": limits,
-            "review": bool(limits and current_limit is not None
+            "stale": stale,
+            # 较早的公告可能已被后续未匹配到的公告取代，不据此报"不符"
+            "review": bool(not stale and limits and current_limit is not None
                            and current_limit not in limits),
         }
 
@@ -550,9 +593,12 @@ class FundFetcher:
     def _map_fields(code: str, datas: dict) -> dict:
         """将接口原始数据映射为前端所需的输出字段"""
         name = datas.get("SHORTNAME") or ""
-        status, status_text = parse_status(datas.get("SGZT"))
-        limit, limit_text, reliable, source = build_limit(status, datas.get("MAXSG"), code)
         fund_type = classify(name)
+        status, status_text = parse_status(datas.get("SGZT"))
+        if fund_type == "etf":
+            # 场内 ETF 的"暂停申购"指一级市场申赎，个人在二级市场照常买卖
+            status = "traded"
+        limit, limit_text, reliable, source = build_limit(status, datas.get("MAXSG"), code)
 
         return {
             "code": code,
@@ -568,6 +614,7 @@ class FundFetcher:
             "limitReliable": reliable,
             "limitSource": source,
             "minPurchase": to_int(datas.get("MINSG")),
+            "minDt": to_int(datas.get("MINDT")),             # 最低定投金额
             "nav": to_float(datas.get("DWJZ")),
             "navChangePct": to_float(datas.get("RZDF")),
             "navDate": datas.get("FSRQ") or "",
@@ -609,7 +656,7 @@ class FundFetcher:
                     amt = max(ann["limits"])
                     item["limit"] = amt
                     item["limitText"] = fmt_amount(amt)
-                    item["limitReliable"] = True
+                    item["limitReliable"] = not ann["stale"]
                     item["limitSource"] = "ann"
         except Exception as e:
             item["announcementError"] = str(e)
@@ -676,7 +723,20 @@ class QdiiQuotaApp:
             "--workers", type=int, default=DEFAULT_WORKERS,
             help="并发线程数（默认：%d）" % DEFAULT_WORKERS
         )
+        parser.add_argument(
+            "--force", action="store_true",
+            help="跳过完整性保护，即使抓取数量骤降也写入"
+        )
         return parser.parse_args()
+
+    @staticmethod
+    def _previous_count(path: str) -> int | None:
+        """读取上一份输出的基金数量（不存在或损坏时返回 None）"""
+        try:
+            with open(path, encoding="utf-8") as f:
+                return int(json.load(f).get("count") or 0) or None
+        except Exception:
+            return None
 
     def run(self) -> None:
         """主流程：构建清单 → 并发抓取 → 写入 JSON"""
@@ -715,7 +775,18 @@ class QdiiQuotaApp:
                     errors.append((code, str(e)))
         funds: list[dict] = [r for r in results if r is not None]
 
-        # 3. 组装结果并写入
+        # 3. 完整性保护：抓取大面积失败（被限流/接口变更）时不覆盖上一份好数据，
+        #    以非零退出让 Actions 运行失败，GitHub 会发失败通知
+        prev_count = self._previous_count(out_path)
+        too_few = prev_count and len(funds) < prev_count * MIN_KEEP_RATIO
+        too_many_err = len(errors) > len(codes) * MAX_ERROR_RATIO
+        if (too_few or too_many_err) and not args.force:
+            print("\n❌ 数据不完整：成功 %d（上次 %s），失败 %d / %d，未写入 %s"
+                  % (len(funds), prev_count, len(errors), len(codes), out_path))
+            print("失败示例：", errors[:5])
+            sys.exit(1)
+
+        # 4. 组装结果并写入
         result = {
             "updatedAt": beijing_now(),
             "source": "eastmoney FundMNNBasicInformation + rankhandler 发现",
@@ -728,7 +799,7 @@ class QdiiQuotaApp:
         with open(out_path, "w", encoding="utf-8") as f:
             json.dump(result, f, ensure_ascii=False, indent=2)
 
-        # 4. 输出统计
+        # 5. 输出统计
         print("\n写入 %s：成功 %d，失败 %d" % (out_path, len(funds), len(errors)))
         if errors[:5]:
             print("失败示例：", errors[:5])
