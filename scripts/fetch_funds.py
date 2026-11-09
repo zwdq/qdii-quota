@@ -344,6 +344,35 @@ def extract_limits(text: str, share_class: str | None = None,
     return {k: sorted(v) for k, v in out.items()}
 
 
+def _show_limit(f: dict) -> str:
+    """变化提示里用的简短额度文本"""
+    return {"suspended": "暂停", "normal": "不限", "traded": "场内"}.get(
+        f.get("status"), f.get("limitText") or "—")
+
+
+def detect_change(old: dict, cur: dict, date: str) -> dict | None:
+    """对比同一只基金前后两次数据，返回 {"type", "from", "to", "date"} 或 None
+
+    type: open=暂停→可申购，suspend=可申购→暂停，up=额度放宽，down=额度收紧
+    """
+    buyable = ("normal", "limited")
+    ps, cs = old.get("status"), cur.get("status")
+    typ = None
+    if ps == "suspended" and cs in buyable:
+        typ = "open"
+    elif ps in buyable and cs == "suspended":
+        typ = "suspend"
+    elif ps in buyable and cs in buyable:
+        inf = float("inf")
+        pl = inf if ps == "normal" else old.get("limit")
+        cl = inf if cs == "normal" else cur.get("limit")
+        if pl is not None and cl is not None and pl != cl:   # 金额未公布的不比较
+            typ = "up" if cl > pl else "down"
+    if not typ:
+        return None
+    return {"type": typ, "from": _show_limit(old), "to": _show_limit(cur), "date": date}
+
+
 def announcement_date(art_id: str) -> datetime.date | None:
     """公告 ID 内嵌发布日期：AN20260720xxxx → 2026-07-20"""
     m = re.match(r"AN(\d{8})", art_id or "")
@@ -776,13 +805,13 @@ class QdiiQuotaApp:
         return parser.parse_args()
 
     @staticmethod
-    def _previous_count(path: str) -> int | None:
-        """读取上一份输出的基金数量（不存在或损坏时返回 None）"""
+    def _load_previous(path: str) -> dict:
+        """读取上一份输出（不存在或损坏时返回空 dict）"""
         try:
             with open(path, encoding="utf-8") as f:
-                return int(json.load(f).get("count") or 0) or None
+                return json.load(f)
         except Exception:
-            return None
+            return {}
 
     def run(self) -> None:
         """主流程：构建清单 → 并发抓取 → 写入 JSON"""
@@ -823,7 +852,8 @@ class QdiiQuotaApp:
 
         # 3. 完整性保护：抓取大面积失败（被限流/接口变更）时不覆盖上一份好数据，
         #    以非零退出让 Actions 运行失败，GitHub 会发失败通知
-        prev_count = self._previous_count(out_path)
+        prev = self._load_previous(out_path)
+        prev_count = int(prev.get("count") or 0) or None
         too_few = prev_count and len(funds) < prev_count * MIN_KEEP_RATIO
         too_many_err = len(errors) > len(codes) * MAX_ERROR_RATIO
         if (too_few or too_many_err) and not args.force:
@@ -832,7 +862,26 @@ class QdiiQuotaApp:
             print("失败示例：", errors[:5])
             sys.exit(1)
 
-        # 4. 组装结果并写入
+        # 4. 与上一份数据对比，标出额度变化（当天及前一天的变化会一直保留显示）
+        prev_funds = {f.get("code"): f for f in prev.get("funds") or []}
+        today = (datetime.datetime.now(datetime.timezone.utc)
+                 + datetime.timedelta(hours=8)).date()
+        n_changed = 0
+        for item in funds:
+            old = prev_funds.get(item["code"])
+            if not old:
+                continue
+            ch = detect_change(old, item, today.isoformat())
+            if ch:
+                n_changed += 1
+            elif old.get("change") and old["change"].get("date", "") >= (
+                    today - datetime.timedelta(days=1)).isoformat():
+                ch = old["change"]          # 状态没再变：沿用近两天内的变化标记
+            if ch:
+                item["change"] = ch
+        print("本次额度变化：%d 只" % n_changed)
+
+        # 5. 组装结果并写入
         result = {
             "updatedAt": beijing_now(),
             "source": "eastmoney FundMNNBasicInformation + rankhandler 发现",
@@ -845,7 +894,7 @@ class QdiiQuotaApp:
         with open(out_path, "w", encoding="utf-8") as f:
             json.dump(result, f, ensure_ascii=False, indent=2)
 
-        # 5. 输出统计
+        # 6. 输出统计
         print("\n写入 %s：成功 %d，失败 %d" % (out_path, len(funds), len(errors)))
         if errors[:5]:
             print("失败示例：", errors[:5])

@@ -4,6 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>QDII 基金每日额度追踪</title>
+<!-- 添加到主屏幕（PWA） -->
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="QDII额度">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#f7f2e6">
 <style>
   :root {
     --bg-0: #060912; --bg-1: #0c1322;
@@ -318,15 +327,93 @@
   .ci-meta { margin-top: 7px; font-size: 12px; color: var(--text-sub); display: flex; flex-wrap: wrap; gap: 4px 12px; }
   .ci-meta b { color: var(--text); font-weight: 600; font-family: var(--mono); }
 
+  /* ===== 15:00 截止 / 图例 ===== */
+  .badge.c { background: var(--amber-soft); color: var(--amber); border-color: rgba(192, 127, 16, 0.3); }
+  .badge.c.past { background: var(--surface-2); color: var(--text-sub); border-color: var(--border); }
+  #helpBtn { font-weight: 800; padding: 6px 12px; }
+  .help-panel {
+    display: none; margin-top: 12px; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 12px 16px; font-size: 13px; color: var(--text-sub); line-height: 1.9; box-shadow: var(--shadow);
+  }
+  .help-panel.open { display: block; }
+  .help-panel b { color: var(--text); }
+  .help-panel .status, .help-panel .direct-tag, .help-panel .chg { transform: scale(.92); }
+
+  /* ===== 我的定投 ===== */
+  .fav-box {
+    background: var(--card); border: 1px solid rgba(201, 160, 40, 0.45); border-radius: var(--radius);
+    padding: 12px 14px; margin-bottom: 12px; font-size: 13px; box-shadow: var(--shadow);
+  }
+  .fav-empty { color: var(--text-sub); }
+  .fav-title { font-weight: 700; color: var(--text); }
+  .fav-total { margin-top: 4px; font-size: 14px; color: var(--text-sub); }
+  .fav-total b { font-size: 22px; font-family: var(--mono); color: var(--primary); margin: 0 2px; }
+  .fav-note { font-size: 11px; color: var(--text-dim); }
+  .fav-parts { margin-top: 4px; color: var(--text-sub); font-size: 12px; }
+  .fav-parts b { color: var(--green); font-family: var(--mono); }
+  .fav-parts .neg { color: var(--red); }
+  .star { background: none; border: none; cursor: pointer; font-size: 17px; line-height: 1; color: var(--text-dim); padding: 0 6px 0 0; vertical-align: -1px; }
+  .star.on { color: #e0a800; }
+  .star-col { width: 34px; padding-left: 12px !important; padding-right: 0 !important; }
+  .card-item.fav { border-color: rgba(224, 168, 0, 0.6); }
+  tr.frow.fav { background: rgba(224, 168, 0, 0.06); }
+
+  /* ===== 状态摘要（可点击筛选） ===== */
+  .summary { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+  .sum-pill {
+    font-family: inherit; font-size: 13px; padding: 6px 11px; border-radius: 999px; cursor: pointer;
+    background: var(--card); border: 1px solid var(--border); color: var(--text-sub); transition: .15s;
+  }
+  .sum-pill b { font-family: var(--mono); color: var(--text); margin-left: 5px; }
+  .sum-pill.buy b { color: var(--green); } .sum-pill.sus b { color: var(--red); }
+  .sum-pill.trd b { color: var(--blue); } .sum-pill.chg-pill b { color: var(--amber); }
+  .sum-pill.active { border-color: var(--primary); color: var(--primary); background: var(--primary-soft); box-shadow: var(--glow); }
+
+  /* ===== 额度变化标记 ===== */
+  .chg { display: inline-flex; align-items: center; gap: 3px; font-size: 11px; font-weight: 700; padding: 1px 7px; border-radius: 999px; margin-left: 6px; white-space: nowrap; vertical-align: middle; }
+  .chg small { font-weight: 400; opacity: .75; }
+  .chg-up { background: var(--green-soft); color: var(--green); }
+  .chg-down { background: var(--amber-soft); color: var(--amber); }
+  .chg-sus { background: var(--red-soft); color: var(--red); }
+
+  /* ===== 详情 ===== */
+  .ci-more { color: var(--primary); font-size: 12px; cursor: pointer; margin-left: auto; }
+  .fname .ci-more { margin-left: 0; font-size: 11px; }
+  tr.frow { cursor: pointer; }
+  .card-item { cursor: pointer; }
+  .ci-detail { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--border); cursor: default; }
+  .detail-row td { background: var(--surface-2); cursor: default; }
+  .d-fund { font-size: 12.5px; color: var(--text-sub); line-height: 1.8; }
+  .d-fund + .d-fund { margin-top: 8px; padding-top: 8px; border-top: 1px dotted var(--border); }
+  .d-head { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; color: var(--text); }
+  .d-facts b { color: var(--text); font-family: var(--mono); }
+  .d-fund a { color: var(--primary); }
+  .mini-btn {
+    font-family: inherit; font-size: 11.5px; padding: 2px 9px; border-radius: 6px; cursor: pointer; text-decoration: none;
+    border: 1px solid var(--border-strong); background: var(--surface-2); color: var(--text) !important; white-space: nowrap;
+  }
+  .mini-btn:hover { border-color: var(--primary); }
+
+  /* ===== 主题：常用在前，其余折叠 ===== */
+  .topics-label { font-size: 13px; color: var(--text-sub); align-self: center; }
+  .chip.ghost { border-style: dashed; }
+  .more-topics { display: none; width: 100%; flex-wrap: wrap; gap: 8px; }
+  .more-topics.open { display: flex; }
+
+  /* ===== 排序下拉（手机） ===== */
+  #sortSel {
+    display: none; width: 100%; padding: 9px 10px; border-radius: 10px; font-size: 14px; font-family: inherit;
+    background: var(--surface-2); border: 1px solid var(--border); color: var(--text);
+  }
+
   @media (max-width: 700px) {
     body { padding: 18px 12px 56px; }
     header { margin-bottom: 14px; }
     .meta-row { margin-top: 10px; gap: 8px; }
-    .sidebar .stats { grid-template-columns: repeat(4, 1fr) !important; gap: 6px; margin-bottom: 10px; }
-    .sidebar .stat { padding: 8px 9px; }
-    .sidebar .stat .label { font-size: 10px; letter-spacing: 0; }
-    .sidebar .stat .num { font-size: 18px; margin-top: 2px; }
     .controls { padding: 10px; gap: 10px; margin-bottom: 10px; }
+    #sortSel { display: block; }
+    .summary { margin-bottom: 10px; }
+    .sum-pill { padding: 5px 9px; font-size: 12px; }
     #topicToggle { display: inline-block; }
     .topics { display: none; }
     .topics.open { display: flex; }
@@ -343,17 +430,26 @@
   <header>
     <div class="title-row">
       <h1>QDII 基金每日额度追踪</h1>
-
     </div>
     <div class="meta-row">
       <span class="badge"><span class="dot"></span>数据更新：<span id="updatedAt">—</span></span>
       <span class="badge g">净值日期：<span id="navDate">—</span></span>
-      <button class="btn" id="refreshBtn">↻ 刷新数据</button>
+      <span class="badge c" id="cutoff" title="QDII 基金交易日 15:00 前提交按当日净值确认（节假日除外）">—</span>
+      <button class="btn" id="refreshBtn">↻ 刷新</button>
+      <button class="btn" id="helpBtn" aria-expanded="false" title="图例与说明">?</button>
       <button class="theme-switch" id="themeToggle" title="切换 浅色 / 深色" aria-label="切换主题">
         <svg class="ts-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
         <span class="ts-sep"></span>
         <svg class="ts-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
       </button>
+    </div>
+    <div class="help-panel" id="helpPanel">
+      <p><b>额度标签</b>：<span class="status limited">10 元</span> 限大额，文字即每个基金账户单日可申购（含定投）上限；<span class="status normal">不限</span> 正常申购；<span class="status suspended">暂停申购</span>；<span class="status traded">场内交易</span> 场内 ETF 在二级市场买卖，无申购额度。</p>
+      <p><b>口径</b>：主额度是天天基金、支付宝等<b>代销平台</b>的额度。<span class="direct-tag">直销 100 元</span> 是基金公司官方 App / 官网 / 公众号的额度（更高时才显示，来自公告）。</p>
+      <p><b>符号</b>：额度后带 <b>*</b> = 来自半年以前的公告，仅供参考；"限额未公布" = 接口和公告都没给出金额；⚠️ = 接口额度与近期公告不符。悬停额度可看依据的公告。</p>
+      <p><b>变化标记</b>：<span class="chg chg-up">🆕 新开放</span> <span class="chg chg-up">⬆ 放宽</span> <span class="chg chg-down">⬇ 收紧</span> <span class="chg chg-sus">⛔ 新暂停</span>，与上一次抓取对比，保留今日和昨日的变化。</p>
+      <p><b>我的定投</b>：点 ☆ 收藏，收藏的基金固定置顶并汇总今日可投额度；收藏只保存在本浏览器。同一基金的 A / C 等份额合并为一张卡片。</p>
+      <p><b>更新时间</b>：每天北京时间 09:15、14:15 自动抓取。数据来自天天基金 / 东方财富公开接口与基金公司公告，仅供参考，不构成投资建议，下单前以销售平台为准。</p>
     </div>
   </header>
 
@@ -361,12 +457,20 @@
 
   <div class="layout">
     <aside class="sidebar">
-      <div class="stats" id="stats"></div>
+      <div class="fav-box" id="favBox"></div>
+      <div class="summary" id="summary"></div>
       <div class="controls">
         <div class="search">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
           <input id="search" type="text" placeholder="搜索基金代码 / 名称 / 公司 / 跟踪指数…">
         </div>
+        <select id="sortSel" aria-label="排序">
+          <option value="default">排序：可买优先</option>
+          <option value="limit:desc">额度 高→低</option>
+          <option value="totalFee:asc">总费率 低→高</option>
+          <option value="scale:desc">规模 大→小</option>
+          <option value="navChangePct:desc">涨跌幅 高→低</option>
+        </select>
         <div class="filters" id="filters"></div>
       </div>
     </aside>
@@ -377,6 +481,7 @@
       <table>
         <thead>
           <tr>
+            <th class="star-col" title="收藏到我的定投"></th>
             <th data-key="code">代码 <span class="arrow"></span></th>
             <th data-key="name">基金名称 <span class="arrow"></span></th>
             <th class="right" data-key="limit">单日限额 <span class="arrow"></span></th>
@@ -401,9 +506,7 @@
 
   <footer>
     <div class="src">
-      <p>数据来源：<strong>各基金公司公告</strong>（经天天基金 / 东方财富公开接口获取），每日由 GitHub Actions 自动抓取，<strong>仅供参考，不构成投资建议</strong>。</p>
-      <p style="margin-top:6px">⚠️ 单日限额单位为元；个别基金以"基金公司公告为准"，本表为 best-effort（主额度为天天基金、支付宝等代销平台口径；绿色"直销"标签是基金公司官方 App / 官网的更高额度，来自公告；限额可悬停看相关公告；带 * 的额度来自半年以前的公告，仅供参考）；ETF 场内品种在二级市场交易，无申购买卖额度概念。</p>
-      <p style="margin-top:6px">📌 加基金 / 改清单：编辑 <code>scripts/fetch_funds.py</code> 的 <code>CORE_FUNDS</code> 与 <code>OVERRIDES</code>。</p>
+      <p>数据来源：天天基金 / 东方财富公开接口与<strong>各基金公司公告</strong>，每日自动抓取，<strong>仅供参考，不构成投资建议</strong>。图例见右上角 <b>?</b>。</p>
     </div>
   </footer>
 </div>
@@ -427,8 +530,21 @@ const STATUS_LABEL = {
   suspended: { text: "暂停",     cls: "suspended" },
   traded:    { text: "场内",     cls: "traded" },
 };
+const DEFAULT_CATS = ["纳斯达克100", "标普500"];
+const isBuy = f => f.status === "normal" || f.status === "limited";
+const isUsd = f => /美元|美汇|美钞/.test(f.name || "");
 
-const state = { data: null, cats: new Set(["纳斯达克100", "标普500"]), query: "", sortKey: "default", sortDir: "asc", withQuota: true, hideUsd: true };
+// statusFilter：null=按"可买"开关；"all"=全部；"suspended"/"traded"=只看该状态；"changed"=只看额度变化
+const state = { data: null, cats: new Set(DEFAULT_CATS), query: "", sortKey: "default", sortDir: "asc",
+  statusFilter: null, hideUsd: true, open: new Set(), moreTopics: false };
+
+// ── 本地存储（收藏只存在本浏览器；隐私模式等不可用时静默降级）────────────
+const store = {
+  get(k, d) { try { const v = localStorage.getItem(k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} },
+};
+const FAVS = new Set(store.get("qdii.favs", []));
+const saveFavs = () => store.set("qdii.favs", [...FAVS]);
 
 // 分类：脚本输出的 group 即展示分类；chip 按数据动态生成、按 PREFERRED 顺序排列
 const PREFERRED = ["纳斯达克100","标普500","道琼斯","日经225","日本","德国","法国","欧洲",
@@ -440,16 +556,26 @@ let CAT_ORDER = [];
 const catOf = f => f.group || "其他";
 const catRank = c => { const i = PREFERRED.indexOf(c); return i < 0 ? 999 : i; };
 
+// ── 文本工具 ────────────────────────────────────────────────────────────
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const yuan = n => n >= 10000 ? (n / 10000) + " 万" : n.toLocaleString() + " 元";
+const money = n => n.toLocaleString() + " 元";   // 合计金额用完整数字，避免"2.001 万"
+function pct(n) {
+  if (n == null || isNaN(n)) return '<span class="flat">—</span>';
+  const cls = n > 0 ? "up" : n < 0 ? "down" : "flat";
+  return `<span class="${cls} num-mono">${n > 0 ? "+" : ""}${n.toFixed(2)}%</span>`;
+}
+const totalFeeOf = f => (f.mgmtFee != null || f.custodyFee != null) ? (f.mgmtFee || 0) + (f.custodyFee || 0) : null;
+function bjDate(daysAgo = 0) { return new Date(Date.now() + 8 * 3600e3 - daysAgo * 864e5).toISOString().slice(0, 10); }
+
+// ── 额度展示 ────────────────────────────────────────────────────────────
 function fmtLimit(f) {
   if (f.status === "suspended") return "暂停申购";
   if (f.status === "traded") return "场内交易";
-  if (f.limitText && f.limitText !== "—") return f.limitText;   // data.json 提供的现成文本
+  if (f.limitText && f.limitText !== "—") return f.limitText;
   if (f.limit == null) return "不限";
-  if (f.limit >= 10000) return (f.limit / 10000) + " 万";
-  return f.limit.toLocaleString() + " 元";
+  return yuan(f.limit);
 }
-const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-const yuan = n => n >= 10000 ? (n / 10000) + " 万" : n.toLocaleString() + " 元";
 function annTip(a) {
   const fmt = n => a.currency === "USD" ? n + " 美元" : yuan(n);
   let amt = (a.limits && a.limits.length) ? a.limits.map(fmt).join(" / ") : "";
@@ -458,7 +584,6 @@ function annTip(a) {
   return (a.stale ? "较早公告（仅供参考，可能已被新公告取代）" : "最新相关公告") + " " + (a.date || "") + "：" + amt
     + (a.title ? "\n" + a.title : "");
 }
-// 额度主体：彩色状态胶囊（文字即额度），有公告时可悬停查看
 function limitPill(f) {
   const st = STATUS_LABEL[f.status] || STATUS_LABEL.normal;
   let txt = esc(fmtLimit(f));
@@ -469,135 +594,263 @@ function limitPill(f) {
   const mark = a.review ? ' <span title="接口额度与近期公告不符，请以销售平台为准">⚠️</span>' : '';
   return `<span class="ann-mark" title="${esc(annTip(a))}">${pill}</span>${mark}`;
 }
-// 起投信息：可申购时显示最低定投 / 起购金额
 function minText(f) {
-  if (f.status !== "normal" && f.status !== "limited") return "";
+  if (!isBuy(f)) return "";
   const m = f.minDt ?? f.minPurchase;
   return m ? "起投 " + yuan(m) : "";
 }
-// 直销额度：基金公司官方 App / 官网额度比代销平台高时才显示
 function directTag(f) {
   if (f.directLimit == null || f.status !== "limited") return "";
   if (f.limit != null && f.directLimit <= f.limit) return "";
   const a = f.announcement || {};
-  const tip = `基金公司直销渠道（官方 App / 官网 / 公众号）单日额度，来自 ${a.date || ""} 公告；天天基金、支付宝等代销平台按左侧额度`;
+  const tip = `基金公司直销渠道（官方 App / 官网 / 公众号）单日额度，来自 ${a.date || ""} 公告；天天基金、支付宝等代销平台按主额度`;
   return `<span class="direct-tag" title="${esc(tip)}">直销 ${esc(f.directLimitText)}</span>`;
 }
 function limitCell(f) {
   const sub = minText(f);
   return `<span class="limit-cell">${limitPill(f)}${directTag(f)}${sub ? `<span class="limit-sub">${sub}</span>` : ""}</span>`;
 }
-function pct(n) {
-  if (n == null || isNaN(n)) return '<span class="flat">—</span>';
-  const cls = n > 0 ? "up" : n < 0 ? "down" : "flat";
-  const sign = n > 0 ? "+" : "";
-  return `<span class="${cls} num-mono">${sign}${n.toFixed(2)}%</span>`;
+
+// ── 额度变化标记 ────────────────────────────────────────────────────────
+const CHANGE = {
+  open:    { t: "🆕 新开放", c: "chg-up" },
+  up:      { t: "⬆ 放宽",   c: "chg-up" },
+  down:    { t: "⬇ 收紧",   c: "chg-down" },
+  suspend: { t: "⛔ 新暂停", c: "chg-sus" },
+};
+function changeBadge(f) {
+  const ch = f && f.change, m = ch && CHANGE[ch.type];
+  if (!m) return "";
+  const when = ch.date === bjDate() ? "今日" : ch.date === bjDate(1) ? "昨日" : (ch.date || "").slice(5);
+  const detail = (ch.type === "up" || ch.type === "down") ? ` ${ch.from}→${ch.to}` : "";
+  return `<span class="chg ${m.c}" title="${esc(when + "：" + ch.from + " → " + ch.to)}">${m.t}${esc(detail)} <small>${when}</small></span>`;
 }
 
-function renderStats() {
-  const arr = baseFilter();   // 跟随主题 / 美元 / 搜索筛选，不受"有额度"开关影响
-  const total = arr.length;
-  const n = arr.filter(f => f.status === "normal").length;
-  const l = arr.filter(f => f.status === "limited").length;
-  const s = arr.filter(f => f.status === "suspended").length;
-  document.getElementById("stats").innerHTML = `
-    <div class="stat"><div class="label">当前范围</div><div class="num">${total}</div></div>
-    <div class="stat green"><div class="label">✅ 正常申购</div><div class="num">${n}</div></div>
-    <div class="stat amber"><div class="label">⚠️ 限大额</div><div class="num">${l}</div></div>
-    <div class="stat red"><div class="label">⛔ 暂停</div><div class="num">${s}</div></div>`;
+// ── 同一基金的 A / C 等份额合并 ──────────────────────────────────────────
+const CLASS_RE = /([^A-Za-z])([A-Z])类?(人民币|美元现汇|美元现钞|美元|美汇|美钞|现汇|现钞)?$/;
+function shareInfo(f) {
+  const n = (f.name || "").trim(), m = n.match(CLASS_RE);
+  if (!m) return { key: f.company + "|" + n, base: n, cls: "" };
+  const base = n.slice(0, m.index + 1) + (m[3] || "");
+  // 只合并 A / C 类：两者条款基本一致；D / E / I 等份额额度和销售渠道常不同，单独成卡
+  const merge = m[2] === "A" || m[2] === "C";
+  return { key: f.company + "|" + base + (merge ? "" : "|" + m[2]), base: merge ? base : n, cls: m[2] };
 }
-
-function defaultCmp(a, b) {
-  const ca = CAT_ORDER.indexOf(catOf(a)), cb = CAT_ORDER.indexOf(catOf(b));
-  if (ca !== cb) return ca - cb;                       // 先按主题分组
+function limitValue(f) {   // 排序用：不限 > 金额 > 未公布 > 场内 / 暂停
+  if (f.status === "normal") return Infinity;
+  if (f.status === "limited") return f.limit ?? 0;
+  return -1;
+}
+function cmpBuy(a, b) {
   const ba = BUY_RANK[a.status] ?? 9, bb = BUY_RANK[b.status] ?? 9;
-  if (ba !== bb) return ba - bb;                       // 再按可买性：正常>限大额>场内>暂停
-  const la = a.limit ?? Infinity, lb = b.limit ?? Infinity;
-  if (la !== lb) return lb - la;                       // 限大额里，额度大（更好买）靠前
-  return (a.name || "").localeCompare(b.name || "", "zh");
+  if (ba !== bb) return ba - bb;
+  return limitValue(b) - limitValue(a);
 }
-function baseFilter() {
+// 把（已排序的）基金列表按份额合并，组的顺序取其中排名最靠前的成员
+function groupFunds(list) {
+  const map = new Map();
+  list.forEach(f => {
+    const s = shareInfo(f);
+    if (!map.has(s.key)) map.set(s.key, { key: s.key, base: s.base, members: [] });
+    map.get(s.key).members.push(f);
+  });
+  return [...map.values()].map(g => {
+    g.members.sort((a, b) => shareInfo(a).cls.localeCompare(shareInfo(b).cls));
+    g.best = [...g.members].sort(cmpBuy)[0];
+    g.fav = g.members.some(f => FAVS.has(f.code));
+    return g;
+  });
+}
+// 所有份额（含被筛掉的）都算进组，收藏 / 汇总按整组处理
+function allMembersOf(key) { return state.data.funds.filter(f => shareInfo(f).key === key); }
+
+// ── 筛选与排序 ──────────────────────────────────────────────────────────
+function scopeFilter() {   // 主题 / 美元 / 搜索；不含状态
   const q = state.query.trim().toLowerCase();
   return state.data.funds.filter(f => {
-    if (!state.cats.has(catOf(f))) return false;        // 主题多选过滤
-    if (state.hideUsd && (f.name || "").includes("美元")) return false; // 美元份额默认隐藏
     if (q) {
-      const hay = (f.code + f.name + f.index + f.company + (f.group || "") + catOf(f)).toLowerCase();
+      const hay = (f.code + f.name + f.index + f.company + catOf(f)).toLowerCase();
       if (!hay.includes(q)) return false;
     }
+    if (!state.cats.has(catOf(f))) return false;
+    if (state.hideUsd && isUsd(f)) return false;
     return true;
   });
 }
+function statusOk(f) {
+  switch (state.statusFilter) {
+    case "all": return true;
+    case "changed": return !!f.change;
+    case "suspended": case "traded": return f.status === state.statusFilter;
+    default: return isBuy(f);
+  }
+}
+function defaultCmp(a, b) {
+  const ca = CAT_ORDER.indexOf(catOf(a)), cb = CAT_ORDER.indexOf(catOf(b));
+  if (ca !== cb) return ca - cb;
+  const c = cmpBuy(a, b);
+  if (c) return c;
+  return (a.name || "").localeCompare(b.name || "", "zh");
+}
+function sortValue(f, key) {
+  switch (key) {
+    case "limit": return limitValue(f);
+    case "totalFee": return totalFeeOf(f) ?? Infinity;
+    case "nav": case "navChangePct": case "etfPremium": case "scale":
+    case "mgmtFee": case "custodyFee": case "purchaseFee": return f[key] ?? -Infinity;
+    default: return f[key] || "";
+  }
+}
 function getView() {
-  let view = baseFilter().filter(f =>
-    !state.withQuota || f.status === "normal" || f.status === "limited"); // 有额度=可申购
-  if (state.sortKey === "default") { view.sort(defaultCmp); return view; }
-  const key = state.sortKey, dir = state.sortDir === "asc" ? 1 : -1;
-  view.sort((a, b) => {
-    let va, vb;
-    switch (key) {
-      case "nav":           va = a.nav ?? -1;        vb = b.nav ?? -1; break;
-      case "navChangePct":  va = a.navChangePct ?? -999; vb = b.navChangePct ?? -999; break;
-      case "etfPremium":    va = a.etfPremium ?? -999;   vb = b.etfPremium ?? -999; break;
-      case "scale":         va = a.scale ?? -1;       vb = b.scale ?? -1; break;
-      case "mgmtFee":       va = a.mgmtFee ?? -1;     vb = b.mgmtFee ?? -1; break;
-      case "custodyFee":    va = a.custodyFee ?? -1;  vb = b.custodyFee ?? -1; break;
-      case "totalFee":      va = (a.mgmtFee ?? -1) + (a.custodyFee ?? 0); vb = (b.mgmtFee ?? -1) + (b.custodyFee ?? 0); break;
-      case "purchaseFee":   va = a.purchaseFee ?? -1; vb = b.purchaseFee ?? -1; break;
-      case "status":        va = a.status;           vb = b.status; break;
-      case "limit":         va = a.limit == null ? Infinity : a.limit; vb = b.limit == null ? Infinity : b.limit; break;
-      default:              va = a[key] || "";       vb = b[key] || "";
+  const q = state.query.trim().toLowerCase();
+  // 收藏的基金在默认视图里不受主题 / 状态筛选影响，始终置顶（搜索仍然生效）
+  const pinFavs = state.statusFilter === null;
+  let view = state.data.funds.filter(f => {
+    if (pinFavs && FAVS.has(f.code)) {
+      return !q || (f.code + f.name + f.index + f.company).toLowerCase().includes(q);
     }
-    if (va < vb) return -1 * dir;
-    if (va > vb) return 1 * dir;
-    return 0;
+    return false;
   });
-  return view;
+  const seen = new Set(view.map(f => f.code));
+  view = view.concat(scopeFilter().filter(f => !seen.has(f.code) && statusOk(f)));
+  if (state.sortKey === "default") view.sort(defaultCmp);
+  else {
+    const dir = state.sortDir === "asc" ? 1 : -1, k = state.sortKey;
+    view.sort((a, b) => { const va = sortValue(a, k), vb = sortValue(b, k); return va < vb ? -dir : va > vb ? dir : 0; });
+  }
+  // 收藏置顶（稳定排序，保留组内顺序）
+  return view.filter(f => FAVS.has(f.code)).concat(view.filter(f => !FAVS.has(f.code)));
 }
 
-function renderCards(view) {
-  const el = document.getElementById("cards");
-  if (view.length === 0) { el.innerHTML = `<div class="empty">没有符合条件的基金</div>`; return; }
-  el.innerHTML = view.map(f => {
-    const meta = [];
-    meta.push(`<span>${f.code}</span>`);
-    if (f.company) meta.push(`<span>${esc(f.company)}</span>`);
-    const mt = minText(f); if (mt) meta.push(`<span>${mt}</span>`);
-    const tf = (f.mgmtFee != null || f.custodyFee != null) ? (f.mgmtFee || 0) + (f.custodyFee || 0) : null;
-    if (tf != null) meta.push(`<span>费率 <b>${tf.toFixed(2)}%</b></span>`);
-    if (f.nav != null) meta.push(`<span>净值 <b>${f.nav.toFixed(4)}</b> ${pct(f.navChangePct)}</span>`);
-    if (f.etfPremium != null) meta.push(`<span>溢价 ${f.etfPremium > 0 ? "+" : ""}${f.etfPremium.toFixed(2)}%</span>`);
-    return `<div class="card-item">
-      <div class="ci-top">
-        <div class="ci-name">${esc(f.name)}<span class="tag ${f.type}">${(f.type || "").toUpperCase()}</span></div>
-        <div class="ci-limit">${limitPill(f)}${directTag(f)}</div>
+// ── 我的定投汇总 ────────────────────────────────────────────────────────
+function renderFavBox() {
+  const el = document.getElementById("favBox");
+  const favFunds = state.data.funds.filter(f => FAVS.has(f.code));
+  if (!favFunds.length) {
+    el.innerHTML = `<div class="fav-empty">⭐ <b>我的定投</b>：点基金旁的 ☆ 加入清单，置顶显示并汇总今天能投多少。</div>`;
+    return;
+  }
+  const groups = groupFunds(favFunds);
+  let total = 0, direct = 0, unlimited = 0, paused = 0, unknown = 0, usd = 0;
+  groups.forEach(g => {
+    const f = g.best;
+    if (isUsd(f)) { usd++; return; }
+    if (f.status === "normal") { unlimited++; return; }
+    if (f.status !== "limited") { paused++; return; }
+    if (f.limit == null) { unknown++; return; }
+    total += f.limit;
+    direct += Math.max(f.limit, f.directLimit || 0);
+  });
+  const parts = [];
+  if (unlimited) parts.push(`${unlimited} 只不限额`);
+  if (direct > total) parts.push(`走直销最多 <b>${money(direct)}</b>`);
+  if (paused) parts.push(`<span class="neg">${paused} 只暂停/场内</span>`);
+  if (unknown) parts.push(`${unknown} 只额度未公布`);
+  if (usd) parts.push(`${usd} 只美元份额未计入`);
+  el.innerHTML = `<div class="fav-title">⭐ 我的定投 · ${groups.length} 只</div>
+    <div class="fav-total">今日可投合计 <b>${money(total)}</b> <span class="fav-note">代销口径</span></div>
+    ${parts.length ? `<div class="fav-parts">${parts.join(" · ")}</div>` : ""}`;
+}
+
+// ── 状态摘要（点击即筛选）────────────────────────────────────────────────
+function renderSummary() {
+  const arr = scopeFilter();
+  const cnt = p => arr.filter(p).length;
+  const items = [
+    ["all", "全部", arr.length, ""],
+    [null, "可买", cnt(isBuy), "buy"],
+    ["suspended", "暂停", cnt(f => f.status === "suspended"), "sus"],
+    ["traded", "场内", cnt(f => f.status === "traded"), "trd"],
+    ["changed", "🔔 变化", cnt(f => !!f.change), "chg-pill"],
+  ];
+  document.getElementById("summary").innerHTML = items.map(([k, label, n, cls]) =>
+    `<button class="sum-pill ${cls}${state.statusFilter === k ? " active" : ""}" data-sf="${k ?? ""}">${label}<b>${n}</b></button>`
+  ).join("");
+}
+
+// ── 详情（卡片展开 / 表格展开行）────────────────────────────────────────
+function detailHtml(members) {
+  return members.map(f => {
+    const a = f.announcement;
+    const ann = a && a.title
+      ? `<div>📄 ${esc(a.date || "")} ${a.stale ? "（较早公告）" : ""}<a href="https://fund.eastmoney.com/gonggao/${f.code},${esc(a.artId)}.html" target="_blank" rel="noopener">${esc(a.title)}…</a></div>`
+      : "";
+    const tf = totalFeeOf(f);
+    const facts = [
+      `额度 <b>${esc(fmtLimit(f))}</b>`,
+      f.directLimitText && directTag(f) ? `直销 <b>${esc(f.directLimitText)}</b>` : "",
+      minText(f),
+      tf != null ? `总费率 <b>${tf.toFixed(2)}%</b>（管理 ${f.mgmtFee ?? "—"}% / 托管 ${f.custodyFee ?? "—"}% / 申购 ${f.purchaseFee ?? "—"}%）` : "",
+      f.scale != null ? `规模 ${f.scale} 亿` : "",
+      f.index ? `跟踪 ${esc(f.index)}` : "",
+    ].filter(Boolean).join(" · ");
+    return `<div class="d-fund">
+      <div class="d-head"><b>${esc(f.name)}</b>
+        <span class="code">${f.code}</span>
+        <button class="mini-btn" data-copy="${f.code}">复制代码</button>
+        <a class="mini-btn" href="https://fund.eastmoney.com/${f.code}.html" target="_blank" rel="noopener">天天基金 ↗</a>
       </div>
-      <div class="ci-meta">${meta.join("")}</div>
+      <div class="d-facts">${facts}</div>${ann}
     </div>`;
   }).join("");
 }
 
-function render() {
-  const view = getView(), tb = document.getElementById("tbody");
-  renderStats();
-  renderCards(view);
-  if (view.length === 0) { tb.innerHTML = `<tr><td colspan="12"><div class="empty">没有符合条件的基金</div></td></tr>`; return; }
+// ── 手机卡片（按份额合并）────────────────────────────────────────────────
+function renderCards(view) {
+  const el = document.getElementById("cards");
+  if (view.length === 0) { el.innerHTML = `<div class="empty">没有符合条件的基金</div>`; return; }
+  el.innerHTML = groupFunds(view).map(g => {
+    const f = g.best, multi = g.members.length > 1;
+    const chgFund = g.members.find(m => m.change);
+    const meta = [];
+    meta.push(`<span>${g.members.map(m => m.code).join(" / ")}</span>`);
+    if (f.company) meta.push(`<span>${esc(f.company)}</span>`);
+    if (multi) {
+      g.members.forEach(m => {
+        const tf = totalFeeOf(m);
+        const cls = shareInfo(m).cls || "—";
+        const lim = fmtLimit(m) !== fmtLimit(f) ? ` ${esc(fmtLimit(m))}` : "";
+        meta.push(`<span>${cls}${lim}${tf != null ? ` 费率 <b>${tf.toFixed(2)}%</b>` : ""}</span>`);
+      });
+    } else {
+      const tf = totalFeeOf(f);
+      if (tf != null) meta.push(`<span>费率 <b>${tf.toFixed(2)}%</b></span>`);
+    }
+    const mt = minText(f); if (mt) meta.push(`<span>${mt}</span>`);
+    if (f.nav != null) meta.push(`<span>净值 <b>${f.nav.toFixed(4)}</b> ${pct(f.navChangePct)}</span>`);
+    if (f.etfPremium != null) meta.push(`<span>溢价 ${f.etfPremium > 0 ? "+" : ""}${f.etfPremium.toFixed(2)}%</span>`);
+    const open = state.open.has(g.key);
+    return `<div class="card-item${g.fav ? " fav" : ""}" data-key="${esc(g.key)}">
+      <div class="ci-top">
+        <div class="ci-name"><button class="star${g.fav ? " on" : ""}" data-fav="${esc(g.key)}" aria-label="收藏">${g.fav ? "★" : "☆"}</button>${esc(g.base)}<span class="tag ${f.type}">${(f.type || "").toUpperCase()}</span>${changeBadge(chgFund)}</div>
+        <div class="ci-limit">${limitPill(f)}${directTag(f)}</div>
+      </div>
+      <div class="ci-meta">${meta.join("")}<span class="ci-more">${open ? "收起 ▴" : "详情 ▾"}</span></div>
+      ${open ? `<div class="ci-detail">${detailHtml(g.members)}</div>` : ""}
+    </div>`;
+  }).join("");
+}
+
+// ── 桌面表格 ────────────────────────────────────────────────────────────
+function renderTable(view) {
+  const tb = document.getElementById("tbody");
+  if (view.length === 0) { tb.innerHTML = `<tr><td colspan="13"><div class="empty">没有符合条件的基金</div></td></tr>`; return; }
   tb.innerHTML = view.map(f => {
+    const fav = FAVS.has(f.code), open = state.open.has("row:" + f.code);
     const nav = f.nav != null ? `<span class="nav-main">${f.nav.toFixed(4)}</span><span class="nav-date">${f.navDate || ""}</span>` : '<span class="flat">—</span>';
     const premium = f.etfPremium != null
       ? `<span class="${f.etfPremium > 3 ? 'up' : f.etfPremium < -1 ? 'down' : 'flat'} num-mono">${f.etfPremium > 0 ? '+' : ''}${f.etfPremium.toFixed(2)}%</span>`
       : '<span class="flat">—</span>';
     const scale = f.scale != null ? `<span class="num-mono">${f.scale}</span>` : '<span class="flat">—</span>';
     const fee = v => v != null ? `<span class="num-mono">${v.toFixed(2)}%</span>` : '<span class="flat">—</span>';
-    const totalFee = (f.mgmtFee != null || f.custodyFee != null) ? (f.mgmtFee || 0) + (f.custodyFee || 0) : null;
+    const tf = totalFeeOf(f);
     const feeTxt = v => v != null ? v.toFixed(2) + "%" : "—";
-    const feeTip = ("管理 " + feeTxt(f.mgmtFee) + " / 托管 " + feeTxt(f.custodyFee) + " / 申购 " + feeTxt(f.purchaseFee)).replace(/"/g, "&quot;");
-    const totalCell = totalFee != null
-      ? `<span class="total-fee" title="${feeTip}">${totalFee.toFixed(2)}%</span>`
-      : '<span class="flat">—</span>';
-    return `<tr>
+    const feeTip = "管理 " + feeTxt(f.mgmtFee) + " / 托管 " + feeTxt(f.custodyFee) + " / 申购 " + feeTxt(f.purchaseFee);
+    const totalCell = tf != null ? `<span class="total-fee" title="${esc(feeTip)}">${tf.toFixed(2)}%</span>` : '<span class="flat">—</span>';
+    return `<tr class="frow${fav ? " fav" : ""}" data-code="${f.code}">
+      <td class="star-col"><button class="star${fav ? " on" : ""}" data-fav-code="${f.code}" aria-label="收藏">${fav ? "★" : "☆"}</button></td>
       <td><span class="code">${f.code}</span></td>
-      <td class="fname">${esc(f.name)}<span class="tag ${f.type}">${(f.type||'').toUpperCase()}</span><span class="co">${esc(f.company)}</span></td>
+      <td class="fname">${esc(f.name)}<span class="tag ${f.type}">${(f.type || '').toUpperCase()}</span>${changeBadge(f)}<span class="co">${esc(f.company)} · <span class="ci-more">${open ? "收起 ▴" : "详情 ▾"}</span></span></td>
       <td class="right">${limitCell(f)}</td>
       <td>${esc(f.index) || "—"}</td>
       <td class="right">${nav}</td>
@@ -608,18 +861,30 @@ function render() {
       <td class="right fee-col">${fee(f.custodyFee)}</td>
       <td class="right fee-col">${fee(f.purchaseFee)}</td>
       <td class="right">${totalCell}</td>
-    </tr>`;
+    </tr>${open ? `<tr class="detail-row"><td></td><td colspan="12">${detailHtml([f])}</td></tr>` : ""}`;
   }).join("");
   document.querySelectorAll("thead th").forEach(th => {
     th.classList.remove("sort-asc", "sort-desc");
     const arrow = th.querySelector(".arrow"); if (arrow) arrow.textContent = "";
-    if (th.dataset.key === state.sortKey) {
+    if (th.dataset.key && th.dataset.key === state.sortKey) {
       th.classList.add(state.sortDir === "asc" ? "sort-asc" : "sort-desc");
       if (arrow) arrow.textContent = state.sortDir === "asc" ? "▲" : "▼";
     }
   });
 }
 
+function render() {
+  const view = getView();
+  renderFavBox();
+  renderSummary();
+  renderTable(view);
+  renderCards(view);
+  const sel = document.getElementById("sortSel");
+  const v = state.sortKey === "default" ? "default" : state.sortKey + ":" + state.sortDir;
+  sel.value = [...sel.options].some(o => o.value === v) ? v : "default";
+}
+
+// ── 主题筛选：常用主题在前，其余收进"更多" ──────────────────────────────
 function buildCategories() {
   const set = new Set((state.data.funds || []).map(catOf));
   CAT_ORDER = [...set].sort((a, b) => {
@@ -627,41 +892,48 @@ function buildCategories() {
     if (pa !== pb) return pa - pb;
     return a.localeCompare(b, "zh");
   });
-  // 默认分类若不在数据里，退化为第一个
-  const have = c => CAT_ORDER.includes(c);
-  const keep = [...state.cats].filter(have);
-  if (keep.length === 0) state.cats = new Set([CAT_ORDER[0]].filter(Boolean));
-  else state.cats = new Set(keep);
+  const keep = [...state.cats].filter(c => CAT_ORDER.includes(c));
+  state.cats = new Set(keep.length ? keep : [CAT_ORDER[0]].filter(Boolean));
+}
+function commonCats() {   // 默认主题 + 收藏基金所在主题 + 当前已选主题
+  const s = new Set(DEFAULT_CATS);
+  state.data.funds.forEach(f => { if (FAVS.has(f.code)) s.add(catOf(f)); });
+  state.cats.forEach(c => s.add(c));
+  return CAT_ORDER.filter(c => s.has(c));
 }
 function renderChips() {
-  const el = document.getElementById("filters");
-  el.innerHTML = '<button class="chip" data-cat="__quota" title="只显示可申购（正常/限大额）的基金；暂停和场内的隐藏">✅有额度</button>'
-    + '<button class="chip" data-cat="__usd" title="隐藏美元现汇/现钞份额，只看人民币份额">💵隐藏美元</button>'
+  const common = commonCats(), rest = CAT_ORDER.filter(c => !common.includes(c));
+  const chip = c => `<button class="chip" data-cat="${esc(c)}">${esc(c)}</button>`;
+  document.getElementById("filters").innerHTML =
+    '<button class="chip" data-cat="__usd" title="隐藏美元现汇/现钞份额，只看人民币份额">💵隐藏美元</button>'
     + '<button class="chip" id="topicToggle" data-cat="__topics"></button>'
     + '<div class="topics" id="topics">'
-    + '<span style="font-size:13px;color:var(--text-sub);align-self:center">主题（可多选）：</span>'
-    + CAT_ORDER.map(c => `<button class="chip" data-cat="${c}">${c}</button>`).join("")
+    + '<span class="topics-label">主题（可多选）：</span>'
+    + common.map(chip).join("")
+    + (rest.length ? `<button class="chip ghost" data-cat="__more">${state.moreTopics ? "收起" : "更多主题"} ${state.moreTopics ? "▴" : "▾"}</button>` : "")
+    + `<div class="more-topics${state.moreTopics ? " open" : ""}">${rest.map(chip).join("")}</div>`
     + '<button class="chip" data-cat="__all">全部</button>'
     + '<button class="chip" data-cat="__reset" title="恢复默认：纳斯达克100 + 标普500">↺ 默认</button>'
     + '</div>';
   syncChips();
 }
-
-function applyData(data, isFallback) {
-  state.data = data;
-  buildCategories();
-  renderChips();
-  document.getElementById("updatedAt").textContent = data.updatedAt || "—";
-  const dates = (data.funds||[]).map(f => f.navDate).filter(d => d && /^\d{4}-\d{2}-\d{2}$/.test(d)).sort();
-  document.getElementById("navDate").textContent = dates.length ? dates[dates.length-1] : "—";
-  document.getElementById("banner").innerHTML = isFallback
-    ? `<div class="banner">⚠️ 本地模式：正在使用内置示例数据。部署到 GitHub Pages / 本地起服务后，会自动读取每天抓取的 <code style="background:rgba(0,0,0,.08);padding:1px 4px;border-radius:3px">data.json</code>。</div>`
-    : staleBanner(data.updatedAt);
-  render();
+function syncChips() {
+  document.querySelectorAll("#filters .chip").forEach(c => {
+    const cat = c.dataset.cat;
+    if (cat === "__usd") { c.classList.toggle("active", state.hideUsd); return; }
+    if (cat === "__reset" || cat === "__more") return;
+    if (cat === "__topics") {   // 手机上的折叠按钮，显示当前已选主题
+      const all = state.cats.size === CAT_ORDER.length;
+      const open = document.getElementById("topics").classList.contains("open");
+      c.textContent = "主题：" + (all ? "全部" : [...state.cats].join("、")) + (open ? " ▴" : " ▾");
+      return;
+    }
+    c.classList.toggle("active", cat === "__all" ? state.cats.size === CAT_ORDER.length : state.cats.has(cat));
+  });
 }
 
-// 正常每天 09:15、14:15 更新；超过 24 小时没更新说明自动抓取出了问题
-const STALE_HOURS = 24;
+// ── 数据加载与提示 ──────────────────────────────────────────────────────
+const STALE_HOURS = 24;   // 正常每天 09:15、14:15 更新；超过 24 小时没更新说明自动抓取出了问题
 function staleBanner(updatedAt) {
   const t = Date.parse(String(updatedAt || "").replace(" ", "T") + "+08:00");
   if (isNaN(t)) return "";
@@ -670,59 +942,105 @@ function staleBanner(updatedAt) {
   const ago = hours < 48 ? Math.floor(hours) + " 小时" : Math.floor(hours / 24) + " 天";
   return `<div class="banner stale">⛔ 数据已 ${ago}未更新（最后更新 ${esc(updatedAt)}），自动抓取可能出了问题。额度可能已变化，下单前请以销售平台为准。</div>`;
 }
-
+function applyData(data, isFallback) {
+  state.data = data;
+  buildCategories();
+  renderChips();
+  document.getElementById("updatedAt").textContent = data.updatedAt || "—";
+  const dates = (data.funds || []).map(f => f.navDate).filter(d => d && /^\d{4}-\d{2}-\d{2}$/.test(d)).sort();
+  document.getElementById("navDate").textContent = dates.length ? dates[dates.length - 1] : "—";
+  document.getElementById("banner").innerHTML = isFallback
+    ? `<div class="banner">⚠️ 本地模式：正在使用内置示例数据。部署到 GitHub Pages / 本地起服务后，会自动读取每天抓取的 <code style="background:rgba(0,0,0,.08);padding:1px 4px;border-radius:3px">data.json</code>。</div>`
+    : staleBanner(data.updatedAt);
+  render();
+}
 async function loadData() {
   try {
     const res = await fetch("data.json?t=" + Date.now());
     if (!res.ok) throw new Error(res.status);
-    const data = await res.json();
-    applyData(data, false);
+    applyData(await res.json(), false);
   } catch (e) {
     applyData(FALLBACK, true);
   }
 }
 
-function syncChips() {
-  document.querySelectorAll("#filters .chip").forEach(c => {
-    const cat = c.dataset.cat;
-    if (cat === "__quota") { c.classList.toggle("active", state.withQuota); return; }
-    if (cat === "__usd") { c.classList.toggle("active", state.hideUsd); return; }
-    if (cat === "__reset") return;
-    if (cat === "__topics") {   // 手机上的折叠按钮，显示当前已选主题
-      const all = state.cats.size === CAT_ORDER.length;
-      const names = all ? "全部" : [...state.cats].join("、");
-      const open = document.getElementById("topics").classList.contains("open");
-      c.textContent = "主题：" + names + (open ? " ▴" : " ▾");
-      return;
-    }
-    c.classList.toggle("active", cat === "__all" ? state.cats.size === CAT_ORDER.length : state.cats.has(cat));
-  });
+// ── 15:00 截止倒计时（北京时间；节假日不判断）────────────────────────────
+function updateCutoff() {
+  const bj = new Date(Date.now() + 8 * 3600e3);
+  const day = bj.getUTCDay(), mins = bj.getUTCHours() * 60 + bj.getUTCMinutes();
+  const el = document.getElementById("cutoff");
+  if (day === 0 || day === 6) { el.textContent = "周末：下单按下一交易日净值"; el.classList.add("past"); return; }
+  const left = 15 * 60 - mins;
+  if (left <= 0) { el.textContent = "已过 15:00：现在下单按下一交易日净值"; el.classList.add("past"); return; }
+  el.classList.remove("past");
+  el.textContent = "距今日 15:00 截止 " + (left >= 60 ? Math.floor(left / 60) + " 小时 " : "") + (left % 60) + " 分";
 }
-const DEFAULT_CATS = ["纳斯达克100", "标普500"];
+
+// ── 交互 ────────────────────────────────────────────────────────────────
+function toggleFavCodes(codes) {
+  const on = codes.some(c => FAVS.has(c));
+  codes.forEach(c => on ? FAVS.delete(c) : FAVS.add(c));
+  saveFavs();
+  renderChips();
+  render();
+}
+async function copyCode(btn) {
+  const code = btn.dataset.copy;
+  try { await navigator.clipboard.writeText(code); }
+  catch (e) {
+    const ta = document.createElement("textarea"); ta.value = code; document.body.appendChild(ta);
+    ta.select(); try { document.execCommand("copy"); } catch (e2) {} ta.remove();
+  }
+  btn.textContent = "已复制 ✓";
+  setTimeout(() => { btn.textContent = "复制代码"; }, 1500);
+}
+document.getElementById("cards").addEventListener("click", e => {
+  const star = e.target.closest("[data-fav]");
+  if (star) { toggleFavCodes(allMembersOf(star.dataset.fav).map(f => f.code)); return; }
+  const cp = e.target.closest("[data-copy]");
+  if (cp) { copyCode(cp); return; }
+  if (e.target.closest("a")) return;
+  const card = e.target.closest(".card-item"); if (!card) return;
+  const k = card.dataset.key;
+  state.open.has(k) ? state.open.delete(k) : state.open.add(k);
+  render();
+});
+document.getElementById("tbody").addEventListener("click", e => {
+  const star = e.target.closest("[data-fav-code]");
+  if (star) { toggleFavCodes([star.dataset.favCode]); return; }
+  const cp = e.target.closest("[data-copy]");
+  if (cp) { copyCode(cp); return; }
+  if (e.target.closest("a")) return;
+  const row = e.target.closest("tr.frow"); if (!row) return;
+  const k = "row:" + row.dataset.code;
+  state.open.has(k) ? state.open.delete(k) : state.open.add(k);
+  render();
+});
+document.getElementById("summary").addEventListener("click", e => {
+  const b = e.target.closest(".sum-pill"); if (!b) return;
+  state.statusFilter = b.dataset.sf || null;
+  render();
+});
 document.getElementById("filters").addEventListener("click", e => {
   const chip = e.target.closest(".chip"); if (!chip) return;
   const cat = chip.dataset.cat;
-  if (cat === "__quota") {
-    state.withQuota = !state.withQuota;                  // 有额度开关
-  } else if (cat === "__usd") {
-    state.hideUsd = !state.hideUsd;                      // 美元份额开关
-  } else if (cat === "__topics") {
-    document.getElementById("topics").classList.toggle("open");
-  } else if (cat === "__all") {
-    state.cats = new Set(CAT_ORDER);                    // 全选
-  } else if (cat === "__reset") {
-    state.cats = new Set(DEFAULT_CATS.filter(c => CAT_ORDER.includes(c)));
-  } else if (state.cats.size === CAT_ORDER.length) {
-    state.cats = new Set([cat]);                         // 从"全部"点某个主题 = 只看它
-  } else if (state.cats.has(cat)) {
-    if (state.cats.size > 1) state.cats.delete(cat);     // 多选：再点一次取消，至少保留一个
-  } else {
-    state.cats.add(cat);
-  }
+  if (cat === "__usd") state.hideUsd = !state.hideUsd;
+  else if (cat === "__topics") document.getElementById("topics").classList.toggle("open");
+  else if (cat === "__more") { state.moreTopics = !state.moreTopics; renderChips(); }
+  else if (cat === "__all") state.cats = new Set(CAT_ORDER);
+  else if (cat === "__reset") state.cats = new Set(DEFAULT_CATS.filter(c => CAT_ORDER.includes(c)));
+  else if (state.cats.size === CAT_ORDER.length) state.cats = new Set([cat]);   // 从"全部"点某个 = 只看它
+  else if (state.cats.has(cat)) { if (state.cats.size > 1) state.cats.delete(cat); }   // 再点取消，至少留一个
+  else state.cats.add(cat);
   syncChips(); render();
 });
+document.getElementById("sortSel").addEventListener("change", e => {
+  const [k, d] = e.target.value.split(":");
+  state.sortKey = k; state.sortDir = d || "asc";
+  render();
+});
 document.getElementById("search").addEventListener("input", e => { state.query = e.target.value; render(); });
-document.querySelectorAll("thead th").forEach(th => {
+document.querySelectorAll("thead th[data-key]").forEach(th => {
   th.addEventListener("click", () => {
     const key = th.dataset.key;
     if (state.sortKey === key) state.sortDir = state.sortDir === "asc" ? "desc" : "asc";
@@ -731,6 +1049,10 @@ document.querySelectorAll("thead th").forEach(th => {
   });
 });
 document.getElementById("refreshBtn").addEventListener("click", loadData);
+document.getElementById("helpBtn").addEventListener("click", e => {
+  const open = document.getElementById("helpPanel").classList.toggle("open");
+  e.currentTarget.setAttribute("aria-expanded", open);
+});
 
 /* 主题切换：圣殿金 → 深色 → 浅色 循环，记忆到 localStorage */
 const THEME_CYCLE = { gold: "dark", dark: "light", light: "gold" };
@@ -740,7 +1062,8 @@ document.getElementById("themeToggle").addEventListener("click", () => {
   document.documentElement.setAttribute("data-theme", next);
   try { localStorage.setItem("theme", next); } catch (e) {}
 });
-syncChips();
+updateCutoff();
+setInterval(updateCutoff, 30e3);
 loadData();
 </script>
 </body>
