@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-09 20:01:31",
+  "updatedAt": "2026-11-10 09:21:00",
   "source": "eastmoney FundMNNBasicInformation + rankhandler 发现",
   "universeSource": "搜索\"标普500\"发现 0 只（过滤后新增 0） + 搜索\"纳斯达克\"发现 50 只（过滤后新增 13） + 自动发现(rankhandler) 742 只",
   "note": "MAXSG 为可信当前限额；CORE 热门基金附公告交叉校验；分组按名称自动分类。",
@@ -31,7 +31,7 @@
       "scale": 350.53,
       "scaleDate": "2026-09-30",
       "etfPrice": 1.572,
-      "etfPremium": 16.44
+      "etfPremium": 12.61
     },
     {
       "code": "513100",
@@ -58,7 +58,7 @@
       "scale": 197.66,
       "scaleDate": "2026-09-30",
       "etfPrice": 2.142,
-      "etfPremium": 18.59
+      "etfPremium": 14.66
     },
     {
       "code": "513300",
@@ -85,7 +85,7 @@
       "scale": 139.14,
       "scaleDate": "2026-09-30",
       "etfPrice": 2.578,
-      "etfPremium": 15.13
+      "etfPremium": 11.27
     },
     {
       "code": "161130",
@@ -295,7 +295,7 @@
       "scale": 82.47,
       "scaleDate": "2026-09-30",
       "etfPrice": 1.697,
-      "etfPremium": 12.87
+      "etfPremium": 9.15
     },
     {
       "code": "159659",
@@ -322,7 +322,7 @@
       "scale": 102.74,
       "scaleDate": "2026-09-30",
       "etfPrice": 2.258,
-      "etfPremium": 15.66
+      "etfPremium": 11.83
     },
     {
       "code": "159632",
@@ -349,7 +349,7 @@
       "scale": 118.08,
       "scaleDate": "2026-09-30",
       "etfPrice": 2.328,
-      "etfPremium": 13.48
+      "etfPremium": 9.73
     },
     {
       "code": "513870",
@@ -376,7 +376,7 @@
       "scale": 28.9,
       "scaleDate": "2026-09-30",
       "etfPrice": 1.984,
-      "etfPremium": 15.36
+      "etfPremium": 11.52
     },
     {
       "code": "159660",
@@ -403,7 +403,7 @@
       "scale": 57.74,
       "scaleDate": "2026-09-30",
       "etfPrice": 2.266,
-      "etfPremium": 14.86
+      "etfPremium": 11.05
     },
     {
       "code": "159696",
@@ -430,7 +430,7 @@
       "scale": 57.05,
       "scaleDate": "2026-09-30",
       "etfPrice": 1.979,
-      "etfPremium": 17.69
+      "etfPremium": 13.79
     },
     {
       "code": "513110",
@@ -457,7 +457,7 @@
       "scale": 52.06,
       "scaleDate": "2026-09-30",
       "etfPrice": 2.341,
-      "etfPremium": 12.87
+      "etfPremium": 9.15
     },
     {
       "code": "513390",
@@ -484,7 +484,7 @@
       "scale": 50.48,
       "scaleDate": "2026-09-30",
       "etfPrice": 2.325,
-      "etfPremium": 14.73
+      "etfPremium": 10.94
     },
     {
       "code": "008971",
@@ -829,8 +829,8 @@
       "nav": 0.2778,
       "navChangePct": 1.28,
       "navDate": "2026-11-06",
-      "mgmtFee": 0.6,
-      "custodyFee": 0.2,
+      "mgmtFee": null,
+      "custodyFee": 1.2,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": 3.26,
@@ -1176,9 +1176,9 @@
       "limitSource": "api",
       "minPurchase": 10,
       "minDt": 10,
-      "nav": 1.341,
-      "navChangePct": -6.03,
-      "navDate": "2026-11-05",
+      "nav": 1.3583,
+      "navChangePct": 1.29,
+      "navDate": "2026-11-06",
       "mgmtFee": 1.0,
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
@@ -1213,9 +1213,9 @@
       "limitSource": "api",
       "minPurchase": 10,
       "minDt": 10,
-      "nav": 1.3311,
-      "navChangePct": -6.04,
-      "navDate": "2026-11-05",
+      "nav": 1.3483,
+      "navChangePct": 1.29,
+      "navDate": "2026-11-06",
       "mgmtFee": 0.0,
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
@@ -1253,8 +1253,8 @@
       "nav": 1.8328,
       "navChangePct": 1.29,
       "navDate": "2026-11-06",
-      "mgmtFee": 0.5,
-      "custodyFee": 0.1,
+      "mgmtFee": null,
+      "custodyFee": 0.0,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": 1.62,
@@ -1331,8 +1331,8 @@
       "nav": 2.0828,
       "navChangePct": 1.31,
       "navDate": "2026-11-06",
-      "mgmtFee": 0.5,
-      "custodyFee": 0.15,
+      "mgmtFee": null,
+      "custodyFee": 0.0,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": 40.79,
@@ -1803,7 +1803,7 @@
       "scale": 251.81,
       "scaleDate": "2026-09-30",
       "etfPrice": 2.604,
-      "etfPremium": 11.14
+      "etfPremium": 8.57
     },
     {
       "code": "050025",
@@ -1936,8 +1936,8 @@
       "purchaseFeeOrig": null,
       "scale": 9.78,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.014,
-      "etfPremium": 9.57
+      "etfPrice": 2.026,
+      "etfPremium": 7.71
     },
     {
       "code": "159655",
@@ -1963,8 +1963,8 @@
       "purchaseFeeOrig": null,
       "scale": 41.71,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.949,
-      "etfPremium": 8.77
+      "etfPrice": 1.99,
+      "etfPremium": 8.43
     },
     {
       "code": "513650",
@@ -1990,8 +1990,8 @@
       "purchaseFeeOrig": null,
       "scale": 87.11,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.944,
-      "etfPremium": 8.91
+      "etfPrice": 1.993,
+      "etfPremium": 9.07
     },
     {
       "code": "006075",
@@ -2465,9 +2465,9 @@
       "limitSource": "ann",
       "minPurchase": 1,
       "minDt": null,
-      "nav": 0.2419,
-      "navChangePct": -4.05,
-      "navDate": "2026-11-05",
+      "nav": 0.2427,
+      "navChangePct": 0.33,
+      "navDate": "2026-11-06",
       "mgmtFee": 1.0,
       "custodyFee": 1.2,
       "purchaseFee": null,
@@ -2502,9 +2502,9 @@
       "limitSource": "ann",
       "minPurchase": 1,
       "minDt": null,
-      "nav": 0.2419,
-      "navChangePct": -4.05,
-      "navDate": "2026-11-05",
+      "nav": 0.2427,
+      "navChangePct": 0.33,
+      "navDate": "2026-11-06",
       "mgmtFee": 1.0,
       "custodyFee": 1.2,
       "purchaseFee": null,
@@ -2741,8 +2741,8 @@
       "purchaseFeeOrig": null,
       "scale": 352.63,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.02,
-      "etfPremium": -1.23
+      "etfPrice": 1.018,
+      "etfPremium": -0.3
     },
     {
       "code": "164906",
@@ -2819,7 +2819,7 @@
       "scale": 259.02,
       "scaleDate": "2026-09-30",
       "etfPrice": 0.338,
-      "etfPremium": 0.42
+      "etfPremium": 0.24
     },
     {
       "code": "513180",
@@ -2845,8 +2845,8 @@
       "purchaseFeeOrig": null,
       "scale": 382.85,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.508,
-      "etfPremium": 0.75
+      "etfPrice": 0.507,
+      "etfPremium": 0.44
     },
     {
       "code": "118001",
@@ -3423,9 +3423,9 @@
       "limitSource": "api",
       "minPurchase": 200,
       "minDt": null,
-      "nav": 0.2148,
-      "navChangePct": -1.15,
-      "navDate": "2026-11-06",
+      "nav": 0.2145,
+      "navChangePct": -0.14,
+      "navDate": "2026-11-09",
       "mgmtFee": 0.0,
       "custodyFee": 0.0,
       "purchaseFee": null,
@@ -3448,9 +3448,9 @@
       "limitSource": "api",
       "minPurchase": 200,
       "minDt": null,
-      "nav": 0.2148,
-      "navChangePct": -1.15,
-      "navDate": "2026-11-06",
+      "nav": 0.2145,
+      "navChangePct": -0.14,
+      "navDate": "2026-11-09",
       "mgmtFee": 0.0,
       "custodyFee": 0.0,
       "purchaseFee": null,
@@ -3548,9 +3548,9 @@
       "limitSource": "api",
       "minPurchase": 10,
       "minDt": 10,
-      "nav": 1.1647,
-      "navChangePct": 0.22,
-      "navDate": "2026-11-05",
+      "nav": 1.1636,
+      "navChangePct": -0.09,
+      "navDate": "2026-11-06",
       "mgmtFee": 0.6,
       "custodyFee": 0.08,
       "purchaseFee": 0.08,
@@ -3598,9 +3598,9 @@
       "limitSource": "api",
       "minPurchase": 10,
       "minDt": 10,
-      "nav": 0.6322,
-      "navChangePct": 0.22,
-      "navDate": "2026-11-05",
+      "nav": 0.6311,
+      "navChangePct": -0.17,
+      "navDate": "2026-11-06",
       "mgmtFee": 0.6,
       "custodyFee": 0.08,
       "purchaseFee": 0.08,
@@ -4148,9 +4148,9 @@
       "limitSource": "api",
       "minPurchase": 1,
       "minDt": null,
-      "nav": 0.0941,
-      "navChangePct": 0.21,
-      "navDate": "2026-11-05",
+      "nav": 0.094,
+      "navChangePct": -0.11,
+      "navDate": "2026-11-06",
       "mgmtFee": 1.0,
       "custodyFee": 0.3,
       "purchaseFee": null,
@@ -4998,9 +4998,9 @@
       "limitSource": "api",
       "minPurchase": 1000,
       "minDt": null,
-      "nav": 0.1382,
-      "navChangePct": 0.29,
-      "navDate": "2026-11-05",
+      "nav": 0.1381,
+      "navChangePct": -0.07,
+      "navDate": "2026-11-06",
       "mgmtFee": 0.8,
       "custodyFee": 0.8,
       "purchaseFee": null,
@@ -5048,9 +5048,9 @@
       "limitSource": "api",
       "minPurchase": 1,
       "minDt": null,
-      "nav": 0.2708,
-      "navChangePct": -0.99,
-      "navDate": "2026-11-05",
+      "nav": 0.2683,
+      "navChangePct": -0.92,
+      "navDate": "2026-11-06",
       "mgmtFee": 1.2,
       "custodyFee": 1.5,
       "purchaseFee": null,
@@ -5073,9 +5073,9 @@
       "limitSource": "api",
       "minPurchase": 1,
       "minDt": null,
-      "nav": 0.2708,
-      "navChangePct": -0.99,
-      "navDate": "2026-11-05",
+      "nav": 0.2683,
+      "navChangePct": -0.92,
+      "navDate": "2026-11-06",
       "mgmtFee": 1.2,
       "custodyFee": 1.5,
       "purchaseFee": null,
@@ -5548,9 +5548,9 @@
       "limitSource": "api",
       "minPurchase": 1,
       "minDt": null,
-      "nav": 0.2234,
-      "navChangePct": -1.06,
-      "navDate": "2026-11-05",
+      "nav": 0.2226,
+      "navChangePct": -0.36,
+      "navDate": "2026-11-06",
       "mgmtFee": 0.8,
       "custodyFee": 1.0,
       "purchaseFee": null,
@@ -5573,9 +5573,9 @@
       "limitSource": "api",
       "minPurchase": 1,
       "minDt": null,
-      "nav": 0.2234,
-      "navChangePct": -1.06,
-      "navDate": "2026-11-05",
+      "nav": 0.2226,
+      "navChangePct": -0.36,
+      "navDate": "2026-11-06",
       "mgmtFee": 0.8,
       "custodyFee": 1.0,
       "purchaseFee": null,
@@ -5829,9 +5829,9 @@
       "limitSource": "api",
       "minPurchase": null,
       "minDt": null,
-      "nav": 0.136,
-      "navChangePct": -1.45,
-      "navDate": "2026-11-05",
+      "nav": 0.135,
+      "navChangePct": -0.74,
+      "navDate": "2026-11-06",
       "mgmtFee": 1.5,
       "custodyFee": 0.3,
       "purchaseFee": null,
@@ -5854,9 +5854,9 @@
       "limitSource": "api",
       "minPurchase": 1,
       "minDt": null,
-      "nav": 0.0811,
-      "navChangePct": 0.12,
-      "navDate": "2026-11-05",
+      "nav": 0.081,
+      "navChangePct": -0.12,
+      "navDate": "2026-11-06",
       "mgmtFee": 0.5,
       "custodyFee": 0.15,
       "purchaseFee": null,
@@ -6391,9 +6391,9 @@
       "limitSource": "api",
       "minPurchase": null,
       "minDt": null,
-      "nav": 0.2071,
-      "navChangePct": -8.85,
-      "navDate": "2026-11-05",
+      "nav": 0.21,
+      "navChangePct": 1.4,
+      "navDate": "2026-11-06",
       "mgmtFee": 1.2,
       "custodyFee": 0.2,
       "purchaseFee": null,
@@ -6416,9 +6416,9 @@
       "limitSource": "api",
       "minPurchase": 200,
       "minDt": null,
-      "nav": 0.1867,
-      "navChangePct": 0.27,
-      "navDate": "2026-11-05",
+      "nav": 0.1865,
+      "navChangePct": -0.11,
+      "navDate": "2026-11-06",
       "mgmtFee": 0.5,
       "custodyFee": 0.1,
       "purchaseFee": null,
@@ -6491,9 +6491,9 @@
       "limitSource": "api",
       "minPurchase": 10,
       "minDt": 10,
-      "nav": 2.0413,
-      "navChangePct": -4.81,
-      "navDate": "2026-11-06",
+      "nav": 2.0969,
+      "navChangePct": 2.72,
+      "navDate": "2026-11-09",
       "mgmtFee": 1.2,
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
@@ -7016,9 +7016,9 @@
       "limitSource": "api",
       "minPurchase": 10,
       "minDt": 10,
-      "nav": 0.5333,
-      "navChangePct": 0.17,
-      "navDate": "2026-11-05",
+      "nav": 0.5326,
+      "navChangePct": -0.13,
+      "navDate": "2026-11-06",
       "mgmtFee": 0.5,
       "custodyFee": 0.15,
       "purchaseFee": 0.0,
@@ -7041,9 +7041,9 @@
       "limitSource": "api",
       "minPurchase": 1,
       "minDt": null,
-      "nav": 0.0794,
-      "navChangePct": 0.25,
-      "navDate": "2026-11-05",
+      "nav": 0.0793,
+      "navChangePct": -0.13,
+      "navDate": "2026-11-06",
       "mgmtFee": 0.5,
       "custodyFee": 0.15,
       "purchaseFee": null,
@@ -7092,8 +7092,8 @@
       "minPurchase": null,
       "minDt": null,
       "nav": 0.1567,
-      "navChangePct": 0.06,
-      "navDate": "2026-11-05",
+      "navChangePct": 0.0,
+      "navDate": "2026-11-06",
       "mgmtFee": 0.6,
       "custodyFee": 0.8,
       "purchaseFee": null,
@@ -7316,9 +7316,9 @@
       "limitSource": "api",
       "minPurchase": null,
       "minDt": null,
-      "nav": 0.2674,
-      "navChangePct": 0.53,
-      "navDate": "2026-11-05",
+      "nav": 0.2667,
+      "navChangePct": -0.26,
+      "navDate": "2026-11-06",
       "mgmtFee": 1.2,
       "custodyFee": 1.5,
       "purchaseFee": null,
@@ -7466,9 +7466,9 @@
       "limitSource": "api",
       "minPurchase": 1,
       "minDt": null,
-      "nav": 0.3812,
-      "navChangePct": 1.84,
-      "navDate": "2026-11-05",
+      "nav": 0.3776,
+      "navChangePct": -0.94,
+      "navDate": "2026-11-06",
       "mgmtFee": 1.2,
       "custodyFee": 0.2,
       "purchaseFee": null,
@@ -7491,9 +7491,9 @@
       "limitSource": "api",
       "minPurchase": 1,
       "minDt": null,
-      "nav": 0.4346,
-      "navChangePct": 1.64,
-      "navDate": "2026-11-05",
+      "nav": 0.4307,
+      "navChangePct": -0.9,
+      "navDate": "2026-11-06",
       "mgmtFee": 1.2,
       "custodyFee": 0.2,
       "purchaseFee": null,
@@ -7541,9 +7541,9 @@
       "limitSource": "api",
       "minPurchase": null,
       "minDt": null,
-      "nav": 0.1261,
-      "navChangePct": 1.04,
-      "navDate": "2026-11-05",
+      "nav": 0.1247,
+      "navChangePct": -1.11,
+      "navDate": "2026-11-06",
       "mgmtFee": 1.2,
       "custodyFee": 1.5,
       "purchaseFee": null,
@@ -7866,9 +7866,9 @@
       "limitSource": "api",
       "minPurchase": null,
       "minDt": null,
-      "nav": 0.2191,
-      "navChangePct": 1.48,
-      "navDate": "2026-11-05",
+      "nav": 0.2177,
+      "navChangePct": -0.64,
+      "navDate": "2026-11-06",
       "mgmtFee": 1.2,
       "custodyFee": 1.5,
       "purchaseFee": null,
@@ -8601,9 +8601,9 @@
       "limitSource": "api",
       "minPurchase": 10,
       "minDt": 10,
-      "nav": 0.6435,
-      "navChangePct": -1.68,
-      "navDate": "2026-11-06",
+      "nav": 0.638,
+      "navChangePct": -0.85,
+      "navDate": "2026-11-09",
       "mgmtFee": 1.0,
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
@@ -8626,9 +8626,9 @@
       "limitSource": "api",
       "minPurchase": 10,
       "minDt": 10,
-      "nav": 0.6325,
-      "navChangePct": -1.68,
-      "navDate": "2026-11-06",
+      "nav": 0.627,
+      "navChangePct": -0.87,
+      "navDate": "2026-11-09",
       "mgmtFee": 0.0,
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
@@ -8951,9 +8951,9 @@
       "limitSource": "api",
       "minPurchase": 10,
       "minDt": 10,
-      "nav": 1.1588,
-      "navChangePct": 0.22,
-      "navDate": "2026-11-05",
+      "nav": 1.1576,
+      "navChangePct": -0.1,
+      "navDate": "2026-11-06",
       "mgmtFee": 0.5,
       "custodyFee": 0.1,
       "purchaseFee": 0.0,
@@ -9461,9 +9461,9 @@
       "limitSource": "api",
       "minPurchase": 10,
       "minDt": 10,
-      "nav": 0.9414,
-      "navChangePct": -1.11,
-      "navDate": "2026-11-06",
+      "nav": 0.9403,
+      "navChangePct": -0.12,
+      "navDate": "2026-11-09",
       "mgmtFee": 1.0,
       "custodyFee": 0.2,
       "purchaseFee": 0.0,
@@ -10705,8 +10705,8 @@
       "minPurchase": 1,
       "minDt": null,
       "nav": 0.1568,
-      "navChangePct": 0.06,
-      "navDate": "2026-11-05",
+      "navChangePct": 0.0,
+      "navDate": "2026-11-06",
       "mgmtFee": 0.2,
       "custodyFee": 0.2,
       "purchaseFee": null,
@@ -10730,8 +10730,8 @@
       "minPurchase": 1,
       "minDt": null,
       "nav": 0.1568,
-      "navChangePct": 0.06,
-      "navDate": "2026-11-05",
+      "navChangePct": 0.0,
+      "navDate": "2026-11-06",
       "mgmtFee": 0.2,
       "custodyFee": 0.2,
       "purchaseFee": null,
@@ -10978,9 +10978,9 @@
       "limitSource": "api",
       "minPurchase": 10,
       "minDt": 10,
-      "nav": 0.7896,
-      "navChangePct": -0.03,
-      "navDate": "2026-11-06",
+      "nav": 0.7875,
+      "navChangePct": -0.27,
+      "navDate": "2026-11-09",
       "mgmtFee": 0.8,
       "custodyFee": 0.1,
       "purchaseFee": 0.1,
@@ -11003,9 +11003,9 @@
       "limitSource": "api",
       "minPurchase": 10,
       "minDt": 10,
-      "nav": 0.7826,
-      "navChangePct": -0.03,
-      "navDate": "2026-11-06",
+      "nav": 0.7805,
+      "navChangePct": -0.27,
+      "navDate": "2026-11-09",
       "mgmtFee": 0.0,
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
@@ -11128,9 +11128,9 @@
       "limitSource": "api",
       "minPurchase": 10,
       "minDt": 10,
-      "nav": 0.9597,
-      "navChangePct": -1.78,
-      "navDate": "2026-11-06",
+      "nav": 0.972,
+      "navChangePct": 1.28,
+      "navDate": "2026-11-09",
       "mgmtFee": 0.8,
       "custodyFee": 0.1,
       "purchaseFee": 0.1,
@@ -11153,9 +11153,9 @@
       "limitSource": "api",
       "minPurchase": 10,
       "minDt": 10,
-      "nav": 0.9578,
-      "navChangePct": -1.78,
-      "navDate": "2026-11-06",
+      "nav": 0.97,
+      "navChangePct": 1.27,
+      "navDate": "2026-11-09",
       "mgmtFee": 0.0,
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
@@ -11553,9 +11553,9 @@
       "limitSource": "api",
       "minPurchase": 10,
       "minDt": 10,
-      "nav": 0.9553,
-      "navChangePct": -0.01,
-      "navDate": "2026-11-06",
+      "nav": 0.9527,
+      "navChangePct": -0.27,
+      "navDate": "2026-11-09",
       "mgmtFee": 0.9,
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
@@ -11578,9 +11578,9 @@
       "limitSource": "api",
       "minPurchase": 10,
       "minDt": 10,
-      "nav": 0.9481,
-      "navChangePct": -0.01,
-      "navDate": "2026-11-06",
+      "nav": 0.9454,
+      "navChangePct": -0.28,
+      "navDate": "2026-11-09",
       "mgmtFee": 0.0,
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
@@ -11953,9 +11953,9 @@
       "limitSource": "api",
       "minPurchase": 10,
       "minDt": 10,
-      "nav": 2.0207,
-      "navChangePct": -4.82,
-      "navDate": "2026-11-06",
+      "nav": 2.0757,
+      "navChangePct": 2.72,
+      "navDate": "2026-11-09",
       "mgmtFee": 1.2,
       "custodyFee": 0.2,
       "purchaseFee": 0.0,
@@ -12076,10 +12076,10 @@
       "group": "亚太",
       "index": "--",
       "company": "博时基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
+      "status": "limited",
+      "statusText": "限大额",
       "limit": null,
-      "limitText": "—",
+      "limitText": "限额未公布",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 10,
@@ -12092,7 +12092,13 @@
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": 26.48,
-      "scaleDate": "2026-09-30"
+      "scaleDate": "2026-09-30",
+      "change": {
+        "type": "open",
+        "from": "暂停",
+        "to": "限额未公布",
+        "date": "2026-11-10"
+      }
     },
     {
       "code": "019495",
@@ -12896,9 +12902,9 @@
       "limitSource": "api",
       "minPurchase": 10,
       "minDt": 10,
-      "nav": 0.99,
-      "navChangePct": -1.55,
-      "navDate": "2026-11-06",
+      "nav": 0.9816,
+      "navChangePct": -0.85,
+      "navDate": "2026-11-09",
       "mgmtFee": 0.1,
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
@@ -12921,9 +12927,9 @@
       "limitSource": "api",
       "minPurchase": 10,
       "minDt": 10,
-      "nav": 0.9601,
-      "navChangePct": -1.56,
-      "navDate": "2026-11-06",
+      "nav": 0.952,
+      "navChangePct": -0.84,
+      "navDate": "2026-11-09",
       "mgmtFee": 0.0,
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
@@ -14120,9 +14126,9 @@
       "limitSource": "api",
       "minPurchase": 10,
       "minDt": 10,
-      "nav": 0.9029,
-      "navChangePct": -1.75,
-      "navDate": "2026-11-06",
+      "nav": 0.9142,
+      "navChangePct": 1.25,
+      "navDate": "2026-11-09",
       "mgmtFee": 0.8,
       "custodyFee": 0.1,
       "purchaseFee": 0.1,
@@ -14145,9 +14151,9 @@
       "limitSource": "api",
       "minPurchase": 10,
       "minDt": 10,
-      "nav": 0.9004,
-      "navChangePct": -1.75,
-      "navDate": "2026-11-06",
+      "nav": 0.9116,
+      "navChangePct": 1.24,
+      "navDate": "2026-11-09",
       "mgmtFee": 0.0,
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
@@ -14495,9 +14501,9 @@
       "limitSource": "api",
       "minPurchase": 10,
       "minDt": 10,
-      "nav": 0.7001,
-      "navChangePct": -1.19,
-      "navDate": "2026-11-06",
+      "nav": 0.6983,
+      "navChangePct": -0.26,
+      "navDate": "2026-11-09",
       "mgmtFee": 1.0,
       "custodyFee": 0.2,
       "purchaseFee": 0.0,
@@ -14745,9 +14751,9 @@
       "limitSource": "api",
       "minPurchase": null,
       "minDt": null,
-      "nav": 0.1242,
-      "navChangePct": -1.19,
-      "navDate": "2026-11-06",
+      "nav": 0.1241,
+      "navChangePct": -0.08,
+      "navDate": "2026-11-09",
       "mgmtFee": 1.2,
       "custodyFee": 1.5,
       "purchaseFee": null,
@@ -14795,9 +14801,9 @@
       "limitSource": "api",
       "minPurchase": 10,
       "minDt": 10,
-      "nav": 0.7377,
-      "navChangePct": -1.63,
-      "navDate": "2026-11-06",
+      "nav": 0.7314,
+      "navChangePct": -0.85,
+      "navDate": "2026-11-09",
       "mgmtFee": 1.0,
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
@@ -14820,9 +14826,9 @@
       "limitSource": "api",
       "minPurchase": 10,
       "minDt": 10,
-      "nav": 0.7363,
-      "navChangePct": -1.62,
-      "navDate": "2026-11-06",
+      "nav": 0.7299,
+      "navChangePct": -0.87,
+      "navDate": "2026-11-09",
       "mgmtFee": 0.0,
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
@@ -14870,9 +14876,9 @@
       "limitSource": "api",
       "minPurchase": 10,
       "minDt": 10,
-      "nav": 0.8498,
-      "navChangePct": 3.62,
-      "navDate": "2026-11-05",
+      "nav": 0.8328,
+      "navChangePct": -2.0,
+      "navDate": "2026-11-06",
       "mgmtFee": 0.08,
       "custodyFee": 0.08,
       "purchaseFee": 0.08,
@@ -14895,9 +14901,9 @@
       "limitSource": "api",
       "minPurchase": 10,
       "minDt": 10,
-      "nav": 0.8481,
-      "navChangePct": 3.62,
-      "navDate": "2026-11-05",
+      "nav": 0.8311,
+      "navChangePct": -2.0,
+      "navDate": "2026-11-06",
       "mgmtFee": 0.0,
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
@@ -14920,9 +14926,9 @@
       "limitSource": "api",
       "minPurchase": 10,
       "minDt": null,
-      "nav": 0.1265,
-      "navChangePct": 3.6,
-      "navDate": "2026-11-05",
+      "nav": 0.124,
+      "navChangePct": -1.98,
+      "navDate": "2026-11-06",
       "mgmtFee": 0.8,
       "custodyFee": 0.8,
       "purchaseFee": null,
@@ -15020,9 +15026,9 @@
       "limitSource": "api",
       "minPurchase": 10,
       "minDt": 10,
-      "nav": 0.9082,
-      "navChangePct": 0.18,
-      "navDate": "2026-11-06",
+      "nav": 0.9044,
+      "navChangePct": -0.42,
+      "navDate": "2026-11-09",
       "mgmtFee": 0.0,
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
@@ -15270,9 +15276,9 @@
       "limitSource": "api",
       "minPurchase": 10,
       "minDt": 10,
-      "nav": 0.87,
-      "navChangePct": -1.61,
-      "navDate": "2026-11-06",
+      "nav": 0.8619,
+      "navChangePct": -0.93,
+      "navDate": "2026-11-09",
       "mgmtFee": 0.3,
       "custodyFee": 0.3,
       "purchaseFee": 0.3,
@@ -15295,9 +15301,9 @@
       "limitSource": "api",
       "minPurchase": 10,
       "minDt": 10,
-      "nav": 0.8695,
-      "navChangePct": -1.6,
-      "navDate": "2026-11-06",
+      "nav": 0.8613,
+      "navChangePct": -0.94,
+      "navDate": "2026-11-09",
       "mgmtFee": 0.0,
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
@@ -15445,9 +15451,9 @@
       "limitSource": "api",
       "minPurchase": 10,
       "minDt": 10,
-      "nav": 0.8984,
-      "navChangePct": -1.65,
-      "navDate": "2026-11-06",
+      "nav": 0.9084,
+      "navChangePct": 1.11,
+      "navDate": "2026-11-09",
       "mgmtFee": 0.0,
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
@@ -15620,9 +15626,9 @@
       "limitSource": "api",
       "minPurchase": 10,
       "minDt": 10,
-      "nav": 0.871,
-      "navChangePct": -1.58,
-      "navDate": "2026-11-06",
+      "nav": 0.8635,
+      "navChangePct": -0.86,
+      "navDate": "2026-11-09",
       "mgmtFee": 0.3,
       "custodyFee": 0.03,
       "purchaseFee": 0.03,
@@ -15645,9 +15651,9 @@
       "limitSource": "api",
       "minPurchase": 10,
       "minDt": 10,
-      "nav": 0.8703,
-      "navChangePct": -1.58,
-      "navDate": "2026-11-06",
+      "nav": 0.8627,
+      "navChangePct": -0.87,
+      "navDate": "2026-11-09",
       "mgmtFee": 0.0,
       "custodyFee": 0.0,
       "purchaseFee": 0.0,
@@ -15820,9 +15826,9 @@
       "limitSource": "api",
       "minPurchase": 10,
       "minDt": 10,
-      "nav": 1.4086,
-      "navChangePct": 1.44,
-      "navDate": "2026-11-05",
+      "nav": 1.4067,
+      "navChangePct": -0.13,
+      "navDate": "2026-11-06",
       "mgmtFee": 1.2,
       "custodyFee": 0.2,
       "purchaseFee": 0.0,
@@ -16005,10 +16011,10 @@
       "group": "亚太",
       "index": "--",
       "company": "博时基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
+      "status": "limited",
+      "statusText": "限大额",
       "limit": null,
-      "limitText": "—",
+      "limitText": "限额未公布",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 10,
@@ -16021,7 +16027,13 @@
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": 10.76,
-      "scaleDate": "2026-09-30"
+      "scaleDate": "2026-09-30",
+      "change": {
+        "type": "open",
+        "from": "暂停",
+        "to": "限额未公布",
+        "date": "2026-11-10"
+      }
     },
     {
       "code": "050203",
@@ -16030,10 +16042,10 @@
       "group": "亚太",
       "index": "--",
       "company": "博时基金",
-      "status": "suspended",
-      "statusText": "暂停申购",
+      "status": "limited",
+      "statusText": "限大额",
       "limit": null,
-      "limitText": "—",
+      "limitText": "限额未公布",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 10,
@@ -16046,7 +16058,13 @@
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": 10.76,
-      "scaleDate": "2026-09-30"
+      "scaleDate": "2026-09-30",
+      "change": {
+        "type": "open",
+        "from": "暂停",
+        "to": "限额未公布",
+        "date": "2026-11-10"
+      }
     },
     {
       "code": "070012",
@@ -16063,9 +16081,9 @@
       "limitSource": "api",
       "minPurchase": 10,
       "minDt": 10,
-      "nav": 0.796,
-      "navChangePct": 2.84,
-      "navDate": "2026-11-05",
+      "nav": 0.786,
+      "navChangePct": -1.26,
+      "navDate": "2026-11-06",
       "mgmtFee": 1.2,
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
@@ -16379,9 +16397,9 @@
       "limitSource": "api",
       "minPurchase": null,
       "minDt": null,
-      "nav": 0.9289,
-      "navChangePct": -1.7,
-      "navDate": "2026-11-06",
+      "nav": 0.9204,
+      "navChangePct": -0.92,
+      "navDate": "2026-11-09",
       "mgmtFee": 0.3,
       "custodyFee": null,
       "purchaseFee": null,
@@ -16389,7 +16407,7 @@
       "scale": 2.17,
       "scaleDate": "2026-09-17",
       "etfPrice": 0.92,
-      "etfPremium": 0.11
+      "etfPremium": -0.09
     },
     {
       "code": "159100",
@@ -16415,8 +16433,8 @@
       "purchaseFeeOrig": null,
       "scale": 5.54,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.991,
-      "etfPremium": 1.95
+      "etfPrice": 1.0,
+      "etfPremium": 0.66
     },
     {
       "code": "159202",
@@ -16442,8 +16460,8 @@
       "purchaseFeeOrig": null,
       "scale": 9.6,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.731,
-      "etfPremium": -0.07
+      "etfPrice": 0.735,
+      "etfPremium": 0.37
     },
     {
       "code": "159303",
@@ -16460,9 +16478,9 @@
       "limitSource": "api",
       "minPurchase": null,
       "minDt": null,
-      "nav": 1.533,
-      "navChangePct": -1.85,
-      "navDate": "2026-11-06",
+      "nav": 1.5533,
+      "navChangePct": 1.32,
+      "navDate": "2026-11-09",
       "mgmtFee": 0.8,
       "custodyFee": null,
       "purchaseFee": null,
@@ -16470,7 +16488,7 @@
       "scale": null,
       "scaleDate": "2026-09-30",
       "etfPrice": 1.54,
-      "etfPremium": -0.4
+      "etfPremium": -2.79
     },
     {
       "code": "159329",
@@ -16497,7 +16515,7 @@
       "scale": 10.12,
       "scaleDate": "2026-09-30",
       "etfPrice": 0.832,
-      "etfPremium": -0.68
+      "etfPremium": -0.53
     },
     {
       "code": "159501",
@@ -16524,7 +16542,7 @@
       "scale": 133.68,
       "scaleDate": "2026-09-30",
       "etfPrice": 2.055,
-      "etfPremium": 21.16
+      "etfPremium": 17.15
     },
     {
       "code": "159502",
@@ -16550,8 +16568,8 @@
       "purchaseFeeOrig": null,
       "scale": 17.93,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.57,
-      "etfPremium": 4.04
+      "etfPrice": 1.625,
+      "etfPremium": 4.54
     },
     {
       "code": "159509",
@@ -16578,7 +16596,7 @@
       "scale": 160.83,
       "scaleDate": "2026-09-30",
       "etfPrice": 2.799,
-      "etfPremium": 38.73
+      "etfPremium": 34.3
     },
     {
       "code": "159518",
@@ -16604,8 +16622,8 @@
       "purchaseFeeOrig": null,
       "scale": 20.18,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.183,
-      "etfPremium": 1.5
+      "etfPrice": 1.13,
+      "etfPremium": -3.28
     },
     {
       "code": "159519",
@@ -16632,7 +16650,7 @@
       "scale": null,
       "scaleDate": "2026-09-30",
       "etfPrice": 1.77,
-      "etfPremium": -0.18
+      "etfPremium": -0.16
     },
     {
       "code": "159529",
@@ -16658,8 +16676,8 @@
       "purchaseFeeOrig": null,
       "scale": 9.75,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.378,
-      "etfPremium": 4.96
+      "etfPrice": 1.399,
+      "etfPremium": 4.46
     },
     {
       "code": "159557",
@@ -16676,17 +16694,17 @@
       "limitSource": "api",
       "minPurchase": null,
       "minDt": null,
-      "nav": 1.3973,
-      "navChangePct": -1.86,
-      "navDate": "2026-11-06",
+      "nav": 1.4159,
+      "navChangePct": 1.33,
+      "navDate": "2026-11-09",
       "mgmtFee": 0.8,
       "custodyFee": null,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": 1.83,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.405,
-      "etfPremium": -0.99
+      "etfPrice": 1.395,
+      "etfPremium": -4.03
     },
     {
       "code": "159561",
@@ -16712,8 +16730,8 @@
       "purchaseFeeOrig": null,
       "scale": 17.25,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.301,
-      "etfPremium": 0.45
+      "etfPrice": 1.325,
+      "etfPremium": 1.25
     },
     {
       "code": "159577",
@@ -16739,8 +16757,8 @@
       "purchaseFeeOrig": null,
       "scale": 13.2,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.612,
-      "etfPremium": 8.88
+      "etfPrice": 1.695,
+      "etfPremium": 11.86
     },
     {
       "code": "159605",
@@ -16767,7 +16785,7 @@
       "scale": 32.45,
       "scaleDate": "2026-09-30",
       "etfPrice": 0.77,
-      "etfPremium": -1.0
+      "etfPremium": 0.65
     },
     {
       "code": "159607",
@@ -16794,7 +16812,7 @@
       "scale": 10.09,
       "scaleDate": "2026-09-30",
       "etfPrice": 0.763,
-      "etfPremium": -1.79
+      "etfPremium": -0.13
     },
     {
       "code": "159615",
@@ -16820,8 +16838,8 @@
       "purchaseFeeOrig": null,
       "scale": 3.86,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.1,
-      "etfPremium": -0.34
+      "etfPrice": 1.012,
+      "etfPremium": -10.85
     },
     {
       "code": "159687",
@@ -16831,7 +16849,7 @@
       "index": "富时亚太低碳精选指数",
       "company": "南方基金",
       "status": "traded",
-      "statusText": "暂停申购",
+      "statusText": "场内交易",
       "limit": null,
       "limitText": "场内",
       "limitReliable": false,
@@ -16847,8 +16865,8 @@
       "purchaseFeeOrig": null,
       "scale": 31.46,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.617,
-      "etfPremium": 0.75
+      "etfPrice": 1.648,
+      "etfPremium": -1.26
     },
     {
       "code": "159688",
@@ -16875,7 +16893,7 @@
       "scale": 10.01,
       "scaleDate": "2026-09-30",
       "etfPrice": 0.686,
-      "etfPremium": -0.22
+      "etfPremium": -0.35
     },
     {
       "code": "159699",
@@ -16901,8 +16919,8 @@
       "purchaseFeeOrig": null,
       "scale": 4.27,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.888,
-      "etfPremium": -0.28
+      "etfPrice": 0.891,
+      "etfPremium": 0.07
     },
     {
       "code": "159740",
@@ -16928,8 +16946,8 @@
       "purchaseFeeOrig": null,
       "scale": 140.6,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.499,
-      "etfPremium": -0.38
+      "etfPrice": 0.5,
+      "etfPremium": -0.4
     },
     {
       "code": "159741",
@@ -16946,17 +16964,17 @@
       "limitSource": "api",
       "minPurchase": null,
       "minDt": null,
-      "nav": 0.5092,
-      "navChangePct": -1.7,
-      "navDate": "2026-11-06",
+      "nav": 0.5046,
+      "navChangePct": -0.9,
+      "navDate": "2026-11-09",
       "mgmtFee": 0.8,
       "custodyFee": null,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": 8.12,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.503,
-      "etfPremium": -0.83
+      "etfPrice": 0.506,
+      "etfPremium": -0.41
     },
     {
       "code": "159742",
@@ -16982,8 +17000,8 @@
       "purchaseFeeOrig": null,
       "scale": 34.37,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.512,
-      "etfPremium": -0.39
+      "etfPrice": 0.515,
+      "etfPremium": 0.0
     },
     {
       "code": "159747",
@@ -17009,8 +17027,8 @@
       "purchaseFeeOrig": null,
       "scale": 3.45,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.038,
-      "etfPremium": -0.33
+      "etfPrice": 1.041,
+      "etfPremium": -0.4
     },
     {
       "code": "159750",
@@ -17036,8 +17054,8 @@
       "purchaseFeeOrig": null,
       "scale": 10.36,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.768,
-      "etfPremium": -0.61
+      "etfPrice": 0.767,
+      "etfPremium": -1.07
     },
     {
       "code": "159822",
@@ -17064,7 +17082,7 @@
       "scale": 1.69,
       "scaleDate": "2026-09-30",
       "etfPrice": 0.562,
-      "etfPremium": -0.16
+      "etfPremium": 0.2
     },
     {
       "code": "159850",
@@ -17091,7 +17109,7 @@
       "scale": 3.24,
       "scaleDate": "2026-09-30",
       "etfPrice": 0.795,
-      "etfPremium": -0.44
+      "etfPremium": -0.55
     },
     {
       "code": "159866",
@@ -17117,8 +17135,8 @@
       "purchaseFeeOrig": null,
       "scale": 20.93,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.502,
-      "etfPremium": 2.89
+      "etfPrice": 1.526,
+      "etfPremium": 1.84
     },
     {
       "code": "159892",
@@ -17144,8 +17162,8 @@
       "purchaseFeeOrig": null,
       "scale": 43.13,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.767,
-      "etfPremium": -0.45
+      "etfPrice": 0.78,
+      "etfPremium": -1.58
     },
     {
       "code": "159920",
@@ -17171,8 +17189,8 @@
       "purchaseFeeOrig": null,
       "scale": 82.43,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.441,
-      "etfPremium": 0.31
+      "etfPrice": 1.448,
+      "etfPremium": 0.4
     },
     {
       "code": "160125",
@@ -17314,9 +17332,9 @@
       "limitSource": "api",
       "minPurchase": 10,
       "minDt": 10,
-      "nav": 1.3906,
-      "navChangePct": -8.91,
-      "navDate": "2026-11-05",
+      "nav": 1.4105,
+      "navChangePct": 1.43,
+      "navDate": "2026-11-06",
       "mgmtFee": 0.12,
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
@@ -17339,9 +17357,9 @@
       "limitSource": "api",
       "minPurchase": 10,
       "minDt": 10,
-      "nav": 0.7077,
-      "navChangePct": -0.97,
-      "navDate": "2026-11-06",
+      "nav": 0.7066,
+      "navChangePct": -0.16,
+      "navDate": "2026-11-09",
       "mgmtFee": 1.0,
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
@@ -17414,9 +17432,9 @@
       "limitSource": "api",
       "minPurchase": 10,
       "minDt": 10,
-      "nav": 0.9634,
-      "navChangePct": -1.11,
-      "navDate": "2026-11-06",
+      "nav": 0.9622,
+      "navChangePct": -0.12,
+      "navDate": "2026-11-09",
       "mgmtFee": 0.1,
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
@@ -17589,9 +17607,9 @@
       "limitSource": "api",
       "minPurchase": 10,
       "minDt": 10,
-      "nav": 1.3991,
-      "navChangePct": 1.44,
-      "navDate": "2026-11-05",
+      "nav": 1.3972,
+      "navChangePct": -0.14,
+      "navDate": "2026-11-06",
       "mgmtFee": 1.2,
       "custodyFee": 0.15,
       "purchaseFee": 0.15,
@@ -17664,9 +17682,9 @@
       "limitSource": "api",
       "minPurchase": 10,
       "minDt": 10,
-      "nav": 0.702,
-      "navChangePct": -1.18,
-      "navDate": "2026-11-06",
+      "nav": 0.7002,
+      "navChangePct": -0.26,
+      "navDate": "2026-11-09",
       "mgmtFee": 1.0,
       "custodyFee": 0.12,
       "purchaseFee": 0.12,
@@ -17964,9 +17982,9 @@
       "limitSource": "api",
       "minPurchase": 10,
       "minDt": 10,
-      "nav": 0.5449,
-      "navChangePct": 0.17,
-      "navDate": "2026-11-05",
+      "nav": 0.5442,
+      "navChangePct": -0.13,
+      "navDate": "2026-11-06",
       "mgmtFee": 1.2,
       "custodyFee": 0.08,
       "purchaseFee": 0.08,
@@ -17989,9 +18007,9 @@
       "limitSource": "api",
       "minPurchase": 10,
       "minDt": 10,
-      "nav": 0.912,
-      "navChangePct": -1.3,
-      "navDate": "2026-11-05",
+      "nav": 0.908,
+      "navChangePct": -0.44,
+      "navDate": "2026-11-06",
       "mgmtFee": 0.8,
       "custodyFee": 0.1,
       "purchaseFee": 0.1,
@@ -18448,8 +18466,8 @@
       "purchaseFeeOrig": null,
       "scale": 32.08,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.016,
-      "etfPremium": 0.07
+      "etfPrice": 1.019,
+      "etfPremium": -0.15
     },
     {
       "code": "513000",
@@ -18475,8 +18493,8 @@
       "purchaseFeeOrig": null,
       "scale": 24.22,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.027,
-      "etfPremium": 3.44
+      "etfPrice": 2.071,
+      "etfPremium": 2.86
     },
     {
       "code": "513010",
@@ -18502,8 +18520,8 @@
       "purchaseFeeOrig": null,
       "scale": 249.43,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.524,
-      "etfPremium": 0.65
+      "etfPrice": 0.526,
+      "etfPremium": 0.1
     },
     {
       "code": "513030",
@@ -18529,8 +18547,8 @@
       "purchaseFeeOrig": null,
       "scale": 18.18,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.792,
-      "etfPremium": 1.34
+      "etfPrice": 1.835,
+      "etfPremium": 2.72
     },
     {
       "code": "513060",
@@ -18556,8 +18574,8 @@
       "purchaseFeeOrig": null,
       "scale": 49.65,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.552,
-      "etfPremium": -0.47
+      "etfPrice": 0.556,
+      "etfPremium": -2.3
     },
     {
       "code": "513080",
@@ -18583,8 +18601,8 @@
       "purchaseFeeOrig": null,
       "scale": 11.11,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.642,
-      "etfPremium": -0.08
+      "etfPrice": 1.661,
+      "etfPremium": 0.59
     },
     {
       "code": "513120",
@@ -18610,8 +18628,8 @@
       "purchaseFeeOrig": null,
       "scale": 233.19,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.26,
-      "etfPremium": 0.34
+      "etfPrice": 1.266,
+      "etfPremium": -2.31
     },
     {
       "code": "513130",
@@ -18637,8 +18655,8 @@
       "purchaseFeeOrig": null,
       "scale": 321.51,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.5,
-      "etfPremium": 0.54
+      "etfPrice": 0.501,
+      "etfPremium": 0.0
     },
     {
       "code": "513140",
@@ -18664,8 +18682,8 @@
       "purchaseFeeOrig": null,
       "scale": 1.35,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.713,
-      "etfPremium": 0.3
+      "etfPrice": 1.71,
+      "etfPremium": 0.15
     },
     {
       "code": "513170",
@@ -18682,17 +18700,17 @@
       "limitSource": "api",
       "minPurchase": null,
       "minDt": null,
-      "nav": 1.5665,
-      "navChangePct": -0.36,
-      "navDate": "2026-11-06",
+      "nav": 1.5712,
+      "navChangePct": 0.3,
+      "navDate": "2026-11-09",
       "mgmtFee": 0.8,
       "custodyFee": null,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": 2.43,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.558,
-      "etfPremium": -0.14
+      "etfPrice": 1.56,
+      "etfPremium": -0.18
     },
     {
       "code": "513210",
@@ -18719,7 +18737,7 @@
       "scale": null,
       "scaleDate": "2026-09-30",
       "etfPrice": 1.45,
-      "etfPremium": 0.43
+      "etfPremium": -0.34
     },
     {
       "code": "513220",
@@ -18745,8 +18763,8 @@
       "purchaseFeeOrig": null,
       "scale": 4.7,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.903,
-      "etfPremium": -1.67
+      "etfPrice": 0.906,
+      "etfPremium": 0.18
     },
     {
       "code": "513260",
@@ -18772,8 +18790,8 @@
       "purchaseFeeOrig": null,
       "scale": 51.43,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.975,
-      "etfPremium": 0.44
+      "etfPrice": 0.972,
+      "etfPremium": -0.79
     },
     {
       "code": "513280",
@@ -18799,8 +18817,8 @@
       "purchaseFeeOrig": null,
       "scale": 4.07,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.084,
-      "etfPremium": -0.2
+      "etfPrice": 1.081,
+      "etfPremium": -3.55
     },
     {
       "code": "513290",
@@ -18826,8 +18844,8 @@
       "purchaseFeeOrig": null,
       "scale": 18.38,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.861,
-      "etfPremium": 6.14
+      "etfPrice": 1.903,
+      "etfPremium": 5.66
     },
     {
       "code": "513310",
@@ -18853,8 +18871,8 @@
       "purchaseFeeOrig": null,
       "scale": 113.05,
       "scaleDate": "2026-09-30",
-      "etfPrice": 3.508,
-      "etfPremium": 8.26
+      "etfPrice": 3.591,
+      "etfPremium": 7.96
     },
     {
       "code": "513350",
@@ -18880,8 +18898,8 @@
       "purchaseFeeOrig": null,
       "scale": 10.92,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.249,
-      "etfPremium": 2.18
+      "etfPrice": 1.201,
+      "etfPremium": -1.98
     },
     {
       "code": "513360",
@@ -18907,8 +18925,8 @@
       "purchaseFeeOrig": null,
       "scale": 2.76,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.421,
-      "etfPremium": 0.72
+      "etfPrice": 0.424,
+      "etfPremium": 0.83
     },
     {
       "code": "513380",
@@ -18934,8 +18952,8 @@
       "purchaseFeeOrig": null,
       "scale": 88.62,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.458,
-      "etfPremium": 0.44
+      "etfPrice": 0.46,
+      "etfPremium": -0.02
     },
     {
       "code": "513400",
@@ -18961,8 +18979,8 @@
       "purchaseFeeOrig": null,
       "scale": 38.85,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.299,
-      "etfPremium": 3.69
+      "etfPrice": 1.319,
+      "etfPremium": 3.0
     },
     {
       "code": "513520",
@@ -18988,8 +19006,8 @@
       "purchaseFeeOrig": null,
       "scale": 24.39,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.027,
-      "etfPremium": 4.05
+      "etfPrice": 2.065,
+      "etfPremium": 3.22
     },
     {
       "code": "513530",
@@ -19015,8 +19033,8 @@
       "purchaseFeeOrig": null,
       "scale": 53.65,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.553,
-      "etfPremium": 0.28
+      "etfPrice": 1.552,
+      "etfPremium": 0.11
     },
     {
       "code": "513580",
@@ -19042,8 +19060,8 @@
       "purchaseFeeOrig": null,
       "scale": 32.35,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.503,
-      "etfPremium": -0.38
+      "etfPrice": 0.505,
+      "etfPremium": -0.84
     },
     {
       "code": "513730",
@@ -19053,7 +19071,7 @@
       "index": "新交所泛东南亚科技指数",
       "company": "华泰柏瑞基金",
       "status": "traded",
-      "statusText": "暂停申购",
+      "statusText": "场内交易",
       "limit": null,
       "limitText": "场内",
       "limitReliable": false,
@@ -19069,8 +19087,8 @@
       "purchaseFeeOrig": null,
       "scale": 8.38,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.026,
-      "etfPremium": -0.62
+      "etfPrice": 1.029,
+      "etfPremium": 2.25
     },
     {
       "code": "513800",
@@ -19096,8 +19114,8 @@
       "purchaseFeeOrig": null,
       "scale": 20.16,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.755,
-      "etfPremium": -0.42
+      "etfPrice": 1.78,
+      "etfPremium": -0.66
     },
     {
       "code": "513810",
@@ -19124,7 +19142,7 @@
       "scale": null,
       "scaleDate": "2026-09-30",
       "etfPrice": 1.734,
-      "etfPremium": -0.23
+      "etfPremium": -0.35
     },
     {
       "code": "513850",
@@ -19150,8 +19168,8 @@
       "purchaseFeeOrig": null,
       "scale": 23.44,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.792,
-      "etfPremium": 8.58
+      "etfPrice": 1.837,
+      "etfPremium": 8.79
     },
     {
       "code": "513880",
@@ -19177,8 +19195,8 @@
       "purchaseFeeOrig": null,
       "scale": 27.77,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.911,
-      "etfPremium": 5.09
+      "etfPrice": 1.94,
+      "etfPremium": 3.83
     },
     {
       "code": "513890",
@@ -19204,8 +19222,8 @@
       "purchaseFeeOrig": null,
       "scale": 7.32,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.775,
-      "etfPremium": 0.58
+      "etfPrice": 0.781,
+      "etfPremium": 0.44
     },
     {
       "code": "513950",
@@ -19231,8 +19249,8 @@
       "purchaseFeeOrig": null,
       "scale": 29.28,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.226,
-      "etfPremium": -0.04
+      "etfPrice": 1.228,
+      "etfPremium": 0.14
     },
     {
       "code": "513970",
@@ -19249,17 +19267,17 @@
       "limitSource": "api",
       "minPurchase": null,
       "minDt": null,
-      "nav": 0.8268,
-      "navChangePct": -0.01,
-      "navDate": "2026-11-06",
+      "nav": 0.8244,
+      "navChangePct": -0.29,
+      "navDate": "2026-11-09",
       "mgmtFee": 0.8,
       "custodyFee": null,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": 10.92,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.82,
-      "etfPremium": 0.16
+      "etfPrice": 0.822,
+      "etfPremium": 0.21
     },
     {
       "code": "519601",
@@ -19360,8 +19378,8 @@
       "purchaseFeeOrig": null,
       "scale": 26.41,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.307,
-      "etfPremium": 0.03
+      "etfPrice": 1.295,
+      "etfPremium": -3.31
     },
     {
       "code": "520520",
@@ -19388,7 +19406,7 @@
       "scale": null,
       "scaleDate": "2026-09-30",
       "etfPrice": 0.951,
-      "etfPremium": 0.14
+      "etfPremium": -0.07
     },
     {
       "code": "520570",
@@ -19415,7 +19433,7 @@
       "scale": 24.73,
       "scaleDate": "2026-09-30",
       "etfPrice": 0.64,
-      "etfPremium": 0.38
+      "etfPremium": -0.54
     },
     {
       "code": "520580",
@@ -19442,7 +19460,7 @@
       "scale": 2.64,
       "scaleDate": "2026-09-30",
       "etfPrice": 0.917,
-      "etfPremium": 0.44
+      "etfPremium": 0.45
     },
     {
       "code": "520590",
@@ -19459,9 +19477,9 @@
       "limitSource": "api",
       "minPurchase": null,
       "minDt": null,
-      "nav": 0.6933,
-      "navChangePct": -1.69,
-      "navDate": "2026-11-06",
+      "nav": 0.687,
+      "navChangePct": -0.91,
+      "navDate": "2026-11-09",
       "mgmtFee": 0.8,
       "custodyFee": null,
       "purchaseFee": null,
@@ -19469,7 +19487,7 @@
       "scale": 1.61,
       "scaleDate": "2026-09-30",
       "etfPrice": 0.686,
-      "etfPremium": 0.72
+      "etfPremium": -0.19
     },
     {
       "code": "520830",
@@ -19495,8 +19513,8 @@
       "purchaseFeeOrig": null,
       "scale": 8.88,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.824,
-      "etfPremium": -0.34
+      "etfPrice": 0.826,
+      "etfPremium": 0.05
     },
     {
       "code": "520870",
@@ -19522,8 +19540,8 @@
       "purchaseFeeOrig": null,
       "scale": 5.96,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.993,
-      "etfPremium": 2.03
+      "etfPrice": 1.004,
+      "etfPremium": 1.27
     },
     {
       "code": "520920",
@@ -19540,16 +19558,16 @@
       "limitSource": "api",
       "minPurchase": null,
       "minDt": null,
-      "nav": 0.5991,
-      "navChangePct": -1.71,
-      "navDate": "2026-11-06",
+      "nav": 0.5936,
+      "navChangePct": -0.92,
+      "navDate": "2026-11-09",
       "mgmtFee": 0.8,
       "custodyFee": null,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": 121.3,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.595,
+      "etfPrice": 0.6,
       "etfPremium": 0.37
     },
     {
