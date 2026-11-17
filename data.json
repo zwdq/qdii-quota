@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-17 09:20:53",
+  "updatedAt": "2026-11-17 14:27:36",
   "source": "eastmoney FundMNNBasicInformation + rankhandler 发现",
   "universeSource": "搜索\"标普500\"发现 0 只（过滤后新增 0） + 搜索\"纳斯达克\"发现 50 只（过滤后新增 13） + 自动发现(rankhandler) 744 只",
   "note": "MAXSG 为可信当前限额；CORE 热门基金附公告交叉校验；分组按名称自动分类。",
@@ -30,8 +30,8 @@
       "purchaseFeeOrig": null,
       "scale": 350.53,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.613,
-      "etfPremium": 18.6
+      "etfPrice": 1.592,
+      "etfPremium": 17.06
     },
     {
       "code": "513100",
@@ -57,8 +57,8 @@
       "purchaseFeeOrig": null,
       "scale": 197.66,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.189,
-      "etfPremium": 20.41
+      "etfPrice": 2.164,
+      "etfPremium": 19.03
     },
     {
       "code": "513300",
@@ -84,8 +84,8 @@
       "purchaseFeeOrig": null,
       "scale": 139.14,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.647,
-      "etfPremium": 17.32
+      "etfPrice": 2.606,
+      "etfPremium": 15.5
     },
     {
       "code": "161130",
@@ -294,8 +294,8 @@
       "purchaseFeeOrig": null,
       "scale": 82.47,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.749,
-      "etfPremium": 15.53
+      "etfPrice": 1.726,
+      "etfPremium": 14.01
     },
     {
       "code": "159659",
@@ -321,8 +321,8 @@
       "purchaseFeeOrig": null,
       "scale": 102.74,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.32,
-      "etfPremium": 17.99
+      "etfPrice": 2.29,
+      "etfPremium": 16.46
     },
     {
       "code": "159632",
@@ -348,8 +348,8 @@
       "purchaseFeeOrig": null,
       "scale": 118.08,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.396,
-      "etfPremium": 15.97
+      "etfPrice": 2.363,
+      "etfPremium": 14.38
     },
     {
       "code": "513870",
@@ -375,8 +375,8 @@
       "purchaseFeeOrig": null,
       "scale": 28.9,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.026,
-      "etfPremium": 16.99
+      "etfPrice": 2.0,
+      "etfPremium": 15.49
     },
     {
       "code": "159660",
@@ -402,8 +402,8 @@
       "purchaseFeeOrig": null,
       "scale": 57.74,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.318,
-      "etfPremium": 16.65
+      "etfPrice": 2.286,
+      "etfPremium": 15.04
     },
     {
       "code": "159696",
@@ -429,8 +429,8 @@
       "purchaseFeeOrig": null,
       "scale": 57.05,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.028,
-      "etfPremium": 19.72
+      "etfPrice": 2.0,
+      "etfPremium": 18.07
     },
     {
       "code": "513110",
@@ -456,8 +456,8 @@
       "purchaseFeeOrig": null,
       "scale": 52.06,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.407,
-      "etfPremium": 15.26
+      "etfPrice": 2.373,
+      "etfPremium": 13.63
     },
     {
       "code": "513390",
@@ -483,8 +483,8 @@
       "purchaseFeeOrig": null,
       "scale": 50.48,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.38,
-      "etfPremium": 16.6
+      "etfPrice": 2.348,
+      "etfPremium": 15.04
     },
     {
       "code": "008971",
@@ -1658,7 +1658,9 @@
         "date": "2026-07-27",
         "title": "摩根纳斯达克100指数型发起式证券投资基金(QDII)调整大额申购、定期定额投资及转换转入业务限制金额的公告",
         "artId": "AN202607241827315717",
-        "limits": [],
+        "limits": [
+          10
+        ],
         "directLimits": [],
         "currency": "CNY",
         "stale": false,
@@ -1674,10 +1676,10 @@
       "company": "摩根基金(中国)",
       "status": "limited",
       "statusText": "限大额",
-      "limit": null,
-      "limitText": "限额未公布",
-      "limitReliable": false,
-      "limitSource": "api",
+      "limit": 1,
+      "limitText": "1 美元",
+      "limitReliable": true,
+      "limitSource": "ann",
       "minPurchase": 1,
       "minDt": null,
       "nav": 1.7567,
@@ -1693,7 +1695,9 @@
         "date": "2026-07-27",
         "title": "摩根纳斯达克100指数型发起式证券投资基金(QDII)调整大额申购、定期定额投资及转换转入业务限制金额的公告",
         "artId": "AN202607241827315717",
-        "limits": [],
+        "limits": [
+          1
+        ],
         "directLimits": [],
         "currency": "USD",
         "stale": false,
@@ -1794,8 +1798,8 @@
       "purchaseFeeOrig": null,
       "scale": 251.81,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.603,
-      "etfPremium": 10.51
+      "etfPrice": 2.575,
+      "etfPremium": 9.32
     },
     {
       "code": "050025",
@@ -1926,8 +1930,8 @@
       "purchaseFeeOrig": null,
       "scale": 9.78,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.015,
-      "etfPremium": 9.03
+      "etfPrice": 2.004,
+      "etfPremium": 8.44
     },
     {
       "code": "159655",
@@ -1953,8 +1957,8 @@
       "purchaseFeeOrig": null,
       "scale": 41.71,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.95,
-      "etfPremium": 8.24
+      "etfPrice": 1.939,
+      "etfPremium": 7.63
     },
     {
       "code": "513650",
@@ -1980,8 +1984,8 @@
       "purchaseFeeOrig": null,
       "scale": 87.11,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.949,
-      "etfPremium": 8.63
+      "etfPrice": 1.932,
+      "etfPremium": 7.68
     },
     {
       "code": "006075",
@@ -2707,8 +2711,8 @@
       "purchaseFeeOrig": null,
       "scale": 352.63,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.938,
-      "etfPremium": -0.49
+      "etfPrice": 0.917,
+      "etfPremium": -2.72
     },
     {
       "code": "164906",
@@ -2784,8 +2788,8 @@
       "purchaseFeeOrig": null,
       "scale": 259.02,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.315,
-      "etfPremium": 0.32
+      "etfPrice": 0.306,
+      "etfPremium": 0.26
     },
     {
       "code": "513180",
@@ -2812,7 +2816,7 @@
       "scale": 382.85,
       "scaleDate": "2026-09-30",
       "etfPrice": 0.472,
-      "etfPremium": -0.46
+      "etfPremium": 0.47
     },
     {
       "code": "118001",
@@ -5587,8 +5591,8 @@
       "nav": 2.726,
       "navChangePct": -0.84,
       "navDate": "2026-11-13",
-      "mgmtFee": 1.2,
-      "custodyFee": 0.2,
+      "mgmtFee": null,
+      "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": 1.14,
@@ -6347,8 +6351,8 @@
       "nav": 0.2107,
       "navChangePct": -3.39,
       "navDate": "2026-11-13",
-      "mgmtFee": 1.2,
-      "custodyFee": 0.2,
+      "mgmtFee": null,
+      "custodyFee": 1.5,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": 11.36,
@@ -6722,8 +6726,8 @@
       "nav": 0.2113,
       "navChangePct": 0.14,
       "navDate": "2026-11-13",
-      "mgmtFee": 1.0,
-      "custodyFee": 0.2,
+      "mgmtFee": null,
+      "custodyFee": 0.0,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": null,
@@ -6997,8 +7001,8 @@
       "nav": 0.0786,
       "navChangePct": -0.25,
       "navDate": "2026-11-13",
-      "mgmtFee": 0.5,
-      "custodyFee": 0.15,
+      "mgmtFee": null,
+      "custodyFee": 0.0,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": 4.79,
@@ -8282,8 +8286,8 @@
       "nav": 0.3411,
       "navChangePct": 0.38,
       "navDate": "2026-11-13",
-      "mgmtFee": 0.8,
-      "custodyFee": 0.2,
+      "mgmtFee": null,
+      "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
@@ -10467,9 +10471,7 @@
         "date": "2026-07-27",
         "title": "摩根标普500指数型发起式证券投资基金(QDII)调整大额申购、定期定额投资及转换转入业务限制金额的公告",
         "artId": "AN202607241827315718",
-        "limits": [
-          10
-        ],
+        "limits": [],
         "directLimits": [],
         "currency": "CNY",
         "stale": false,
@@ -14255,8 +14257,8 @@
       "nav": 2.8141,
       "navChangePct": -1.13,
       "navDate": "2026-11-13",
-      "mgmtFee": 1.2,
-      "custodyFee": 0.2,
+      "mgmtFee": null,
+      "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": 1.13,
@@ -16331,8 +16333,8 @@
       "purchaseFeeOrig": null,
       "scale": 2.17,
       "scaleDate": "2026-09-17",
-      "etfPrice": 0.865,
-      "etfPremium": 0.79
+      "etfPrice": 0.852,
+      "etfPremium": 0.34
     },
     {
       "code": "159100",
@@ -16358,8 +16360,8 @@
       "purchaseFeeOrig": null,
       "scale": 5.54,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.957,
-      "etfPremium": 1.67
+      "etfPrice": 0.935,
+      "etfPremium": -0.67
     },
     {
       "code": "159202",
@@ -16385,8 +16387,8 @@
       "purchaseFeeOrig": null,
       "scale": 9.6,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.678,
-      "etfPremium": -0.07
+      "etfPrice": 0.66,
+      "etfPremium": 0.26
     },
     {
       "code": "159303",
@@ -16412,8 +16414,8 @@
       "purchaseFeeOrig": null,
       "scale": null,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.362,
-      "etfPremium": -7.31
+      "etfPrice": 1.456,
+      "etfPremium": -0.17
     },
     {
       "code": "159329",
@@ -16439,8 +16441,8 @@
       "purchaseFeeOrig": null,
       "scale": 10.12,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.846,
-      "etfPremium": -0.77
+      "etfPrice": 0.844,
+      "etfPremium": -0.07
     },
     {
       "code": "159501",
@@ -16466,8 +16468,8 @@
       "purchaseFeeOrig": null,
       "scale": 133.68,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.07,
-      "etfPremium": 21.16
+      "etfPrice": 2.045,
+      "etfPremium": 19.7
     },
     {
       "code": "159502",
@@ -16493,8 +16495,8 @@
       "purchaseFeeOrig": null,
       "scale": 17.93,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.522,
-      "etfPremium": 5.35
+      "etfPrice": 1.512,
+      "etfPremium": 4.66
     },
     {
       "code": "159509",
@@ -16520,8 +16522,8 @@
       "purchaseFeeOrig": null,
       "scale": 160.83,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.895,
-      "etfPremium": 43.81
+      "etfPrice": 2.814,
+      "etfPremium": 39.78
     },
     {
       "code": "159518",
@@ -16547,8 +16549,8 @@
       "purchaseFeeOrig": null,
       "scale": 20.18,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.199,
-      "etfPremium": -0.54
+      "etfPrice": 1.211,
+      "etfPremium": 0.46
     },
     {
       "code": "159519",
@@ -16575,7 +16577,7 @@
       "scale": null,
       "scaleDate": "2026-09-30",
       "etfPrice": 1.751,
-      "etfPremium": -0.27
+      "etfPremium": -0.16
     },
     {
       "code": "159529",
@@ -16601,8 +16603,8 @@
       "purchaseFeeOrig": null,
       "scale": 9.75,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.381,
-      "etfPremium": 3.41
+      "etfPrice": 1.387,
+      "etfPremium": 3.86
     },
     {
       "code": "159557",
@@ -16628,8 +16630,8 @@
       "purchaseFeeOrig": null,
       "scale": 1.83,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.277,
-      "etfPremium": -5.27
+      "etfPrice": 1.326,
+      "etfPremium": -0.93
     },
     {
       "code": "159561",
@@ -16655,8 +16657,8 @@
       "purchaseFeeOrig": null,
       "scale": 17.25,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.32,
-      "etfPremium": 0.77
+      "etfPrice": 1.303,
+      "etfPremium": -0.53
     },
     {
       "code": "159577",
@@ -16709,8 +16711,8 @@
       "purchaseFeeOrig": null,
       "scale": 32.45,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.715,
-      "etfPremium": -0.57
+      "etfPrice": 0.706,
+      "etfPremium": -1.82
     },
     {
       "code": "159607",
@@ -16736,8 +16738,8 @@
       "purchaseFeeOrig": null,
       "scale": 10.09,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.71,
-      "etfPremium": -1.05
+      "etfPrice": 0.701,
+      "etfPremium": -2.3
     },
     {
       "code": "159615",
@@ -16763,8 +16765,8 @@
       "purchaseFeeOrig": null,
       "scale": 3.86,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.95,
-      "etfPremium": -8.85
+      "etfPrice": 1.031,
+      "etfPremium": -0.27
     },
     {
       "code": "159687",
@@ -16790,8 +16792,8 @@
       "purchaseFeeOrig": null,
       "scale": 31.46,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.6,
-      "etfPremium": -1.65
+      "etfPrice": 1.582,
+      "etfPremium": -2.69
     },
     {
       "code": "159688",
@@ -16817,8 +16819,8 @@
       "purchaseFeeOrig": null,
       "scale": 10.01,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.635,
-      "etfPremium": -0.42
+      "etfPrice": 0.62,
+      "etfPremium": 0.24
     },
     {
       "code": "159699",
@@ -16844,8 +16846,8 @@
       "purchaseFeeOrig": null,
       "scale": 4.27,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.902,
-      "etfPremium": 0.31
+      "etfPrice": 0.909,
+      "etfPremium": -0.15
     },
     {
       "code": "159740",
@@ -16871,8 +16873,8 @@
       "purchaseFeeOrig": null,
       "scale": 140.6,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.461,
-      "etfPremium": -0.39
+      "etfPrice": 0.462,
+      "etfPremium": -0.17
     },
     {
       "code": "159741",
@@ -16898,8 +16900,8 @@
       "purchaseFeeOrig": null,
       "scale": 8.12,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.47,
-      "etfPremium": 0.26
+      "etfPrice": 0.466,
+      "etfPremium": -0.62
     },
     {
       "code": "159742",
@@ -16925,8 +16927,8 @@
       "purchaseFeeOrig": null,
       "scale": 34.37,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.476,
-      "etfPremium": 0.25
+      "etfPrice": 0.475,
+      "etfPremium": 0.02
     },
     {
       "code": "159747",
@@ -16952,8 +16954,8 @@
       "purchaseFeeOrig": null,
       "scale": 3.45,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.969,
-      "etfPremium": 1.17
+      "etfPrice": 0.956,
+      "etfPremium": -0.08
     },
     {
       "code": "159750",
@@ -16979,8 +16981,8 @@
       "purchaseFeeOrig": null,
       "scale": 10.36,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.715,
-      "etfPremium": 0.53
+      "etfPrice": 0.706,
+      "etfPremium": -0.63
     },
     {
       "code": "159822",
@@ -17006,8 +17008,8 @@
       "purchaseFeeOrig": null,
       "scale": 1.69,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.536,
-      "etfPremium": -0.24
+      "etfPrice": 0.53,
+      "etfPremium": -1.36
     },
     {
       "code": "159850",
@@ -17033,8 +17035,8 @@
       "purchaseFeeOrig": null,
       "scale": 3.24,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.766,
-      "etfPremium": 0.7
+      "etfPrice": 0.76,
+      "etfPremium": -0.2
     },
     {
       "code": "159866",
@@ -17060,8 +17062,8 @@
       "purchaseFeeOrig": null,
       "scale": 20.93,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.505,
-      "etfPremium": 3.27
+      "etfPrice": 1.494,
+      "etfPremium": 2.91
     },
     {
       "code": "159892",
@@ -17087,8 +17089,8 @@
       "purchaseFeeOrig": null,
       "scale": 43.13,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.718,
-      "etfPremium": -0.46
+      "etfPrice": 0.72,
+      "etfPremium": -0.26
     },
     {
       "code": "159920",
@@ -17114,8 +17116,8 @@
       "purchaseFeeOrig": null,
       "scale": 82.43,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.39,
-      "etfPremium": 1.04
+      "etfPrice": 1.374,
+      "etfPremium": -0.17
     },
     {
       "code": "160125",
@@ -18391,8 +18393,8 @@
       "purchaseFeeOrig": null,
       "scale": 32.08,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.977,
-      "etfPremium": 0.59
+      "etfPrice": 0.971,
+      "etfPremium": -0.16
     },
     {
       "code": "513000",
@@ -18418,8 +18420,8 @@
       "purchaseFeeOrig": null,
       "scale": 24.22,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.03,
-      "etfPremium": 3.43
+      "etfPrice": 2.018,
+      "etfPremium": 3.37
     },
     {
       "code": "513010",
@@ -18446,7 +18448,7 @@
       "scale": 249.43,
       "scaleDate": "2026-09-30",
       "etfPrice": 0.486,
-      "etfPremium": 0.31
+      "etfPremium": 0.23
     },
     {
       "code": "513030",
@@ -18472,8 +18474,8 @@
       "purchaseFeeOrig": null,
       "scale": 18.18,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.743,
-      "etfPremium": -2.56
+      "etfPrice": 1.815,
+      "etfPremium": 1.46
     },
     {
       "code": "513060",
@@ -18499,8 +18501,8 @@
       "purchaseFeeOrig": null,
       "scale": 49.65,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.523,
-      "etfPremium": -0.21
+      "etfPrice": 0.522,
+      "etfPremium": -0.4
     },
     {
       "code": "513080",
@@ -18526,8 +18528,8 @@
       "purchaseFeeOrig": null,
       "scale": 11.11,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.661,
-      "etfPremium": 0.33
+      "etfPrice": 1.648,
+      "etfPremium": -0.45
     },
     {
       "code": "513120",
@@ -18553,8 +18555,8 @@
       "purchaseFeeOrig": null,
       "scale": 233.19,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.147,
-      "etfPremium": -2.61
+      "etfPrice": 1.177,
+      "etfPremium": -0.07
     },
     {
       "code": "513130",
@@ -18581,7 +18583,7 @@
       "scale": 321.51,
       "scaleDate": "2026-09-30",
       "etfPrice": 0.464,
-      "etfPremium": 0.54
+      "etfPremium": 0.24
     },
     {
       "code": "513140",
@@ -18607,8 +18609,8 @@
       "purchaseFeeOrig": null,
       "scale": 1.35,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.709,
-      "etfPremium": 1.16
+      "etfPrice": 1.692,
+      "etfPremium": 0.02
     },
     {
       "code": "513170",
@@ -18635,7 +18637,7 @@
       "scale": 2.43,
       "scaleDate": "2026-09-30",
       "etfPrice": 1.544,
-      "etfPremium": 0.7
+      "etfPremium": 0.08
     },
     {
       "code": "513210",
@@ -18661,8 +18663,8 @@
       "purchaseFeeOrig": null,
       "scale": null,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.402,
-      "etfPremium": 1.02
+      "etfPrice": 1.386,
+      "etfPremium": -0.2
     },
     {
       "code": "513220",
@@ -18688,8 +18690,8 @@
       "purchaseFeeOrig": null,
       "scale": 4.7,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.848,
-      "etfPremium": -0.06
+      "etfPrice": 0.832,
+      "etfPremium": -1.94
     },
     {
       "code": "513260",
@@ -18715,8 +18717,8 @@
       "purchaseFeeOrig": null,
       "scale": 51.43,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.911,
-      "etfPremium": 0.86
+      "etfPrice": 0.903,
+      "etfPremium": -0.11
     },
     {
       "code": "513280",
@@ -18742,8 +18744,8 @@
       "purchaseFeeOrig": null,
       "scale": 4.07,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.021,
-      "etfPremium": 0.05
+      "etfPrice": 1.016,
+      "etfPremium": -0.56
     },
     {
       "code": "513290",
@@ -18769,8 +18771,8 @@
       "purchaseFeeOrig": null,
       "scale": 18.38,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.87,
-      "etfPremium": 9.31
+      "etfPrice": 1.837,
+      "etfPremium": 7.38
     },
     {
       "code": "513310",
@@ -18796,8 +18798,8 @@
       "purchaseFeeOrig": null,
       "scale": 113.05,
       "scaleDate": "2026-09-30",
-      "etfPrice": 3.4,
-      "etfPremium": 4.17
+      "etfPrice": 3.525,
+      "etfPremium": 9.2
     },
     {
       "code": "513350",
@@ -18823,8 +18825,8 @@
       "purchaseFeeOrig": null,
       "scale": 10.92,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.255,
-      "etfPremium": -0.75
+      "etfPrice": 1.273,
+      "etfPremium": 0.67
     },
     {
       "code": "513360",
@@ -18850,8 +18852,8 @@
       "purchaseFeeOrig": null,
       "scale": 2.76,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.407,
-      "etfPremium": -1.12
+      "etfPrice": 0.41,
+      "etfPremium": -0.39
     },
     {
       "code": "513380",
@@ -18877,8 +18879,8 @@
       "purchaseFeeOrig": null,
       "scale": 88.62,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.427,
-      "etfPremium": 0.66
+      "etfPrice": 0.424,
+      "etfPremium": -0.14
     },
     {
       "code": "513400",
@@ -18904,8 +18906,8 @@
       "purchaseFeeOrig": null,
       "scale": 38.85,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.294,
-      "etfPremium": 2.63
+      "etfPrice": 1.288,
+      "etfPremium": 2.16
     },
     {
       "code": "513520",
@@ -18931,8 +18933,8 @@
       "purchaseFeeOrig": null,
       "scale": 24.39,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.016,
-      "etfPremium": 3.53
+      "etfPrice": 2.018,
+      "etfPremium": 3.99
     },
     {
       "code": "513530",
@@ -18958,8 +18960,8 @@
       "purchaseFeeOrig": null,
       "scale": 53.65,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.53,
-      "etfPremium": 0.55
+      "etfPrice": 1.531,
+      "etfPremium": 0.1
     },
     {
       "code": "513580",
@@ -18985,8 +18987,8 @@
       "purchaseFeeOrig": null,
       "scale": 32.35,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.472,
-      "etfPremium": 0.47
+      "etfPrice": 0.467,
+      "etfPremium": -0.7
     },
     {
       "code": "513730",
@@ -19012,8 +19014,8 @@
       "purchaseFeeOrig": null,
       "scale": 8.38,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.0,
-      "etfPremium": -1.89
+      "etfPrice": 0.997,
+      "etfPremium": -2.19
     },
     {
       "code": "513800",
@@ -19039,8 +19041,8 @@
       "purchaseFeeOrig": null,
       "scale": 20.16,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.755,
-      "etfPremium": 0.26
+      "etfPrice": 1.75,
+      "etfPremium": -0.21
     },
     {
       "code": "513810",
@@ -19066,8 +19068,8 @@
       "purchaseFeeOrig": null,
       "scale": null,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.706,
-      "etfPremium": -0.14
+      "etfPrice": 1.718,
+      "etfPremium": -0.12
     },
     {
       "code": "513850",
@@ -19093,8 +19095,8 @@
       "purchaseFeeOrig": null,
       "scale": 23.44,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.806,
-      "etfPremium": 9.39
+      "etfPrice": 1.802,
+      "etfPremium": 9.15
     },
     {
       "code": "513880",
@@ -19120,8 +19122,8 @@
       "purchaseFeeOrig": null,
       "scale": 27.77,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.914,
-      "etfPremium": 4.99
+      "etfPrice": 1.901,
+      "etfPremium": 4.96
     },
     {
       "code": "513890",
@@ -19147,8 +19149,8 @@
       "purchaseFeeOrig": null,
       "scale": 7.32,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.726,
-      "etfPremium": 1.24
+      "etfPrice": 0.717,
+      "etfPremium": -0.11
     },
     {
       "code": "513950",
@@ -19174,8 +19176,8 @@
       "purchaseFeeOrig": null,
       "scale": 29.28,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.219,
-      "etfPremium": 0.27
+      "etfPrice": 1.22,
+      "etfPremium": -0.2
     },
     {
       "code": "513970",
@@ -19201,8 +19203,8 @@
       "purchaseFeeOrig": null,
       "scale": 10.92,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.83,
-      "etfPremium": 0.28
+      "etfPrice": 0.838,
+      "etfPremium": -0.13
     },
     {
       "code": "519601",
@@ -19303,8 +19305,8 @@
       "purchaseFeeOrig": null,
       "scale": 26.41,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.204,
-      "etfPremium": -1.16
+      "etfPrice": 1.209,
+      "etfPremium": 0.01
     },
     {
       "code": "520520",
@@ -19330,8 +19332,8 @@
       "purchaseFeeOrig": null,
       "scale": null,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.96,
-      "etfPremium": 0.0
+      "etfPrice": 0.972,
+      "etfPremium": -0.12
     },
     {
       "code": "520570",
@@ -19357,8 +19359,8 @@
       "purchaseFeeOrig": null,
       "scale": 24.73,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.6,
-      "etfPremium": 1.1
+      "etfPrice": 0.595,
+      "etfPremium": 0.17
     },
     {
       "code": "520580",
@@ -19385,7 +19387,7 @@
       "scale": 2.64,
       "scaleDate": "2026-09-30",
       "etfPrice": 0.924,
-      "etfPremium": 0.21
+      "etfPremium": 0.26
     },
     {
       "code": "520590",
@@ -19411,8 +19413,8 @@
       "purchaseFeeOrig": null,
       "scale": 1.61,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.644,
-      "etfPremium": 1.58
+      "etfPrice": 0.634,
+      "etfPremium": -0.11
     },
     {
       "code": "520830",
@@ -19438,8 +19440,8 @@
       "purchaseFeeOrig": null,
       "scale": 8.88,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.833,
-      "etfPremium": -1.01
+      "etfPrice": 0.834,
+      "etfPremium": 0.04
     },
     {
       "code": "520870",
@@ -19465,8 +19467,8 @@
       "purchaseFeeOrig": null,
       "scale": 5.96,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.934,
-      "etfPremium": 0.13
+      "etfPrice": 0.932,
+      "etfPremium": -0.09
     },
     {
       "code": "520920",
@@ -19492,8 +19494,8 @@
       "purchaseFeeOrig": null,
       "scale": 121.3,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.555,
-      "etfPremium": 0.65
+      "etfPrice": 0.551,
+      "etfPremium": -0.18
     },
     {
       "code": "539001",
