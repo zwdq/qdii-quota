@@ -540,6 +540,7 @@ class AnnouncementChecker:
             m = re.search(r"\{.*\}", raw, re.S)
             data = json.loads(m.group(0)).get("Data") or []
         except Exception:
+            self.failed = True      # 网络/接口失败（区别于\"这只基金没有限额公告\"）
             return None
         cands = [r for r in data
                  if ANN_INCLUDE.search(r.get("TITLE", "") or "")
@@ -563,6 +564,7 @@ class AnnouncementChecker:
         返回 {"date", "title", "artId", "limits", "directLimits", "currency", "stale", "review"} 或 None
         limits = 代销/通用渠道额度（与接口 MAXSG 同口径），directLimits = 基金公司直销渠道额度
         """
+        self.failed = False
         ann = self._latest_limit_announcement(code, fund_name)
         if not ann:
             return None
@@ -573,18 +575,26 @@ class AnnouncementChecker:
         stale = pub is None or (today - pub).days > ANN_RECENT_DAYS
         usd = is_usd_share(fund_name)
         body = ""
+        parsed = {"agency": [], "direct": [], "general": []}
         if art_id:
-            try:
-                d = self.http.get_json(
-                    "%s?art_code=%s&client_source=web&page_index=1"
-                    % (Endpoints.ANNOUNCEMENT_CONTENT, art_id)
-                )
-                body = re.sub(r"<[^>]+>", "",
-                              d.get("data", {}).get("notice_content", "") or "")
-            except Exception:
-                body = ""
-        parsed = (extract_limits(body, share_class_of(fund_name), usd) if body
-                  else {"agency": [], "direct": [], "general": []})
+            # 2026-11-19 修订：公告正文抓取偶发失败（接口空响应/断连），
+            # 一次失败会让限额和直销额度一起变空 → 重试 3 次再放弃
+            for attempt in range(3):
+                try:
+                    d = self.http.get_json(
+                        "%s?art_code=%s&client_source=web&page_index=1"
+                        % (Endpoints.ANNOUNCEMENT_CONTENT, art_id)
+                    )
+                    body = re.sub(r"<[^>]+>", "",
+                                  d.get("data", {}).get("notice_content", "") or "")
+                except Exception:
+                    body = ""
+                if body:
+                    parsed = extract_limits(body, share_class_of(fund_name), usd)
+                    if parsed["agency"] or parsed["general"] or parsed["direct"]:
+                        break
+                if attempt < 2:
+                    time.sleep(1.5 * (attempt + 1))
         limits = sorted(set(parsed["agency"]) | set(parsed["general"]))
         return {
             "date": ann.get("PUBLISHDATEDesc") or (pub.isoformat() if pub else ""),
@@ -709,15 +719,35 @@ class FundFetcher:
 
     # ── 公告校验 ──────────────────────────────────────────────────────────
 
-    def _add_announcement(self, item: dict, do_ann: bool) -> None:
-        """公告校验：CORE 基金 + 纳指100/标普500 全组（F/E/I 类份额常只有公告有额度）"""
+    @staticmethod
+    def _ann_empty(ann: dict) -> bool:
+        """公告解析结果里代销/直销额度都为空的视为\"没解析出来\"（≠真的没有限额）"""
+        return not (ann.get("limits") or ann.get("directLimits"))
+
+    def _add_announcement(self, item: dict, do_ann: bool,
+                          prev_ann: dict | None = None) -> None:
+        """公告校验：CORE 基金 + 纳指100/标普500 全组（F/E/I 类份额常只有公告有额度）
+
+        prev_ann：上一份 data.json 里同一只基金的公告结果。公告正文抓取/解析偶发失败时，
+        同一份公告会解析成空（2026-11-19 实测：11/18 有 16 只基金额度整段消失，含大成标普500
+        的\"直销 500 元\"，第二天自己又好了）。此时沿用上一份结果，避免额度在页面上闪没。
+        """
         code = item["code"]
         hot = code in ANN_CORE or item.get("group") in ("纳斯达克100", "标普500")
         if not (do_ann and hot and item["status"] in ("limited", "suspended")):
             return
         try:
             ann = self.ann_checker.supplement(code, item["limit"], item.get("name", ""))
+            # 公告列表整体抓失败（网络抖动）且上一份结果还新鲜 → 沿用上次，不判为\"没额度\"
+            if not ann and getattr(self.ann_checker, "failed", False) \
+                    and prev_ann and not prev_ann.get("stale"):
+                ann = dict(prev_ann, carriedOver=True)
             if ann:
+                # 同一份公告（artId 相同）这次解析为空、上次有值 → 沿用上次
+                if (self._ann_empty(ann) and prev_ann and not prev_ann.get("stale")
+                        and (prev_ann.get("artId") == ann.get("artId")
+                             or not ann.get("artId"))):
+                    ann = dict(prev_ann, carriedOver=True)
                 item["announcement"] = ann
                 # API MAXSG='--'（未公布，如 I 类份额）→ 用公告抠出的金额当限额
                 usd = ann.get("currency") == "USD"
@@ -734,7 +764,11 @@ class FundFetcher:
                     item["directLimit"] = amt
                     item["directLimitText"] = fmt_amount(amt, usd)
         except Exception as e:
-            item["announcementError"] = str(e)
+            # 公告列表/正文整体抓失败：上一份结果还新鲜就沿用，不让页面上额度凭空消失
+            if prev_ann and not prev_ann.get("stale"):
+                item["announcement"] = dict(prev_ann, carriedOver=True)
+            else:
+                item["announcementError"] = str(e)
 
     # ── 费率兜底（F10 费率页）────────────────────────────────────────────
 
@@ -758,13 +792,14 @@ class FundFetcher:
 
     # ── 主入口 ────────────────────────────────────────────────────────────
 
-    def fetch_one(self, code: str, do_ann: bool) -> dict:
-        """抓取单只基金完整数据"""
+    def fetch_one(self, code: str, do_ann: bool,
+                  prev_ann: dict | None = None) -> dict:
+        """抓取单只基金完整数据（prev_ann：上一份数据里该基金的公告结果，用作兜底）"""
         datas = self._fetch_raw_data(code)
         item = self._map_fields(code, datas)
         self._fee_fallback(item)
         self._add_premium(item)
-        self._add_announcement(item, do_ann)
+        self._add_announcement(item, do_ann, prev_ann)
         return item
 
 
@@ -823,9 +858,14 @@ class QdiiQuotaApp:
         codes, src = self.universe.build()
         print("清单来源：%s → 共 %d 只基金" % (src, len(codes)))
 
+        # 1.5 读上一份数据：既用于公告兜底，也用于额度变化对比
+        prev = self._load_previous(out_path)
+        prev_funds = {f.get("code"): f for f in prev.get("funds") or []}
+
         # 2. 并发抓取（结果按清单原顺序输出，保证 data.json diff 稳定）
         def task(code: str) -> dict:
-            item = self.fetcher.fetch_one(code, do_ann)
+            old = prev_funds.get(code) or {}
+            item = self.fetcher.fetch_one(code, do_ann, old.get("announcement"))
             time.sleep(REQUEST_INTERVAL)  # 每个线程自我节流，避免被限流
             return item
 
@@ -852,7 +892,6 @@ class QdiiQuotaApp:
 
         # 3. 完整性保护：抓取大面积失败（被限流/接口变更）时不覆盖上一份好数据，
         #    以非零退出让 Actions 运行失败，GitHub 会发失败通知
-        prev = self._load_previous(out_path)
         prev_count = int(prev.get("count") or 0) or None
         too_few = prev_count and len(funds) < prev_count * MIN_KEEP_RATIO
         too_many_err = len(errors) > len(codes) * MAX_ERROR_RATIO
@@ -863,7 +902,6 @@ class QdiiQuotaApp:
             sys.exit(1)
 
         # 4. 与上一份数据对比，标出额度变化（当天及前一天的变化会一直保留显示）
-        prev_funds = {f.get("code"): f for f in prev.get("funds") or []}
         today = (datetime.datetime.now(datetime.timezone.utc)
                  + datetime.timedelta(hours=8)).date()
         n_changed = 0
