@@ -2,12 +2,20 @@
   "name": "QDII 基金每日额度追踪",
   "short_name": "QDII额度",
   "start_url": "fund-quota.html",
-  "scope": "./",
   "display": "standalone",
   "background_color": "#f5f5f5",
   "theme_color": "#f5f5f5",
   "icons": [
-    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
   ]
 }
