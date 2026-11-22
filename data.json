@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-21 19:54:59",
+  "updatedAt": "2026-11-22 09:31:03",
   "source": "eastmoney FundMNNBasicInformation + rankhandler 发现",
   "universeSource": "搜索\"标普500\"发现 0 只（过滤后新增 0） + 搜索\"纳斯达克\"发现 50 只（过滤后新增 13） + 自动发现(rankhandler) 746 只",
   "note": "MAXSG 为可信当前限额；CORE 热门基金附公告交叉校验；分组按名称自动分类。",
@@ -2717,8 +2717,8 @@
       "nav": 2.0663,
       "navChangePct": -1.57,
       "navDate": "2026-11-19",
-      "mgmtFee": null,
-      "custodyFee": 0.0,
+      "mgmtFee": 0.6,
+      "custodyFee": 0.2,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": 1.83,
@@ -3695,13 +3695,7 @@
       "purchaseFee": 0.13,
       "purchaseFeeOrig": 1.3,
       "scale": 14.03,
-      "scaleDate": "2026-09-30",
-      "change": {
-        "type": "suspend",
-        "from": "100 元",
-        "to": "暂停",
-        "date": "2026-11-20"
-      }
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "000370",
@@ -5701,13 +5695,7 @@
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
       "scale": 1.84,
-      "scaleDate": "2026-09-30",
-      "change": {
-        "type": "suspend",
-        "from": "不限",
-        "to": "暂停",
-        "date": "2026-11-20"
-      }
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "005700",
@@ -6440,8 +6428,8 @@
       "nav": 0.1848,
       "navChangePct": 0.11,
       "navDate": "2026-11-19",
-      "mgmtFee": 0.5,
-      "custodyFee": 0.1,
+      "mgmtFee": null,
+      "custodyFee": 0.8,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": 38.18,
@@ -6520,13 +6508,7 @@
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
       "scale": 26.6,
-      "scaleDate": "2026-09-30",
-      "change": {
-        "type": "suspend",
-        "from": "2000 元",
-        "to": "暂停",
-        "date": "2026-11-20"
-      }
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "007360",
@@ -6746,8 +6728,8 @@
       "nav": 1.342,
       "navChangePct": -1.63,
       "navDate": "2026-11-19",
-      "mgmtFee": 1.0,
-      "custodyFee": 0.2,
+      "mgmtFee": null,
+      "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
@@ -6796,8 +6778,8 @@
       "nav": 0.1999,
       "navChangePct": -1.67,
       "navDate": "2026-11-19",
-      "mgmtFee": 1.0,
-      "custodyFee": 0.2,
+      "mgmtFee": null,
+      "custodyFee": 0.0,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": null,
@@ -7446,8 +7428,8 @@
       "nav": null,
       "navChangePct": null,
       "navDate": "--",
-      "mgmtFee": 1.2,
-      "custodyFee": 0.2,
+      "mgmtFee": null,
+      "custodyFee": 1.6,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": 3.38,
@@ -7821,8 +7803,8 @@
       "nav": 0.1514,
       "navChangePct": 0.07,
       "navDate": "2026-11-19",
-      "mgmtFee": 0.8,
-      "custodyFee": 0.2,
+      "mgmtFee": null,
+      "custodyFee": 0.8,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": 1.55,
@@ -8246,8 +8228,8 @@
       "nav": 2.9987,
       "navChangePct": -1.98,
       "navDate": "2026-11-19",
-      "mgmtFee": 0.8,
-      "custodyFee": 0.2,
+      "mgmtFee": null,
+      "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": 23.61,
@@ -8357,8 +8339,8 @@
       "nav": 0.3256,
       "navChangePct": -1.93,
       "navDate": "2026-11-19",
-      "mgmtFee": null,
-      "custodyFee": 0.0,
+      "mgmtFee": 0.8,
+      "custodyFee": 0.2,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
@@ -9007,8 +8989,8 @@
       "nav": 0.1708,
       "navChangePct": 0.0,
       "navDate": "2026-11-19",
-      "mgmtFee": 0.5,
-      "custodyFee": 0.1,
+      "mgmtFee": null,
+      "custodyFee": 0.0,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": 4.65,
@@ -9723,13 +9705,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": 1.95,
-      "scaleDate": "2026-09-30",
-      "change": {
-        "type": "suspend",
-        "from": "100 元",
-        "to": "暂停",
-        "date": "2026-11-20"
-      }
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "016281",
@@ -10584,13 +10560,7 @@
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
       "scale": 3.68,
-      "scaleDate": "2026-09-30",
-      "change": {
-        "type": "suspend",
-        "from": "10 万",
-        "to": "暂停",
-        "date": "2026-11-20"
-      }
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "017654",
@@ -10615,13 +10585,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": 14.09,
-      "scaleDate": "2026-09-30",
-      "change": {
-        "type": "suspend",
-        "from": "10 万",
-        "to": "暂停",
-        "date": "2026-11-20"
-      }
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "017730",
@@ -11993,13 +11957,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": 12.62,
-      "scaleDate": "2026-09-30",
-      "change": {
-        "type": "suspend",
-        "from": "2000 元",
-        "to": "暂停",
-        "date": "2026-11-20"
-      }
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "019450",
@@ -12774,13 +12732,7 @@
       "purchaseFee": 0.06,
       "purchaseFeeOrig": 0.6,
       "scale": 3.04,
-      "scaleDate": "2026-09-30",
-      "change": {
-        "type": "suspend",
-        "from": "10 元",
-        "to": "暂停",
-        "date": "2026-11-20"
-      }
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "020713",
@@ -12805,13 +12757,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": 1.69,
-      "scaleDate": "2026-09-30",
-      "change": {
-        "type": "suspend",
-        "from": "10 元",
-        "to": "暂停",
-        "date": "2026-11-20"
-      }
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "020743",
@@ -12911,13 +12857,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": 1.29,
-      "scaleDate": "2026-09-30",
-      "change": {
-        "type": "suspend",
-        "from": "不限",
-        "to": "暂停",
-        "date": "2026-11-20"
-      }
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "020988",
@@ -13067,13 +13007,7 @@
       "purchaseFee": 0.12,
       "purchaseFeeOrig": 1.2,
       "scale": 1.9,
-      "scaleDate": "2026-09-30",
-      "change": {
-        "type": "suspend",
-        "from": "2 万",
-        "to": "暂停",
-        "date": "2026-11-20"
-      }
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "021190",
@@ -13098,13 +13032,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": 8.87,
-      "scaleDate": "2026-09-30",
-      "change": {
-        "type": "suspend",
-        "from": "2 万",
-        "to": "暂停",
-        "date": "2026-11-20"
-      }
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "021277",
@@ -14590,13 +14518,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": null,
-      "scaleDate": "2026-09-30",
-      "change": {
-        "type": "suspend",
-        "from": "不限",
-        "to": "暂停",
-        "date": "2026-11-20"
-      }
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "025587",
@@ -15621,13 +15543,7 @@
       "purchaseFee": 0.08,
       "purchaseFeeOrig": 0.8,
       "scale": 2.42,
-      "scaleDate": "2026-08-25",
-      "change": {
-        "type": "open",
-        "from": "暂停",
-        "to": "不限",
-        "date": "2026-11-20"
-      }
+      "scaleDate": "2026-08-25"
     },
     {
       "code": "027756",
@@ -15652,13 +15568,7 @@
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": 1.12,
-      "scaleDate": "2026-08-25",
-      "change": {
-        "type": "open",
-        "from": "暂停",
-        "to": "不限",
-        "date": "2026-11-20"
-      }
+      "scaleDate": "2026-08-25"
     },
     {
       "code": "027765",
@@ -16243,13 +16153,7 @@
       "purchaseFee": 0.15,
       "purchaseFeeOrig": 1.5,
       "scale": null,
-      "scaleDate": "2026-09-30",
-      "change": {
-        "type": "suspend",
-        "from": "100 元",
-        "to": "暂停",
-        "date": "2026-11-20"
-      }
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "080006",
@@ -18076,13 +17980,7 @@
       "purchaseFee": 0.16,
       "purchaseFeeOrig": 1.6,
       "scale": 2.68,
-      "scaleDate": "2026-09-30",
-      "change": {
-        "type": "suspend",
-        "from": "不限",
-        "to": "暂停",
-        "date": "2026-11-20"
-      }
+      "scaleDate": "2026-09-30"
     },
     {
       "code": "202801",
