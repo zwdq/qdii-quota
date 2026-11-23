@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-22 20:08:15",
+  "updatedAt": "2026-11-23 09:30:14",
   "source": "eastmoney FundMNNBasicInformation + rankhandler 发现",
   "universeSource": "搜索\"标普500\"发现 0 只（过滤后新增 0） + 搜索\"纳斯达克\"发现 50 只（过滤后新增 13） + 自动发现(rankhandler) 746 只",
   "note": "MAXSG 为可信当前限额；CORE 热门基金附公告交叉校验；分组按名称自动分类。",
@@ -31,7 +31,7 @@
       "scale": 350.53,
       "scaleDate": "2026-09-30",
       "etfPrice": 1.526,
-      "etfPremium": 15.14
+      "etfPremium": 21.9
     },
     {
       "code": "513100",
@@ -58,7 +58,7 @@
       "scale": 197.66,
       "scaleDate": "2026-09-30",
       "etfPrice": 2.074,
-      "etfPremium": 16.99
+      "etfPremium": 23.99
     },
     {
       "code": "513300",
@@ -85,7 +85,7 @@
       "scale": 139.14,
       "scaleDate": "2026-09-30",
       "etfPrice": 2.523,
-      "etfPremium": 14.78
+      "etfPremium": 21.39
     },
     {
       "code": "161130",
@@ -296,7 +296,7 @@
       "scale": 82.47,
       "scaleDate": "2026-09-30",
       "etfPrice": 1.655,
-      "etfPremium": 12.2
+      "etfPremium": 18.84
     },
     {
       "code": "159659",
@@ -323,7 +323,7 @@
       "scale": 102.74,
       "scaleDate": "2026-09-30",
       "etfPrice": 2.219,
-      "etfPremium": 15.75
+      "etfPremium": 22.61
     },
     {
       "code": "159632",
@@ -350,7 +350,7 @@
       "scale": 118.08,
       "scaleDate": "2026-09-30",
       "etfPrice": 2.282,
-      "etfPremium": 13.32
+      "etfPremium": 20.02
     },
     {
       "code": "513870",
@@ -377,7 +377,7 @@
       "scale": 28.9,
       "scaleDate": "2026-09-30",
       "etfPrice": 1.939,
-      "etfPremium": 14.85
+      "etfPremium": 21.69
     },
     {
       "code": "159660",
@@ -404,7 +404,7 @@
       "scale": 57.74,
       "scaleDate": "2026-09-30",
       "etfPrice": 2.207,
-      "etfPremium": 13.93
+      "etfPremium": 20.7
     },
     {
       "code": "159696",
@@ -431,7 +431,7 @@
       "scale": 57.05,
       "scaleDate": "2026-09-30",
       "etfPrice": 1.935,
-      "etfPremium": 17.19
+      "etfPremium": 24.12
     },
     {
       "code": "513110",
@@ -458,7 +458,7 @@
       "scale": 52.06,
       "scaleDate": "2026-09-30",
       "etfPrice": 2.285,
-      "etfPremium": 12.22
+      "etfPremium": 18.82
     },
     {
       "code": "513390",
@@ -485,7 +485,7 @@
       "scale": 50.48,
       "scaleDate": "2026-09-30",
       "etfPrice": 2.273,
-      "etfPremium": 14.23
+      "etfPremium": 20.96
     },
     {
       "code": "008971",
@@ -632,8 +632,7 @@
         "directLimits": [],
         "currency": "USD",
         "stale": false,
-        "review": false,
-        "carriedOver": true
+        "review": false
       }
     },
     {
@@ -1813,8 +1812,8 @@
       "purchaseFeeOrig": null,
       "scale": 251.81,
       "scaleDate": "2026-09-30",
-      "etfPrice": 2.474,
-      "etfPremium": 8.57
+      "etfPrice": 2.47,
+      "etfPremium": 12.51
     },
     {
       "code": "050025",
@@ -1948,8 +1947,8 @@
       "purchaseFeeOrig": null,
       "scale": 9.78,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.928,
-      "etfPremium": 7.83
+      "etfPrice": 1.924,
+      "etfPremium": 11.67
     },
     {
       "code": "159655",
@@ -1975,8 +1974,8 @@
       "purchaseFeeOrig": null,
       "scale": 41.71,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.854,
-      "etfPremium": 6.43
+      "etfPrice": 1.82,
+      "etfPremium": 8.31
     },
     {
       "code": "513650",
@@ -2002,8 +2001,8 @@
       "purchaseFeeOrig": null,
       "scale": 87.11,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.847,
-      "etfPremium": 6.41
+      "etfPrice": 1.82,
+      "etfPremium": 8.88
     },
     {
       "code": "006075",
@@ -2558,8 +2557,8 @@
       "nav": 2.7264,
       "navChangePct": -1.6,
       "navDate": "2026-11-19",
-      "mgmtFee": 1.0,
-      "custodyFee": 0.2,
+      "mgmtFee": null,
+      "custodyFee": 0.0,
       "purchaseFee": 0.0,
       "purchaseFeeOrig": 0.0,
       "scale": 2.81,
@@ -2616,8 +2615,7 @@
         ],
         "currency": "USD",
         "stale": false,
-        "review": false,
-        "carriedOver": true
+        "review": false
       },
       "directLimit": 75,
       "directLimitText": "75 美元"
@@ -2759,8 +2757,8 @@
       "purchaseFeeOrig": null,
       "scale": 352.63,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.858,
-      "etfPremium": -2.34
+      "etfPrice": 0.85,
+      "etfPremium": -1.7
     },
     {
       "code": "164906",
@@ -2836,8 +2834,8 @@
       "purchaseFeeOrig": null,
       "scale": 259.02,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.279,
-      "etfPremium": -0.29
+      "etfPrice": 0.275,
+      "etfPremium": 0.07
     },
     {
       "code": "513180",
@@ -2863,8 +2861,8 @@
       "purchaseFeeOrig": null,
       "scale": 382.85,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.439,
-      "etfPremium": 0.0
+      "etfPrice": 0.434,
+      "etfPremium": 0.79
     },
     {
       "code": "118001",
@@ -3135,8 +3133,8 @@
       "nav": 0.3624,
       "navChangePct": -2.05,
       "navDate": "2026-11-19",
-      "mgmtFee": 0.8,
-      "custodyFee": 0.2,
+      "mgmtFee": null,
+      "custodyFee": 1.2,
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": 31.25,
@@ -3705,10 +3703,10 @@
       "group": "医药",
       "index": "标普全球1200医疗保健指数",
       "company": "广发基金",
-      "status": "limited",
-      "statusText": "限大额",
+      "status": "suspended",
+      "statusText": "暂停申购",
       "limit": null,
-      "limitText": "限额未公布",
+      "limitText": "—",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 1,
@@ -3721,7 +3719,13 @@
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": 14.03,
-      "scaleDate": "2026-09-30"
+      "scaleDate": "2026-09-30",
+      "change": {
+        "type": "suspend",
+        "from": "限额未公布",
+        "to": "暂停",
+        "date": "2026-11-23"
+      }
     },
     {
       "code": "000593",
@@ -5705,10 +5709,10 @@
       "group": "其他",
       "index": "--",
       "company": "工银瑞信基金",
-      "status": "limited",
-      "statusText": "限大额",
+      "status": "suspended",
+      "statusText": "暂停申购",
       "limit": null,
-      "limitText": "限额未公布",
+      "limitText": "—",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 1,
@@ -5721,7 +5725,13 @@
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": 1.84,
-      "scaleDate": "2026-09-30"
+      "scaleDate": "2026-09-30",
+      "change": {
+        "type": "suspend",
+        "from": "限额未公布",
+        "to": "暂停",
+        "date": "2026-11-23"
+      }
     },
     {
       "code": "005801",
@@ -6307,7 +6317,8 @@
         "directLimits": [],
         "currency": "CNY",
         "stale": false,
-        "review": false
+        "review": false,
+        "carriedOver": true
       }
     },
     {
@@ -9714,10 +9725,10 @@
       "group": "医药",
       "index": "标普全球1200医疗保健指数",
       "company": "广发基金",
-      "status": "limited",
-      "statusText": "限大额",
+      "status": "suspended",
+      "statusText": "暂停申购",
       "limit": null,
-      "limitText": "限额未公布",
+      "limitText": "—",
       "limitReliable": false,
       "limitSource": "api",
       "minPurchase": 1,
@@ -9730,7 +9741,13 @@
       "purchaseFee": null,
       "purchaseFeeOrig": null,
       "scale": 1.95,
-      "scaleDate": "2026-09-30"
+      "scaleDate": "2026-09-30",
+      "change": {
+        "type": "suspend",
+        "from": "限额未公布",
+        "to": "暂停",
+        "date": "2026-11-23"
+      }
     },
     {
       "code": "016452",
@@ -9760,12 +9777,13 @@
         "date": "2026-07-08",
         "title": "关于调整南方纳斯达克100指数发起式证券投资基金(QDII)申购、定投及转换转入业务金额限制的公告",
         "artId": "AN202607081826816306",
-        "limits": [],
+        "limits": [
+          10
+        ],
         "directLimits": [],
         "currency": "CNY",
         "stale": false,
-        "review": false,
-        "carriedOver": true
+        "review": false
       }
     },
     {
@@ -9796,12 +9814,13 @@
         "date": "2026-07-08",
         "title": "关于调整南方纳斯达克100指数发起式证券投资基金(QDII)申购、定投及转换转入业务金额限制的公告",
         "artId": "AN202607081826816306",
-        "limits": [],
+        "limits": [
+          10
+        ],
         "directLimits": [],
         "currency": "CNY",
         "stale": false,
-        "review": false,
-        "carriedOver": true
+        "review": false
       }
     },
     {
@@ -10533,8 +10552,7 @@
         "directLimits": [],
         "currency": "CNY",
         "stale": false,
-        "review": false,
-        "carriedOver": true
+        "review": false
       }
     },
     {
@@ -10790,12 +10808,13 @@
         "date": "2026-09-18",
         "title": "天弘基金管理有限公司关于天弘纳斯达克100指数型发起式证券投资基金(QDII)A类基金份额、C类基金份额暂停申购及定期定",
         "artId": "AN202609181829590491",
-        "limits": [],
+        "limits": [
+          100
+        ],
         "directLimits": [],
         "currency": "CNY",
         "stale": false,
-        "review": false,
-        "carriedOver": true
+        "review": false
       }
     },
     {
@@ -10826,12 +10845,13 @@
         "date": "2026-09-18",
         "title": "天弘基金管理有限公司关于天弘纳斯达克100指数型发起式证券投资基金(QDII)A类基金份额、C类基金份额暂停申购及定期定",
         "artId": "AN202609181829590491",
-        "limits": [],
+        "limits": [
+          100
+        ],
         "directLimits": [],
         "currency": "CNY",
         "stale": false,
-        "review": false,
-        "carriedOver": true
+        "review": false
       }
     },
     {
@@ -15778,19 +15798,19 @@
       "index": "--",
       "company": "建信基金",
       "status": "normal",
-      "statusText": "--",
+      "statusText": "认购期",
       "limit": null,
       "limitText": "不限",
       "limitReliable": false,
       "limitSource": "api",
-      "minPurchase": 1,
-      "minDt": null,
+      "minPurchase": 10,
+      "minDt": 10,
       "nav": null,
       "navChangePct": null,
       "navDate": "--",
       "mgmtFee": 0.8,
       "custodyFee": 0.08,
-      "purchaseFee": null,
+      "purchaseFee": 0.8,
       "purchaseFeeOrig": 0.8,
       "scale": null,
       "scaleDate": "--"
@@ -15803,20 +15823,20 @@
       "index": "--",
       "company": "建信基金",
       "status": "normal",
-      "statusText": "--",
+      "statusText": "认购期",
       "limit": null,
       "limitText": "不限",
       "limitReliable": false,
       "limitSource": "api",
-      "minPurchase": null,
-      "minDt": null,
+      "minPurchase": 10,
+      "minDt": 10,
       "nav": null,
       "navChangePct": null,
       "navDate": "--",
       "mgmtFee": 0.0,
       "custodyFee": 0.0,
-      "purchaseFee": null,
-      "purchaseFeeOrig": null,
+      "purchaseFee": 0.0,
+      "purchaseFeeOrig": 0.0,
       "scale": null,
       "scaleDate": "--"
     },
@@ -15973,7 +15993,9 @@
         "date": "2023-07-21",
         "title": "关于华安纳斯达克100交易型开放式指数证券投资基金联接基金(QDII)恢复A类美元现钞、A类美元现汇份额申购业务并暂停大",
         "artId": "AN202307211592521008",
-        "limits": [],
+        "limits": [
+          10000
+        ],
         "directLimits": [],
         "currency": "USD",
         "stale": true,
@@ -16446,8 +16468,8 @@
       "purchaseFeeOrig": null,
       "scale": 2.17,
       "scaleDate": "2026-09-17",
-      "etfPrice": 0.79,
-      "etfPremium": 0.03
+      "etfPrice": 0.779,
+      "etfPremium": -0.06
     },
     {
       "code": "159100",
@@ -16473,8 +16495,8 @@
       "purchaseFeeOrig": null,
       "scale": 5.54,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.889,
-      "etfPremium": -1.17
+      "etfPrice": 0.87,
+      "etfPremium": -2.39
     },
     {
       "code": "159202",
@@ -16500,8 +16522,8 @@
       "purchaseFeeOrig": null,
       "scale": 9.6,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.602,
-      "etfPremium": 0.2
+      "etfPrice": 0.595,
+      "etfPremium": 0.15
     },
     {
       "code": "159303",
@@ -16527,8 +16549,8 @@
       "purchaseFeeOrig": null,
       "scale": null,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.341,
-      "etfPremium": -0.45
+      "etfPrice": 1.34,
+      "etfPremium": -0.35
     },
     {
       "code": "159329",
@@ -16554,8 +16576,8 @@
       "purchaseFeeOrig": null,
       "scale": 10.12,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.833,
-      "etfPremium": -0.48
+      "etfPrice": 0.812,
+      "etfPremium": -3.57
     },
     {
       "code": "159501",
@@ -16582,7 +16604,7 @@
       "scale": 133.68,
       "scaleDate": "2026-09-30",
       "etfPrice": 1.966,
-      "etfPremium": 18.04
+      "etfPremium": 25.03
     },
     {
       "code": "159502",
@@ -16608,8 +16630,8 @@
       "purchaseFeeOrig": null,
       "scale": 17.93,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.445,
-      "etfPremium": 1.3
+      "etfPrice": 1.425,
+      "etfPremium": 2.65
     },
     {
       "code": "159509",
@@ -16636,7 +16658,7 @@
       "scale": 160.83,
       "scaleDate": "2026-09-30",
       "etfPrice": 2.682,
-      "etfPremium": 36.84
+      "etfPremium": 46.61
     },
     {
       "code": "159518",
@@ -16662,8 +16684,8 @@
       "purchaseFeeOrig": null,
       "scale": 20.18,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.148,
-      "etfPremium": 0.84
+      "etfPrice": 1.135,
+      "etfPremium": 0.75
     },
     {
       "code": "159519",
@@ -16690,7 +16712,7 @@
       "scale": null,
       "scaleDate": "2026-09-30",
       "etfPrice": 1.702,
-      "etfPremium": -0.14
+      "etfPremium": 0.11
     },
     {
       "code": "159529",
@@ -16716,8 +16738,8 @@
       "purchaseFeeOrig": null,
       "scale": 9.75,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.307,
-      "etfPremium": 0.26
+      "etfPrice": 1.294,
+      "etfPremium": 0.8
     },
     {
       "code": "159557",
@@ -16743,8 +16765,8 @@
       "purchaseFeeOrig": null,
       "scale": 1.83,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.22,
-      "etfPremium": -1.21
+      "etfPrice": 1.213,
+      "etfPremium": -1.44
     },
     {
       "code": "159561",
@@ -16770,8 +16792,8 @@
       "purchaseFeeOrig": null,
       "scale": 17.25,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.225,
-      "etfPremium": -1.85
+      "etfPrice": 1.212,
+      "etfPremium": -0.31
     },
     {
       "code": "159577",
@@ -16797,8 +16819,8 @@
       "purchaseFeeOrig": null,
       "scale": 13.2,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.537,
-      "etfPremium": 7.22
+      "etfPrice": 1.515,
+      "etfPremium": 10.57
     },
     {
       "code": "159605",
@@ -16824,8 +16846,8 @@
       "purchaseFeeOrig": null,
       "scale": 32.45,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.663,
-      "etfPremium": -3.55
+      "etfPrice": 0.659,
+      "etfPremium": -1.24
     },
     {
       "code": "159607",
@@ -16851,8 +16873,8 @@
       "purchaseFeeOrig": null,
       "scale": 10.09,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.66,
-      "etfPremium": -3.76
+      "etfPrice": 0.652,
+      "etfPremium": -2.04
     },
     {
       "code": "159615",
@@ -16878,8 +16900,8 @@
       "purchaseFeeOrig": null,
       "scale": 3.86,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.951,
-      "etfPremium": -0.39
+      "etfPrice": 0.942,
+      "etfPremium": -0.87
     },
     {
       "code": "159687",
@@ -16889,7 +16911,7 @@
       "index": "富时亚太低碳精选指数",
       "company": "南方基金",
       "status": "traded",
-      "statusText": "场内交易",
+      "statusText": "暂停申购",
       "limit": null,
       "limitText": "场内",
       "limitReliable": false,
@@ -16905,8 +16927,8 @@
       "purchaseFeeOrig": null,
       "scale": 31.46,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.497,
-      "etfPremium": -1.32
+      "etfPrice": 1.467,
+      "etfPremium": -2.26
     },
     {
       "code": "159688",
@@ -16932,8 +16954,8 @@
       "purchaseFeeOrig": null,
       "scale": 10.01,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.566,
-      "etfPremium": 0.07
+      "etfPrice": 0.558,
+      "etfPremium": -0.23
     },
     {
       "code": "159699",
@@ -16959,8 +16981,8 @@
       "purchaseFeeOrig": null,
       "scale": 4.27,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.873,
-      "etfPremium": -0.34
+      "etfPrice": 0.872,
+      "etfPremium": -0.49
     },
     {
       "code": "159740",
@@ -16986,8 +17008,8 @@
       "purchaseFeeOrig": null,
       "scale": 140.6,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.429,
-      "etfPremium": -0.37
+      "etfPrice": 0.423,
+      "etfPremium": -0.49
     },
     {
       "code": "159741",
@@ -17013,8 +17035,8 @@
       "purchaseFeeOrig": null,
       "scale": 8.12,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.434,
-      "etfPremium": -0.44
+      "etfPrice": 0.428,
+      "etfPremium": -0.37
     },
     {
       "code": "159742",
@@ -17040,8 +17062,8 @@
       "purchaseFeeOrig": null,
       "scale": 34.37,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.441,
-      "etfPremium": -0.16
+      "etfPrice": 0.438,
+      "etfPremium": 0.46
     },
     {
       "code": "159747",
@@ -17067,8 +17089,8 @@
       "purchaseFeeOrig": null,
       "scale": 3.45,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.883,
-      "etfPremium": -0.23
+      "etfPrice": 0.867,
+      "etfPremium": -0.77
     },
     {
       "code": "159750",
@@ -17094,8 +17116,8 @@
       "purchaseFeeOrig": null,
       "scale": 10.36,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.655,
-      "etfPremium": -0.27
+      "etfPrice": 0.644,
+      "etfPremium": -0.62
     },
     {
       "code": "159822",
@@ -17121,8 +17143,8 @@
       "purchaseFeeOrig": null,
       "scale": 1.69,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.505,
-      "etfPremium": -2.47
+      "etfPrice": 0.504,
+      "etfPremium": -0.43
     },
     {
       "code": "159850",
@@ -17148,8 +17170,8 @@
       "purchaseFeeOrig": null,
       "scale": 3.24,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.724,
-      "etfPremium": -0.08
+      "etfPrice": 0.725,
+      "etfPremium": 0.68
     },
     {
       "code": "159866",
@@ -17159,7 +17181,7 @@
       "index": "东京日经225指数",
       "company": "工银瑞信基金",
       "status": "traded",
-      "statusText": "场内交易",
+      "statusText": "暂停申购",
       "limit": null,
       "limitText": "场内",
       "limitReliable": false,
@@ -17175,8 +17197,8 @@
       "purchaseFeeOrig": null,
       "scale": 20.93,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.428,
-      "etfPremium": 2.34
+      "etfPrice": 1.405,
+      "etfPremium": 0.36
     },
     {
       "code": "159892",
@@ -17202,8 +17224,8 @@
       "purchaseFeeOrig": null,
       "scale": 43.13,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.664,
-      "etfPremium": -0.38
+      "etfPrice": 0.657,
+      "etfPremium": -0.89
     },
     {
       "code": "159920",
@@ -17229,8 +17251,8 @@
       "purchaseFeeOrig": null,
       "scale": 82.43,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.304,
-      "etfPremium": -0.37
+      "etfPrice": 1.297,
+      "etfPremium": -0.25
     },
     {
       "code": "160125",
@@ -18506,8 +18528,8 @@
       "purchaseFeeOrig": null,
       "scale": 32.08,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.923,
-      "etfPremium": -0.74
+      "etfPrice": 0.917,
+      "etfPremium": -0.29
     },
     {
       "code": "513000",
@@ -18517,7 +18539,7 @@
       "index": "东京日经225指数",
       "company": "易方达基金",
       "status": "traded",
-      "statusText": "场内交易",
+      "statusText": "暂停申购",
       "limit": null,
       "limitText": "场内",
       "limitReliable": false,
@@ -18533,8 +18555,8 @@
       "purchaseFeeOrig": null,
       "scale": 24.22,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.924,
-      "etfPremium": 2.83
+      "etfPrice": 1.894,
+      "etfPremium": 0.8
     },
     {
       "code": "513010",
@@ -18560,8 +18582,8 @@
       "purchaseFeeOrig": null,
       "scale": 249.43,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.451,
-      "etfPremium": -0.55
+      "etfPrice": 0.444,
+      "etfPremium": -0.2
     },
     {
       "code": "513030",
@@ -18587,8 +18609,8 @@
       "purchaseFeeOrig": null,
       "scale": 18.18,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.675,
-      "etfPremium": -1.74
+      "etfPrice": 1.66,
+      "etfPremium": -0.04
     },
     {
       "code": "513060",
@@ -18614,8 +18636,8 @@
       "purchaseFeeOrig": null,
       "scale": 49.65,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.481,
-      "etfPremium": -1.01
+      "etfPrice": 0.476,
+      "etfPremium": -1.33
     },
     {
       "code": "513080",
@@ -18641,8 +18663,8 @@
       "purchaseFeeOrig": null,
       "scale": 11.11,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.565,
-      "etfPremium": -1.83
+      "etfPrice": 1.546,
+      "etfPremium": -1.16
     },
     {
       "code": "513120",
@@ -18668,8 +18690,8 @@
       "purchaseFeeOrig": null,
       "scale": 233.19,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.083,
-      "etfPremium": -0.81
+      "etfPrice": 1.073,
+      "etfPremium": -0.84
     },
     {
       "code": "513130",
@@ -18695,8 +18717,8 @@
       "purchaseFeeOrig": null,
       "scale": 321.51,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.431,
-      "etfPremium": -0.58
+      "etfPrice": 0.424,
+      "etfPremium": -0.49
     },
     {
       "code": "513140",
@@ -18722,8 +18744,8 @@
       "purchaseFeeOrig": null,
       "scale": 1.35,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.633,
-      "etfPremium": -0.38
+      "etfPrice": 1.624,
+      "etfPremium": 0.03
     },
     {
       "code": "513170",
@@ -18750,7 +18772,7 @@
       "scale": 2.43,
       "scaleDate": "2026-09-30",
       "etfPrice": 1.496,
-      "etfPremium": -0.47
+      "etfPremium": 0.09
     },
     {
       "code": "513210",
@@ -18776,8 +18798,8 @@
       "purchaseFeeOrig": null,
       "scale": null,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.318,
-      "etfPremium": -0.61
+      "etfPrice": 1.314,
+      "etfPremium": 0.17
     },
     {
       "code": "513220",
@@ -18803,8 +18825,8 @@
       "purchaseFeeOrig": null,
       "scale": 4.7,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.784,
-      "etfPremium": -3.52
+      "etfPrice": 0.779,
+      "etfPremium": -1.6
     },
     {
       "code": "513260",
@@ -18830,8 +18852,8 @@
       "purchaseFeeOrig": null,
       "scale": 51.43,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.839,
-      "etfPremium": -0.77
+      "etfPrice": 0.826,
+      "etfPremium": -0.4
     },
     {
       "code": "513280",
@@ -18857,8 +18879,8 @@
       "purchaseFeeOrig": null,
       "scale": 4.07,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.936,
-      "etfPremium": -1.2
+      "etfPrice": 0.933,
+      "etfPremium": -0.62
     },
     {
       "code": "513290",
@@ -18884,8 +18906,8 @@
       "purchaseFeeOrig": null,
       "scale": 18.38,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.704,
-      "etfPremium": 2.16
+      "etfPrice": 1.686,
+      "etfPremium": 2.76
     },
     {
       "code": "513310",
@@ -18911,8 +18933,8 @@
       "purchaseFeeOrig": null,
       "scale": 113.05,
       "scaleDate": "2026-09-30",
-      "etfPrice": 3.375,
-      "etfPremium": 5.14
+      "etfPrice": 3.335,
+      "etfPremium": 6.32
     },
     {
       "code": "513350",
@@ -18938,8 +18960,8 @@
       "purchaseFeeOrig": null,
       "scale": 10.92,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.21,
-      "etfPremium": 1.35
+      "etfPrice": 1.19,
+      "etfPremium": 0.72
     },
     {
       "code": "513360",
@@ -18965,8 +18987,8 @@
       "purchaseFeeOrig": null,
       "scale": 2.76,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.384,
-      "etfPremium": -3.32
+      "etfPrice": 0.381,
+      "etfPremium": 0.95
     },
     {
       "code": "513380",
@@ -18992,8 +19014,8 @@
       "purchaseFeeOrig": null,
       "scale": 88.62,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.394,
-      "etfPremium": -0.76
+      "etfPrice": 0.389,
+      "etfPremium": -0.1
     },
     {
       "code": "513400",
@@ -19019,8 +19041,8 @@
       "purchaseFeeOrig": null,
       "scale": 38.85,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.208,
-      "etfPremium": 0.75
+      "etfPrice": 1.204,
+      "etfPremium": 2.36
     },
     {
       "code": "513520",
@@ -19030,7 +19052,7 @@
       "index": "东京日经225指数",
       "company": "华夏基金",
       "status": "traded",
-      "statusText": "场内交易",
+      "statusText": "暂停申购",
       "limit": null,
       "limitText": "场内",
       "limitReliable": false,
@@ -19046,8 +19068,8 @@
       "purchaseFeeOrig": null,
       "scale": 24.39,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.928,
-      "etfPremium": 3.37
+      "etfPrice": 1.898,
+      "etfPremium": 1.55
     },
     {
       "code": "513530",
@@ -19073,8 +19095,8 @@
       "purchaseFeeOrig": null,
       "scale": 53.65,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.491,
-      "etfPremium": -0.25
+      "etfPrice": 1.485,
+      "etfPremium": -0.03
     },
     {
       "code": "513580",
@@ -19100,8 +19122,8 @@
       "purchaseFeeOrig": null,
       "scale": 32.35,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.433,
-      "etfPremium": -1.37
+      "etfPrice": 0.426,
+      "etfPremium": -1.07
     },
     {
       "code": "513730",
@@ -19127,8 +19149,8 @@
       "purchaseFeeOrig": null,
       "scale": 8.38,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.945,
-      "etfPremium": -1.81
+      "etfPrice": 0.937,
+      "etfPremium": -3.84
     },
     {
       "code": "513800",
@@ -19138,7 +19160,7 @@
       "index": "东证指数",
       "company": "南方基金",
       "status": "traded",
-      "statusText": "场内交易",
+      "statusText": "暂停申购",
       "limit": null,
       "limitText": "场内",
       "limitReliable": false,
@@ -19154,8 +19176,8 @@
       "purchaseFeeOrig": null,
       "scale": 20.16,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.675,
-      "etfPremium": -0.53
+      "etfPrice": 1.662,
+      "etfPremium": -1.52
     },
     {
       "code": "513810",
@@ -19181,8 +19203,8 @@
       "purchaseFeeOrig": null,
       "scale": null,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.665,
-      "etfPremium": -0.69
+      "etfPrice": 1.703,
+      "etfPremium": 2.26
     },
     {
       "code": "513850",
@@ -19208,8 +19230,8 @@
       "purchaseFeeOrig": null,
       "scale": 23.44,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.717,
-      "etfPremium": 7.45
+      "etfPrice": 1.689,
+      "etfPremium": 10.56
     },
     {
       "code": "513880",
@@ -19219,7 +19241,7 @@
       "index": "东京日经225指数",
       "company": "华安基金",
       "status": "traded",
-      "statusText": "场内交易",
+      "statusText": "暂停申购",
       "limit": null,
       "limitText": "场内",
       "limitReliable": false,
@@ -19235,8 +19257,8 @@
       "purchaseFeeOrig": null,
       "scale": 27.77,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.812,
-      "etfPremium": 4.25
+      "etfPrice": 1.781,
+      "etfPremium": 2.03
     },
     {
       "code": "513890",
@@ -19262,8 +19284,8 @@
       "purchaseFeeOrig": null,
       "scale": 7.32,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.667,
-      "etfPremium": -0.68
+      "etfPrice": 0.66,
+      "etfPremium": 0.17
     },
     {
       "code": "513950",
@@ -19289,8 +19311,8 @@
       "purchaseFeeOrig": null,
       "scale": 29.28,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.193,
-      "etfPremium": -0.53
+      "etfPrice": 1.19,
+      "etfPremium": -0.49
     },
     {
       "code": "513970",
@@ -19316,8 +19338,8 @@
       "purchaseFeeOrig": null,
       "scale": 10.92,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.805,
-      "etfPremium": -0.45
+      "etfPrice": 0.802,
+      "etfPremium": -0.62
     },
     {
       "code": "519601",
@@ -19418,7 +19440,7 @@
       "purchaseFeeOrig": null,
       "scale": 26.41,
       "scaleDate": "2026-09-30",
-      "etfPrice": 1.12,
+      "etfPrice": 1.114,
       "etfPremium": -0.7
     },
     {
@@ -19446,7 +19468,7 @@
       "scale": null,
       "scaleDate": "2026-09-30",
       "etfPrice": 0.933,
-      "etfPremium": -0.52
+      "etfPremium": -0.35
     },
     {
       "code": "520570",
@@ -19472,8 +19494,8 @@
       "purchaseFeeOrig": null,
       "scale": 24.73,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.552,
-      "etfPremium": -0.63
+      "etfPrice": 0.543,
+      "etfPremium": -0.35
     },
     {
       "code": "520580",
@@ -19499,8 +19521,8 @@
       "purchaseFeeOrig": null,
       "scale": 2.64,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.917,
-      "etfPremium": -0.21
+      "etfPrice": 0.915,
+      "etfPremium": -1.17
     },
     {
       "code": "520590",
@@ -19527,7 +19549,7 @@
       "scale": 1.61,
       "scaleDate": "2026-09-30",
       "etfPrice": 0.59,
-      "etfPremium": -0.62
+      "etfPremium": 1.27
     },
     {
       "code": "520830",
@@ -19553,8 +19575,8 @@
       "purchaseFeeOrig": null,
       "scale": 8.88,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.825,
-      "etfPremium": -0.27
+      "etfPrice": 0.813,
+      "etfPremium": -2.21
     },
     {
       "code": "520870",
@@ -19580,8 +19602,8 @@
       "purchaseFeeOrig": null,
       "scale": 5.96,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.889,
-      "etfPremium": -0.53
+      "etfPrice": 0.88,
+      "etfPremium": -1.11
     },
     {
       "code": "520920",
@@ -19607,8 +19629,8 @@
       "purchaseFeeOrig": null,
       "scale": 121.3,
       "scaleDate": "2026-09-30",
-      "etfPrice": 0.511,
-      "etfPremium": -0.85
+      "etfPrice": 0.506,
+      "etfPremium": 0.1
     },
     {
       "code": "539001",
