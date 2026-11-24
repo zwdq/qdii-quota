@@ -11,3 +11,7 @@ __pycache__/
 worker/.wrangler/
 worker/node_modules/
 worker/.dev.vars
+
+# 每日抓取数据由 GitHub Actions 直接发布到 Pages，不再提交进 Git 历史
+data.json
+_site/

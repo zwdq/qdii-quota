@@ -1,39 +1,59 @@
-name: 每日更新基金额度
+name: 每日更新基金额度并发布 Pages
 
 on:
   # 主触发：Cloudflare Worker（worker/）在北京 09:15、14:15 准点调用 workflow_dispatch。
   # GitHub 自带 schedule 高峰期常延迟 4~5 小时甚至跳过，这里只作兜底：
-  # 03:30 UTC = 北京 11:30，08:30 UTC = 北京 16:30；若数据 5 小时内已更新则跳过。
+  # 03:30 UTC = 北京 11:30，08:30 UTC = 北京 16:30；若线上数据 5 小时内已更新则跳过。
   schedule:
     - cron: "30 3,8 * * *"
   workflow_dispatch: {}  # Worker 准点触发 / 也可在 GitHub 页面手动触发
+  push:
+    branches: ["main"]
+    paths:
+      - "index.html"
+      - "fund-quota.html"
+      - "manifest.json"
+      - "favicon.svg"
+      - "*.png"
+      - ".github/workflows/daily.yml"
 
 permissions:
-  contents: write   # 允许 Action 把新 data.json 提交回仓库
+  contents: read
+  pages: write
+  id-token: write
 
 concurrency:
-  group: daily-fetch
+  group: pages-deploy
   cancel-in-progress: false
 
 jobs:
-  fetch:
+  build_and_deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
 
-      - name: 兜底任务检查数据是否新鲜
+      - name: 兜底任务检查线上数据是否新鲜
         id: fresh
         if: github.event_name == 'schedule'
         run: |
           python3 - <<'EOF' >> "$GITHUB_OUTPUT"
-          import datetime, json
-          s = json.load(open("data.json")).get("updatedAt", "")
+          import datetime, json, urllib.request
           bj = datetime.timezone(datetime.timedelta(hours=8))
+          age = 999
           try:
+              req = urllib.request.Request(
+                  "https://zwdq.github.io/qdii-quota/data.json",
+                  headers={"User-Agent": "qdii-quota-actions"},
+              )
+              with urllib.request.urlopen(req, timeout=15) as r:
+                  s = json.loads(r.read().decode("utf-8")).get("updatedAt", "")
               t = datetime.datetime.strptime(s, "%Y-%m-%d %H:%M:%S").replace(tzinfo=bj)
               age = (datetime.datetime.now(bj) - t).total_seconds() / 3600
-          except ValueError:
-              age = 999
+          except Exception as e:
+              print(f"freshness check fallback: {e}")
           print("skip=%s" % ("true" if age < 5 else "false"))
           EOF
           cat "$GITHUB_OUTPUT"
@@ -43,21 +63,52 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: 抓取基金数据
-        if: steps.fresh.outputs.skip != 'true'
-        run: python3 scripts/fetch_funds.py data.json
-
-      - name: 提交 data.json
+      - name: 准备静态站点目录
         if: steps.fresh.outputs.skip != 'true'
         run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data.json
-          if git diff --cached --quiet; then
-            echo "数据无变化，跳过提交。"
+          mkdir -p _site
+          cp index.html fund-quota.html manifest.json favicon.svg *.png _site/
+
+      - name: 获取或抓取 data.json（不回写 Git 仓库）
+        if: steps.fresh.outputs.skip != 'true'
+        run: |
+          if [ "${{ github.event_name }}" = "push" ]; then
+            echo "代码推送触发：尝试复用线上 data.json 以快速发布..."
+            if curl -fsSL "https://zwdq.github.io/qdii-quota/data.json" -o _site/data.json && \
+               python3 -c 'import json; d=json.load(open("_site/data.json")); assert len(d.get("funds",[]))>=50'; then
+              echo "已复用线上有效 data.json"
+            else
+              echo "线上 data.json 不可用，执行完整抓取..."
+              python3 scripts/fetch_funds.py _site/data.json
+            fi
           else
-            git commit -m "chore(data): 每日基金额度更新 $(date -u +%Y-%m-%d)"
-            # 抓取期间 main 可能有新提交（代码改动/另一次触发），先 rebase 再推
-            git pull --rebase -X theirs origin main
-            git push
+            python3 scripts/fetch_funds.py _site/data.json
           fi
+
+      - name: 校验 data.json 完整性（防止异常空数据覆盖线上）
+        if: steps.fresh.outputs.skip != 'true'
+        run: |
+          python3 - <<'EOF'
+          import json, sys
+          d = json.load(open("_site/data.json", encoding="utf-8"))
+          funds = d.get("funds")
+          if not isinstance(funds, list) or len(funds) < 50:
+              print(f"ERROR: invalid funds count: {len(funds) if isinstance(funds, list) else type(funds)}", file=sys.stderr)
+              sys.exit(1)
+          print(f"OK: updatedAt={d.get('updatedAt')}, funds={len(funds)}, failed={d.get('failed')}")
+          EOF
+
+      - name: 配置 GitHub Pages
+        if: steps.fresh.outputs.skip != 'true'
+        uses: actions/configure-pages@v5
+
+      - name: 上传 Pages 构建产物
+        if: steps.fresh.outputs.skip != 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: 部署到 GitHub Pages
+        id: deployment
+        if: steps.fresh.outputs.skip != 'true'
+        uses: actions/deploy-pages@v4
